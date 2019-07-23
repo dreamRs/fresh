@@ -1,0 +1,16 @@
+Package: fresh
+Title: Fresh 'Bootstrap' Themes
+Version: 0.0.0.9000
+Authors@R: c(
+  person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
+  person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
+  person("Thomas", "Park", role = c("ctb", "cph"), comment = "Bootswatch themes"))
+Description: What the package does (one paragraph).
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    sass
+Remotes:
+    rstudio/sass
+RoxygenNote: 6.1.1
