@@ -3,7 +3,7 @@ library(shiny)
 
 ui <- navbarPage(
   title = "A new app",
-  theme = "mytheme.css",
+  # theme = "mytheme.css",
   tabPanel(
     title = "Demo",
     tags$h1("New colors demo"),
@@ -12,6 +12,9 @@ ui <- navbarPage(
     ),
     actionButton(
       "success", "Success", class = "btn-success"
+    ),
+    actionButton(
+      "info", "Info", class = "btn-info"
     ),
     actionButton(
       "warning", "Warning", class = "btn-warning"

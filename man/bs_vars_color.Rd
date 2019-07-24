@@ -41,7 +41,8 @@ bs_vars_color(brand_primary = NULL, brand_success = NULL,
 a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
-Those variables can be used to customize Bootstrap and Bootswatch themes.
+Those variables can be used to customize
+ defaults colors in Bootstrap and Bootswatch themes.
 }
 \note{
 See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.

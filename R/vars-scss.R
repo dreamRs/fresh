@@ -1,7 +1,8 @@
 
 #' @title Bootstrap CSS colors variables
 #'
-#' @description Those variables can be used to customize Bootstrap and Bootswatch themes.
+#' @description Those variables can be used to customize
+#'  defaults colors in Bootstrap and Bootswatch themes.
 #'
 #' @param brand_primary Primary color (default in Bootstrap is blue).
 #' @param brand_success Success color (default in Bootstrap is green).
@@ -56,7 +57,8 @@ bs_vars_color <- function(brand_primary = NULL,
 
 #' @title Bootstrap CSS navbar variables
 #'
-#' @description Those variables can be used to customize Bootstrap and Bootswatch themes.
+#' @description Those variables can be used to customize
+#'  navigation bar component in Bootstrap and Bootswatch themes.
 #'
 #' @param height Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).
 #' @param default_color Color of text in the navbar.
@@ -97,3 +99,48 @@ bs_vars_nav <- function(height = NULL,
   class(vars) <- c("sass_vars", class(vars))
   vars
 }
+
+
+
+
+#' @title Bootstrap CSS font variables
+#'
+#' @description Those variables can be used to customize
+#'  fonts in Bootstrap and Bootswatch themes.
+#'
+#' @param size_base Size of base font, e.g. normal text, default in Bootstrap is \code{"15px"}.
+#' @param size_large Size of large text.
+#' @param size_small Size of small text.
+#' @param size_h1 Size of h1 tags.
+#' @param size_h2 Size of h2 tags.
+#' @param size_h3 Size of h3 tags.
+#' @param size_h4 Size of h4 tags.
+#' @param size_h5 Size of h5 tags.
+#' @param size_h6 Size of h6 tags.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#'
+#' @note In Bootstrap, only \code{size_base} is defined, all others are calculated from this one.
+#'  See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+#'
+#' @export
+#'
+#' @examples
+bs_vars_font <- function(size_base = NULL,
+                         size_large = NULL,
+                         size_small = NULL,
+                         size_h1 = NULL,
+                         size_h2 = NULL,
+                         size_h3 = NULL,
+                         size_h4 = NULL,
+                         size_h5 = NULL,
+                         size_h6 = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "font")
+  class(vars) <- c("sass_vars", class(vars))
+  vars
+}
+
+
+

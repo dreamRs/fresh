@@ -42,7 +42,8 @@ bs_vars_nav(height = NULL, default_color = NULL, default_bg = NULL,
 a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
-Those variables can be used to customize Bootstrap and Bootswatch themes.
+Those variables can be used to customize
+ navigation bar component in Bootstrap and Bootswatch themes.
 }
 \note{
 See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
