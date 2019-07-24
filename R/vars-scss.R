@@ -1,5 +1,5 @@
 
-#' @title CSS colors variables
+#' @title Bootstrap CSS colors variables
 #'
 #' @description Those variables can be used to customize Bootstrap and Bootswatch themes.
 #'
@@ -25,14 +25,14 @@
 #' @examples
 #'
 #' # New colors (for buttons for example)
-#' vars_color(
+#' bs_vars_color(
 #'   brand_primary = "#75b8d1",
 #'   brand_success = "#c9d175",
 #'   brand_info = "#758bd1",
 #'   brand_warning = "#d1ab75",
 #'   brand_danger = "#d175b8"
 #' )
-vars_color <- function(brand_primary = NULL,
+bs_vars_color <- function(brand_primary = NULL,
                        brand_success = NULL,
                        brand_info = NULL,
                        brand_warning = NULL,
@@ -54,7 +54,7 @@ vars_color <- function(brand_primary = NULL,
 
 
 
-#' @title CSS navbar variables
+#' @title Bootstrap CSS navbar variables
 #'
 #' @description Those variables can be used to customize Bootstrap and Bootswatch themes.
 #'
@@ -63,24 +63,34 @@ vars_color <- function(brand_primary = NULL,
 #' @param default_bg Background color of the navbar.
 #' @param default_border Border color of the navbar.
 #' @param default_link_color Link color.
+#' @param default_link_active_color Color for active link (selected tab).
+#' @param default_link_active_bg Background color for active link (selected tab).
 #' @param inverse_color Color of text for inversed navbar.
-#' @param inverse_bgBackground Background color for inversed navbar.
+#' @param inverse_bg Background color for inversed navbar.
 #' @param inverse_border Border color for inversed navbar.
 #' @param inverse_link_color Link color for inversed navbar.
+#' @param inverse_link_active_color Color for active link (selected tab) for inversed navbar.
+#' @param inverse_link_active_bg Background color for active link (selected tab) for inversed navbar.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
+#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+#'
 #' @examples
-vars_nav <- function(height = NULL,
+bs_vars_nav <- function(height = NULL,
                      default_color = NULL,
                      default_bg = NULL,
                      default_border = NULL,
                      default_link_color = NULL,
+                     default_link_active_color = NULL,
+                     default_link_active_bg = NULL,
                      inverse_color = NULL,
                      inverse_bg = NULL,
                      inverse_border = NULL,
-                     inverse_link_color = NULL) {
+                     inverse_link_color = NULL,
+                     inverse_link_active_color = NULL,
+                     inverse_link_active_bg = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "navbar")

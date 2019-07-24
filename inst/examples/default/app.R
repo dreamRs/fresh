@@ -19,8 +19,10 @@ ui <- navbarPage(
     actionButton(
       "danger", "Danger", class = "btn-danger"
     )
+  ),
+  tabPanel(
+    title = "Second tab"
   )
-
 )
 
 server <- function(input, output, session) {

@@ -10,7 +10,7 @@ create_theme(theme = c("default", "cosmo", "flatly"), ...,
 \arguments{
 \item{theme}{Base theme to use.}
 
-\item{...}{Lists of CSS variables declared with \code{\link{vars_color}},  \code{\link{vars_nav}}.}
+\item{...}{Lists of CSS variables declared with \code{\link{bs_vars_color}},  \code{\link{bs_vars_nav}}.}
 
 \item{output_file}{Specifies path to output file for compiled CSS.}
 }

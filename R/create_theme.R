@@ -4,7 +4,7 @@
 #' @description Allow to customize some CSS variables from Bootstrap themes to be included in Shiny applications.
 #'
 #' @param theme Base theme to use.
-#' @param ... Lists of CSS variables declared with \code{\link{vars_color}},  \code{\link{vars_nav}}.
+#' @param ... Lists of CSS variables declared with \code{\link{bs_vars_color}},  \code{\link{bs_vars_nav}}.
 #' @param output_file Specifies path to output file for compiled CSS.
 #'
 #' @export
@@ -42,7 +42,7 @@ create_theme <- function(theme = c("default", "cosmo", "flatly"),
 bootstrap_scss <- function() {
   sass_file(
     input = system.file(
-      "assets/bootstrap-3.4.1/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss",
+      "assets/bootstrap3/default/stylesheets/_bootstrap.scss",
       package = "fresh"
     )
   )
@@ -52,7 +52,7 @@ bootstrap_scss <- function() {
 bootswatch_vars_scss <- function(theme) {
   sass_file(
     input = system.file(
-      "assets/bootstrap-3.4.1/", theme, "/_variables.scss",
+      "assets/bootstrap3", theme, "_variables.scss",
       package = "fresh"
     )
   )
@@ -62,7 +62,7 @@ bootswatch_vars_scss <- function(theme) {
 bootswatch_scss <- function(theme) {
   sass_file(
     input = system.file(
-      "assets/bootstrap-3.4.1/", theme, "/_bootswatch.scss",
+      "assets/bootstrap3", theme, "_bootswatch.scss",
       package = "fresh"
     )
   )

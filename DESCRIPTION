@@ -6,7 +6,7 @@ Authors@R: c(
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
   person("Thomas", "Park", role = c("ctb", "cph"), comment = "Bootswatch themes"))
 Description: What the package does (one paragraph).
-License: What license it uses
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
