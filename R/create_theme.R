@@ -7,6 +7,9 @@
 #' @param ... Lists of CSS variables declared with \code{\link{bs_vars_color}},  \code{\link{bs_vars_nav}}.
 #' @param output_file Specifies path to output file for compiled CSS.
 #'
+#' @return If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
+#'  If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.
+#'
 #' @export
 #'
 #' @importFrom sass sass sass_options

@@ -3,6 +3,7 @@
 export(bs_vars_color)
 export(bs_vars_font)
 export(bs_vars_nav)
+export(create_pretty)
 export(create_theme)
 importFrom(sass,sass)
 importFrom(sass,sass_file)
