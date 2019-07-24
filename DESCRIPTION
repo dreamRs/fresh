@@ -10,7 +10,8 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    sass
+    sass,
+    htmltools
 Remotes:
     rstudio/sass
 RoxygenNote: 6.1.1

@@ -52,4 +52,30 @@ create_pretty <- function(output_file,
 }
 
 
+#' @title Use pretty-checkbox CSS in Shiny
+#'
+#' @description After created new pretty-checkbox CSS with \code{\link{create_pretty}},
+#'  allow to use in Shiny application instead of default shinyWidgets dependency.
+#'
+#' @param path Path to the file created with \code{\link{create_pretty}},
+#'  the file must be in www/ directory of the application.
+#'
+#' @export
+#'
+#' @importFrom htmltools htmlDependency
+#'
+#' @examples
+use_pretty <- function(path) {
+  htmltools::htmlDependency(
+    name = "pretty",
+    version = "1000",
+    src = c(file = "www"),
+    stylesheet = path
+  )
+}
+
+
+
+
+
 
