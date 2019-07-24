@@ -12,7 +12,9 @@
 #' @importFrom sass sass sass_options
 #'
 #' @examples
-create_theme <- function(theme = c("default", "cosmo", "flatly"),
+create_theme <- function(theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
+                                   "journal", "lumen", "paper", "readable", "sandstone", "simplex",
+                                   "slate", "spacelab", "superhero", "united", "yeti"),
                          ...,
                          output_file = NULL) {
   theme <- match.arg(theme)

@@ -4,7 +4,9 @@
 \alias{create_theme}
 \title{Create a custom Bootstrap theme}
 \usage{
-create_theme(theme = c("default", "cosmo", "flatly"), ...,
+create_theme(theme = c("default", "cerulean", "cosmo", "cyborg",
+  "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone",
+  "simplex", "slate", "spacelab", "superhero", "united", "yeti"), ...,
   output_file = NULL)
 }
 \arguments{
