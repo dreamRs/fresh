@@ -1,0 +1,36 @@
+---
+title: "Custom CSS"
+output: 
+  flexdashboard::flex_dashboard:
+    css: stylesheets/mytheme.css
+---
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
