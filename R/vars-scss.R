@@ -49,7 +49,7 @@ bs_vars_color <- function(brand_primary = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
-  class(vars) <- c("sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", class(vars))
   vars
 }
 
@@ -105,7 +105,7 @@ bs_vars_nav <- function(height = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "navbar")
-  class(vars) <- c("sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", class(vars))
   vars
 }
 
@@ -152,7 +152,7 @@ bs_vars_font <- function(size_base = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "font")
-  class(vars) <- c("sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", class(vars))
   vars
 }
 

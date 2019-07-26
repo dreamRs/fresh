@@ -13,4 +13,3 @@ vars_names <- function(x, prefix = NULL) {
   names(x) <- n_x
   x
 }
-

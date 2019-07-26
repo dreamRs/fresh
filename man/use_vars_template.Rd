@@ -7,12 +7,14 @@
 use_vars_template(output_file, theme = c("default", "cerulean", "cosmo",
   "cyborg", "darkly", "flatly", "journal", "lumen", "paper", "readable",
   "sandstone", "simplex", "slate", "spacelab", "superhero", "united",
-  "yeti"))
+  "yeti"), open = interactive())
 }
 \arguments{
 \item{output_file}{Path where to create the template, use \code{".scss"} as file extension.}
 
 \item{theme}{Base theme to use, e.g. \code{"cosmo"} to start modifying the cosmo theme.}
+
+\item{open}{Open the newly created file for editing? Happens in RStudio, if applicable, or via \code{utils::file.edit()} otherwise.}
 }
 \description{
 Use a template to define SCSS variables
