@@ -38,3 +38,10 @@ Those variables can be used to customize
 In Bootstrap, only \code{size_base} is defined, all others are calculated from this one.
  See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 }
+\examples{
+
+# Use a smaller font than the default
+bs_vars_font(
+  size_base = "12px"
+)
+}

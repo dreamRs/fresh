@@ -23,3 +23,30 @@ If \code{output_file = NULL}, the function returns a string value of the compile
 \description{
 Allow to customize some CSS variables from Bootstrap themes to be included in Shiny applications.
 }
+\examples{
+
+# Temporary file
+tmp <- file.path(tempdir(), "my-pretty.css")
+
+# Create the new theme
+create_theme(
+  theme = "default",
+  bs_vars_color(
+    brand_primary = "#75b8d1",
+    brand_success = "#c9d175",
+    brand_info = "#758bd1",
+    brand_warning = "#d1ab75",
+    brand_danger = "#d175b8"
+  ),
+  bs_vars_nav(
+    default_bg = "#75b8d1",
+    default_color = "#FFFFFF",
+    default_link_color = "#FFFFFF",
+    default_link_active_color = "#FFFFFF"
+  ),
+  output_file = tmp
+)
+
+# clean
+unlink(tmp)
+}

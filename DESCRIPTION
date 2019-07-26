@@ -11,9 +11,10 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     sass,
-    htmltools
+    htmltools,
+    rstudioapi
 Remotes:
     rstudio/sass
-RoxygenNote: 6.1.1
 Suggests: 
     shinyWidgets
+RoxygenNote: 6.1.1

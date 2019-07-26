@@ -30,3 +30,17 @@ If \code{output_file = NULL}, the function returns a string value of the compile
 This allow you to change colors of \code{\link[shinyWidgets]{prettyCheckbox}},
  \code{\link[shinyWidgets]{prettyRadioButtons}}
 }
+\examples{
+
+# Temporary file
+tmp <- file.path(tempdir(), "my-pretty.css")
+
+# Create the new theme
+create_pretty(
+  output_file = tmp,
+  primary = "#FFFF00"
+)
+
+# Clean
+unlink(tmp)
+}

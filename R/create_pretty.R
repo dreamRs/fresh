@@ -19,6 +19,18 @@
 #' @export
 #'
 #' @examples
+#'
+#' # Temporary file
+#' tmp <- file.path(tempdir(), "my-pretty.css")
+#'
+#' # Create the new theme
+#' create_pretty(
+#'   output_file = tmp,
+#'   primary = "#FFFF00"
+#' )
+#'
+#' # Clean
+#' unlink(tmp)
 create_pretty <- function(output_file,
                           default = NULL,
                           primary = NULL,
@@ -64,7 +76,6 @@ create_pretty <- function(output_file,
 #'
 #' @importFrom htmltools htmlDependency
 #'
-#' @examples
 use_pretty <- function(path) {
   htmltools::htmlDependency(
     name = "pretty",

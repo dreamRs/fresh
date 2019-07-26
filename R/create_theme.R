@@ -15,6 +15,31 @@
 #' @importFrom sass sass sass_options
 #'
 #' @examples
+#'
+#' # Temporary file
+#' tmp <- file.path(tempdir(), "my-pretty.css")
+#'
+#' # Create the new theme
+#' create_theme(
+#'   theme = "default",
+#'   bs_vars_color(
+#'     brand_primary = "#75b8d1",
+#'     brand_success = "#c9d175",
+#'     brand_info = "#758bd1",
+#'     brand_warning = "#d1ab75",
+#'     brand_danger = "#d175b8"
+#'   ),
+#'   bs_vars_nav(
+#'     default_bg = "#75b8d1",
+#'     default_color = "#FFFFFF",
+#'     default_link_color = "#FFFFFF",
+#'     default_link_active_color = "#FFFFFF"
+#'   ),
+#'   output_file = tmp
+#' )
+#'
+#' # clean
+#' unlink(tmp)
 create_theme <- function(theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
                                    "journal", "lumen", "paper", "readable", "sandstone", "simplex",
                                    "slate", "spacelab", "superhero", "united", "yeti"),
@@ -72,5 +97,16 @@ bootswatch_scss <- function(theme) {
     )
   )
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
