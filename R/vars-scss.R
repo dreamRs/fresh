@@ -158,3 +158,112 @@ bs_vars_font <- function(size_base = NULL,
 
 
 
+
+
+#' @title Bootstrap CSS wells variables
+#'
+#' @description Those variables can be used to customize
+#'  wells panel (e.g. \code{\link[shiny]{wellPanel}} or
+#'  \code{\link[shiny]{sidebarPanel}}) in Bootstrap and Bootswatch themes.
+#'
+#' @param bg Background color (default in Shiny is grey).
+#' @param border Border color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_wells(
+#'   bg = "#CEECF5"
+#' )
+bs_vars_wells <- function(bg = NULL, border = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "well")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+
+
+#' @title Bootstrap CSS states variables
+#'
+#' @description Those variables can be used to customize
+#'  states colors (used for alerts or panels) in Bootstrap and Bootswatch themes.
+#'
+#' @param success_text Success text color.
+#' @param success_bg Success background color.
+#' @param success_border Success border color.
+#' @param info_text Info text color.
+#' @param info_bg Info background color.
+#' @param info_border Info border color.
+#' @param warning_text Warning text color.
+#' @param warning_bg Warning background color.
+#' @param warning_border Warning border color.
+#' @param danger_text Danger text color.
+#' @param danger_bg Danger background color.
+#' @param danger_border Danger border color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_state(
+#'   success_text = "#FFF",
+#'   success_bg = "#238B45",
+#'   success_border = "#00441B"
+#' )
+bs_vars_state <- function(success_text = NULL,
+                          success_bg = NULL,
+                          success_border = NULL,
+                          info_text = NULL,
+                          info_bg = NULL,
+                          info_border = NULL,
+                          warning_text = NULL,
+                          warning_bg = NULL,
+                          warning_border = NULL,
+                          danger_text = NULL,
+                          danger_bg = NULL,
+                          danger_border = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "state")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+
+
+#' @title Bootstrap CSS input variables
+#'
+#' @description Those variables can be used to customize
+#'  inputs in Bootstrap and Bootswatch themes.
+#'
+#' @param bg Background color.
+#' @param color Text color.
+#' @param border Border color.
+#' @param border_radius Border radius.
+#' @param color_placeholder Text color of placeholder.
+#' @param group_addon_bg Background color of addons.
+#' @param border_focus Color of border when focused.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+bs_vars_input <- function(bg = NULL,
+                          color = NULL,
+                          border = NULL,
+                          border_radius = NULL,
+                          color_placeholder = NULL,
+                          group_addon_bg = NULL,
+                          border_focus = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "input")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
