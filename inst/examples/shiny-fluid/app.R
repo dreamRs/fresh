@@ -10,6 +10,12 @@ library(fresh)
 
 create_theme(
   theme = "default",
+  bs_vars_nav(
+    default_bg = "#3f2d54",
+    default_color = "#FFFFFF",
+    default_link_color = "#FFFFFF",
+    default_link_active_color = "#FFFFFF"
+  ),
   bs_vars_color(
     gray_base = "#354e5c",
     brand_primary = "#75b8d1",
@@ -22,96 +28,112 @@ create_theme(
     success_text = "#FFF",
     success_bg = "#c9d175",
     success_border = "#c9d175",
+    info_text = "#FFF",
+    info_bg = "#3f2d54",
+    info_border = "#3f2d54",
     danger_text = "#FFF",
     danger_bg = "#d175b8",
     danger_border = "#d175b8"
   ),
   bs_vars_wells(
-    bg = "#98dfd8" # "#86d1d9", "#98dfd8"
+    bg = "#FFF",
+    border = "#3f2d54"
   ),
   output_file = "www/mytheme.css"
 )
 
-ui <- fluidPage(
+ui <- navbarPage(
 
+  title = "My application",
   theme = "mytheme.css",
 
-  tags$h1("Custom theme for Shiny apps"),
+  tabPanel(
+    title = "First page",
 
-  sidebarLayout(
-    sidebarPanel(
-      radioButtons(
-        inputId = "radio",
-        label = "Your choice:",
-        choices = c("shiny", "shinydashboard", "flexdashboard")
-      )
-    ),
-    mainPanel(
+    tags$h1("Custom theme for Shiny apps"),
 
-      tags$h3("Buttons"),
-      actionButton(
-        "primary", "Primary", class = "btn-primary"
-      ),
-      actionButton(
-        "success", "Success", class = "btn-success"
-      ),
-      actionButton(
-        "info", "Info", class = "btn-info"
-      ),
-      actionButton(
-        "warning", "Warning", class = "btn-warning"
-      ),
-      actionButton(
-        "danger", "Danger", class = "btn-danger"
-      ),
-
-      tags$h3("Panel from {shinyWidgets}"),
-      fluidRow(
-        column(
-          width = 4,
-          panel(
-            heading = "Primary panel",
-            status = "primary"
-          )
+    sidebarLayout(
+      sidebarPanel(
+        radioButtons(
+          inputId = "radio",
+          label = "Your choice:",
+          choices = c("shiny", "shinydashboard", "flexdashboard")
         ),
-        column(
-          width = 4,
-          panel(
-            heading = "Success panel",
-            status = "success"
-          )
-        ),
-        column(
-          width = 4,
-          panel(
-            heading = "Danger panel",
-            status = "danger"
-          )
+        tags$div(
+          class = "alert alert-info",
+          icon("info"), "You can customize a lot of elements from Bootstrap"
         )
       ),
+      mainPanel(
 
-      tags$h3("progressBar from {shinyWidgets}"),
-      fluidRow(
-        column(
-          width = 4,
-          progressBar(
-            "pb1", value = 80, status = "primary", display_pct = TRUE
+        tags$h3("Buttons"),
+        actionButton(
+          "primary", "Primary", class = "btn-primary"
+        ),
+        actionButton(
+          "success", "Success", class = "btn-success"
+        ),
+        actionButton(
+          "info", "Info", class = "btn-info"
+        ),
+        actionButton(
+          "warning", "Warning", class = "btn-warning"
+        ),
+        actionButton(
+          "danger", "Danger", class = "btn-danger"
+        ),
+
+        tags$h3("Panel from {shinyWidgets}"),
+        fluidRow(
+          column(
+            width = 4,
+            panel(
+              heading = "Primary panel",
+              status = "primary"
+            )
+          ),
+          column(
+            width = 4,
+            panel(
+              heading = "Success panel",
+              status = "success"
+            )
+          ),
+          column(
+            width = 4,
+            panel(
+              heading = "Danger panel",
+              status = "danger"
+            )
           )
         ),
-        column(
-          width = 4,
-          progressBar(
-            "pb2", value = 60, status = "success", display_pct = TRUE
-          )
-        ),
-        column(
-          width = 4,
-          progressBar(
-            "pb3", value = 40, status = "danger", display_pct = TRUE
+
+        tags$h3("progressBar from {shinyWidgets}"),
+        fluidRow(
+          column(
+            width = 4,
+            progressBar(
+              "pb1", value = 80, status = "primary", display_pct = TRUE
+            )
+          ),
+          column(
+            width = 4,
+            progressBar(
+              "pb2", value = 60, status = "success", display_pct = TRUE
+            )
+          ),
+          column(
+            width = 4,
+            progressBar(
+              "pb3", value = 40, status = "danger", display_pct = TRUE
+            )
           )
         )
       )
     )
+  ),
+  tabPanel(
+    title = "Second page"
   )
 
 )

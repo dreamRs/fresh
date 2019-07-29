@@ -30,3 +30,12 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 Those variables can be used to customize
  inputs in Bootstrap and Bootswatch themes.
 }
+\note{
+See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+}
+\examples{
+
+bs_vars_input(
+  border_radius = "10px" # change border radius
+)
+}

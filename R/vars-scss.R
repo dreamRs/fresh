@@ -1,4 +1,41 @@
 
+#' @title Bootstrap CSS global variables
+#'
+#' @description Those variables can be used to customize
+#'  Bootstrap and Bootswatch themes.
+#'
+#' @param body_bg Background color for the body.
+#' @param text_color Global text color on body.
+#' @param link_color Global textual link color.
+#' @param link_hover_color Link hover color.
+#' @param line_height_base Unit-less `line-height` for use in components like buttons.
+#' @param grid_columns Number of columns in the grid, e.g. in \code{\link[shiny]{column}}.
+#' @param grid_gutter_width Padding between columns. Gets divided in half for the left and right.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_global(
+#'   body_bg = "#FAFAFA" # change background color
+#' )
+bs_vars_global <- function(body_bg,
+                           text_color,
+                           link_color,
+                           link_hover_color,
+                           line_height_base,
+                           grid_columns,
+                           grid_gutter_width) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+
+
 #' @title Bootstrap CSS colors variables
 #'
 #' @description Those variables can be used to customize
@@ -172,6 +209,8 @@ bs_vars_font <- function(size_base = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
+#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+#'
 #' @examples
 #'
 #' bs_vars_wells(
@@ -207,6 +246,8 @@ bs_vars_wells <- function(bg = NULL, border = NULL) {
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
+#'
+#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 #'
 #' @examples
 #'
@@ -252,7 +293,13 @@ bs_vars_state <- function(success_text = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
+#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+#'
 #' @examples
+#'
+#' bs_vars_input(
+#'   border_radius = "10px" # change border radius
+#' )
 bs_vars_input <- function(bg = NULL,
                           color = NULL,
                           border = NULL,
@@ -266,4 +313,63 @@ bs_vars_input <- function(bg = NULL,
   class(vars) <- c("fresh_sass_vars", class(vars))
   vars
 }
+
+
+
+
+#' @title Bootstrap CSS alert variables
+#'
+#' @description Those variables can be used to customize
+#'  inputs in Bootstrap and Bootswatch themes.
+#'
+#' @param padding Padding for alerts.
+#' @param border_radius Border radius (rounded corners)
+#' @param link_font_weight Font weight for links in alerts.
+#' @param success_text Success text color.
+#' @param success_bg Success background color.
+#' @param success_border Success border color.
+#' @param info_text Info text color.
+#' @param info_bg Info background color.
+#' @param info_border Info border color.
+#' @param warning_text Warning text color.
+#' @param warning_bg Warning background color.
+#' @param warning_border Warning border color.
+#' @param danger_text Danger text color.
+#' @param danger_bg Danger background color.
+#' @param danger_border Danger border color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+#'
+#' @examples
+#'
+#' bs_vars_alert(
+#'   border_radius = "10px", # increase border radius,
+#'   success_bg = "#c9d175" # change color for success alerts
+#' )
+bs_vars_alert <- function(padding = NULL,
+                          border_radius = NULL,
+                          link_font_weight = NULL,
+                          success_text = NULL,
+                          success_bg = NULL,
+                          success_border = NULL,
+                          info_text = NULL,
+                          info_bg = NULL,
+                          info_border = NULL,
+                          warning_text = NULL,
+                          warning_bg = NULL,
+                          warning_border = NULL,
+                          danger_text = NULL,
+                          danger_bg = NULL,
+                          danger_border = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "alert")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+
 
