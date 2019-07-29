@@ -9,7 +9,7 @@
 #' @param link_color Global textual link color.
 #' @param link_hover_color Link hover color.
 #' @param line_height_base Unit-less `line-height` for use in components like buttons.
-#' @param grid_columns Number of columns in the grid, e.g. in \code{\link[shiny]{column}}.
+#' @param grid_columns Number of columns in the grid, e.g. in \code{\link[shiny:fluidPage]{shiny::fluidRow(shiny::column(...))}}.
 #' @param grid_gutter_width Padding between columns. Gets divided in half for the left and right.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
@@ -311,8 +311,8 @@ bs_vars_font <- function(size_base = NULL,
 #' @title Bootstrap CSS wells variables
 #'
 #' @description Those variables can be used to customize
-#'  wells panel (e.g. \code{\link[shiny]{wellPanel}} or
-#'  \code{\link[shiny]{sidebarPanel}}) in Bootstrap and Bootswatch themes.
+#'  wells panel (e.g. \code{\link[shiny:wellPanel]{shiny::wellPanel}} or
+#'  \code{\link[shiny:sidebarPanel]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
 #'
 #' @param bg Background color (default in Shiny is grey).
 #' @param border Border color.
@@ -516,6 +516,120 @@ bs_vars_alert <- function(padding = NULL,
   class(vars) <- c("fresh_sass_vars", class(vars))
   vars
 }
+
+
+
+#' @title Bootstrap CSS progress variables
+#'
+#' @description Those variables can be used to customize
+#'  progress bars (e.g. \code{\link[shinyWidgets:progress-bar]{shinyWidgets::progressBar}}
+#'  and \code{\link[shiny:Progress]{shiny::Progress or shiny::withProgress}})
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param bg Background color of the whole progress component
+#' @param bar_color Progress bar text color
+#' @param border_radius Variable for setting rounded corners on progress bar.
+#' @param bar_bg Default progress bar color.
+#' @param bar_success_bg Success progress bar color.
+#' @param bar_warning_bg Warning progress bar color.
+#' @param bar_danger_bg Danger progress bar color.
+#' @param bar_info_bg Info progress bar color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_progress(
+#'   border_radius = "15px",
+#'   bar_bg = "#1B9E77",
+#'   bar_info_bg = "#D95F02",
+#'   bar_success_bg = "#7570B3",
+#'   bar_danger_bg = "#E7298A"
+#' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_progress(
+#'           border_radius = "15px",
+#'           bar_bg = "#1B9E77",
+#'           bar_info_bg = "#D95F02",
+#'           bar_success_bg = "#7570B3",
+#'           bar_danger_bg = "#E7298A"
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$h1("Custom progress bars"),
+#'     # actionButton()
+#'     fluidRow(
+#'       column(
+#'         width = 6,
+#'         progressBar(
+#'           "pb1", value = 90, display_pct = TRUE
+#'         )
+#'       ),
+#'       column(
+#'         width = 6,
+#'         progressBar(
+#'           "pb2", value = 70, status = "info", display_pct = TRUE
+#'         )
+#'       ),
+#'       column(
+#'         width = 6,
+#'         progressBar(
+#'           "pb3", value = 50, status = "success", display_pct = TRUE
+#'         )
+#'       ),
+#'       column(
+#'         width = 6,
+#'         progressBar(
+#'           "pb4", value = 30, status = "danger", display_pct = TRUE
+#'         )
+#'       )
+#'     ),
+#'     plotOutput("plot")
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'     output$plot <- renderPlot({
+#'       withProgress(message = 'Calculation in progress',
+#'                    detail = 'This may take a while...', value = 0, {
+#'                      for (i in 1:15) {
+#'                        incProgress(1/15)
+#'                        Sys.sleep(0.25)
+#'                      }
+#'                    })
+#'       plot(cars)
+#'     })
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_progress <- function(bg = NULL,
+                             bar_color = NULL,
+                             border_radius = NULL,
+                             bar_bg = NULL,
+                             bar_success_bg = NULL,
+                             bar_warning_bg = NULL,
+                             bar_danger_bg = NULL,
+                             bar_info_bg = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "progress")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+
 
 
 

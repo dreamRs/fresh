@@ -19,7 +19,7 @@ bs_vars_global(body_bg = NULL, text_color = NULL, link_color = NULL,
 
 \item{line_height_base}{Unit-less `line-height` for use in components like buttons.}
 
-\item{grid_columns}{Number of columns in the grid, e.g. in \code{\link[shiny]{column}}.}
+\item{grid_columns}{Number of columns in the grid, e.g. in \code{\link[shiny:fluidPage]{shiny::fluidRow(shiny::column(...))}}.}
 
 \item{grid_gutter_width}{Padding between columns. Gets divided in half for the left and right.}
 }
