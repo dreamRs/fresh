@@ -63,7 +63,6 @@ if (interactive()) {
       )
     ))),
     tags$h1("Custom progress bars"),
-    # actionButton()
     fluidRow(
       column(
         width = 6,

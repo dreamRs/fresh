@@ -567,7 +567,6 @@ bs_vars_alert <- function(padding = NULL,
 #'       )
 #'     ))),
 #'     tags$h1("Custom progress bars"),
-#'     # actionButton()
 #'     fluidRow(
 #'       column(
 #'         width = 6,
@@ -631,5 +630,154 @@ bs_vars_progress <- function(bg = NULL,
 
 
 
-
+#' @title Bootstrap CSS panel variables
+#'
+#' @description Those variables can be used to customize
+#'  panel (e.g. \code{\link[shinyWidgets:panel]{shinyWidgets::panel}}
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param bg Background color.
+#' @param body_padding Panel body padding.
+#' @param heading_padding Panel heading padding.
+#' @param footer_padding Panel footer padding.
+#' @param border_radius Variable for setting rounded corners on panel.
+#' @param inner_border Border color for inner elements in panel.
+#' @param footer_bg Panel footer background color.
+#' @param default_text Default color for text.
+#' @param default_border Default border color.
+#' @param default_heading_bg Default background color for panel heading.
+#' @param primary_text Text color for primary status.
+#' @param primary_border Border color for primary status.
+#' @param primary_heading_bg Heading background color for primary status.
+#' @param success_text Text color for success status.
+#' @param success_border Border color for success status.
+#' @param success_heading_bg Heading background color for success status.
+#' @param info_text Text color for info status.
+#' @param info_border Border color for info status.
+#' @param info_heading_bg Heading background color for info status.
+#' @param warning_text Text color for warning status.
+#' @param warning_border Border color for warning status.
+#' @param warning_heading_bg Heading background color for warning status.
+#' @param danger_text Text color for danger status.
+#' @param danger_border Border color for danger status.
+#' @param danger_heading_bg Heading background color for danger status.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_panel(
+#'   border_radius = "15px",
+#'   default_text = "#FFF",
+#'   default_heading_bg = "#3f2d54",
+#'   default_border = "#3f2d54",
+#'   primary_heading_bg = "#1B9E77",
+#'   primary_border = "#1B9E77",
+#'   success_heading_bg = "#D95F02",
+#'   success_border = "#D95F02",
+#'   success_text = "#FFF",
+#'   danger_heading_bg = "#7570B3",
+#'   danger_border = "#7570B3",
+#'   danger_text = "#FFF"
+#' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_panel(
+#'           border_radius = "15px",
+#'           default_text = "#FFF",
+#'           default_heading_bg = "#3f2d54",
+#'           default_border = "#3f2d54",
+#'           primary_heading_bg = "#1B9E77",
+#'           primary_border = "#1B9E77",
+#'           success_heading_bg = "#D95F02",
+#'           success_border = "#D95F02",
+#'           success_text = "#FFF",
+#'           danger_heading_bg = "#7570B3",
+#'           danger_border = "#7570B3",
+#'           danger_text = "#FFF"
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$h1("Custom panels"),
+#'     fluidRow(
+#'       column(
+#'         width = 3,
+#'         panel(
+#'           heading = "Default panel",
+#'           "Some content"
+#'         )
+#'       ),
+#'       column(
+#'         width = 3,
+#'         panel(
+#'           heading = "Primary panel",
+#'           status = "primary",
+#'           "Some content"
+#'         )
+#'       ),
+#'       column(
+#'         width = 3,
+#'         panel(
+#'           heading = "Success panel",
+#'           status = "success",
+#'           "Some content"
+#'         )
+#'       ),
+#'       column(
+#'         width = 3,
+#'         panel(
+#'           heading = "Danger panel",
+#'           status = "danger",
+#'           "Some content"
+#'         )
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_panel <- function(bg = NULL,
+                          body_padding = NULL,
+                          heading_padding = NULL,
+                          footer_padding = NULL,
+                          border_radius = NULL,
+                          inner_border = NULL,
+                          footer_bg = NULL,
+                          default_text = NULL,
+                          default_border = NULL,
+                          default_heading_bg = NULL,
+                          primary_text = NULL,
+                          primary_border = NULL,
+                          primary_heading_bg = NULL,
+                          success_text = NULL,
+                          success_border = NULL,
+                          success_heading_bg = NULL,
+                          info_text = NULL,
+                          info_border = NULL,
+                          info_heading_bg = NULL,
+                          warning_text = NULL,
+                          warning_border = NULL,
+                          warning_heading_bg = NULL,
+                          danger_text = NULL,
+                          danger_border = NULL,
+                          danger_heading_bg = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "panel")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
 

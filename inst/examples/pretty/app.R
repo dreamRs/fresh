@@ -2,16 +2,20 @@
 library(shiny)
 library(shinyWidgets)
 
+
+create_pretty(
+  output_file = "www/pretty.css",
+  primary = "#1B9E77",
+  success = "#7570B3",
+  info = "#D95F02",
+  danger = "#E7298A"
+)
+
 ui <- fluidPage(
   tags$h1("Pretty checkbox"),
   br(),
 
-  htmltools::htmlDependency(
-    name = "pretty",
-    version = "1000",
-    src = c(file = "www"),
-    stylesheet = "pretty.css"
-  ),
+  use_pretty("pretty.css"),
 
   fluidRow(
     column(
@@ -34,7 +38,7 @@ ui <- fluidPage(
       br(),
       prettyCheckbox(inputId = "checkbox5",
                      label = "Click me!", icon = icon("check"),
-                     animation = "tada", status = "default"),
+                     animation = "tada", status = "success"),
       verbatimTextOutput(outputId = "res5")
     ),
     column(
