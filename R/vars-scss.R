@@ -20,13 +20,89 @@
 #' bs_vars_global(
 #'   body_bg = "#FAFAFA" # change background color
 #' )
-bs_vars_global <- function(body_bg,
-                           text_color,
-                           link_color,
-                           link_hover_color,
-                           line_height_base,
-                           grid_columns,
-                           grid_gutter_width) {
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_global(
+#'           body_bg = "#F5A9E1",
+#'           text_color = "#FFF",
+#'           grid_columns = 16
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$h1("My custom app!"),
+#'     tags$h3("With plenty of columns!"),
+#'     fluidRow(
+#'       column(
+#'         width = 1, "Column 1"
+#'       ),
+#'       column(
+#'         width = 1, "Column 2"
+#'       ),
+#'       column(
+#'         width = 1, "Column 3"
+#'       ),
+#'       column(
+#'         width = 1, "Column 4"
+#'       ),
+#'       column(
+#'         width = 1, "Column 5"
+#'       ),
+#'       column(
+#'         width = 1, "Column 6"
+#'       ),
+#'       column(
+#'         width = 1, "Column 7"
+#'       ),
+#'       column(
+#'         width = 1, "Column 8"
+#'       ),
+#'       column(
+#'         width = 1, "Column 9"
+#'       ),
+#'       column(
+#'         width = 1, "Column 10"
+#'       ),
+#'       column(
+#'         width = 1, "Column 11"
+#'       ),
+#'       column(
+#'         width = 1, "Column 12"
+#'       ),
+#'       column(
+#'         width = 1, "Column 13"
+#'       ),
+#'       column(
+#'         width = 1, "Column 14"
+#'       ),
+#'       column(
+#'         width = 1, "Column 15"
+#'       ),
+#'       column(
+#'         width = 1, "Column 16"
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_global <- function(body_bg = NULL,
+                           text_color = NULL,
+                           link_color = NULL,
+                           link_hover_color = NULL,
+                           line_height_base = NULL,
+                           grid_columns = NULL,
+                           grid_gutter_width = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
@@ -46,8 +122,6 @@ bs_vars_global <- function(body_bg,
 #' @param brand_info Info color (default in Bootstrap is light blue).
 #' @param brand_warning Warning color (default in Bootstrap is orange).
 #' @param brand_danger Danger color (default in Bootstrap is red).
-#' @param body_bg Background color (default in Bootstrap is white).
-#' @param text_color Text color (default in Bootstrap is black).
 #' @param gray_base Base gray color.
 #' @param gray_darker Darker gray color.
 #' @param gray_dark Dark gray color.
@@ -71,18 +145,16 @@ bs_vars_global <- function(body_bg,
 #'   brand_danger = "#d175b8"
 #' )
 bs_vars_color <- function(brand_primary = NULL,
-                       brand_success = NULL,
-                       brand_info = NULL,
-                       brand_warning = NULL,
-                       brand_danger = NULL,
-                       body_bg = NULL,
-                       text_color = NULL,
-                       gray_base = NULL,
-                       gray_darker = NULL,
-                       gray_dark = NULL,
-                       gray = NULL,
-                       gray_light = NULL,
-                       gray_lighter = NULL) {
+                          brand_success = NULL,
+                          brand_info = NULL,
+                          brand_warning = NULL,
+                          brand_danger = NULL,
+                          gray_base = NULL,
+                          gray_darker = NULL,
+                          gray_dark = NULL,
+                          gray = NULL,
+                          gray_light = NULL,
+                          gray_lighter = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
@@ -104,12 +176,16 @@ bs_vars_color <- function(brand_primary = NULL,
 #' @param default_link_color Link color.
 #' @param default_link_active_color Color for active link (selected tab).
 #' @param default_link_active_bg Background color for active link (selected tab).
+#' @param default_link_hover_color Color of links when hovered.
+#' @param default_link_hover_bg Background color of links when hovered.
 #' @param inverse_color Color of text for inversed navbar.
 #' @param inverse_bg Background color for inversed navbar.
 #' @param inverse_border Border color for inversed navbar.
 #' @param inverse_link_color Link color for inversed navbar.
 #' @param inverse_link_active_color Color for active link (selected tab) for inversed navbar.
 #' @param inverse_link_active_bg Background color for active link (selected tab) for inversed navbar.
+#' @param inverse_link_hover_color Color of links when hovered for inversed navbar.
+#' @param inverse_link_hover_bg Background color of links when hovered for inversed navbar.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
@@ -126,6 +202,37 @@ bs_vars_color <- function(brand_primary = NULL,
 #'   default_link_color = "#FFFFFF",
 #'   default_link_active_color = "#FFFFFF"
 #' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'
+#'   ui <- navbarPage(
+#'     title = "Custom navbar",
+#'     header = tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_nav(
+#'           default_bg = "#75b8d1",
+#'           default_color = "#FFFFFF",
+#'           default_link_color = "#FFFFFF",
+#'           default_link_active_color = "#75b8d1",
+#'           default_link_active_bg = "#FFFFFF",
+#'           default_link_hover_color = "firebrick"
+#'
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tabPanel("Tab 1"),
+#'     tabPanel("Tab 2")
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
 bs_vars_nav <- function(height = NULL,
                      default_color = NULL,
                      default_bg = NULL,
@@ -133,12 +240,16 @@ bs_vars_nav <- function(height = NULL,
                      default_link_color = NULL,
                      default_link_active_color = NULL,
                      default_link_active_bg = NULL,
+                     default_link_hover_color = NULL,
+                     default_link_hover_bg = NULL,
                      inverse_color = NULL,
                      inverse_bg = NULL,
                      inverse_border = NULL,
                      inverse_link_color = NULL,
                      inverse_link_active_color = NULL,
-                     inverse_link_active_bg = NULL) {
+                     inverse_link_active_bg = NULL,
+                     inverse_link_hover_color = NULL,
+                     inverse_link_hover_bg = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "navbar")
@@ -349,6 +460,41 @@ bs_vars_input <- function(bg = NULL,
 #'   border_radius = "10px", # increase border radius,
 #'   success_bg = "#c9d175" # change color for success alerts
 #' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_alert(
+#'           border_radius = "15px",
+#'           success_bg = "forestgreen",
+#'           success_text = "#FFF",
+#'           danger_bg = "firebrick",
+#'           danger_text = "#FFF"
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$br(),
+#'     tags$div(
+#'       class = "alert alert-success",
+#'       "This is an alert !"
+#'     ),
+#'     tags$div(
+#'       class = "alert alert-danger",
+#'       "This is an other alert !"
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
 bs_vars_alert <- function(padding = NULL,
                           border_radius = NULL,
                           link_font_weight = NULL,

@@ -6,9 +6,8 @@
 \usage{
 bs_vars_color(brand_primary = NULL, brand_success = NULL,
   brand_info = NULL, brand_warning = NULL, brand_danger = NULL,
-  body_bg = NULL, text_color = NULL, gray_base = NULL,
-  gray_darker = NULL, gray_dark = NULL, gray = NULL,
-  gray_light = NULL, gray_lighter = NULL)
+  gray_base = NULL, gray_darker = NULL, gray_dark = NULL,
+  gray = NULL, gray_light = NULL, gray_lighter = NULL)
 }
 \arguments{
 \item{brand_primary}{Primary color (default in Bootstrap is blue).}
@@ -20,10 +19,6 @@ bs_vars_color(brand_primary = NULL, brand_success = NULL,
 \item{brand_warning}{Warning color (default in Bootstrap is orange).}
 
 \item{brand_danger}{Danger color (default in Bootstrap is red).}
-
-\item{body_bg}{Background color (default in Bootstrap is white).}
-
-\item{text_color}{Text color (default in Bootstrap is black).}
 
 \item{gray_base}{Base gray color.}
 

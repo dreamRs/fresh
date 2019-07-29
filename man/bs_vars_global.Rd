@@ -4,8 +4,9 @@
 \alias{bs_vars_global}
 \title{Bootstrap CSS global variables}
 \usage{
-bs_vars_global(body_bg, text_color, link_color, link_hover_color,
-  line_height_base, grid_columns, grid_gutter_width)
+bs_vars_global(body_bg = NULL, text_color = NULL, link_color = NULL,
+  link_hover_color = NULL, line_height_base = NULL,
+  grid_columns = NULL, grid_gutter_width = NULL)
 }
 \arguments{
 \item{body_bg}{Background color for the body.}
@@ -34,4 +35,80 @@ Those variables can be used to customize
 bs_vars_global(
   body_bg = "#FAFAFA" # change background color
 )
+
+if (interactive()) {
+  library(shiny)
+
+  ui <- fluidPage(
+    tags$head(tags$style(HTML(
+      create_theme(
+        theme = "default",
+        bs_vars_global(
+          body_bg = "#F5A9E1",
+          text_color = "#FFF",
+          grid_columns = 16
+        ),
+        output_file = NULL
+      )
+    ))),
+    tags$h1("My custom app!"),
+    tags$h3("With plenty of columns!"),
+    fluidRow(
+      column(
+        width = 1, "Column 1"
+      ),
+      column(
+        width = 1, "Column 2"
+      ),
+      column(
+        width = 1, "Column 3"
+      ),
+      column(
+        width = 1, "Column 4"
+      ),
+      column(
+        width = 1, "Column 5"
+      ),
+      column(
+        width = 1, "Column 6"
+      ),
+      column(
+        width = 1, "Column 7"
+      ),
+      column(
+        width = 1, "Column 8"
+      ),
+      column(
+        width = 1, "Column 9"
+      ),
+      column(
+        width = 1, "Column 10"
+      ),
+      column(
+        width = 1, "Column 11"
+      ),
+      column(
+        width = 1, "Column 12"
+      ),
+      column(
+        width = 1, "Column 13"
+      ),
+      column(
+        width = 1, "Column 14"
+      ),
+      column(
+        width = 1, "Column 15"
+      ),
+      column(
+        width = 1, "Column 16"
+      )
+    )
+  )
+
+  server <- function(input, output, session) {
+
+  }
+
+  shinyApp(ui, server)
+}
 }

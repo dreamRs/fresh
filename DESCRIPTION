@@ -16,5 +16,6 @@ Imports:
 Remotes:
     rstudio/sass
 Suggests: 
-    shinyWidgets
+    shinyWidgets,
+    shiny
 RoxygenNote: 6.1.1

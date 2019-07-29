@@ -7,9 +7,11 @@
 bs_vars_nav(height = NULL, default_color = NULL, default_bg = NULL,
   default_border = NULL, default_link_color = NULL,
   default_link_active_color = NULL, default_link_active_bg = NULL,
+  default_link_hover_color = NULL, default_link_hover_bg = NULL,
   inverse_color = NULL, inverse_bg = NULL, inverse_border = NULL,
   inverse_link_color = NULL, inverse_link_active_color = NULL,
-  inverse_link_active_bg = NULL)
+  inverse_link_active_bg = NULL, inverse_link_hover_color = NULL,
+  inverse_link_hover_bg = NULL)
 }
 \arguments{
 \item{height}{Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).}
@@ -26,6 +28,10 @@ bs_vars_nav(height = NULL, default_color = NULL, default_bg = NULL,
 
 \item{default_link_active_bg}{Background color for active link (selected tab).}
 
+\item{default_link_hover_color}{Color of links when hovered.}
+
+\item{default_link_hover_bg}{Background color of links when hovered.}
+
 \item{inverse_color}{Color of text for inversed navbar.}
 
 \item{inverse_bg}{Background color for inversed navbar.}
@@ -37,6 +43,10 @@ bs_vars_nav(height = NULL, default_color = NULL, default_bg = NULL,
 \item{inverse_link_active_color}{Color for active link (selected tab) for inversed navbar.}
 
 \item{inverse_link_active_bg}{Background color for active link (selected tab) for inversed navbar.}
+
+\item{inverse_link_hover_color}{Color of links when hovered for inversed navbar.}
+
+\item{inverse_link_hover_bg}{Background color of links when hovered for inversed navbar.}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.
@@ -58,4 +68,35 @@ bs_vars_nav(
   default_link_color = "#FFFFFF",
   default_link_active_color = "#FFFFFF"
 )
+
+if (interactive()) {
+  library(shiny)
+
+  ui <- navbarPage(
+    title = "Custom navbar",
+    header = tags$head(tags$style(HTML(
+      create_theme(
+        theme = "default",
+        bs_vars_nav(
+          default_bg = "#75b8d1",
+          default_color = "#FFFFFF",
+          default_link_color = "#FFFFFF",
+          default_link_active_color = "#75b8d1",
+          default_link_active_bg = "#FFFFFF",
+          default_link_hover_color = "firebrick"
+
+        ),
+        output_file = NULL
+      )
+    ))),
+    tabPanel("Tab 1"),
+    tabPanel("Tab 2")
+  )
+
+  server <- function(input, output, session) {
+
+  }
+
+  shinyApp(ui, server)
+}
 }
