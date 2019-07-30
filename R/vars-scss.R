@@ -871,3 +871,116 @@ bs_vars_modal <- function(md = NULL,
   vars
 }
 
+
+
+
+#' @title Bootstrap CSS button variables
+#'
+#' @description Those variables can be used to customize
+#'  buttons (e.g. \code{\link[shiny:actionButton]{shiny::actionButton}}
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param font_weight Text font weight.
+#' @param default_color Text color for default buttons.
+#' @param default_bg Background color for default buttons.
+#' @param default_border Border color for default buttons.
+#' @param primary_color Text color for primary buttons.
+#' @param primary_bg Background color for primary buttons.
+#' @param primary_border Border color for primary buttons.
+#' @param success_color Text color for success buttons.
+#' @param success_bg Background color for success buttons.
+#' @param success_border Border color for success buttons.
+#' @param info_color Text color for info buttons.
+#' @param info_bg Background color for info buttons.
+#' @param info_border Border color for info buttons.
+#' @param warning_color Text color for warning buttons.
+#' @param warning_bg Background color for warning buttons.
+#' @param warning_border Border color for warning buttons.
+#' @param danger_color Text color for danger buttons.
+#' @param danger_bg Background color for danger buttons.
+#' @param danger_border Border color for danger buttons.
+#' @param link_disabled_color Color for disabled link.
+#' @param border_radius_base Button rounded corner.
+#' @param border_radius_large Large utton rounded corner.
+#' @param border_radius_small Small button rounded corner.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_button(
+#'   default_color = "#FFF",
+#'   default_bg = "#112446",
+#'   default_border = "#FFF",
+#'   primary_color = "#112446",
+#'   primary_bg = "#FFF",
+#'   primary_border = "#112446",
+#'   border_radius_base = 0
+#' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_button(
+#'           default_color = "#FFF",
+#'           default_bg = "#112446",
+#'           default_border = "#FFF",
+#'           primary_color = "#112446",
+#'           primary_bg = "#FFF",
+#'           primary_border = "#112446",
+#'           border_radius_base = 0
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$h1("Custom buttons"),
+#'     actionButton("button1", "This is a default button"),
+#'     actionButton(
+#'       "button2", "This is a primary button",
+#'       class = "btn-primary"
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_button <- function(font_weight = NULL,
+                           default_color = NULL,
+                           default_bg = NULL,
+                           default_border = NULL,
+                           primary_color = NULL,
+                           primary_bg = NULL,
+                           primary_border = NULL,
+                           success_color = NULL,
+                           success_bg = NULL,
+                           success_border = NULL,
+                           info_color = NULL,
+                           info_bg = NULL,
+                           info_border = NULL,
+                           warning_color = NULL,
+                           warning_bg = NULL,
+                           warning_border = NULL,
+                           danger_color = NULL,
+                           danger_bg = NULL,
+                           danger_border = NULL,
+                           link_disabled_color = NULL,
+                           border_radius_base = NULL,
+                           border_radius_large = NULL,
+                           border_radius_small = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "btn")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+
