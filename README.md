@@ -1,6 +1,6 @@
 # fresh
 
-> Create fresh themes for Shiny applications and flexdashboard document.
+> Create fresh themes for Shiny applications and flexdashboard documents.
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
@@ -63,3 +63,18 @@ create_theme(
   output_file = "www/mytheme.css"
 )
 ```
+
+Use the created theme like this: 
+
+```r
+navbarPage(
+  
+  title = "My application",
+  theme = "mytheme.css",
+  
+  ...
+)
+```
+
+
+

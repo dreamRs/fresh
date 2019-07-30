@@ -781,3 +781,93 @@ bs_vars_panel <- function(bg = NULL,
   vars
 }
 
+
+
+
+
+#' @title Bootstrap CSS modal variables
+#'
+#' @description Those variables can be used to customize
+#'  modal (e.g. \code{\link[shiny:modalDialog]{shiny::modalDialog}}
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param md Size in pixel for medium modal, e.g. \code{modalDialog(size = "m")}.
+#' @param lg Size in pixel for large modal, e.g. \code{modalDialog(size = "l")}.
+#' @param sm Size in pixel for small modal, e.g. \code{modalDialog(size = "s")}.
+#' @param inner_padding Padding applied to the modal body.
+#' @param title_padding Padding applied to the modal title.
+#' @param title_line_height Modal title line-height.
+#' @param content_bg Background color of modal content area.
+#' @param content_border_color Modal content border color.
+#' @param content_fallback_border_color Modal content border color (for IE8).
+#' @param backdrop_bg Modal backdrop background color.
+#' @param backdrop_opacity Modal backdrop opacity.
+#' @param header_border_color Modal header border color.
+#' @param footer_border_color Modal footer border color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_modal(
+#'   md = "80%",
+#'   backdrop_opacity = 1,
+#'   header_border_color = "#112446",
+#'   footer_border_color = "#112446"
+#' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_modal(
+#'           md = "80%",
+#'           backdrop_opacity = 1,
+#'           header_border_color = "#112446",
+#'           footer_border_color = "#112446"
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$h1("Custom modals"),
+#'     actionButton("show", "Show modal dialog")
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'     observeEvent(input$show, {
+#'       showModal(modalDialog(
+#'         title = "Important message",
+#'         "This is an important message!"
+#'       ))
+#'     })
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_modal <- function(md = NULL,
+                          lg = NULL,
+                          sm = NULL,
+                          inner_padding = NULL,
+                          title_padding = NULL,
+                          title_line_height = NULL,
+                          content_bg = NULL,
+                          content_border_color = NULL,
+                          content_fallback_border_color = NULL,
+                          backdrop_bg = NULL,
+                          backdrop_opacity = NULL,
+                          header_border_color = NULL,
+                          footer_border_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "modal")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
