@@ -14,7 +14,8 @@ create_theme(
     default_bg = "#3f2d54",
     default_color = "#FFFFFF",
     default_link_color = "#FFFFFF",
-    default_link_active_color = "#FFFFFF"
+    default_link_active_color = "#FFFFFF",
+    default_link_hover_color = "#A4A4A4"
   ),
   bs_vars_color(
     gray_base = "#354e5c",
@@ -134,6 +135,13 @@ ui <- navbarPage(
   ),
   tabPanel(
     title = "Second page"
+  ),
+  navbarMenu(
+    title = "More",
+    tabPanel("Summary"),
+    "----",
+    "Section header",
+    tabPanel("Table")
   )
 
 )

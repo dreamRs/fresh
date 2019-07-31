@@ -1,11 +1,13 @@
 Package: fresh
-Title: Fresh 'Bootstrap' Themes
+Title: Fresh 'Shiny' Themes
 Version: 0.0.0.9000
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
   person("Thomas", "Park", role = c("ctb", "cph"), comment = "Bootswatch themes"))
-Description: What the package does (one paragraph).
+Description: Customize 'Bootstrap' and 'Bootswatch' themes, like colors, fonts, grid layout, to use in 'Shiny' applications.
+URL: https://github.com/dreamRs/fresh
+BugReports: https://github.com/dreamRs/fresh/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -17,5 +19,8 @@ Remotes:
     rstudio/sass
 Suggests: 
     shinyWidgets,
-    shiny
+    shiny,
+    knitr,
+    rmarkdown
 RoxygenNote: 6.1.1
+VignetteBuilder: knitr

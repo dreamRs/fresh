@@ -57,7 +57,7 @@ bs_vars_button(font_weight = NULL, default_color = NULL,
 
 \item{border_radius_base}{Button rounded corner.}
 
-\item{border_radius_large}{Large utton rounded corner.}
+\item{border_radius_large}{Large button rounded corner.}
 
 \item{border_radius_small}{Small button rounded corner.}
 }

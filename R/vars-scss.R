@@ -901,7 +901,7 @@ bs_vars_modal <- function(md = NULL,
 #' @param danger_border Border color for danger buttons.
 #' @param link_disabled_color Color for disabled link.
 #' @param border_radius_base Button rounded corner.
-#' @param border_radius_large Large utton rounded corner.
+#' @param border_radius_large Large button rounded corner.
 #' @param border_radius_small Small button rounded corner.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
