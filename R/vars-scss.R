@@ -984,3 +984,95 @@ bs_vars_button <- function(font_weight = NULL,
 }
 
 
+
+
+#' @title Bootstrap CSS dropdown variables
+#'
+#' @description Those variables can be used to customize
+#'  dropdowns (e.g. \code{\link[shinyWidgets:dropdownButton]{shinyWidgets::dropdownButton}}
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param bg Background color for the dropdown menu.
+#' @param border Dropdown menu border-color.
+#' @param fallback_border Dropdown menu border-color (for IE8).
+#' @param divider_bg Divider color for between dropdown items.
+#' @param link_color Dropdown link text color.
+#' @param link_hover_color Hover color for dropdown links.
+#' @param link_hover_bg Hover background for dropdown links.
+#' @param link_active_color Active dropdown menu item text color.
+#' @param link_active_bg Active dropdown menu item background color.
+#' @param link_disabled_color  Disabled dropdown menu item background color.
+#' @param header_color Text color for headers within dropdown menus.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#'
+#' bs_vars_dropdown(
+#'   bg = "#FAFAFA",
+#'   border = "firebrick"
+#' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'
+#'   ui <- fluidPage(
+#'     tags$head(tags$style(HTML(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_dropdown(
+#'           bg = "#FAFAFA",
+#'           border = "firebrick"
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ))),
+#'     tags$h1("Custom dropdowns"),
+#'     dropdownButton(
+#'       inputId = "mydropdown",
+#'       label = "Controls",
+#'       icon = icon("sliders"),
+#'       status = "primary",
+#'       circle = FALSE,
+#'       sliderInput(
+#'         inputId = "n",
+#'         label = "Number of observations",
+#'         min = 10, max = 100, value = 30
+#'       ),
+#'       prettyToggle(
+#'         inputId = "na",
+#'         label_on = "NAs keeped",
+#'         label_off = "NAs removed",
+#'         icon_on = icon("check"),
+#'         icon_off = icon("remove")
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_dropdown <- function(bg = NULL,
+                             border = NULL,
+                             fallback_border = NULL,
+                             divider_bg = NULL,
+                             link_color = NULL,
+                             link_hover_color = NULL,
+                             link_hover_bg = NULL,
+                             link_active_color = NULL,
+                             link_active_bg = NULL,
+                             link_disabled_color = NULL,
+                             header_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "dropdown")
+  class(vars) <- c("fresh_sass_vars", class(vars))
+  vars
+}
+
+

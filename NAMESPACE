@@ -3,6 +3,7 @@
 export(bs_vars_alert)
 export(bs_vars_button)
 export(bs_vars_color)
+export(bs_vars_dropdown)
 export(bs_vars_font)
 export(bs_vars_global)
 export(bs_vars_input)
