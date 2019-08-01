@@ -1,6 +1,6 @@
 # fresh
 
-> Create fresh themes for Shiny applications and flexdashboard documents.
+> Create fresh themes for use in Shiny applications and flexdashboard documents.
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
