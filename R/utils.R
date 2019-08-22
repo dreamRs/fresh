@@ -13,3 +13,13 @@ vars_names <- function(x, prefix = NULL) {
   names(x) <- n_x
   x
 }
+
+
+is_bootstrap_vars <- function(vars) {
+  all(unlist(lapply(vars, inherits, what = "bootstrap_vars")))
+}
+
+
+is_adminlte_vars <- function(vars) {
+  all(unlist(lapply(vars, inherits, what = "adminlte_vars")))
+}

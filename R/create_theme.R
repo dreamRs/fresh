@@ -3,8 +3,8 @@
 #'
 #' @description Allow to customize some CSS variables from Bootstrap themes to be included in Shiny applications.
 #'
+#' @param ... Lists of CSS variables declared with \code{bs_vars_*} or \code{adminlte_*} functions.
 #' @param theme Base theme to use.
-#' @param ... Lists of CSS variables declared with \code{\link{bs_vars_color}},  \code{\link{bs_vars_nav}}.
 #' @param output_file Specifies path to output file for compiled CSS.
 #'
 #' @return If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
@@ -40,25 +40,40 @@
 #'
 #' # clean
 #' unlink(tmp)
-create_theme <- function(theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
+create_theme <- function(...,
+                         theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
                                    "journal", "lumen", "paper", "readable", "sandstone", "simplex",
                                    "slate", "spacelab", "superhero", "united", "yeti"),
-                         ...,
                          output_file = NULL) {
   theme <- match.arg(theme)
   vars <- list(...)
-  vars <- Reduce(c, vars)
-  if (identical(theme, "default")) {
-    input <- list(
-      vars,
-      bootstrap_scss()
-    )
+  if (is_bootstrap_vars(vars)) {
+    framework <- "bootstrap"
+  } else if (is_adminlte_vars(vars)) {
+    framework <- "adminlte"
   } else {
+    stop("You cannot mix Bootstrap and AddminLTE variables", call. = FALSE)
+  }
+  vars <- Reduce(c, vars)
+  if (identical(framework, "bootstrap")) {
+    if (identical(theme, "default")) {
+      input <- list(
+        vars,
+        bootstrap_scss()
+      )
+    } else {
+      input <- list(
+        vars,
+        bootswatch_vars_scss(theme),
+        bootstrap_scss(),
+        bootswatch_scss(theme)
+      )
+    }
+  } else if (identical(framework, "adminlte")) {
     input <- list(
       vars,
-      bootswatch_vars_scss(theme),
-      bootstrap_scss(),
-      bootswatch_scss(theme)
+      adminlte_scss(),
+      adminlte_skin_scss()
     )
   }
   sass(
@@ -99,9 +114,22 @@ bootswatch_scss <- function(theme) {
 }
 
 
+#' @importFrom sass sass_file
+adminlte_scss <- function() {
+  sass_file(input = system.file(
+    "assets/adminlte/scss/AdminLTE.scss",
+    package = "fresh"
+  ))
+}
 
 
-
+#' @importFrom sass sass_file
+adminlte_skin_scss <- function() {
+  sass_file(input = system.file(
+    "assets/adminlte/scss/skins/_all-skins.scss",
+    package = "fresh"
+  ))
+}
 
 
 

@@ -106,7 +106,7 @@ bs_vars_global <- function(body_bg = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -158,7 +158,7 @@ bs_vars_color <- function(brand_primary = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -253,7 +253,7 @@ bs_vars_nav <- function(height = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "navbar")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -335,7 +335,7 @@ bs_vars_font <- function(size_base = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "font")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -366,7 +366,7 @@ bs_vars_wells <- function(bg = NULL, border = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "well")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -417,7 +417,7 @@ bs_vars_state <- function(success_text = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "state")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -456,7 +456,7 @@ bs_vars_input <- function(bg = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "input")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -548,7 +548,7 @@ bs_vars_alert <- function(padding = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "alert")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -659,7 +659,7 @@ bs_vars_progress <- function(bg = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "progress")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -812,7 +812,7 @@ bs_vars_panel <- function(bg = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "panel")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -902,7 +902,7 @@ bs_vars_modal <- function(md = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "modal")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -1013,7 +1013,7 @@ bs_vars_button <- function(font_weight = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "btn")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 
@@ -1105,7 +1105,7 @@ bs_vars_dropdown <- function(bg = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "dropdown")
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
 

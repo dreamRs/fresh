@@ -4,15 +4,15 @@
 \alias{create_theme}
 \title{Create a custom Bootstrap theme}
 \usage{
-create_theme(theme = c("default", "cerulean", "cosmo", "cyborg",
+create_theme(..., theme = c("default", "cerulean", "cosmo", "cyborg",
   "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone",
-  "simplex", "slate", "spacelab", "superhero", "united", "yeti"), ...,
+  "simplex", "slate", "spacelab", "superhero", "united", "yeti"),
   output_file = NULL)
 }
 \arguments{
-\item{theme}{Base theme to use.}
+\item{...}{Lists of CSS variables declared with \code{bs_vars_*} or \code{adminlte_*} functions.}
 
-\item{...}{Lists of CSS variables declared with \code{\link{bs_vars_color}},  \code{\link{bs_vars_nav}}.}
+\item{theme}{Base theme to use.}
 
 \item{output_file}{Specifies path to output file for compiled CSS.}
 }
