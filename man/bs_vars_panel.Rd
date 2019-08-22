@@ -96,7 +96,7 @@ if (interactive()) {
   library(shinyWidgets)
 
   ui <- fluidPage(
-    tags$head(tags$style(HTML(
+    use_theme(
       create_theme(
         theme = "default",
         bs_vars_panel(
@@ -115,7 +115,7 @@ if (interactive()) {
         ),
         output_file = NULL
       )
-    ))),
+    ),
     tags$h1("Custom panels"),
     fluidRow(
       column(

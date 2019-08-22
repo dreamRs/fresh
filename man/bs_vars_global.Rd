@@ -40,7 +40,7 @@ if (interactive()) {
   library(shiny)
 
   ui <- fluidPage(
-    tags$head(tags$style(HTML(
+    use_theme(
       create_theme(
         theme = "default",
         bs_vars_global(
@@ -50,7 +50,7 @@ if (interactive()) {
         ),
         output_file = NULL
       )
-    ))),
+    ),
     tags$h1("My custom app!"),
     tags$h3("With plenty of columns!"),
     fluidRow(

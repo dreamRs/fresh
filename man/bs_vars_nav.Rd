@@ -74,7 +74,7 @@ if (interactive()) {
 
   ui <- navbarPage(
     title = "Custom navbar",
-    header = tags$head(tags$style(HTML(
+    header = use_theme(
       create_theme(
         theme = "default",
         bs_vars_nav(
@@ -88,7 +88,7 @@ if (interactive()) {
         ),
         output_file = NULL
       )
-    ))),
+    ),
     tabPanel("Tab 1"),
     tabPanel("Tab 2")
   )

@@ -63,7 +63,7 @@ if (interactive()) {
   library(shiny)
 
   ui <- fluidPage(
-    tags$head(tags$style(HTML(
+    use_theme(
       create_theme(
         theme = "default",
         bs_vars_alert(
@@ -75,7 +75,7 @@ if (interactive()) {
         ),
         output_file = NULL
       )
-    ))),
+    ),
     tags$br(),
     tags$div(
       class = "alert alert-success",

@@ -83,10 +83,9 @@ bs_vars_button(
 
 if (interactive()) {
   library(shiny)
-  library(shinyWidgets)
 
   ui <- fluidPage(
-    tags$head(tags$style(HTML(
+    use_theme(
       create_theme(
         theme = "default",
         bs_vars_button(
@@ -100,7 +99,7 @@ if (interactive()) {
         ),
         output_file = NULL
       )
-    ))),
+    ),
     tags$h1("Custom buttons"),
     actionButton("button1", "This is a default button"),
     actionButton(

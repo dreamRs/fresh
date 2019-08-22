@@ -25,7 +25,7 @@
 #'   library(shiny)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_global(
@@ -35,7 +35,7 @@
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$h1("My custom app!"),
 #'     tags$h3("With plenty of columns!"),
 #'     fluidRow(
@@ -208,7 +208,7 @@ bs_vars_color <- function(brand_primary = NULL,
 #'
 #'   ui <- navbarPage(
 #'     title = "Custom navbar",
-#'     header = tags$head(tags$style(HTML(
+#'     header = use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_nav(
@@ -222,7 +222,7 @@ bs_vars_color <- function(brand_primary = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tabPanel("Tab 1"),
 #'     tabPanel("Tab 2")
 #'   )
@@ -288,6 +288,41 @@ bs_vars_nav <- function(height = NULL,
 #' bs_vars_font(
 #'   size_base = "12px"
 #' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(fresh)
+#'
+#'   ui <- fluidPage(
+#'     use_theme(create_theme(
+#'       theme = "default",
+#'       bs_vars_font(
+#'         size_base = "32px"
+#'       )
+#'     )),
+#'     tags$h1("Big font theme"),
+#'
+#'     sidebarLayout(
+#'       sidebarPanel(
+#'         "This is the sidebar panel"
+#'       ),
+#'       mainPanel(
+#'         tags$h1("First level title"),
+#'         tags$h2("Second level title"),
+#'         tags$h3("Third level title"),
+#'         tags$h4("Fourth level title"),
+#'         tags$h5("Fifth level title"),
+#'         tags$h6("Sixth level title")
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
 bs_vars_font <- function(size_base = NULL,
                          size_large = NULL,
                          size_small = NULL,
@@ -465,7 +500,7 @@ bs_vars_input <- function(bg = NULL,
 #'   library(shiny)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_alert(
@@ -477,7 +512,7 @@ bs_vars_input <- function(bg = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$br(),
 #'     tags$div(
 #'       class = "alert alert-success",
@@ -553,7 +588,7 @@ bs_vars_alert <- function(padding = NULL,
 #'   library(shinyWidgets)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_progress(
@@ -565,7 +600,7 @@ bs_vars_alert <- function(padding = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$h1("Custom progress bars"),
 #'     fluidRow(
 #'       column(
@@ -687,7 +722,7 @@ bs_vars_progress <- function(bg = NULL,
 #'   library(shinyWidgets)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_panel(
@@ -706,7 +741,7 @@ bs_vars_progress <- function(bg = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$h1("Custom panels"),
 #'     fluidRow(
 #'       column(
@@ -822,7 +857,7 @@ bs_vars_panel <- function(bg = NULL,
 #'   library(shinyWidgets)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_modal(
@@ -833,7 +868,7 @@ bs_vars_panel <- function(bg = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$h1("Custom modals"),
 #'     actionButton("show", "Show modal dialog")
 #'   )
@@ -921,10 +956,9 @@ bs_vars_modal <- function(md = NULL,
 #'
 #' if (interactive()) {
 #'   library(shiny)
-#'   library(shinyWidgets)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_button(
@@ -938,7 +972,7 @@ bs_vars_modal <- function(md = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$h1("Custom buttons"),
 #'     actionButton("button1", "This is a default button"),
 #'     actionButton(
@@ -1019,7 +1053,7 @@ bs_vars_button <- function(font_weight = NULL,
 #'   library(shinyWidgets)
 #'
 #'   ui <- fluidPage(
-#'     tags$head(tags$style(HTML(
+#'     use_theme(
 #'       create_theme(
 #'         theme = "default",
 #'         bs_vars_dropdown(
@@ -1028,7 +1062,7 @@ bs_vars_button <- function(font_weight = NULL,
 #'         ),
 #'         output_file = NULL
 #'       )
-#'     ))),
+#'     ),
 #'     tags$h1("Custom dropdowns"),
 #'     dropdownButton(
 #'       inputId = "mydropdown",

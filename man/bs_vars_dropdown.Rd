@@ -53,7 +53,7 @@ if (interactive()) {
   library(shinyWidgets)
 
   ui <- fluidPage(
-    tags$head(tags$style(HTML(
+    use_theme(
       create_theme(
         theme = "default",
         bs_vars_dropdown(
@@ -62,7 +62,7 @@ if (interactive()) {
         ),
         output_file = NULL
       )
-    ))),
+    ),
     tags$h1("Custom dropdowns"),
     dropdownButton(
       inputId = "mydropdown",
