@@ -1,0 +1,21 @@
+{
+  "name": "admin-lte-2-sass",
+  "version": "0.0.2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/onkbear/admin-lte-2-sass"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "^3.4.1",
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "copy-bootstrap": "yarn run copy-bootstrap-sass && yarn run copy-bootstrap-font",
+    "copy-bootstrap-sass": "cp -R node_modules/bootstrap-sass/assets/stylesheets assets/bootstrap-sass",
+    "copy-bootstrap-font": "cp -R node_modules/bootstrap-sass/assets/fonts/bootstrap assets/fonts/bootstrap",
+    "build": "node-sass assets/scss/AdminLTE.scss dist/AdminLTE.css && node-sass assets/scss/AdminLTE-without-plugins.scss dist/AdminLTE-without-plugins.css && node-sass assets/scss/skins/_all-skins.scss dist/all-skins.css"
+  }
+}

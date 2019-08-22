@@ -4,7 +4,8 @@ Version: 0.0.0.9000
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),
-  person("Thomas", "Park", role = c("ctb", "cph"), comment = "Bootswatch themes"))
+  person("Thomas", "Park", role = c("ctb", "cph"), comment = "Bootswatch themes"),
+  person("onkbear", role = c("ctb", "cph"), comment = "admin-lte-2-sass"))
 Description: Customize 'Bootstrap' and 'Bootswatch' themes, like colors, fonts, grid layout, to use in 'Shiny' applications.
 URL: https://github.com/dreamRs/fresh
 BugReports: https://github.com/dreamRs/fresh/issues
