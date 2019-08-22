@@ -1,6 +1,6 @@
 # fresh
 
-> Create fresh themes for use in shiny applications and flexdashboard documents.
+> Create fresh themes for use in {shiny} & {shinydashboard} applications and {flexdashboard} documents.
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
@@ -80,3 +80,38 @@ navbarPage(
 
 
 
+
+## shinydashboard
+
+Customize colors used in Shiny dashboard applications :
+
+From :
+
+![](man/figures/shinydashboard-default.png)
+
+Obtain this :
+
+![](man/figures/shinydashboard-custom.png)
+
+
+With:
+
+```r
+create_theme(
+  adminlte_global(
+    content_bg = "#FFF"
+  ),
+  adminlte_sidebar(
+    dark_bg = "#80829a",
+    dark_hover_bg = "#53486c"
+  ),
+  adminlte_color(
+    light_blue = "#3f2d54",
+    aqua = "#75b8d1",
+    green = "#c9d175",
+    red = "#d175b8",
+    purple = "#3f2d54",
+    yellow = "#d1ab75"
+  )
+)
+```
