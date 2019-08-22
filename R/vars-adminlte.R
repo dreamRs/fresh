@@ -121,3 +121,91 @@ adminlte_color <- function(light_blue = NULL,
   class(vars) <- c("fresh_sass_vars", "adminlte_vars", class(vars))
   vars
 }
+
+
+
+
+
+#' @title AdminLTE CSS sidebar variables
+#'
+#' @description Those variables can be used to customize
+#'  the sidebar in {shinydashboard}.
+#'
+#' @param width Side bar width, default to \code{230px}.
+#' @param dark_bg Background color (dark mode).
+#' @param dark_hover_bg Background hover color (dark mode).
+#' @param dark_color Text color (dark mode).
+#' @param dark_hover_color Text hover color (dark mode).
+#' @param dark_submenu_bg Background sub-menu color (dark mode).
+#' @param dark_submenu_color Text sub-menu color (dark mode).
+#' @param dark_submenu_hover_color Text sub-menu hover color (dark mode).
+#' @param light_bg Background color (light mode).
+#' @param light_hover_bg Background hover color (light mode).
+#' @param light_color Text color (light mode).
+#' @param light_hover_color Text hover color (light mode).
+#' @param light_submenu_bg Background sub-menu color (light mode).
+#' @param light_submenu_color Text sub-menu color (light mode).
+#' @param light_submenu_hover_color Text sub-menu hover color (light mode).
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinydashboard)
+#'
+#'   ui <- dashboardPage(
+#'     header = dashboardHeader(title = "My dashboard"),
+#'     sidebar = dashboardSidebar(
+#'       sidebarMenu(
+#'         menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+#'         menuItem("Widgets", icon = icon("th"), tabName = "widgets", badgeLabel = "new",
+#'                  badgeColor = "green"),
+#'         menuItem("Charts", icon = icon("bar-chart-o"),
+#'                  menuSubItem("Sub-item 1", tabName = "subitem1"),
+#'                  menuSubItem("Sub-item 2", tabName = "subitem2")
+#'         )
+#'       )
+#'     ),
+#'     body = dashboardBody(
+#'
+#'       use_theme(create_theme(
+#'         adminlte_sidebar(
+#'           dark_bg = "#F5A9A9",
+#'           dark_hover_bg = "#8A0808"
+#'         )
+#'       ))
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+adminlte_sidebar <- function(width = NULL,
+                             dark_bg = NULL,
+                             dark_hover_bg = NULL,
+                             dark_color = NULL,
+                             dark_hover_color = NULL,
+                             dark_submenu_bg = NULL,
+                             dark_submenu_color = NULL,
+                             dark_submenu_hover_color = NULL,
+                             light_bg = NULL,
+                             light_hover_bg = NULL,
+                             light_color = NULL,
+                             light_hover_color = NULL,
+                             light_submenu_bg = NULL,
+                             light_submenu_color = NULL,
+                             light_submenu_hover_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "sidebar")
+  class(vars) <- c("fresh_sass_vars", "adminlte_vars", class(vars))
+  vars
+}
+
+
+
