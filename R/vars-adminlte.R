@@ -209,3 +209,49 @@ adminlte_sidebar <- function(width = NULL,
 
 
 
+#' @title AdminLTE CSS global variables
+#'
+#' @description Those variables can be used to customize
+#'  global settings in {shinydashboard}.
+#'
+#' @param content_bg Background color of the body.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinydashboard)
+#'
+#'   ui <- dashboardPage(
+#'     header = dashboardHeader(title = "My dashboard"),
+#'     sidebar = dashboardSidebar(),
+#'     body = dashboardBody(
+#'
+#'       use_theme(create_theme(
+#'         adminlte_global(
+#'           content_bg = "#FAAC58"
+#'         )
+#'       ))
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+adminlte_global <- function(content_bg = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "adminlte_vars", class(vars))
+  vars
+}
+
+
+
+
+
