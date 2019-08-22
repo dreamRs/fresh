@@ -70,8 +70,9 @@
     background-image: none;
     padding: $navbar-padding-vertical $navbar-padding-horizontal;
     //Add the fontawesome bars icon
-    font-family: fontAwesome;
+    //font-family: fontAwesome;
     &:before {
+      font-family: "Font Awesome 5 Free";
       content: "\f0c9";
     }
     &:hover {
