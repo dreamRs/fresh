@@ -16,8 +16,6 @@ Imports:
     sass,
     htmltools,
     rstudioapi
-Remotes:
-    rstudio/sass
 Suggests: 
     shinyWidgets,
     shiny,
