@@ -1,6 +1,6 @@
 Package: fresh
 Title: Fresh 'Shiny' Themes
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),

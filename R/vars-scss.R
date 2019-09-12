@@ -11,6 +11,7 @@
 #' @param line_height_base Unit-less `line-height` for use in components like buttons.
 #' @param grid_columns Number of columns in the grid, e.g. in \code{\link[shiny:fluidPage]{shiny::fluidRow(shiny::column(...))}}.
 #' @param grid_gutter_width Padding between columns. Gets divided in half for the left and right.
+#' @param border_radius_base Base border radius (rounds the corners of elements).
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
@@ -102,7 +103,8 @@ bs_vars_global <- function(body_bg = NULL,
                            link_hover_color = NULL,
                            line_height_base = NULL,
                            grid_columns = NULL,
-                           grid_gutter_width = NULL) {
+                           grid_gutter_width = NULL,
+                           border_radius_base = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
@@ -1105,6 +1107,62 @@ bs_vars_dropdown <- function(bg = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "dropdown")
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
+  vars
+}
+
+
+
+#' @title Bootstrap CSS pills variables
+#'
+#' @description Those variables can be used to customize
+#'  pills (e.g. \code{\link[shiny:tabsetPanel]{shiny:tabsetPanel}}
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param border_radius Rounded corner of elements.
+#' @param active_link_hover_bg Background color when selected.
+#' @param active_link_hover_color Text color when selected.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(fresh)
+#'
+#'   ui <- fluidPage(
+#'     use_theme(
+#'       create_theme(
+#'         theme = "default",
+#'         bs_vars_pills(
+#'           border_radius = "100px",
+#'           active_link_hover_bg = "#DF3A01",
+#'           active_link_hover_color = "#FFF"
+#'         ),
+#'         output_file = NULL
+#'       )
+#'     ),
+#'     tabsetPanel(
+#'       type = "pills",
+#'       tabPanel("Plot", plotOutput("plot")),
+#'       tabPanel("Summary", verbatimTextOutput("summary")),
+#'       tabPanel("Table", tableOutput("table"))
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_pills <- function(border_radius = NULL,
+                          active_link_hover_bg = NULL,
+                          active_link_hover_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "nav-pills")
   class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }

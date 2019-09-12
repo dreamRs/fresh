@@ -6,7 +6,8 @@
 \usage{
 bs_vars_global(body_bg = NULL, text_color = NULL, link_color = NULL,
   link_hover_color = NULL, line_height_base = NULL,
-  grid_columns = NULL, grid_gutter_width = NULL)
+  grid_columns = NULL, grid_gutter_width = NULL,
+  border_radius_base = NULL)
 }
 \arguments{
 \item{body_bg}{Background color for the body.}
@@ -22,6 +23,8 @@ bs_vars_global(body_bg = NULL, text_color = NULL, link_color = NULL,
 \item{grid_columns}{Number of columns in the grid, e.g. in \code{\link[shiny:fluidPage]{shiny::fluidRow(shiny::column(...))}}.}
 
 \item{grid_gutter_width}{Padding between columns. Gets divided in half for the left and right.}
+
+\item{border_radius_base}{Base border radius (rounds the corners of elements).}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.
