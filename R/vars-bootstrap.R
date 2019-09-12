@@ -146,6 +146,74 @@ bs_vars_global <- function(body_bg = NULL,
 #'   brand_warning = "#d1ab75",
 #'   brand_danger = "#d175b8"
 #' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'   library(fresh)
+#'
+#'   ui <- fluidPage(
+#'     use_theme(create_theme(
+#'       theme = "default",
+#'       bs_vars_color(
+#'         brand_primary = "#75b8d1",
+#'         brand_success = "#c9d175",
+#'         brand_info = "#758bd1",
+#'         brand_warning = "#d1ab75",
+#'         brand_danger = "#d175b8"
+#'       )
+#'     )),
+#'     tags$h1("Colors"),
+#'
+#'     tags$p("Apply to :"),
+#'     tags$p("buttons"),
+#'     actionButton("btn1", "Primary", class = "btn-primary"),
+#'     actionButton("btn2", "Success", class = "btn-success"),
+#'     actionButton("btn3", "Danger", class = "btn-danger"),
+#'     actionButton("btn4", "Warning", class = "btn-warning"),
+#'     actionButton("btn5", "info", class = "btn-info"),
+#'     tags$br(), tags$br(),
+#'     tags$p("links"),
+#'     tags$a(href = "", "A link (same color as the primary button)"),
+#'     tags$br(), tags$br(),
+#'     tags$p("labels"),
+#'     tags$span(class = "label label-primary", "Primary"),
+#'     tags$span(class = "label label-success", "Success"),
+#'     tags$span(class = "label label-danger", "Danger"),
+#'     tags$span(class = "label label-warning", "Warning"),
+#'     tags$span(class = "label label-info", "Info"),
+#'     tags$br(), tags$br(),
+#'     tags$p("progress bars"),
+#'     progressBar(
+#'       "pb1", value = 80, status = "primary", display_pct = TRUE
+#'     ),
+#'     progressBar(
+#'       "pb2", value = 80, status = "success", display_pct = TRUE
+#'     ),
+#'     progressBar(
+#'       "pb3", value = 80, status = "danger", display_pct = TRUE
+#'     ),
+#'     progressBar(
+#'       "pb4", value = 80, status = "warning", display_pct = TRUE
+#'     ),
+#'     progressBar(
+#'       "pb5", value = 80, status = "info", display_pct = TRUE
+#'     ),
+#'     tags$br(), tags$br(),
+#'     tags$p("and panels (only primary)"),
+#'     panel(
+#'       heading = "Primary panel",
+#'       status = "primary",
+#'       "For other status, look at ?bs_vars_state"
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
 bs_vars_color <- function(brand_primary = NULL,
                           brand_success = NULL,
                           brand_info = NULL,
@@ -1163,6 +1231,80 @@ bs_vars_pills <- function(border_radius = NULL,
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "nav-pills")
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
+  vars
+}
+
+
+
+
+
+
+#' @title Bootstrap CSS tabs variables
+#'
+#' @description Those variables can be used to customize
+#'  pills (e.g. \code{\link[shiny:tabsetPanel]{shiny:tabsetPanel}}
+#'  in Bootstrap and Bootswatch themes.
+#'
+#' @param border_color Border color.
+#' @param link_hover_border_color Link hover color.
+#' @param active_link_hover_bg Active link hover background color.
+#' @param active_link_hover_color Active link hover color.
+#' @param active_link_hover_border_color Active link hover border color.
+#' @param justified_link_border_color Justified link border color.
+#' @param justified_active_link_border_color Justified active link border color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(fresh)
+#'
+#'   ui <- fluidPage(
+#'     use_theme(create_theme(
+#'       theme = "default",
+#'       bs_vars_global(
+#'         link_color = "#00FF00" #green
+#'       ),
+#'       bs_vars_tabs(
+#'         border_color = "#FF0000", # red
+#'         link_hover_border_color = "#FFFF00", # yellow
+#'         active_link_hover_bg = "#FF00FF", # pink
+#'         active_link_hover_color = "#FFF" # white
+#'       )
+#'     )),
+#'     tags$h1("Tabs panel"),
+#'
+#'     sidebarLayout(
+#'       sidebarPanel(),
+#'       mainPanel(
+#'         tabsetPanel(
+#'           tabPanel("Plot", plotOutput("plot")),
+#'           tabPanel("Summary", verbatimTextOutput("summary")),
+#'           tabPanel("Table", tableOutput("table"))
+#'         )
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_tabs <- function(border_color = NULL,
+                         link_hover_border_color = NULL,
+                         active_link_hover_bg = NULL,
+                         active_link_hover_color = NULL,
+                         active_link_hover_border_color = NULL,
+                         justified_link_border_color = NULL,
+                         justified_active_link_border_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "nav-tabs")
   class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
