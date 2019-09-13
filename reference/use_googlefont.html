@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bootstrap CSS tabs variables — bs_vars_tabs • fresh</title>
+<title>Use online Google font in Shiny application — use_googlefont • fresh</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,11 +32,9 @@
 
 
 
-<meta property="og:title" content="Bootstrap CSS tabs variables — bs_vars_tabs" />
+<meta property="og:title" content="Use online Google font in Shiny application — use_googlefont" />
 
-<meta property="og:description" content="Those variables can be used to customize
- pills (e.g. shiny:tabsetPanel
- in Bootstrap and Bootswatch themes." />
+<meta property="og:description" content="Use online Google font in Shiny application" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -117,61 +115,31 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Bootstrap CSS tabs variables</h1>
-    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bootstrap.R'><code>R/vars-bootstrap.R</code></a></small>
-    <div class="hidden name"><code>bs_vars_tabs.Rd</code></div>
+    <h1>Use online Google font in Shiny application</h1>
+    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/fonts.R'><code>R/fonts.R</code></a></small>
+    <div class="hidden name"><code>use_googlefont.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Those variables can be used to customize
- pills (e.g. <code><a href='https://rdrr.io/pkg/shiny/man/tabsetPanel.html'>shiny:tabsetPanel</a></code>
- in Bootstrap and Bootswatch themes.</p>
+    <p>Use online Google font in Shiny application</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_tabs</span>(<span class='kw'>border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>link_hover_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>active_link_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>active_link_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>active_link_hover_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>justified_link_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>justified_active_link_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>use_googlefont</span>(<span class='no'>family</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>border_color</th>
-      <td><p>Border color.</p></td>
-    </tr>
-    <tr>
-      <th>link_hover_border_color</th>
-      <td><p>Link hover color.</p></td>
-    </tr>
-    <tr>
-      <th>active_link_hover_bg</th>
-      <td><p>Active link hover background color.</p></td>
-    </tr>
-    <tr>
-      <th>active_link_hover_color</th>
-      <td><p>Active link hover color.</p></td>
-    </tr>
-    <tr>
-      <th>active_link_hover_border_color</th>
-      <td><p>Active link hover border color.</p></td>
-    </tr>
-    <tr>
-      <th>justified_link_border_color</th>
-      <td><p>Justified link border color.</p></td>
-    </tr>
-    <tr>
-      <th>justified_active_link_border_color</th>
-      <td><p>Justified active link border color.</p></td>
+      <th>family</th>
+      <td><p>Name of the family to use, see <a href='https://fonts.google.com'>https://fonts.google.com</a>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a HTML tag to be included in a UI definition</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -180,28 +148,48 @@
   <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>fresh</span>)
 
   <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+
+    <span class='fu'>use_googlefont</span>(<span class='st'>"Saira Stencil One"</span>),
     <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
       <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-      <span class='fu'><a href='bs_vars_global.html'>bs_vars_global</a></span>(
-        <span class='kw'>link_color</span> <span class='kw'>=</span> <span class='st'>"#00FF00"</span> <span class='co'>#green</span>
-      ),
-      <span class='fu'>bs_vars_tabs</span>(
-        <span class='kw'>border_color</span> <span class='kw'>=</span> <span class='st'>"#FF0000"</span>, <span class='co'># red</span>
-        <span class='kw'>link_hover_border_color</span> <span class='kw'>=</span> <span class='st'>"#FFFF00"</span>, <span class='co'># yellow</span>
-        <span class='kw'>active_link_hover_bg</span> <span class='kw'>=</span> <span class='st'>"#FF00FF"</span>, <span class='co'># pink</span>
-        <span class='kw'>active_link_hover_color</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span> <span class='co'># white</span>
+      <span class='fu'><a href='bs_vars_font.html'>bs_vars_font</a></span>(
+        <span class='kw'>family_sans_serif</span> <span class='kw'>=</span> <span class='st'>"'Saira Stencil One', cursive"</span>
       )
     )),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Tabs panel"</span>),
 
-    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarLayout</a></span>(
-      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarPanel.html'>sidebarPanel</a></span>(),
-      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/mainPanel.html'>mainPanel</a></span>(
-        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tabsetPanel.html'>tabsetPanel</a></span>(
-          <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tabPanel.html'>tabPanel</a></span>(<span class='st'>"Plot"</span>, <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/plotOutput.html'>plotOutput</a></span>(<span class='st'>"plot"</span>)),
-          <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tabPanel.html'>tabPanel</a></span>(<span class='st'>"Summary"</span>, <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/verbatimTextOutput.html'>verbatimTextOutput</a></span>(<span class='st'>"summary"</span>)),
-          <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tabPanel.html'>tabPanel</a></span>(<span class='st'>"Table"</span>, <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tableOutput.html'>tableOutput</a></span>(<span class='st'>"table"</span>))
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Use a google font (online demo)"</span>),
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
+        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>),
+        <span class='no'>tags</span>$<span class='fu'>b</span>(<span class='st'>"Bold text"</span>),
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>p</a></span>(
+          <span class='st'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"</span>,
+          <span class='st'>" sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</span>,
+          <span class='st'>"Ut enim ad minim veniam, quis nostrud exercitation ullamco"</span>,
+          <span class='st'>" laboris nisi ut aliquip ex ea commodo consequat."</span>,
+          <span class='st'>"Duis aute irure dolor in reprehenderit in voluptate velit"</span>,
+          <span class='st'>" esse cillum dolore eu fugiat nulla pariatur."</span>,
+          <span class='st'>"Excepteur sint occaecat cupidatat non proident, sunt in"</span>,
+          <span class='st'>" culpa qui officia deserunt mollit anim id est laborum."</span>
         )
+      ),
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
+        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/textInput.html'>textInput</a></span>(<span class='st'>"caption"</span>, <span class='st'>"Caption"</span>, <span class='st'>"Data Summary"</span>),
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/actionButton.html'>actionButton</a></span>(<span class='st'>"goButton"</span>, <span class='st'>"Go!"</span>),
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/checkboxGroupInput.html'>checkboxGroupInput</a></span>(<span class='st'>"variable"</span>, <span class='st'>"Variables to show:"</span>,
+                           <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cylinders"</span> <span class='kw'>=</span> <span class='st'>"cyl"</span>,
+                             <span class='st'>"Transmission"</span> <span class='kw'>=</span> <span class='st'>"am"</span>,
+                             <span class='st'>"Gears"</span> <span class='kw'>=</span> <span class='st'>"gear"</span>)),
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/selectInput.html'>selectInput</a></span>(<span class='st'>"variable"</span>, <span class='st'>"Variable:"</span>,
+                    <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cylinders"</span> <span class='kw'>=</span> <span class='st'>"cyl"</span>,
+                      <span class='st'>"Transmission"</span> <span class='kw'>=</span> <span class='st'>"am"</span>,
+                      <span class='st'>"Gears"</span> <span class='kw'>=</span> <span class='st'>"gear"</span>))
       )
     )
   )
