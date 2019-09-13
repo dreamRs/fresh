@@ -4,11 +4,14 @@
 \alias{bs_vars_font}
 \title{Bootstrap CSS font variables}
 \usage{
-bs_vars_font(size_base = NULL, size_large = NULL, size_small = NULL,
-  size_h1 = NULL, size_h2 = NULL, size_h3 = NULL, size_h4 = NULL,
-  size_h5 = NULL, size_h6 = NULL)
+bs_vars_font(family_sans_serif = NULL, size_base = NULL,
+  size_large = NULL, size_small = NULL, size_h1 = NULL,
+  size_h2 = NULL, size_h3 = NULL, size_h4 = NULL, size_h5 = NULL,
+  size_h6 = NULL)
 }
 \arguments{
+\item{family_sans_serif}{Font family to use.}
+
 \item{size_base}{Size of base font, e.g. normal text, default in Bootstrap is \code{"15px"}.}
 
 \item{size_large}{Size of large text.}

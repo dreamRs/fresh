@@ -335,6 +335,7 @@ bs_vars_nav <- function(height = NULL,
 #' @description Those variables can be used to customize
 #'  fonts in Bootstrap and Bootswatch themes.
 #'
+#' @param family_sans_serif Font family to use.
 #' @param size_base Size of base font, e.g. normal text, default in Bootstrap is \code{"15px"}.
 #' @param size_large Size of large text.
 #' @param size_small Size of small text.
@@ -393,7 +394,8 @@ bs_vars_nav <- function(height = NULL,
 #'
 #'   shinyApp(ui, server)
 #' }
-bs_vars_font <- function(size_base = NULL,
+bs_vars_font <- function(family_sans_serif = NULL,
+                         size_base = NULL,
                          size_large = NULL,
                          size_small = NULL,
                          size_h1 = NULL,
