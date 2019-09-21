@@ -34,7 +34,8 @@
 
 <meta property="og:title" content="Use a template to define SCSS variables — use_vars_template" />
 
-<meta property="og:description" content="Use a template to define SCSS variables" />
+<meta property="og:description" content="Open a SCSS template to modify variable,
+ after use vars_file to import variables and create a theme." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -122,7 +123,8 @@
 
     <div class="ref-description">
     
-    <p>Use a template to define SCSS variables</p>
+    <p>Open a SCSS template to modify variable,
+ after use <a href='vars_file.html'>vars_file</a> to import variables and create a theme.</p>
     
     </div>
 
@@ -144,15 +146,17 @@
     </tr>
     <tr>
       <th>open</th>
-      <td><p>Open the newly created file for editing? Happens in RStudio, if applicable, or via <code><a href='https://rdrr.io/r/utils/file.edit.html'>utils::file.edit()</a></code> otherwise.</p></td>
+      <td><p>Open the newly created file for editing? Happens in RStudio,
+if applicable, or via <code><a href='https://rdrr.io/r/utils/file.edit.html'>utils::file.edit()</a></code> otherwise.</p></td>
     </tr>
     </table>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='co'># \donttest{</span>
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 
+<span class='co'># this will open a template</span>
+<span class='co'># to modify variables of the flatly theme</span>
 <span class='fu'>use_vars_template</span>(
   <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='st'>"custom.scss"</span>,
   <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"flatly"</span>
@@ -178,7 +182,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

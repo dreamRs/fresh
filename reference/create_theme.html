@@ -156,8 +156,8 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='co'># Temporary file</span>
-<span class='no'>tmp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"my-pretty.css"</span>)
+<span class='co'># using a temporary file but use the path you want</span>
+<span class='no'>tmp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"custom-theme.css"</span>)
 
 <span class='co'># Create the new theme</span>
 <span class='fu'>create_theme</span>(
@@ -178,7 +178,15 @@
   <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='no'>tmp</span>
 )
 
-<span class='co'># clean</span>
+<span class='co'># Use the file created at the path provided</span>
+<span class='co'># in your Shiny app by moving it in the</span>
+<span class='co'># www/ folder, then use it in UI</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"custom-theme.css"</span>
+)</div><div class='output co'>#&gt; &lt;div class="container-fluid"&gt;&lt;/div&gt;</div><div class='input'>
+<span class='co'># clean up</span>
 <span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>tmp</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -201,7 +209,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>
