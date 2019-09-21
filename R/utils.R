@@ -16,10 +16,10 @@ vars_names <- function(x, prefix = NULL) {
 
 
 is_bootstrap_vars <- function(vars) {
-  all(unlist(lapply(vars, inherits, what = "bootstrap_vars")))
+  unlist(lapply(vars, inherits, what = "bootstrap_vars"))
 }
 
 
 is_adminlte_vars <- function(vars) {
-  all(unlist(lapply(vars, inherits, what = "adminlte_vars")))
+  unlist(lapply(vars, inherits, what = "adminlte_vars"))
 }

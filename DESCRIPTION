@@ -21,6 +21,8 @@ Suggests:
     shiny,
     shinydashboard,
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 2.1.0),
+    covr
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr

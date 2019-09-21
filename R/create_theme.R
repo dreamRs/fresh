@@ -1,4 +1,17 @@
 
+# cat(
+#   "Au lac de tes yeux tr\u00e8s profond",
+#   "Mon pauvre c\u0153ur se noie et fond",
+#   "L\u00e0 le d\u00e9font",
+#   "Dans l\'eau d\'amour et de folie",
+#   "Souvenir et M\u00e9lancolie",
+#   "",
+#   "Guillaume Apollinaire",
+#   sep = "\n"
+# )
+
+
+
 #' @title Create a custom Bootstrap theme
 #'
 #' @description Allow to customize some CSS variables from Bootstrap themes to be included in Shiny applications.
@@ -16,8 +29,8 @@
 #'
 #' @examples
 #'
-#' # Temporary file
-#' tmp <- file.path(tempdir(), "my-pretty.css")
+#' # using a temporary file but use the path you want
+#' tmp <- file.path(tempdir(), "custom-theme.css")
 #'
 #' # Create the new theme
 #' create_theme(
@@ -38,7 +51,16 @@
 #'   output_file = tmp
 #' )
 #'
-#' # clean
+#' # Use the file created at the path provided
+#' # in your Shiny app by moving it in the
+#' # www/ folder, then use it in UI
+#'
+#' library(shiny)
+#' fluidPage(
+#'   theme = "custom-theme.css"
+#' )
+#'
+#' # clean up
 #' unlink(tmp)
 create_theme <- function(...,
                          theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
@@ -47,12 +69,25 @@ create_theme <- function(...,
                          output_file = NULL) {
   theme <- match.arg(theme)
   vars <- list(...)
-  if (is_bootstrap_vars(vars)) {
+  if (all(is_bootstrap_vars(vars))) {
     framework <- "bootstrap"
-  } else if (is_adminlte_vars(vars)) {
+  } else if (all(is_adminlte_vars(vars))) {
     framework <- "adminlte"
   } else {
-    stop("You cannot mix Bootstrap and AddminLTE variables", call. = FALSE)
+    if (any(is_bootstrap_vars(vars)) & any(is_adminlte_vars(vars))) {
+      stop("You cannot mix Bootstrap and AddminLTE variables", call. = FALSE)
+    } else {
+      if (any(is_bootstrap_vars(vars))) {
+        framework <- "bootstrap"
+        warning("Using custom variables with Bootstrap SCSS files", call. = FALSE)
+      } else if (any(is_adminlte_vars(vars))) {
+        framework <- "adminlte"
+        warning("Using custom variables with adminlte SCSS files", call. = FALSE)
+      } else {
+        framework <- "bootstrap"
+        warning("Using custom variables with Bootstrap SCSS files", call. = FALSE)
+      }
+    }
   }
   vars <- Reduce(c, vars)
   if (identical(framework, "bootstrap")) {

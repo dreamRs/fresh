@@ -16,7 +16,7 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 SCSS variables from a file
 }
 \examples{
-\dontrun{
+\donttest{
 
 # Open template and edit variables
 use_vars_template(

@@ -6,7 +6,7 @@
 #' @return a HTML tag to be included in a UI definition
 #' @export
 #'
-#' @importFrom htmltools singleton tags HTML
+#' @importFrom htmltools htmlDependency
 #'
 #' @examples
 #' if (interactive()) {
@@ -68,14 +68,14 @@
 #' }
 use_googlefont <- function(family) {
   family_w_plus <- gsub(pattern = "\\s", replacement = "+", x = family)
-  htmltools::htmlDependency(
+  htmlDependency(
     name = family,
     version = "0.1.0",
     src = c(href = sprintf(
       "https://fonts.googleapis.com/css?family=%s&display=swap",
       family_w_plus
     )),
-    style = ""
+    stylesheet = ""
   )
 }
 

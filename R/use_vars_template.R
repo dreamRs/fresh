@@ -1,9 +1,13 @@
 
-#' Use a template to define SCSS variables
+#' @title Use a template to define SCSS variables
+#'
+#' @description Open a SCSS template to modify variable,
+#'  after use \link{vars_file} to import variables and create a theme.
 #'
 #' @param output_file Path where to create the template, use \code{".scss"} as file extension.
 #' @param theme Base theme to use, e.g. \code{"cosmo"} to start modifying the cosmo theme.
-#' @param open Open the newly created file for editing? Happens in RStudio, if applicable, or via \code{utils::file.edit()} otherwise.
+#' @param open Open the newly created file for editing? Happens in RStudio,
+#'  if applicable, or via \code{utils::file.edit()} otherwise.
 #'
 #' @export
 #'
@@ -11,9 +15,10 @@
 #' @importFrom utils file.edit
 #'
 #' @examples
-#'
 #' \donttest{
 #'
+#' # this will open a template
+#' # to modify variables of the flatly theme
 #' use_vars_template(
 #'   output_file = "custom.scss",
 #'   theme = "flatly"
@@ -44,13 +49,13 @@ use_vars_template <- function(output_file,
       to = output_file
     )
   }
-  if (isTRUE(rc) & isTRUE(open)) {
+  if (isTRUE(rc) & isTRUE(open)) { # nocov start
     if (rstudioapi::isAvailable()) {
       rstudioapi::navigateToFile(file = output_file)
     } else {
       utils::file.edit(output_file)
     }
-  }
+  } # nocov end
 }
 
 
@@ -62,7 +67,7 @@ use_vars_template <- function(output_file,
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'
 #' # Open template and edit variables
 #' use_vars_template(
@@ -83,7 +88,7 @@ vars_file <- function(input_file) {
   vars <- sass_file(
     input = input_file
   )
-  class(vars) <- c("fresh_sass_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "fresh_file_vars", class(vars))
   vars
 }
 

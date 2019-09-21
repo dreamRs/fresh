@@ -25,8 +25,8 @@ Allow to customize some CSS variables from Bootstrap themes to be included in Sh
 }
 \examples{
 
-# Temporary file
-tmp <- file.path(tempdir(), "my-pretty.css")
+# using a temporary file but use the path you want
+tmp <- file.path(tempdir(), "custom-theme.css")
 
 # Create the new theme
 create_theme(
@@ -47,6 +47,15 @@ create_theme(
   output_file = tmp
 )
 
-# clean
+# Use the file created at the path provided
+# in your Shiny app by moving it in the
+# www/ folder, then use it in UI
+
+library(shiny)
+fluidPage(
+  theme = "custom-theme.css"
+)
+
+# clean up
 unlink(tmp)
 }

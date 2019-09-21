@@ -14,15 +14,18 @@ use_vars_template(output_file, theme = c("default", "cerulean", "cosmo",
 
 \item{theme}{Base theme to use, e.g. \code{"cosmo"} to start modifying the cosmo theme.}
 
-\item{open}{Open the newly created file for editing? Happens in RStudio, if applicable, or via \code{utils::file.edit()} otherwise.}
+\item{open}{Open the newly created file for editing? Happens in RStudio,
+if applicable, or via \code{utils::file.edit()} otherwise.}
 }
 \description{
-Use a template to define SCSS variables
+Open a SCSS template to modify variable,
+ after use \link{vars_file} to import variables and create a theme.
 }
 \examples{
-
 \donttest{
 
+# this will open a template
+# to modify variables of the flatly theme
 use_vars_template(
   output_file = "custom.scss",
   theme = "flatly"
