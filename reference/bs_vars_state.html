@@ -67,7 +67,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
       </span>
     </div>
 
@@ -212,7 +212,48 @@
 #&gt; [1] "#00441B"
 #&gt; 
 #&gt; attr(,"class")
-#&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div></pre>
+#&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
+<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shinyWidgets</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>fresh</span>)
+
+  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+
+    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
+      <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
+      <span class='fu'>bs_vars_state</span>(
+        <span class='kw'>success_text</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>,
+        <span class='kw'>success_bg</span> <span class='kw'>=</span> <span class='st'>"#238B45"</span>,
+        <span class='kw'>success_border</span> <span class='kw'>=</span> <span class='st'>"#00441B"</span>
+      )
+    )),
+
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"State variables"</span>),
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
+        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>div</a></span>(
+          <span class='kw'>class</span> <span class='kw'>=</span> <span class='st'>"alert alert-success"</span>,
+          <span class='no'>tags</span>$<span class='fu'>b</span>(<span class='st'>"Alert!"</span>), <span class='st'>"this is an alert !"</span>
+        )
+      ),
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
+        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/panel.html'>panel</a></span>(
+          <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"success"</span>,
+          <span class='st'>"This is a panel"</span>
+        )
+      )
+    )
+  )
+
+  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+
+  }
+
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

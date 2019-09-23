@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bootstrap CSS dropdown variables — bs_vars_dropdown • fresh</title>
+<title>Bootstrap CSS navbar variables — bs_vars_navbar • fresh</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,11 +32,10 @@
 
 
 
-<meta property="og:title" content="Bootstrap CSS dropdown variables — bs_vars_dropdown" />
+<meta property="og:title" content="Bootstrap CSS navbar variables — bs_vars_navbar" />
 
 <meta property="og:description" content="Those variables can be used to customize
- dropdowns (e.g. shinyWidgets::dropdownButton
- in Bootstrap and Bootswatch themes." />
+ navigation bar component (e.g. shiny::navbarPage) in Bootstrap and Bootswatch themes." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -117,71 +116,102 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Bootstrap CSS dropdown variables</h1>
+    <h1>Bootstrap CSS navbar variables</h1>
     <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bootstrap.R'><code>R/vars-bootstrap.R</code></a></small>
-    <div class="hidden name"><code>bs_vars_dropdown.Rd</code></div>
+    <div class="hidden name"><code>bs_vars_navbar.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
     <p>Those variables can be used to customize
- dropdowns (e.g. <code><a href='https://rdrr.io/pkg/shinyWidgets/man/dropdownButton.html'>shinyWidgets::dropdownButton</a></code>
- in Bootstrap and Bootswatch themes.</p>
+ navigation bar component (e.g. <code><a href='https://rdrr.io/pkg/shiny/man/navbarPage.html'>shiny::navbarPage</a></code>) in Bootstrap and Bootswatch themes.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_dropdown</span>(<span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>fallback_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>divider_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>link_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>link_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>link_active_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_active_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>link_disabled_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>header_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>bs_vars_navbar</span>(<span class='kw'>height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>margin_bottom</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>default_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>default_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_link_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>default_link_active_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_link_active_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>default_link_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_link_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>inverse_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>inverse_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>inverse_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>inverse_link_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>inverse_link_active_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>inverse_link_active_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>inverse_link_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>inverse_link_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>bg</th>
-      <td><p>Background color for the dropdown menu.</p></td>
+      <th>height</th>
+      <td><p>Height of the navbar, e.g. <code>"50px"</code> (the default in Bootstrap).</p></td>
     </tr>
     <tr>
-      <th>border</th>
-      <td><p>Dropdown menu border-color.</p></td>
+      <th>margin_bottom</th>
+      <td><p>Bottom margin of navbar.</p></td>
     </tr>
     <tr>
-      <th>fallback_border</th>
-      <td><p>Dropdown menu border-color (for IE8).</p></td>
+      <th>default_color</th>
+      <td><p>Color of text in the navbar.</p></td>
     </tr>
     <tr>
-      <th>divider_bg</th>
-      <td><p>Divider color for between dropdown items.</p></td>
+      <th>default_bg</th>
+      <td><p>Background color of the navbar.</p></td>
     </tr>
     <tr>
-      <th>link_color</th>
-      <td><p>Dropdown link text color.</p></td>
+      <th>default_border</th>
+      <td><p>Border color of the navbar.</p></td>
     </tr>
     <tr>
-      <th>link_hover_color</th>
-      <td><p>Hover color for dropdown links.</p></td>
+      <th>default_link_color</th>
+      <td><p>Link color.</p></td>
     </tr>
     <tr>
-      <th>link_hover_bg</th>
-      <td><p>Hover background for dropdown links.</p></td>
+      <th>default_link_active_color</th>
+      <td><p>Color for active link (selected tab).</p></td>
     </tr>
     <tr>
-      <th>link_active_color</th>
-      <td><p>Active dropdown menu item text color.</p></td>
+      <th>default_link_active_bg</th>
+      <td><p>Background color for active link (selected tab).</p></td>
     </tr>
     <tr>
-      <th>link_active_bg</th>
-      <td><p>Active dropdown menu item background color.</p></td>
+      <th>default_link_hover_color</th>
+      <td><p>Color of links when hovered.</p></td>
     </tr>
     <tr>
-      <th>link_disabled_color</th>
-      <td><p>Disabled dropdown menu item background color.</p></td>
+      <th>default_link_hover_bg</th>
+      <td><p>Background color of links when hovered.</p></td>
     </tr>
     <tr>
-      <th>header_color</th>
-      <td><p>Text color for headers within dropdown menus.</p></td>
+      <th>inverse_color</th>
+      <td><p>Color of text for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_bg</th>
+      <td><p>Background color for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_border</th>
+      <td><p>Border color for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_color</th>
+      <td><p>Link color for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_active_color</th>
+      <td><p>Color for active link (selected tab) for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_active_bg</th>
+      <td><p>Background color for active link (selected tab) for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_hover_color</th>
+      <td><p>Color of links when hovered for inversed navbar.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_hover_bg</th>
+      <td><p>Background color of links when hovered for inversed navbar.</p></td>
     </tr>
     </table>
     
@@ -189,55 +219,56 @@
 
     <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
     
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>See default parameters for Bootstrap: <a href='https://getbootstrap.com/docs/3.4/customize/'>https://getbootstrap.com/docs/3.4/customize/</a>.</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>bs_vars_dropdown</span>(
-  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#FAFAFA"</span>,
-  <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
-)</div><div class='output co'>#&gt; $`dropdown-bg`
-#&gt; [1] "#FAFAFA"
+<span class='co'># Change background color of the navbar</span>
+
+<span class='fu'>bs_vars_navbar</span>(
+  <span class='kw'>default_bg</span> <span class='kw'>=</span> <span class='st'>"#75b8d1"</span>,
+  <span class='kw'>default_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
+  <span class='kw'>default_link_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
+  <span class='kw'>default_link_active_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>
+)</div><div class='output co'>#&gt; $`navbar-default-color`
+#&gt; [1] "#FFFFFF"
 #&gt; 
-#&gt; $`dropdown-border`
-#&gt; [1] "firebrick"
+#&gt; $`navbar-default-bg`
+#&gt; [1] "#75b8d1"
+#&gt; 
+#&gt; $`navbar-default-link-color`
+#&gt; [1] "#FFFFFF"
+#&gt; 
+#&gt; $`navbar-default-link-active-color`
+#&gt; [1] "#FFFFFF"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
   <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shinyWidgets</span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(
+  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/navbarPage.html'>navbarPage</a></span>(
+    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Custom navbar"</span>,
+    <span class='kw'>header</span> <span class='kw'>=</span> <span class='fu'><a href='use_theme.html'>use_theme</a></span>(
       <span class='fu'><a href='create_theme.html'>create_theme</a></span>(
         <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-        <span class='fu'>bs_vars_dropdown</span>(
-          <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#FAFAFA"</span>,
-          <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
+        <span class='fu'>bs_vars_navbar</span>(
+          <span class='kw'>default_bg</span> <span class='kw'>=</span> <span class='st'>"#75b8d1"</span>,
+          <span class='kw'>default_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
+          <span class='kw'>default_link_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
+          <span class='kw'>default_link_active_color</span> <span class='kw'>=</span> <span class='st'>"#75b8d1"</span>,
+          <span class='kw'>default_link_active_bg</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
+          <span class='kw'>default_link_hover_color</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
+
         ),
         <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
       )
     ),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Custom dropdowns"</span>),
-    <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/dropdownButton.html'>dropdownButton</a></span>(
-      <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"mydropdown"</span>,
-      <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>"Controls"</span>,
-      <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"sliders"</span>),
-      <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-      <span class='kw'>circle</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sliderInput.html'>sliderInput</a></span>(
-        <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"n"</span>,
-        <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>"Number of observations"</span>,
-        <span class='kw'>min</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>30</span>
-      ),
-      <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/prettyToggle.html'>prettyToggle</a></span>(
-        <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"na"</span>,
-        <span class='kw'>label_on</span> <span class='kw'>=</span> <span class='st'>"NAs keeped"</span>,
-        <span class='kw'>label_off</span> <span class='kw'>=</span> <span class='st'>"NAs removed"</span>,
-        <span class='kw'>icon_on</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"check"</span>),
-        <span class='kw'>icon_off</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"remove"</span>)
-      )
-    )
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tabPanel.html'>tabPanel</a></span>(<span class='st'>"Tab 1"</span>),
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tabPanel.html'>tabPanel</a></span>(<span class='st'>"Tab 2"</span>)
   )
 
   <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
@@ -253,6 +284,8 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#note">Note</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
