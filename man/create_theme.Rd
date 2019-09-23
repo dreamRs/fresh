@@ -38,7 +38,7 @@ create_theme(
     brand_warning = "#d1ab75",
     brand_danger = "#d175b8"
   ),
-  bs_vars_nav(
+  bs_vars_navbar(
     default_bg = "#75b8d1",
     default_color = "#FFFFFF",
     default_link_color = "#FFFFFF",

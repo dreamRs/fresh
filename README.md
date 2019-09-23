@@ -34,7 +34,7 @@ This theme was creating with following code:
 ```r
 create_theme(
   theme = "default",
-  bs_vars_nav(
+  bs_vars_navbar(
     default_bg = "#3f2d54",
     default_color = "#FFFFFF",
     default_link_color = "#FFFFFF",

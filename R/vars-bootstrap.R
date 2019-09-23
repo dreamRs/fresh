@@ -237,9 +237,10 @@ bs_vars_color <- function(brand_primary = NULL,
 #' @title Bootstrap CSS navbar variables
 #'
 #' @description Those variables can be used to customize
-#'  navigation bar component in Bootstrap and Bootswatch themes.
+#'  navigation bar component (e.g. \code{\link[shiny:navbarPage]{shiny::navbarPage}}) in Bootstrap and Bootswatch themes.
 #'
 #' @param height Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).
+#' @param margin_bottom Bottom margin of navbar.
 #' @param default_color Color of text in the navbar.
 #' @param default_bg Background color of the navbar.
 #' @param default_border Border color of the navbar.
@@ -266,7 +267,7 @@ bs_vars_color <- function(brand_primary = NULL,
 #'
 #' # Change background color of the navbar
 #'
-#' bs_vars_nav(
+#' bs_vars_navbar(
 #'   default_bg = "#75b8d1",
 #'   default_color = "#FFFFFF",
 #'   default_link_color = "#FFFFFF",
@@ -281,7 +282,7 @@ bs_vars_color <- function(brand_primary = NULL,
 #'     header = use_theme(
 #'       create_theme(
 #'         theme = "default",
-#'         bs_vars_nav(
+#'         bs_vars_navbar(
 #'           default_bg = "#75b8d1",
 #'           default_color = "#FFFFFF",
 #'           default_link_color = "#FFFFFF",
@@ -303,26 +304,100 @@ bs_vars_color <- function(brand_primary = NULL,
 #'
 #'   shinyApp(ui, server)
 #' }
-bs_vars_nav <- function(height = NULL,
-                     default_color = NULL,
-                     default_bg = NULL,
-                     default_border = NULL,
-                     default_link_color = NULL,
-                     default_link_active_color = NULL,
-                     default_link_active_bg = NULL,
-                     default_link_hover_color = NULL,
-                     default_link_hover_bg = NULL,
-                     inverse_color = NULL,
-                     inverse_bg = NULL,
-                     inverse_border = NULL,
-                     inverse_link_color = NULL,
-                     inverse_link_active_color = NULL,
-                     inverse_link_active_bg = NULL,
-                     inverse_link_hover_color = NULL,
-                     inverse_link_hover_bg = NULL) {
+bs_vars_navbar <- function(height = NULL,
+                           margin_bottom = NULL,
+                           default_color = NULL,
+                           default_bg = NULL,
+                           default_border = NULL,
+                           default_link_color = NULL,
+                           default_link_active_color = NULL,
+                           default_link_active_bg = NULL,
+                           default_link_hover_color = NULL,
+                           default_link_hover_bg = NULL,
+                           inverse_color = NULL,
+                           inverse_bg = NULL,
+                           inverse_border = NULL,
+                           inverse_link_color = NULL,
+                           inverse_link_active_color = NULL,
+                           inverse_link_active_bg = NULL,
+                           inverse_link_hover_color = NULL,
+                           inverse_link_hover_bg = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "navbar")
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
+  vars
+}
+
+
+
+#' @title Bootstrap CSS nav variables
+#'
+#' @description Those variables can be used to customize
+#'  navs (e.g. \code{\link[shiny:tabsetPanel]{shiny::tabsetPanel}} or
+#'  \code{\link[shiny:navlistPanel]{shiny::navlistPanel}}) in Bootstrap and Bootswatch themes.
+#'
+#' @param link_padding Padding for links (tabset's titles).
+#' @param link_hover_bg Link hover background color.
+#' @param disabled_link_color Disabled link color.
+#' @param disabled_link_hover_color Disabled link hover color.
+#'
+#' @note See \code{\link{bs_vars_pills}} and \code{\link{bs_vars_tabs}} for more options.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'   library(fresh)
+#'
+#'   ui <- fluidPage(
+#'
+#'     use_theme(create_theme(
+#'       theme = "default",
+#'       bs_vars_nav(
+#'         link_padding = "30px 45px",
+#'         link_hover_bg = "#FF0000"
+#'       )
+#'     )),
+#'
+#'     tags$h1("State variables"),
+#'     fluidRow(
+#'       column(
+#'         width = 6,
+#'         navlistPanel(
+#'           "Header",
+#'           tabPanel("First"),
+#'           tabPanel("Second"),
+#'           tabPanel("Third")
+#'         )
+#'       ),
+#'       column(
+#'         width = 6,
+#'         tabsetPanel(
+#'           tabPanel("Plot", plotOutput("plot")),
+#'           tabPanel("Summary", verbatimTextOutput("summary")),
+#'           tabPanel("Table", tableOutput("table"))
+#'         )
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+bs_vars_nav <- function(link_padding = NULL,
+                        link_hover_bg = NULL,
+                        disabled_link_color = NULL,
+                        disabled_link_hover_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "nav")
   class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
   vars
 }
@@ -474,6 +549,48 @@ bs_vars_wells <- function(bg = NULL, border = NULL) {
 #'   success_bg = "#238B45",
 #'   success_border = "#00441B"
 #' )
+#'
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shinyWidgets)
+#'   library(fresh)
+#'
+#'   ui <- fluidPage(
+#'
+#'     use_theme(create_theme(
+#'       theme = "default",
+#'       bs_vars_state(
+#'         success_text = "#FFF",
+#'         success_bg = "#238B45",
+#'         success_border = "#00441B"
+#'       )
+#'     )),
+#'
+#'     tags$h1("State variables"),
+#'     fluidRow(
+#'       column(
+#'         width = 6,
+#'         tags$div(
+#'           class = "alert alert-success",
+#'           tags$b("Alert!"), "this is an alert !"
+#'         )
+#'       ),
+#'       column(
+#'         width = 6,
+#'         panel(
+#'           status = "success",
+#'           "This is a panel"
+#'         )
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
 bs_vars_state <- function(success_text = NULL,
                           success_bg = NULL,
                           success_border = NULL,

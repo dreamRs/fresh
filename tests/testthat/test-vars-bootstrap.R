@@ -21,15 +21,27 @@ test_that("bs_vars_color works", {
 })
 
 
-test_that("bs_vars_nav works", {
+test_that("bs_vars_navbar works", {
 
-  vars <- bs_vars_nav(height = "10px", default_bg = "#fff")
+  vars <- bs_vars_navbar(height = "10px", default_bg = "#fff")
 
   expect_is(vars, "list")
   expect_is(vars, "fresh_sass_vars")
   expect_is(vars, "bootstrap_vars")
   expect_length(vars, 2)
 })
+
+
+test_that("bs_vars_nav works", {
+
+  vars <- bs_vars_nav(link_padding = "15px", link_hover_bg = "#000", disabled_link_color = "#000")
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bootstrap_vars")
+  expect_length(vars, 3)
+})
+
 
 
 test_that("bs_vars_font works", {

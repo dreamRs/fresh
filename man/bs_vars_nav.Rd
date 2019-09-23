@@ -2,95 +2,67 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_nav}
 \alias{bs_vars_nav}
-\title{Bootstrap CSS navbar variables}
+\title{Bootstrap CSS nav variables}
 \usage{
-bs_vars_nav(height = NULL, default_color = NULL, default_bg = NULL,
-  default_border = NULL, default_link_color = NULL,
-  default_link_active_color = NULL, default_link_active_bg = NULL,
-  default_link_hover_color = NULL, default_link_hover_bg = NULL,
-  inverse_color = NULL, inverse_bg = NULL, inverse_border = NULL,
-  inverse_link_color = NULL, inverse_link_active_color = NULL,
-  inverse_link_active_bg = NULL, inverse_link_hover_color = NULL,
-  inverse_link_hover_bg = NULL)
+bs_vars_nav(link_padding = NULL, link_hover_bg = NULL,
+  disabled_link_color = NULL, disabled_link_hover_color = NULL)
 }
 \arguments{
-\item{height}{Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).}
+\item{link_padding}{Padding for links (tabset's titles).}
 
-\item{default_color}{Color of text in the navbar.}
+\item{link_hover_bg}{Link hover background color.}
 
-\item{default_bg}{Background color of the navbar.}
+\item{disabled_link_color}{Disabled link color.}
 
-\item{default_border}{Border color of the navbar.}
-
-\item{default_link_color}{Link color.}
-
-\item{default_link_active_color}{Color for active link (selected tab).}
-
-\item{default_link_active_bg}{Background color for active link (selected tab).}
-
-\item{default_link_hover_color}{Color of links when hovered.}
-
-\item{default_link_hover_bg}{Background color of links when hovered.}
-
-\item{inverse_color}{Color of text for inversed navbar.}
-
-\item{inverse_bg}{Background color for inversed navbar.}
-
-\item{inverse_border}{Border color for inversed navbar.}
-
-\item{inverse_link_color}{Link color for inversed navbar.}
-
-\item{inverse_link_active_color}{Color for active link (selected tab) for inversed navbar.}
-
-\item{inverse_link_active_bg}{Background color for active link (selected tab) for inversed navbar.}
-
-\item{inverse_link_hover_color}{Color of links when hovered for inversed navbar.}
-
-\item{inverse_link_hover_bg}{Background color of links when hovered for inversed navbar.}
+\item{disabled_link_hover_color}{Disabled link hover color.}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
 Those variables can be used to customize
- navigation bar component in Bootstrap and Bootswatch themes.
+ navs (e.g. \code{\link[shiny:tabsetPanel]{shiny::tabsetPanel}} or
+ \code{\link[shiny:navlistPanel]{shiny::navlistPanel}}) in Bootstrap and Bootswatch themes.
 }
 \note{
-See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
+See \code{\link{bs_vars_pills}} and \code{\link{bs_vars_tabs}} for more options.
 }
 \examples{
-
-# Change background color of the navbar
-
-bs_vars_nav(
-  default_bg = "#75b8d1",
-  default_color = "#FFFFFF",
-  default_link_color = "#FFFFFF",
-  default_link_active_color = "#FFFFFF"
-)
-
 if (interactive()) {
   library(shiny)
+  library(shinyWidgets)
+  library(fresh)
 
-  ui <- navbarPage(
-    title = "Custom navbar",
-    header = use_theme(
-      create_theme(
-        theme = "default",
-        bs_vars_nav(
-          default_bg = "#75b8d1",
-          default_color = "#FFFFFF",
-          default_link_color = "#FFFFFF",
-          default_link_active_color = "#75b8d1",
-          default_link_active_bg = "#FFFFFF",
-          default_link_hover_color = "firebrick"
+  ui <- fluidPage(
 
-        ),
-        output_file = NULL
+    use_theme(create_theme(
+      theme = "default",
+      bs_vars_nav(
+        link_padding = "30px 45px",
+        link_hover_bg = "#FF0000"
       )
-    ),
-    tabPanel("Tab 1"),
-    tabPanel("Tab 2")
+    )),
+
+    tags$h1("State variables"),
+    fluidRow(
+      column(
+        width = 6,
+        navlistPanel(
+          "Header",
+          tabPanel("First"),
+          tabPanel("Second"),
+          tabPanel("Third")
+        )
+      ),
+      column(
+        width = 6,
+        tabsetPanel(
+          tabPanel("Plot", plotOutput("plot")),
+          tabPanel("Summary", verbatimTextOutput("summary")),
+          tabPanel("Table", tableOutput("table"))
+        )
+      )
+    )
   )
 
   server <- function(input, output, session) {

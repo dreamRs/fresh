@@ -12,7 +12,7 @@ test_that("create_theme create a file", {
       brand_warning = "#d1ab75",
       brand_danger = "#d175b8"
     ),
-    bs_vars_nav(
+    bs_vars_navbar(
       default_bg = "#75b8d1",
       default_color = "#FFFFFF",
       default_link_color = "#FFFFFF",
@@ -38,7 +38,7 @@ test_that("create_theme return CSS", {
       brand_warning = "#d1ab75",
       brand_danger = "#d175b8"
     ),
-    bs_vars_nav(
+    bs_vars_navbar(
       default_bg = "#75b8d1",
       default_color = "#FFFFFF",
       default_link_color = "#FFFFFF",
@@ -89,7 +89,7 @@ test_that("dont mix BS & AdminLTE vars", {
   expect_error(create_theme(
     theme = "default",
     adminlte_color(light_blue = "#fff"),
-    bs_vars_nav(
+    bs_vars_navbar(
       default_bg = "#75b8d1",
       default_color = "#FFFFFF",
       default_link_color = "#FFFFFF",
@@ -107,7 +107,7 @@ test_that("works with custom Bootstrap var with a warning", {
   expect_warning(theme <- create_theme(
     theme = "default",
     list("my-custom-var" = "12px"),
-    bs_vars_nav(
+    bs_vars_navbar(
       default_bg = "#75b8d1",
       default_color = "#FFFFFF",
       default_link_color = "#FFFFFF",
