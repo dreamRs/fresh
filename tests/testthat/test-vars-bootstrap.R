@@ -174,3 +174,15 @@ test_that("bs_vars_tabs works", {
   expect_is(vars, "bootstrap_vars")
   expect_length(vars, 2)
 })
+
+
+test_that("bs_vars_badge works", {
+
+  vars <- bs_vars_badge(color = "#fff", bg = "#000", font_weight = "bold")
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bootstrap_vars")
+  expect_length(vars, 3)
+})
+

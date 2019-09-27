@@ -1429,3 +1429,86 @@ bs_vars_tabs <- function(border_color = NULL,
 }
 
 
+
+
+#' @title Bootstrap CSS badge variables
+#'
+#' @description Those variables can be used to customize
+#'  badge in Bootstrap and Bootswatch themes.
+#'
+#' @param color Text color.
+#' @param bg Background color.
+#' @param link_hover_color Linked badge text color on hover.
+#' @param active_color Badge text color in active nav link.
+#' @param active_bg Badge background color in active nav link.
+#' @param font_weight Font weight, e.g. : \code{"bold"}.
+#' @param line_height Line height.
+#' @param border_radius Border radius.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' bs_vars_badge(
+#'   color = "firebrick",
+#'   bg = "steelblue"
+#' )
+#'
+#'
+#' if (interactive()) {
+#'
+#'   library(shiny)
+#'
+#'   ui <- fluidPage(
+#'     use_theme(create_theme(
+#'       theme = "default",
+#'       bs_vars_badge(
+#'         color = "yellow",
+#'         bg = "firebrick",
+#'         line_height = 1.2
+#'       )
+#'     )),
+#'     tags$h1("Badges"),
+#'     tags$span(class = "badge", "Simple badge"),
+#'     tags$br(),
+#'     tags$ul(
+#'       class = "list-group",
+#'       tags$li(
+#'         class = "list-group-item",
+#'         "Badge in list group",
+#'         tags$span(class = "badge", "badge")
+#'       ),
+#'       tags$li(
+#'         class = "list-group-item",
+#'         "An other item",
+#'         tags$span(class = "badge", "other")
+#'       )
+#'     )
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'
+#'   }
+#'
+#'   shinyApp(ui, server)
+#'
+#' }
+bs_vars_badge <- function(color = NULL,
+                          bg = NULL,
+                          link_hover_color = NULL,
+                          active_color = NULL,
+                          active_bg = NULL,
+                          font_weight = NULL,
+                          line_height = NULL,
+                          border_radius = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "badge")
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
+  vars
+}
+
+
+
+
+
