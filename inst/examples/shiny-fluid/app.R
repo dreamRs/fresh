@@ -10,7 +10,7 @@ library(fresh)
 
 create_theme(
   theme = "default",
-  bs_vars_nav(
+  bs_vars_navbar(
     default_bg = "#3f2d54",
     default_color = "#FFFFFF",
     default_link_color = "#FFFFFF",
@@ -40,13 +40,14 @@ create_theme(
     bg = "#FFF",
     border = "#3f2d54"
   ),
-  output_file = "www/mytheme.css"
+  output_file = "www/mytheme.css",
+  include_assets = TRUE
 )
 
 ui <- navbarPage(
 
   title = "My application",
-  theme = "mytheme.css",
+  theme = "stylesheets/mytheme.css",
 
   tabPanel(
     title = "First page",

@@ -19,6 +19,8 @@
 #' @param ... Lists of CSS variables declared with \code{bs_vars_*} or \code{adminlte_*} functions.
 #' @param theme Base theme to use.
 #' @param output_file Specifies path to output file for compiled CSS.
+#' @param include_assets Logical. Only use if \code{output_file} is not \code{NULL},
+#'  it will copy fonts file used in Bootstrap and Bootswatch themes.
 #'
 #' @return If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
 #'  If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.
@@ -66,7 +68,7 @@ create_theme <- function(...,
                          theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
                                    "journal", "lumen", "paper", "readable", "sandstone", "simplex",
                                    "slate", "spacelab", "superhero", "united", "yeti"),
-                         output_file = NULL) {
+                         output_file = NULL, include_assets = FALSE) {
   theme <- match.arg(theme)
   vars <- list(...)
   if (all(is_bootstrap_vars(vars))) {
@@ -109,6 +111,20 @@ create_theme <- function(...,
       vars,
       adminlte_scss(),
       adminlte_skin_scss()
+    )
+  }
+  if (!is.null(output_file) && isTRUE(include_assets)) {
+    path <- normalizePath(path = output_file, mustWork = FALSE)
+    file.copy(
+      from = system.file("assets/bootstrap3/default/fonts", package = "fresh"),
+      to = dirname(path), recursive = TRUE
+    )
+    output_dir <- file.path(dirname(path), "stylesheets")
+    dir.create(path = output_dir)
+    output_file <- file.path(output_dir, basename(output_file))
+    warning(
+      "Output path has been modified to include assets: ",
+      output_file, call. = FALSE
     )
   }
   sass(

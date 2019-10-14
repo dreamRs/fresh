@@ -26,6 +26,38 @@ test_that("create_theme create a file", {
 })
 
 
+test_that("create_theme with assets", {
+
+  tmp_dir <- tempfile()
+  dir.create(tmp_dir)
+  tmp <- file.path(tmp_dir, "theme.css")
+
+  expect_warning(create_theme(
+    theme = "default",
+    bs_vars_color(
+      brand_primary = "#75b8d1",
+      brand_success = "#c9d175",
+      brand_info = "#758bd1",
+      brand_warning = "#d1ab75",
+      brand_danger = "#d175b8"
+    ),
+    bs_vars_navbar(
+      default_bg = "#75b8d1",
+      default_color = "#FFFFFF",
+      default_link_color = "#FFFFFF",
+      default_link_active_color = "#FFFFFF"
+    ),
+    output_file = tmp,
+    include_assets = TRUE
+  ))
+
+  expect_false(file.exists(tmp))
+  expect_true(file.exists(file.path(tmp_dir, "stylesheets", "theme.css")))
+  expect_true("fonts" %in% list.files(path = tmp_dir))
+  unlink(tmp_dir, recursive = TRUE)
+})
+
+
 
 test_that("create_theme return CSS", {
 

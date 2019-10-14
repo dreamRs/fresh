@@ -7,7 +7,7 @@
 create_theme(..., theme = c("default", "cerulean", "cosmo", "cyborg",
   "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone",
   "simplex", "slate", "spacelab", "superhero", "united", "yeti"),
-  output_file = NULL)
+  output_file = NULL, include_assets = FALSE)
 }
 \arguments{
 \item{...}{Lists of CSS variables declared with \code{bs_vars_*} or \code{adminlte_*} functions.}
@@ -15,6 +15,9 @@ create_theme(..., theme = c("default", "cerulean", "cosmo", "cyborg",
 \item{theme}{Base theme to use.}
 
 \item{output_file}{Specifies path to output file for compiled CSS.}
+
+\item{include_assets}{Logical. Only use if \code{output_file} is not \code{NULL},
+it will copy fonts file used in Bootstrap and Bootswatch themes.}
 }
 \value{
 If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
