@@ -17,7 +17,6 @@ SCSS variables from a file
 }
 \examples{
 \donttest{
-
 # Open template and edit variables
 use_vars_template(
   output_file = "custom.scss",
@@ -30,7 +29,6 @@ create_theme(
   vars_file(input_file = "custom.scss"),
   output_file = "mytheme.css"
 )
-
 
 }
 }

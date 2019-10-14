@@ -21,6 +21,9 @@ if applicable, or via \code{utils::file.edit()} otherwise.}
 Open a SCSS template to modify variable,
  after use \link{vars_file} to import variables and create a theme.
 }
+\note{
+After use \code{\link{vars_file}} to use the template.
+}
 \examples{
 \donttest{
 
@@ -30,6 +33,8 @@ use_vars_template(
   output_file = "custom.scss",
   theme = "flatly"
 )
+
+# after use vars_file() to use the template
 
 }
 

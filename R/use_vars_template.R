@@ -9,6 +9,8 @@
 #' @param open Open the newly created file for editing? Happens in RStudio,
 #'  if applicable, or via \code{utils::file.edit()} otherwise.
 #'
+#' @note After use \code{\link{vars_file}} to use the template.
+#'
 #' @export
 #'
 #' @importFrom rstudioapi isAvailable navigateToFile
@@ -23,6 +25,8 @@
 #'   output_file = "custom.scss",
 #'   theme = "flatly"
 #' )
+#'
+#' # after use vars_file() to use the template
 #'
 #' }
 #'
@@ -68,7 +72,6 @@ use_vars_template <- function(output_file,
 #'
 #' @examples
 #' \donttest{
-#'
 #' # Open template and edit variables
 #' use_vars_template(
 #'   output_file = "custom.scss",
@@ -81,7 +84,6 @@ use_vars_template <- function(output_file,
 #'   vars_file(input_file = "custom.scss"),
 #'   output_file = "mytheme.css"
 #' )
-#'
 #'
 #' }
 vars_file <- function(input_file) {
