@@ -74,14 +74,18 @@ create_pretty <- function(output_file,
 #'
 #' @export
 #'
+#' @importFrom shiny addResourcePath
 #' @importFrom htmltools htmlDependency
 #'
 use_pretty <- function(path) {
+  path <- normalizePath(path = path, mustWork = TRUE)
+  dirpath <- dirname(path = path)
+  shiny::addResourcePath(prefix = "custom-pretty", directoryPath = dirpath)
   htmltools::htmlDependency(
     name = "pretty",
     version = "1000",
-    src = c(file = "www"),
-    stylesheet = path
+    src = c(href = "custom-pretty"),
+    stylesheet = basename(path)
   )
 }
 

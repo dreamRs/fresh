@@ -4,18 +4,19 @@ library(shinyWidgets)
 
 
 create_pretty(
-  output_file = "www/pretty.css",
+  output_file = "custom-pretty.css",
   primary = "#1B9E77",
   success = "#7570B3",
   info = "#D95F02",
   danger = "#E7298A"
 )
 
+
 ui <- fluidPage(
   tags$h1("Pretty checkbox"),
   br(),
 
-  use_pretty("pretty.css"),
+  use_pretty(path = "custom-pretty.css"),
 
   fluidRow(
     column(

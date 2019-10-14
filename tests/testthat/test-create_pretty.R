@@ -32,7 +32,17 @@ test_that("create_pretty return CSS", {
 
 test_that("use_pretty return HTML dependency", {
 
-  expect_is(use_pretty("pretty.css"), "html_dependency")
+  tmp <- file.path(tempdir(), "custom-pretty.css")
+
+  create_pretty(
+    default = "#fff",
+    primary = "#fff",
+    success = "#fff",
+    output_file = tmp
+  )
+
+  expect_is(use_pretty(tmp), "html_dependency")
+  unlink(tmp)
 })
 
 

@@ -4,7 +4,7 @@
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Project Status: WIP Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Travis build status](https://travis-ci.org/dreamRs/fresh.svg?branch=master)](https://travis-ci.org/dreamRs/fresh)
 [![Codecov test coverage](https://codecov.io/gh/dreamRs/fresh/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/fresh?branch=master)
 <!-- badges: end -->

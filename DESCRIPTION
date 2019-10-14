@@ -19,10 +19,10 @@ LazyData: true
 Imports: 
     sass,
     htmltools,
+    shiny,
     rstudioapi
 Suggests: 
     shinyWidgets,
-    shiny,
     shinydashboard,
     knitr,
     rmarkdown,
