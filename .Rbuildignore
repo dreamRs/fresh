@@ -5,3 +5,4 @@
 ^docs$
 ^pkgdown$
 ^codecov\.yml$
+^examples$

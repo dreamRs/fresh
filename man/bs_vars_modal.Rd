@@ -47,7 +47,6 @@ Those variables can be used to customize
  in Bootstrap and Bootswatch themes.
 }
 \examples{
-
 bs_vars_modal(
   md = "80\%",
   backdrop_opacity = 1,

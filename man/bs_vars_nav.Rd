@@ -28,6 +28,12 @@ Those variables can be used to customize
 See \code{\link{bs_vars_pills}} and \code{\link{bs_vars_tabs}} for more options.
 }
 \examples{
+# Change color of tabset when hovered
+bs_vars_nav(
+  link_padding = "30px 45px",
+  link_hover_bg = "#FF0000"
+)
+
 if (interactive()) {
   library(shiny)
   library(shinyWidgets)

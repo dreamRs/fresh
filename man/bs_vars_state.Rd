@@ -46,7 +46,7 @@ Those variables can be used to customize
 See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 }
 \examples{
-
+# Panels & alerts colors
 bs_vars_state(
   success_text = "#FFF",
   success_bg = "#238B45",

@@ -20,7 +20,9 @@
 #' @param theme Base theme to use.
 #' @param output_file Specifies path to output file for compiled CSS.
 #' @param include_assets Logical. Only use if \code{output_file} is not \code{NULL},
-#'  it will copy fonts file used in Bootstrap and Bootswatch themes.
+#'  it will copy fonts file used in Bootstrap and Bootswatch themes. Note that output
+#'  path will be modified to add an intermediate directory \code{"stylesheets"} where
+#'  the CSS file will be located.
 #'
 #' @return If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
 #'  If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.

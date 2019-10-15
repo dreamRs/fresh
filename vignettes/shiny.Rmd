@@ -57,8 +57,39 @@ Result looks like :
 
 There's two way to use a newly created theme : 
 
-* inline in the UI
-* using a CSS file (recommended)
+1. inline in the UI (useful to quickly visualize your theme)
+2. using a CSS file (recommended)
+
+
+### Inline
+
+Don't specify an output file and use rsult of `create_theme()` in `use_theme()` directly in your application : 
+
+```{r}
+navbarPage(
+  title = "Custom navbar",
+  header = use_theme(
+    create_theme(
+      theme = "default",
+      bs_vars_navbar(
+        default_bg = "#75b8d1",
+        default_color = "#FFFFFF",
+        default_link_color = "#FFFFFF",
+        default_link_active_color = "#75b8d1",
+        default_link_active_bg = "#FFFFFF",
+        default_link_hover_color = "firebrick"
+      ),
+      output_file = NULL
+    )
+  ),
+  tabPanel("Tab 1"),
+  tabPanel("Tab 2")
+)
+```
+
+
+
+### File
 
 When you create a theme, you can specify an output file : 
 
@@ -66,18 +97,18 @@ When you create a theme, you can specify an output file :
 create_theme(
   theme = "default", 
   ...,
-  output_file = "mytheme.css"
+  output_file = "my-custom-theme.css"
 )
 ```
 
-Put the file `mytheme.css` in the `www/` folder of your application, and reference it like that in your UI : 
+Put the file `my-custom-theme.css` in the `www/` folder of your application, and reference it like that in your UI : 
 
 ```r
 fluidPage(
   
-  theme = "mytheme.css",
+  theme = "my-custom-theme.css",
   
-  ...
+  # ...
 )
 
 # or if using a navbar page
@@ -86,7 +117,7 @@ navbarPage(
   title = "My application",
   theme = "mytheme.css",
   
-  ...
+  # ...
 )
 ```
 

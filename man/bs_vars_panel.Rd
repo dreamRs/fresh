@@ -75,7 +75,6 @@ Those variables can be used to customize
  in Bootstrap and Bootswatch themes.
 }
 \examples{
-
 bs_vars_panel(
   border_radius = "15px",
   default_text = "#FFF",

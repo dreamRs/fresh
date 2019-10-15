@@ -53,7 +53,6 @@ Those variables can be used to customize
 See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 }
 \examples{
-
 bs_vars_alert(
   border_radius = "10px", # increase border radius,
   success_bg = "#c9d175" # change color for success alerts

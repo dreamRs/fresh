@@ -70,7 +70,6 @@ Those variables can be used to customize
  in Bootstrap and Bootswatch themes.
 }
 \examples{
-
 bs_vars_button(
   default_color = "#FFF",
   default_bg = "#112446",

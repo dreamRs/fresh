@@ -62,9 +62,7 @@ Those variables can be used to customize
 See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 }
 \examples{
-
 # Change background color of the navbar
-
 bs_vars_navbar(
   default_bg = "#75b8d1",
   default_color = "#FFFFFF",

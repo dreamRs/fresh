@@ -42,7 +42,6 @@ Those variables can be used to customize
  in Bootstrap and Bootswatch themes.
 }
 \examples{
-
 bs_vars_dropdown(
   bg = "#FAFAFA",
   border = "firebrick"

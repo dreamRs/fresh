@@ -16,87 +16,7 @@
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' bs_vars_global(
-#'   body_bg = "#FAFAFA" # change background color
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_global(
-#'           body_bg = "#F5A9E1",
-#'           text_color = "#FFF",
-#'           grid_columns = 16
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$h1("My custom app!"),
-#'     tags$h3("With plenty of columns!"),
-#'     fluidRow(
-#'       column(
-#'         width = 1, "Column 1"
-#'       ),
-#'       column(
-#'         width = 1, "Column 2"
-#'       ),
-#'       column(
-#'         width = 1, "Column 3"
-#'       ),
-#'       column(
-#'         width = 1, "Column 4"
-#'       ),
-#'       column(
-#'         width = 1, "Column 5"
-#'       ),
-#'       column(
-#'         width = 1, "Column 6"
-#'       ),
-#'       column(
-#'         width = 1, "Column 7"
-#'       ),
-#'       column(
-#'         width = 1, "Column 8"
-#'       ),
-#'       column(
-#'         width = 1, "Column 9"
-#'       ),
-#'       column(
-#'         width = 1, "Column 10"
-#'       ),
-#'       column(
-#'         width = 1, "Column 11"
-#'       ),
-#'       column(
-#'         width = 1, "Column 12"
-#'       ),
-#'       column(
-#'         width = 1, "Column 13"
-#'       ),
-#'       column(
-#'         width = 1, "Column 14"
-#'       ),
-#'       column(
-#'         width = 1, "Column 15"
-#'       ),
-#'       column(
-#'         width = 1, "Column 16"
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_global.R
 bs_vars_global <- function(body_bg = NULL,
                            text_color = NULL,
                            link_color = NULL,
@@ -136,84 +56,7 @@ bs_vars_global <- function(body_bg = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' # New colors (for buttons for example)
-#' bs_vars_color(
-#'   brand_primary = "#75b8d1",
-#'   brand_success = "#c9d175",
-#'   brand_info = "#758bd1",
-#'   brand_warning = "#d1ab75",
-#'   brand_danger = "#d175b8"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'   library(fresh)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(create_theme(
-#'       theme = "default",
-#'       bs_vars_color(
-#'         brand_primary = "#75b8d1",
-#'         brand_success = "#c9d175",
-#'         brand_info = "#758bd1",
-#'         brand_warning = "#d1ab75",
-#'         brand_danger = "#d175b8"
-#'       )
-#'     )),
-#'     tags$h1("Colors"),
-#'
-#'     tags$p("Apply to :"),
-#'     tags$p("buttons"),
-#'     actionButton("btn1", "Primary", class = "btn-primary"),
-#'     actionButton("btn2", "Success", class = "btn-success"),
-#'     actionButton("btn3", "Danger", class = "btn-danger"),
-#'     actionButton("btn4", "Warning", class = "btn-warning"),
-#'     actionButton("btn5", "info", class = "btn-info"),
-#'     tags$br(), tags$br(),
-#'     tags$p("links"),
-#'     tags$a(href = "", "A link (same color as the primary button)"),
-#'     tags$br(), tags$br(),
-#'     tags$p("labels"),
-#'     tags$span(class = "label label-primary", "Primary"),
-#'     tags$span(class = "label label-success", "Success"),
-#'     tags$span(class = "label label-danger", "Danger"),
-#'     tags$span(class = "label label-warning", "Warning"),
-#'     tags$span(class = "label label-info", "Info"),
-#'     tags$br(), tags$br(),
-#'     tags$p("progress bars"),
-#'     progressBar(
-#'       "pb1", value = 80, status = "primary", display_pct = TRUE
-#'     ),
-#'     progressBar(
-#'       "pb2", value = 80, status = "success", display_pct = TRUE
-#'     ),
-#'     progressBar(
-#'       "pb3", value = 80, status = "danger", display_pct = TRUE
-#'     ),
-#'     progressBar(
-#'       "pb4", value = 80, status = "warning", display_pct = TRUE
-#'     ),
-#'     progressBar(
-#'       "pb5", value = 80, status = "info", display_pct = TRUE
-#'     ),
-#'     tags$br(), tags$br(),
-#'     tags$p("and panels (only primary)"),
-#'     panel(
-#'       heading = "Primary panel",
-#'       status = "primary",
-#'       "For other status, look at ?bs_vars_state"
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_color.R
 bs_vars_color <- function(brand_primary = NULL,
                           brand_success = NULL,
                           brand_info = NULL,
@@ -263,47 +106,7 @@ bs_vars_color <- function(brand_primary = NULL,
 #'
 #' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 #'
-#' @examples
-#'
-#' # Change background color of the navbar
-#'
-#' bs_vars_navbar(
-#'   default_bg = "#75b8d1",
-#'   default_color = "#FFFFFF",
-#'   default_link_color = "#FFFFFF",
-#'   default_link_active_color = "#FFFFFF"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'
-#'   ui <- navbarPage(
-#'     title = "Custom navbar",
-#'     header = use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_navbar(
-#'           default_bg = "#75b8d1",
-#'           default_color = "#FFFFFF",
-#'           default_link_color = "#FFFFFF",
-#'           default_link_active_color = "#75b8d1",
-#'           default_link_active_bg = "#FFFFFF",
-#'           default_link_hover_color = "firebrick"
-#'
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tabPanel("Tab 1"),
-#'     tabPanel("Tab 2")
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_navbar.R
 bs_vars_navbar <- function(height = NULL,
                            margin_bottom = NULL,
                            default_color = NULL,
@@ -347,50 +150,7 @@ bs_vars_navbar <- function(height = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'   library(fresh)
-#'
-#'   ui <- fluidPage(
-#'
-#'     use_theme(create_theme(
-#'       theme = "default",
-#'       bs_vars_nav(
-#'         link_padding = "30px 45px",
-#'         link_hover_bg = "#FF0000"
-#'       )
-#'     )),
-#'
-#'     tags$h1("State variables"),
-#'     fluidRow(
-#'       column(
-#'         width = 6,
-#'         navlistPanel(
-#'           "Header",
-#'           tabPanel("First"),
-#'           tabPanel("Second"),
-#'           tabPanel("Third")
-#'         )
-#'       ),
-#'       column(
-#'         width = 6,
-#'         tabsetPanel(
-#'           tabPanel("Plot", plotOutput("plot")),
-#'           tabPanel("Summary", verbatimTextOutput("summary")),
-#'           tabPanel("Table", tableOutput("table"))
-#'         )
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_nav.R
 bs_vars_nav <- function(link_padding = NULL,
                         link_hover_bg = NULL,
                         disabled_link_color = NULL,
@@ -428,47 +188,7 @@ bs_vars_nav <- function(link_padding = NULL,
 #'
 #' @export
 #'
-#' @examples
-#'
-#' # Use a smaller font than the default
-#' bs_vars_font(
-#'   size_base = "12px"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(fresh)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(create_theme(
-#'       theme = "default",
-#'       bs_vars_font(
-#'         size_base = "32px"
-#'       )
-#'     )),
-#'     tags$h1("Big font theme"),
-#'
-#'     sidebarLayout(
-#'       sidebarPanel(
-#'         "This is the sidebar panel"
-#'       ),
-#'       mainPanel(
-#'         tags$h1("First level title"),
-#'         tags$h2("Second level title"),
-#'         tags$h3("Third level title"),
-#'         tags$h4("Fourth level title"),
-#'         tags$h5("Fifth level title"),
-#'         tags$h6("Sixth level title")
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_font.R
 bs_vars_font <- function(family_sans_serif = NULL,
                          size_base = NULL,
                          size_large = NULL,
@@ -504,11 +224,7 @@ bs_vars_font <- function(family_sans_serif = NULL,
 #'
 #' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 #'
-#' @examples
-#'
-#' bs_vars_wells(
-#'   bg = "#CEECF5"
-#' )
+#' @example examples/bs_vars_wells.R
 bs_vars_wells <- function(bg = NULL, border = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
@@ -542,55 +258,7 @@ bs_vars_wells <- function(bg = NULL, border = NULL) {
 #'
 #' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 #'
-#' @examples
-#'
-#' bs_vars_state(
-#'   success_text = "#FFF",
-#'   success_bg = "#238B45",
-#'   success_border = "#00441B"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'   library(fresh)
-#'
-#'   ui <- fluidPage(
-#'
-#'     use_theme(create_theme(
-#'       theme = "default",
-#'       bs_vars_state(
-#'         success_text = "#FFF",
-#'         success_bg = "#238B45",
-#'         success_border = "#00441B"
-#'       )
-#'     )),
-#'
-#'     tags$h1("State variables"),
-#'     fluidRow(
-#'       column(
-#'         width = 6,
-#'         tags$div(
-#'           class = "alert alert-success",
-#'           tags$b("Alert!"), "this is an alert !"
-#'         )
-#'       ),
-#'       column(
-#'         width = 6,
-#'         panel(
-#'           status = "success",
-#'           "This is a panel"
-#'         )
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_state.R
 bs_vars_state <- function(success_text = NULL,
                           success_bg = NULL,
                           success_border = NULL,
@@ -630,11 +298,7 @@ bs_vars_state <- function(success_text = NULL,
 #'
 #' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 #'
-#' @examples
-#'
-#' bs_vars_input(
-#'   border_radius = "10px" # change border radius
-#' )
+#' @example examples/bs_vars_input.R
 bs_vars_input <- function(bg = NULL,
                           color = NULL,
                           border = NULL,
@@ -678,47 +342,7 @@ bs_vars_input <- function(bg = NULL,
 #'
 #' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
 #'
-#' @examples
-#'
-#' bs_vars_alert(
-#'   border_radius = "10px", # increase border radius,
-#'   success_bg = "#c9d175" # change color for success alerts
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_alert(
-#'           border_radius = "15px",
-#'           success_bg = "forestgreen",
-#'           success_text = "#FFF",
-#'           danger_bg = "firebrick",
-#'           danger_text = "#FFF"
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$br(),
-#'     tags$div(
-#'       class = "alert alert-success",
-#'       "This is an alert !"
-#'     ),
-#'     tags$div(
-#'       class = "alert alert-danger",
-#'       "This is an other alert !"
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_alert.R
 bs_vars_alert <- function(padding = NULL,
                           border_radius = NULL,
                           link_font_weight = NULL,
@@ -762,81 +386,7 @@ bs_vars_alert <- function(padding = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' bs_vars_progress(
-#'   border_radius = "15px",
-#'   bar_bg = "#1B9E77",
-#'   bar_info_bg = "#D95F02",
-#'   bar_success_bg = "#7570B3",
-#'   bar_danger_bg = "#E7298A"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_progress(
-#'           border_radius = "15px",
-#'           bar_bg = "#1B9E77",
-#'           bar_info_bg = "#D95F02",
-#'           bar_success_bg = "#7570B3",
-#'           bar_danger_bg = "#E7298A"
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$h1("Custom progress bars"),
-#'     fluidRow(
-#'       column(
-#'         width = 6,
-#'         progressBar(
-#'           "pb1", value = 90, display_pct = TRUE
-#'         )
-#'       ),
-#'       column(
-#'         width = 6,
-#'         progressBar(
-#'           "pb2", value = 70, status = "info", display_pct = TRUE
-#'         )
-#'       ),
-#'       column(
-#'         width = 6,
-#'         progressBar(
-#'           "pb3", value = 50, status = "success", display_pct = TRUE
-#'         )
-#'       ),
-#'       column(
-#'         width = 6,
-#'         progressBar(
-#'           "pb4", value = 30, status = "danger", display_pct = TRUE
-#'         )
-#'       )
-#'     ),
-#'     plotOutput("plot")
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'     output$plot <- renderPlot({
-#'       withProgress(message = 'Calculation in progress',
-#'                    detail = 'This may take a while...', value = 0, {
-#'                      for (i in 1:15) {
-#'                        incProgress(1/15)
-#'                        Sys.sleep(0.25)
-#'                      }
-#'                    })
-#'       plot(cars)
-#'     })
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_progress.R
 bs_vars_progress <- function(bg = NULL,
                              bar_color = NULL,
                              border_radius = NULL,
@@ -889,90 +439,7 @@ bs_vars_progress <- function(bg = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' bs_vars_panel(
-#'   border_radius = "15px",
-#'   default_text = "#FFF",
-#'   default_heading_bg = "#3f2d54",
-#'   default_border = "#3f2d54",
-#'   primary_heading_bg = "#1B9E77",
-#'   primary_border = "#1B9E77",
-#'   success_heading_bg = "#D95F02",
-#'   success_border = "#D95F02",
-#'   success_text = "#FFF",
-#'   danger_heading_bg = "#7570B3",
-#'   danger_border = "#7570B3",
-#'   danger_text = "#FFF"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_panel(
-#'           border_radius = "15px",
-#'           default_text = "#FFF",
-#'           default_heading_bg = "#3f2d54",
-#'           default_border = "#3f2d54",
-#'           primary_heading_bg = "#1B9E77",
-#'           primary_border = "#1B9E77",
-#'           success_heading_bg = "#D95F02",
-#'           success_border = "#D95F02",
-#'           success_text = "#FFF",
-#'           danger_heading_bg = "#7570B3",
-#'           danger_border = "#7570B3",
-#'           danger_text = "#FFF"
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$h1("Custom panels"),
-#'     fluidRow(
-#'       column(
-#'         width = 3,
-#'         panel(
-#'           heading = "Default panel",
-#'           "Some content"
-#'         )
-#'       ),
-#'       column(
-#'         width = 3,
-#'         panel(
-#'           heading = "Primary panel",
-#'           status = "primary",
-#'           "Some content"
-#'         )
-#'       ),
-#'       column(
-#'         width = 3,
-#'         panel(
-#'           heading = "Success panel",
-#'           status = "success",
-#'           "Some content"
-#'         )
-#'       ),
-#'       column(
-#'         width = 3,
-#'         panel(
-#'           heading = "Danger panel",
-#'           status = "danger",
-#'           "Some content"
-#'         )
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_panel.R
 bs_vars_panel <- function(bg = NULL,
                           body_padding = NULL,
                           heading_padding = NULL,
@@ -1032,49 +499,7 @@ bs_vars_panel <- function(bg = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' bs_vars_modal(
-#'   md = "80%",
-#'   backdrop_opacity = 1,
-#'   header_border_color = "#112446",
-#'   footer_border_color = "#112446"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_modal(
-#'           md = "80%",
-#'           backdrop_opacity = 1,
-#'           header_border_color = "#112446",
-#'           footer_border_color = "#112446"
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$h1("Custom modals"),
-#'     actionButton("show", "Show modal dialog")
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'     observeEvent(input$show, {
-#'       showModal(modalDialog(
-#'         title = "Important message",
-#'         "This is an important message!"
-#'       ))
-#'     })
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_modal.R
 bs_vars_modal <- function(md = NULL,
                           lg = NULL,
                           sm = NULL,
@@ -1131,51 +556,7 @@ bs_vars_modal <- function(md = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' bs_vars_button(
-#'   default_color = "#FFF",
-#'   default_bg = "#112446",
-#'   default_border = "#FFF",
-#'   primary_color = "#112446",
-#'   primary_bg = "#FFF",
-#'   primary_border = "#112446",
-#'   border_radius_base = 0
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_button(
-#'           default_color = "#FFF",
-#'           default_bg = "#112446",
-#'           default_border = "#FFF",
-#'           primary_color = "#112446",
-#'           primary_bg = "#FFF",
-#'           primary_border = "#112446",
-#'           border_radius_base = 0
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$h1("Custom buttons"),
-#'     actionButton("button1", "This is a default button"),
-#'     actionButton(
-#'       "button2", "This is a primary button",
-#'       class = "btn-primary"
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_button.R
 bs_vars_button <- function(font_weight = NULL,
                            default_color = NULL,
                            default_bg = NULL,
@@ -1230,56 +611,7 @@ bs_vars_button <- function(font_weight = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#'
-#' bs_vars_dropdown(
-#'   bg = "#FAFAFA",
-#'   border = "firebrick"
-#' )
-#'
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shinyWidgets)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_dropdown(
-#'           bg = "#FAFAFA",
-#'           border = "firebrick"
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tags$h1("Custom dropdowns"),
-#'     dropdownButton(
-#'       inputId = "mydropdown",
-#'       label = "Controls",
-#'       icon = icon("sliders"),
-#'       status = "primary",
-#'       circle = FALSE,
-#'       sliderInput(
-#'         inputId = "n",
-#'         label = "Number of observations",
-#'         min = 10, max = 100, value = 30
-#'       ),
-#'       prettyToggle(
-#'         inputId = "na",
-#'         label_on = "NAs keeped",
-#'         label_off = "NAs removed",
-#'         icon_on = icon("check"),
-#'         icon_off = icon("remove")
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_dropdown.R
 bs_vars_dropdown <- function(bg = NULL,
                              border = NULL,
                              fallback_border = NULL,
@@ -1313,37 +645,7 @@ bs_vars_dropdown <- function(bg = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(fresh)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(
-#'       create_theme(
-#'         theme = "default",
-#'         bs_vars_pills(
-#'           border_radius = "100px",
-#'           active_link_hover_bg = "#DF3A01",
-#'           active_link_hover_color = "#FFF"
-#'         ),
-#'         output_file = NULL
-#'       )
-#'     ),
-#'     tabsetPanel(
-#'       type = "pills",
-#'       tabPanel("Plot", plotOutput("plot")),
-#'       tabPanel("Summary", verbatimTextOutput("summary")),
-#'       tabPanel("Table", tableOutput("table"))
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_pills.R
 bs_vars_pills <- function(border_radius = NULL,
                           active_link_hover_bg = NULL,
                           active_link_hover_color = NULL) {
@@ -1376,44 +678,7 @@ bs_vars_pills <- function(border_radius = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(fresh)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(create_theme(
-#'       theme = "default",
-#'       bs_vars_global(
-#'         link_color = "#00FF00" #green
-#'       ),
-#'       bs_vars_tabs(
-#'         border_color = "#FF0000", # red
-#'         link_hover_border_color = "#FFFF00", # yellow
-#'         active_link_hover_bg = "#FF00FF", # pink
-#'         active_link_hover_color = "#FFF" # white
-#'       )
-#'     )),
-#'     tags$h1("Tabs panel"),
-#'
-#'     sidebarLayout(
-#'       sidebarPanel(),
-#'       mainPanel(
-#'         tabsetPanel(
-#'           tabPanel("Plot", plotOutput("plot")),
-#'           tabPanel("Summary", verbatimTextOutput("summary")),
-#'           tabPanel("Table", tableOutput("table"))
-#'         )
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/bs_vars_tabs.R
 bs_vars_tabs <- function(border_color = NULL,
                          link_hover_border_color = NULL,
                          active_link_hover_bg = NULL,
@@ -1448,51 +713,7 @@ bs_vars_tabs <- function(border_color = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
-#' bs_vars_badge(
-#'   color = "firebrick",
-#'   bg = "steelblue"
-#' )
-#'
-#'
-#' if (interactive()) {
-#'
-#'   library(shiny)
-#'
-#'   ui <- fluidPage(
-#'     use_theme(create_theme(
-#'       theme = "default",
-#'       bs_vars_badge(
-#'         color = "yellow",
-#'         bg = "firebrick",
-#'         line_height = 1.2
-#'       )
-#'     )),
-#'     tags$h1("Badges"),
-#'     tags$span(class = "badge", "Simple badge"),
-#'     tags$br(),
-#'     tags$ul(
-#'       class = "list-group",
-#'       tags$li(
-#'         class = "list-group-item",
-#'         "Badge in list group",
-#'         tags$span(class = "badge", "badge")
-#'       ),
-#'       tags$li(
-#'         class = "list-group-item",
-#'         "An other item",
-#'         tags$span(class = "badge", "other")
-#'       )
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#'
-#' }
+#' @example examples/bs_vars_badge.R
 bs_vars_badge <- function(color = NULL,
                           bg = NULL,
                           link_hover_color = NULL,
