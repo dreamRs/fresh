@@ -49,7 +49,7 @@ Here we modify `shiny::actionButton` appearance with `bs_vars_button` and appear
 
 Result looks like :
 
-![](figures/exemple-shiny.png)
+![](figures/example_shiny.png)
 
 
 
