@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4.910</span>
       </span>
     </div>
 
@@ -126,7 +126,7 @@
     
     <p>Those variables can be used to customize
  wells panel (e.g. <code><a href='https://rdrr.io/pkg/shiny/man/wellPanel.html'>shiny::wellPanel</a></code> or
- <code><a href='https://rdrr.io/pkg/shiny/man/sidebarPanel.html'>shiny::sidebarPanel</a></code>) in Bootstrap and Bootswatch themes.</p>
+ <code><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>shiny::sidebarPanel</a></code>) in Bootstrap and Bootswatch themes.</p>
     
     </div>
 
@@ -155,14 +155,36 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
+    <pre class="examples"><div class='input'><span class='co'># Background color of wellPanel</span>
 <span class='fu'>bs_vars_wells</span>(
   <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#CEECF5"</span>
 )</div><div class='output co'>#&gt; $`well-bg`
 #&gt; [1] "#CEECF5"
 #&gt; 
 #&gt; attr(,"class")
-#&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div></pre>
+#&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
+
+<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
+
+  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
+      <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
+      <span class='fu'>bs_vars_wells</span>(
+        <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#CEECF5"</span>
+      )
+    )),
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/wellPanel.html'>wellPanel</a></span>(
+      <span class='st'>"This is a wellPanel"</span>
+    )
+  )
+
+  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+
+  }
+
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

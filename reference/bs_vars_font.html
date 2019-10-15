@@ -67,7 +67,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4.910</span>
       </span>
     </div>
 
@@ -189,8 +189,7 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='co'># Use a smaller font than the default</span>
+    <pre class="examples"><div class='input'><span class='co'># Use a smaller font than the default</span>
 <span class='fu'>bs_vars_font</span>(
   <span class='kw'>size_base</span> <span class='kw'>=</span> <span class='st'>"12px"</span>
 )</div><div class='output co'>#&gt; $`font-size-base`
@@ -212,10 +211,10 @@
     <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Big font theme"</span>),
 
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarLayout</a></span>(
-      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarPanel.html'>sidebarPanel</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>sidebarPanel</a></span>(
         <span class='st'>"This is the sidebar panel"</span>
       ),
-      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/mainPanel.html'>mainPanel</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>mainPanel</a></span>(
         <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"First level title"</span>),
         <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
         <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),

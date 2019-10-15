@@ -66,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4.910</span>
       </span>
     </div>
 
@@ -129,7 +129,7 @@
     <pre class="usage"><span class='fu'>create_theme</span>(<span class='no'>...</span>, <span class='kw'>theme</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"cerulean"</span>, <span class='st'>"cosmo"</span>, <span class='st'>"cyborg"</span>,
   <span class='st'>"darkly"</span>, <span class='st'>"flatly"</span>, <span class='st'>"journal"</span>, <span class='st'>"lumen"</span>, <span class='st'>"paper"</span>, <span class='st'>"readable"</span>, <span class='st'>"sandstone"</span>,
   <span class='st'>"simplex"</span>, <span class='st'>"slate"</span>, <span class='st'>"spacelab"</span>, <span class='st'>"superhero"</span>, <span class='st'>"united"</span>, <span class='st'>"yeti"</span>),
-  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>include_assets</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -145,6 +145,13 @@
     <tr>
       <th>output_file</th>
       <td><p>Specifies path to output file for compiled CSS.</p></td>
+    </tr>
+    <tr>
+      <th>include_assets</th>
+      <td><p>Logical. Only use if <code>output_file</code> is not <code>NULL</code>,
+it will copy fonts file used in Bootstrap and Bootswatch themes. Note that output
+path will be modified to add an intermediate directory <code>"stylesheets"</code> where
+the CSS file will be located.</p></td>
     </tr>
     </table>
     

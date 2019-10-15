@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4.910</span>
       </span>
     </div>
 
@@ -108,40 +108,69 @@
 <a class="sourceLine" id="cb2-11" data-line-number="11">    <span class="dt">border =</span> <span class="st">"#112446"</span></a>
 <a class="sourceLine" id="cb2-12" data-line-number="12">  )</a>
 <a class="sourceLine" id="cb2-13" data-line-number="13">)</a></code></pre></div>
-<p>Here we modify <code><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">shiny::actionButton</a></code> appearance with <code>bs_vars_button</code> and appearance of <code><a href="https://rdrr.io/pkg/shiny/man/sidebarPanel.html">shiny::sidebarPanel</a></code> with <code>bs_vars_wells</code>.</p>
+<p>Here we modify <code><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">shiny::actionButton</a></code> appearance with <code>bs_vars_button</code> and appearance of <code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">shiny::sidebarPanel</a></code> with <code>bs_vars_wells</code>.</p>
 <p>Result looks like :</p>
-<p><img src="figures/exemple-shiny.png"></p>
+<!-- ![](figures/example_shiny.png) -->
+<p><img src="figures/example_shiny.png"><!-- --></p>
 </div>
 <div id="use-a-theme" class="section level2">
 <h2 class="hasAnchor">
 <a href="#use-a-theme" class="anchor"></a>Use a theme</h2>
 <p>There’s two way to use a newly created theme :</p>
-<ul>
-<li>inline in the UI</li>
+<ol style="list-style-type: decimal">
+<li>inline in the UI (useful to quickly visualize your theme)</li>
 <li>using a CSS file (recommended)</li>
-</ul>
+</ol>
+<div id="inline" class="section level3">
+<h3 class="hasAnchor">
+<a href="#inline" class="anchor"></a>Inline</h3>
+<p>Don’t specify an output file and use rsult of <code><a href="../reference/create_theme.html">create_theme()</a></code> in <code><a href="../reference/use_theme.html">use_theme()</a></code> directly in your application :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">navbarPage</span>(</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">title =</span> <span class="st">"Custom navbar"</span>,</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="dt">header =</span> <span class="kw"><a href="../reference/use_theme.html">use_theme</a></span>(</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">    <span class="kw"><a href="../reference/create_theme.html">create_theme</a></span>(</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">      <span class="dt">theme =</span> <span class="st">"default"</span>,</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">      <span class="kw"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span>(</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">        <span class="dt">default_bg =</span> <span class="st">"#75b8d1"</span>,</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">        <span class="dt">default_color =</span> <span class="st">"#FFFFFF"</span>,</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">        <span class="dt">default_link_color =</span> <span class="st">"#FFFFFF"</span>,</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">        <span class="dt">default_link_active_color =</span> <span class="st">"#75b8d1"</span>,</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">        <span class="dt">default_link_active_bg =</span> <span class="st">"#FFFFFF"</span>,</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">        <span class="dt">default_link_hover_color =</span> <span class="st">"firebrick"</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">      ),</a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">      <span class="dt">output_file =</span> <span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">    )</a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">  ),</a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">  <span class="kw">tabPanel</span>(<span class="st">"Tab 1"</span>),</a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">  <span class="kw">tabPanel</span>(<span class="st">"Tab 2"</span>)</a>
+<a class="sourceLine" id="cb3-19" data-line-number="19">)</a></code></pre></div>
+</div>
+<div id="file" class="section level3">
+<h3 class="hasAnchor">
+<a href="#file" class="anchor"></a>File</h3>
 <p>When you create a theme, you can specify an output file :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/create_theme.html">create_theme</a></span>(</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">theme =</span> <span class="st">"default"</span>, </a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">  ...,</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">  <span class="dt">output_file =</span> <span class="st">"mytheme.css"</span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">)</a></code></pre></div>
-<p>Put the file <code>mytheme.css</code> in the <code>www/</code> folder of your application, and reference it like that in your UI :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">fluidPage</span>(</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">  </a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">theme =</span> <span class="st">"mytheme.css"</span>,</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">  ...</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">)</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co"># or if using a navbar page</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="kw">navbarPage</span>(</a>
-<a class="sourceLine" id="cb4-10" data-line-number="10">  </a>
-<a class="sourceLine" id="cb4-11" data-line-number="11">  <span class="dt">title =</span> <span class="st">"My application"</span>,</a>
-<a class="sourceLine" id="cb4-12" data-line-number="12">  <span class="dt">theme =</span> <span class="st">"mytheme.css"</span>,</a>
-<a class="sourceLine" id="cb4-13" data-line-number="13">  </a>
-<a class="sourceLine" id="cb4-14" data-line-number="14">  ...</a>
-<a class="sourceLine" id="cb4-15" data-line-number="15">)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/create_theme.html">create_theme</a></span>(</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">theme =</span> <span class="st">"default"</span>, </a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">  ...,</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">  <span class="dt">output_file =</span> <span class="st">"my-custom-theme.css"</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">)</a></code></pre></div>
+<p>Put the file <code>my-custom-theme.css</code> in the <code>www/</code> folder of your application, and reference it like that in your UI :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">  <span class="dt">theme =</span> <span class="st">"my-custom-theme.css"</span>,</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">  </a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">  <span class="co"># ...</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co"># or if using a navbar page</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="kw">navbarPage</span>(</a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">  </a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">  <span class="dt">title =</span> <span class="st">"My application"</span>,</a>
+<a class="sourceLine" id="cb5-12" data-line-number="12">  <span class="dt">theme =</span> <span class="st">"mytheme.css"</span>,</a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">  </a>
+<a class="sourceLine" id="cb5-14" data-line-number="14">  <span class="co"># ...</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15">)</a></code></pre></div>
+</div>
 </div>
   </div>
 
