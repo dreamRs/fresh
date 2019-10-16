@@ -41,13 +41,14 @@ create_theme(
     border = "#3f2d54"
   ),
   output_file = "www/mytheme.css",
-  include_assets = TRUE
+  include_assets = FALSE
 )
 
 ui <- navbarPage(
 
   title = "My application",
-  theme = "stylesheets/mytheme.css",
+  theme = "mytheme.css",
+  # theme = "stylesheets/mytheme.css",
 
   tabPanel(
     title = "First page",
