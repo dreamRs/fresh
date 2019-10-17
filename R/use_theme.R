@@ -51,7 +51,10 @@
 #' }
 use_theme <- function(theme) {
   if (inherits(theme, what = "css")) {
-    singleton(tags$head(tags$style(HTML(theme))))
+    tags$head(tags$style(
+      id = "fresh-theme",
+      HTML(theme)
+    ))
   } else {
     singleton(tags$head(tags$link(
       rel = "stylesheet",
