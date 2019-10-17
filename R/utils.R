@@ -5,6 +5,9 @@ dropNulls <- function(x) {
 }
 
 vars_names <- function(x, prefix = NULL) {
+  if (length(x) == 0) {
+    return(x)
+  }
   n_x <- names(x)
   n_x <- gsub(pattern = "_", replacement = "-", x = n_x)
   if (!is.null(prefix)) {

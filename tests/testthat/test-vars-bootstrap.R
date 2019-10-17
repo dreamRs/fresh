@@ -1,4 +1,16 @@
 
+
+test_that("works with no args", {
+
+  vars <- bs_vars_global()
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bootstrap_vars")
+  expect_length(vars, 0)
+})
+
+
 test_that("bs_vars_global works", {
 
   vars <- bs_vars_global(body_bg = "#fff", grid_columns = 8)
