@@ -1,6 +1,6 @@
 Package: fresh
 Title: Create Custom 'Bootstrap' Themes to Use in 'Shiny'
-Version: 0.0.4.910
+Version: 0.1.0
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = "aut"),

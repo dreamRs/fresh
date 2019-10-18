@@ -6,3 +6,4 @@
 ^pkgdown$
 ^codecov\.yml$
 ^examples$
+^cran-comments\.md$
