@@ -3,10 +3,11 @@
 > Create fresh themes for use in {shiny} & {shinydashboard} applications and {flexdashboard} documents.
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![version](http://www.r-pkg.org/badges/version/fresh)](https://CRAN.R-project.org/package=fresh)
+[![Project Status: Active The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Travis build status](https://travis-ci.org/dreamRs/fresh.svg?branch=master)](https://travis-ci.org/dreamRs/fresh)
 [![Codecov test coverage](https://codecov.io/gh/dreamRs/fresh/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamRs/fresh?branch=master)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
 
