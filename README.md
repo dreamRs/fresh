@@ -13,6 +13,12 @@
 
 ## Installation
 
+You can install stable version from CRAN with:
+
+```r
+install.packages("fresh")
+```
+
 You can install the development version of fresh from GitHub with:
 
 ```r
