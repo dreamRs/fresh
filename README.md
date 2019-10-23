@@ -1,4 +1,4 @@
-# fresh
+# fresh <img src="man/figures/fresh-logo.png" width=200 align="right" />
 
 > Create fresh themes for use in {shiny} & {shinydashboard} applications and {flexdashboard} documents.
 
