@@ -4,8 +4,12 @@
 \alias{bs_vars_nav}
 \title{Bootstrap CSS nav variables}
 \usage{
-bs_vars_nav(link_padding = NULL, link_hover_bg = NULL,
-  disabled_link_color = NULL, disabled_link_hover_color = NULL)
+bs_vars_nav(
+  link_padding = NULL,
+  link_hover_bg = NULL,
+  disabled_link_color = NULL,
+  disabled_link_hover_color = NULL
+)
 }
 \arguments{
 \item{link_padding}{Padding for links (tabset's titles).}

@@ -156,7 +156,6 @@ interactive_theme <- function(input, output, session) {
   )
 
   output$theme_ui <- renderUI({
-    removeUI(selector = "#fresh-theme", immediate = TRUE)
     results <- reactiveValuesToList(results)
     vars <- lapply(
       X = names(results),
@@ -168,6 +167,7 @@ interactive_theme <- function(input, output, session) {
       what = create_theme,
       args = c(list(theme = input$theme), vars)
     )
+    removeUI(selector = "#fresh-theme", immediate = TRUE)
     use_theme(theme = css)
   })
 

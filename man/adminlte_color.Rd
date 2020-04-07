@@ -4,11 +4,24 @@
 \alias{adminlte_color}
 \title{AdminLTE CSS colors variables}
 \usage{
-adminlte_color(light_blue = NULL, red = NULL, green = NULL,
-  aqua = NULL, yellow = NULL, blue = NULL, navy = NULL,
-  teal = NULL, olive = NULL, lime = NULL, orange = NULL,
-  fuchsia = NULL, purple = NULL, maroon = NULL, black = NULL,
-  gray_lte = NULL)
+adminlte_color(
+  light_blue = NULL,
+  red = NULL,
+  green = NULL,
+  aqua = NULL,
+  yellow = NULL,
+  blue = NULL,
+  navy = NULL,
+  teal = NULL,
+  olive = NULL,
+  lime = NULL,
+  orange = NULL,
+  fuchsia = NULL,
+  purple = NULL,
+  maroon = NULL,
+  black = NULL,
+  gray_lte = NULL
+)
 }
 \arguments{
 \item{light_blue}{Light blue (primary status), default to \code{#3c8dbc}.}

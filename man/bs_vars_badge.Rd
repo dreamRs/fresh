@@ -4,9 +4,16 @@
 \alias{bs_vars_badge}
 \title{Bootstrap CSS badge variables}
 \usage{
-bs_vars_badge(color = NULL, bg = NULL, link_hover_color = NULL,
-  active_color = NULL, active_bg = NULL, font_weight = NULL,
-  line_height = NULL, border_radius = NULL)
+bs_vars_badge(
+  color = NULL,
+  bg = NULL,
+  link_hover_color = NULL,
+  active_color = NULL,
+  active_bg = NULL,
+  font_weight = NULL,
+  line_height = NULL,
+  border_radius = NULL
+)
 }
 \arguments{
 \item{color}{Text color.}

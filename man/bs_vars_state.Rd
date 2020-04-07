@@ -4,11 +4,20 @@
 \alias{bs_vars_state}
 \title{Bootstrap CSS states variables}
 \usage{
-bs_vars_state(success_text = NULL, success_bg = NULL,
-  success_border = NULL, info_text = NULL, info_bg = NULL,
-  info_border = NULL, warning_text = NULL, warning_bg = NULL,
-  warning_border = NULL, danger_text = NULL, danger_bg = NULL,
-  danger_border = NULL)
+bs_vars_state(
+  success_text = NULL,
+  success_bg = NULL,
+  success_border = NULL,
+  info_text = NULL,
+  info_bg = NULL,
+  info_border = NULL,
+  warning_text = NULL,
+  warning_bg = NULL,
+  warning_border = NULL,
+  danger_text = NULL,
+  danger_bg = NULL,
+  danger_border = NULL
+)
 }
 \arguments{
 \item{success_text}{Success text color.}

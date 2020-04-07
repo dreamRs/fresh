@@ -4,11 +4,19 @@
 \alias{bs_vars_dropdown}
 \title{Bootstrap CSS dropdown variables}
 \usage{
-bs_vars_dropdown(bg = NULL, border = NULL, fallback_border = NULL,
-  divider_bg = NULL, link_color = NULL, link_hover_color = NULL,
-  link_hover_bg = NULL, link_active_color = NULL,
-  link_active_bg = NULL, link_disabled_color = NULL,
-  header_color = NULL)
+bs_vars_dropdown(
+  bg = NULL,
+  border = NULL,
+  fallback_border = NULL,
+  divider_bg = NULL,
+  link_color = NULL,
+  link_hover_color = NULL,
+  link_hover_bg = NULL,
+  link_active_color = NULL,
+  link_active_bg = NULL,
+  link_disabled_color = NULL,
+  header_color = NULL
+)
 }
 \arguments{
 \item{bg}{Background color for the dropdown menu.}

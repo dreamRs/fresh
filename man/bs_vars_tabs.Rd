@@ -4,11 +4,15 @@
 \alias{bs_vars_tabs}
 \title{Bootstrap CSS tabs variables}
 \usage{
-bs_vars_tabs(border_color = NULL, link_hover_border_color = NULL,
-  active_link_hover_bg = NULL, active_link_hover_color = NULL,
+bs_vars_tabs(
+  border_color = NULL,
+  link_hover_border_color = NULL,
+  active_link_hover_bg = NULL,
+  active_link_hover_color = NULL,
   active_link_hover_border_color = NULL,
   justified_link_border_color = NULL,
-  justified_active_link_border_color = NULL)
+  justified_active_link_border_color = NULL
+)
 }
 \arguments{
 \item{border_color}{Border color.}

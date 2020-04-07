@@ -4,12 +4,23 @@
 \alias{adminlte_sidebar}
 \title{AdminLTE CSS sidebar variables}
 \usage{
-adminlte_sidebar(width = NULL, dark_bg = NULL, dark_hover_bg = NULL,
-  dark_color = NULL, dark_hover_color = NULL, dark_submenu_bg = NULL,
-  dark_submenu_color = NULL, dark_submenu_hover_color = NULL,
-  light_bg = NULL, light_hover_bg = NULL, light_color = NULL,
-  light_hover_color = NULL, light_submenu_bg = NULL,
-  light_submenu_color = NULL, light_submenu_hover_color = NULL)
+adminlte_sidebar(
+  width = NULL,
+  dark_bg = NULL,
+  dark_hover_bg = NULL,
+  dark_color = NULL,
+  dark_hover_color = NULL,
+  dark_submenu_bg = NULL,
+  dark_submenu_color = NULL,
+  dark_submenu_hover_color = NULL,
+  light_bg = NULL,
+  light_hover_bg = NULL,
+  light_color = NULL,
+  light_hover_color = NULL,
+  light_submenu_bg = NULL,
+  light_submenu_color = NULL,
+  light_submenu_hover_color = NULL
+)
 }
 \arguments{
 \item{width}{Side bar width, default to \code{230px}.}

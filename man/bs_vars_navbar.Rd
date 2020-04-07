@@ -4,15 +4,26 @@
 \alias{bs_vars_navbar}
 \title{Bootstrap CSS navbar variables}
 \usage{
-bs_vars_navbar(height = NULL, margin_bottom = NULL,
-  default_color = NULL, default_bg = NULL, default_border = NULL,
-  default_link_color = NULL, default_link_active_color = NULL,
-  default_link_active_bg = NULL, default_link_hover_color = NULL,
-  default_link_hover_bg = NULL, inverse_color = NULL,
-  inverse_bg = NULL, inverse_border = NULL,
-  inverse_link_color = NULL, inverse_link_active_color = NULL,
-  inverse_link_active_bg = NULL, inverse_link_hover_color = NULL,
-  inverse_link_hover_bg = NULL)
+bs_vars_navbar(
+  height = NULL,
+  margin_bottom = NULL,
+  default_color = NULL,
+  default_bg = NULL,
+  default_border = NULL,
+  default_link_color = NULL,
+  default_link_active_color = NULL,
+  default_link_active_bg = NULL,
+  default_link_hover_color = NULL,
+  default_link_hover_bg = NULL,
+  inverse_color = NULL,
+  inverse_bg = NULL,
+  inverse_border = NULL,
+  inverse_link_color = NULL,
+  inverse_link_active_color = NULL,
+  inverse_link_active_bg = NULL,
+  inverse_link_hover_color = NULL,
+  inverse_link_hover_bg = NULL
+)
 }
 \arguments{
 \item{height}{Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).}

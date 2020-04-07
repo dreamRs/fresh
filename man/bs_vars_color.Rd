@@ -4,10 +4,19 @@
 \alias{bs_vars_color}
 \title{Bootstrap CSS colors variables}
 \usage{
-bs_vars_color(brand_primary = NULL, brand_success = NULL,
-  brand_info = NULL, brand_warning = NULL, brand_danger = NULL,
-  gray_base = NULL, gray_darker = NULL, gray_dark = NULL,
-  gray = NULL, gray_light = NULL, gray_lighter = NULL)
+bs_vars_color(
+  brand_primary = NULL,
+  brand_success = NULL,
+  brand_info = NULL,
+  brand_warning = NULL,
+  brand_danger = NULL,
+  gray_base = NULL,
+  gray_darker = NULL,
+  gray_dark = NULL,
+  gray = NULL,
+  gray_light = NULL,
+  gray_lighter = NULL
+)
 }
 \arguments{
 \item{brand_primary}{Primary color (default in Bootstrap is blue).}

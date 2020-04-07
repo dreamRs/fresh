@@ -4,8 +4,15 @@
 \alias{create_pretty}
 \title{Create a custom CSS file for pretty-checkbox}
 \usage{
-create_pretty(output_file, default = NULL, primary = NULL,
-  success = NULL, info = NULL, warning = NULL, danger = NULL)
+create_pretty(
+  output_file,
+  default = NULL,
+  primary = NULL,
+  success = NULL,
+  info = NULL,
+  warning = NULL,
+  danger = NULL
+)
 }
 \arguments{
 \item{output_file}{Specifies path to output file for compiled CSS.}

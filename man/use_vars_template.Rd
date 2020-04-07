@@ -4,10 +4,13 @@
 \alias{use_vars_template}
 \title{Use a template to define SCSS variables}
 \usage{
-use_vars_template(output_file, theme = c("default", "cerulean", "cosmo",
-  "cyborg", "darkly", "flatly", "journal", "lumen", "paper", "readable",
-  "sandstone", "simplex", "slate", "spacelab", "superhero", "united",
-  "yeti"), open = interactive())
+use_vars_template(
+  output_file,
+  theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly", "journal",
+    "lumen", "paper", "readable", "sandstone", "simplex", "slate", "spacelab",
+    "superhero", "united", "yeti"),
+  open = interactive()
+)
 }
 \arguments{
 \item{output_file}{Path where to create the template, use \code{".scss"} as file extension.}

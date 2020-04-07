@@ -4,15 +4,31 @@
 \alias{bs_vars_button}
 \title{Bootstrap CSS button variables}
 \usage{
-bs_vars_button(font_weight = NULL, default_color = NULL,
-  default_bg = NULL, default_border = NULL, primary_color = NULL,
-  primary_bg = NULL, primary_border = NULL, success_color = NULL,
-  success_bg = NULL, success_border = NULL, info_color = NULL,
-  info_bg = NULL, info_border = NULL, warning_color = NULL,
-  warning_bg = NULL, warning_border = NULL, danger_color = NULL,
-  danger_bg = NULL, danger_border = NULL, link_disabled_color = NULL,
-  border_radius_base = NULL, border_radius_large = NULL,
-  border_radius_small = NULL)
+bs_vars_button(
+  font_weight = NULL,
+  default_color = NULL,
+  default_bg = NULL,
+  default_border = NULL,
+  primary_color = NULL,
+  primary_bg = NULL,
+  primary_border = NULL,
+  success_color = NULL,
+  success_bg = NULL,
+  success_border = NULL,
+  info_color = NULL,
+  info_bg = NULL,
+  info_border = NULL,
+  warning_color = NULL,
+  warning_bg = NULL,
+  warning_border = NULL,
+  danger_color = NULL,
+  danger_bg = NULL,
+  danger_border = NULL,
+  link_disabled_color = NULL,
+  border_radius_base = NULL,
+  border_radius_large = NULL,
+  border_radius_small = NULL
+)
 }
 \arguments{
 \item{font_weight}{Text font weight.}

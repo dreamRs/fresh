@@ -4,8 +4,11 @@
 \alias{bs_vars_pills}
 \title{Bootstrap CSS pills variables}
 \usage{
-bs_vars_pills(border_radius = NULL, active_link_hover_bg = NULL,
-  active_link_hover_color = NULL)
+bs_vars_pills(
+  border_radius = NULL,
+  active_link_hover_bg = NULL,
+  active_link_hover_color = NULL
+)
 }
 \arguments{
 \item{border_radius}{Rounded corner of elements.}

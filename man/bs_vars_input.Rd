@@ -4,9 +4,15 @@
 \alias{bs_vars_input}
 \title{Bootstrap CSS input variables}
 \usage{
-bs_vars_input(bg = NULL, color = NULL, border = NULL,
-  border_radius = NULL, color_placeholder = NULL,
-  group_addon_bg = NULL, border_focus = NULL)
+bs_vars_input(
+  bg = NULL,
+  color = NULL,
+  border = NULL,
+  border_radius = NULL,
+  color_placeholder = NULL,
+  group_addon_bg = NULL,
+  border_focus = NULL
+)
 }
 \arguments{
 \item{bg}{Background color.}

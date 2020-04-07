@@ -4,16 +4,33 @@
 \alias{bs_vars_panel}
 \title{Bootstrap CSS panel variables}
 \usage{
-bs_vars_panel(bg = NULL, body_padding = NULL, heading_padding = NULL,
-  footer_padding = NULL, border_radius = NULL, inner_border = NULL,
-  footer_bg = NULL, default_text = NULL, default_border = NULL,
-  default_heading_bg = NULL, primary_text = NULL,
-  primary_border = NULL, primary_heading_bg = NULL,
-  success_text = NULL, success_border = NULL,
-  success_heading_bg = NULL, info_text = NULL, info_border = NULL,
-  info_heading_bg = NULL, warning_text = NULL, warning_border = NULL,
-  warning_heading_bg = NULL, danger_text = NULL,
-  danger_border = NULL, danger_heading_bg = NULL)
+bs_vars_panel(
+  bg = NULL,
+  body_padding = NULL,
+  heading_padding = NULL,
+  footer_padding = NULL,
+  border_radius = NULL,
+  inner_border = NULL,
+  footer_bg = NULL,
+  default_text = NULL,
+  default_border = NULL,
+  default_heading_bg = NULL,
+  primary_text = NULL,
+  primary_border = NULL,
+  primary_heading_bg = NULL,
+  success_text = NULL,
+  success_border = NULL,
+  success_heading_bg = NULL,
+  info_text = NULL,
+  info_border = NULL,
+  info_heading_bg = NULL,
+  warning_text = NULL,
+  warning_border = NULL,
+  warning_heading_bg = NULL,
+  danger_text = NULL,
+  danger_border = NULL,
+  danger_heading_bg = NULL
+)
 }
 \arguments{
 \item{bg}{Background color.}
