@@ -8,23 +8,29 @@
 
 <title>Bootstrap CSS panel variables — bs_vars_panel • fresh</title>
 
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,12 +38,12 @@
 
 
 
-<meta property="og:title" content="Bootstrap CSS panel variables — bs_vars_panel" />
 
+<meta property="og:title" content="Bootstrap CSS panel variables — bs_vars_panel" />
 <meta property="og:description" content="Those variables can be used to customize
  panel (e.g. shinyWidgets::panel
  in Bootstrap and Bootswatch themes." />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -54,7 +60,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -68,7 +74,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.900</span>
       </span>
     </div>
 
@@ -99,10 +105,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/dreamRs/fresh">
+  <a href="https://github.com/dreamRs/fresh/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -126,24 +131,39 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Those variables can be used to customize
  panel (e.g. <code><a href='https://rdrr.io/pkg/shinyWidgets/man/panel.html'>shinyWidgets::panel</a></code>
  in Bootstrap and Bootswatch themes.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_panel</span>(<span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>body_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>heading_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>footer_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>inner_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>footer_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>default_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>default_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>default_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>primary_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>primary_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>primary_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>success_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>success_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>success_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>info_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>info_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>info_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>warning_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>warning_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>warning_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>danger_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>danger_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>danger_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>bs_vars_panel</span>(
+  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>body_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>heading_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>footer_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>inner_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>footer_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>default_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>primary_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>primary_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>primary_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>success_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>success_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>success_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>info_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>info_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>info_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>warning_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>warning_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>warning_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>danger_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>danger_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>danger_heading_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)</pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -248,11 +268,10 @@
       <td><p>Heading background color for danger status.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>bs_vars_panel</span>(
@@ -374,16 +393,10 @@
   <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
 }</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -394,7 +407,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>
