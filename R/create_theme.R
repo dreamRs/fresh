@@ -170,7 +170,7 @@ bootswatch_scss <- function(theme) {
 #' @importFrom sass sass_file
 adminlte_scss <- function() {
   sass_file(input = system.file(
-    "assets/adminlte/scss/AdminLTE.scss",
+    "assets/adminlte2/scss/AdminLTE.scss",
     package = "fresh"
   ))
 }
@@ -179,7 +179,7 @@ adminlte_scss <- function() {
 #' @importFrom sass sass_file
 adminlte_skin_scss <- function() {
   sass_file(input = system.file(
-    "assets/adminlte/scss/skins/_all-skins.scss",
+    "assets/adminlte2/scss/skins/_all-skins.scss",
     package = "fresh"
   ))
 }

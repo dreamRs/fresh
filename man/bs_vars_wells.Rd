@@ -17,7 +17,7 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 \description{
 Those variables can be used to customize
  wells panel (e.g. \code{\link[shiny:wellPanel]{shiny::wellPanel}} or
- \code{\link[shiny:sidebarPanel]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
+ \code{\link[shiny:sidebarLayout]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
 }
 \note{
 See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.

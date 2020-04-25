@@ -214,7 +214,7 @@ bs_vars_font <- function(family_sans_serif = NULL,
 #'
 #' @description Those variables can be used to customize
 #'  wells panel (e.g. \code{\link[shiny:wellPanel]{shiny::wellPanel}} or
-#'  \code{\link[shiny:sidebarPanel]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
+#'  \code{\link[shiny:sidebarLayout]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
 #'
 #' @param bg Background color (default in Shiny is grey).
 #' @param border Border color.
