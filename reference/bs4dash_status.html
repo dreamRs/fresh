@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bootstrap CSS wells variables — bs_vars_wells • fresh</title>
+<title>bs4Dash status colors — bs4dash_status • fresh</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,8 @@
 
 
 
-<meta property="og:title" content="Bootstrap CSS wells variables — bs_vars_wells" />
-<meta property="og:description" content="Those variables can be used to customize
- wells panel (e.g. shiny::wellPanel or
- shiny::sidebarPanel) in Bootstrap and Bootswatch themes." />
+<meta property="og:title" content="bs4Dash status colors — bs4dash_status" />
+<meta property="og:description" content="bs4Dash status colors" />
 
 
 
@@ -125,70 +123,69 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Bootstrap CSS wells variables</h1>
-    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bootstrap.R'><code>R/vars-bootstrap.R</code></a></small>
-    <div class="hidden name"><code>bs_vars_wells.Rd</code></div>
+    <h1>bs4Dash status colors</h1>
+    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bs4dash.R'><code>R/vars-bs4dash.R</code></a></small>
+    <div class="hidden name"><code>bs4dash_status.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Those variables can be used to customize
- wells panel (e.g. <code><a href='https://rdrr.io/pkg/shiny/man/wellPanel.html'>shiny::wellPanel</a></code> or
- <code><a href='https://rdrr.io/pkg/shiny/man/sidebarLayout.html'>shiny::sidebarPanel</a></code>) in Bootstrap and Bootswatch themes.</p>
+    <p>bs4Dash status colors</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_wells</span>(<span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>bs4dash_status</span>(
+  <span class='kw'>primary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>secondary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>success</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>info</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>warning</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>danger</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>light</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>dark</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>bg</th>
-      <td><p>Background color (default in Shiny is grey).</p></td>
+      <th>primary</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#0073b7;border-radius:2px;display:inline-block;margin-right:5px;'></span>#0073b7.</p></td>
     </tr>
     <tr>
-      <th>border</th>
-      <td><p>Border color.</p></td>
+      <th>secondary</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#6c757d;border-radius:2px;display:inline-block;margin-right:5px;'></span>#6c757d.</p></td>
+    </tr>
+    <tr>
+      <th>success</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#28a745;border-radius:2px;display:inline-block;margin-right:5px;'></span>#28a745.</p></td>
+    </tr>
+    <tr>
+      <th>info</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#17a2b8;border-radius:2px;display:inline-block;margin-right:5px;'></span>#17a2b8.</p></td>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#ffc107;border-radius:2px;display:inline-block;margin-right:5px;'></span>#ffc107.</p></td>
+    </tr>
+    <tr>
+      <th>danger</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#dc3545;border-radius:2px;display:inline-block;margin-right:5px;'></span>#dc3545.</p></td>
+    </tr>
+    <tr>
+      <th>light</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#f8f9fa;border-radius:2px;display:inline-block;margin-right:5px;'></span>#f8f9fa.</p></td>
+    </tr>
+    <tr>
+      <th>dark</th>
+      <td><p>Default: <span style='width:12px;height:12px;background:#343a40;border-radius:2px;display:inline-block;margin-right:5px;'></span>#343a40.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>See default parameters for Bootstrap: <a href='https://getbootstrap.com/docs/3.4/customize/'>https://getbootstrap.com/docs/3.4/customize/</a>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Background color of wellPanel</span>
-<span class='fu'>bs_vars_wells</span>(
-  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#CEECF5"</span>
-)</div><div class='output co'>#&gt; $`well-bg`
-#&gt; [1] "#CEECF5"
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
-
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-      <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-      <span class='fu'>bs_vars_wells</span>(
-        <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#CEECF5"</span>
-      )
-    )),
-    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/wellPanel.html'>wellPanel</a></span>(
-      <span class='st'>"This is a wellPanel"</span>
-    )
-  )
-
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
-
-  }
-
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
-}</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>examples</span>/<span class='no'>bs4dash_status.R</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'examples' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
