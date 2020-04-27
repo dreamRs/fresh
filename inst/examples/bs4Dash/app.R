@@ -20,22 +20,6 @@ library(fresh)
 
 # Theme -------------------------------------------------------------------
 
-
-# library(sass)
-# bs4DashTheme <- sass(
-#   input = list(
-#     list("lightblue" = "#112446", "blue" = "#FFFF00", red = "#3ADF00", "sidebar-width" = "400px"),
-#     # sass_file(input = system.file(
-#     #   "assets/bootstrap-4.3.1/bootstrap.scss",
-#     #   package = "fresh"
-#     # )),
-#     sass_file(input = system.file(
-#       "assets/AdminLTE-3.0.4/AdminLTE.scss",
-#       package = "fresh"
-#     ))
-#   ),
-#   options = sass_options(output_style = "compressed")
-# )
 bs4DashTheme <- create_theme(
   bs4dash_status(primary = "#FFFF00", danger = "#3ADF00")
 )

@@ -63,7 +63,7 @@ bs4dash_color <- function(blue = NULL,
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples examples/bs4dash_status.R
+#' @example examples/bs4dash_status.R
 bs4dash_status <- function(primary = NULL,
                            secondary = NULL,
                            success = NULL,
@@ -83,20 +83,20 @@ bs4dash_status <- function(primary = NULL,
 
 #' bs4Dash layout options
 #'
-#' @param font_size_root
-#' @param sidebar_width
-#' @param sidebar_padding_x
-#' @param sidebar_padding_y
-#' @param boxed_layout_max_width
-#' @param screen_header_collapse
-#' @param main_bg
-#' @param content_padding_y
-#' @param content_padding_x
+#' @param font_size_root Font size root.
+#' @param sidebar_width Sidebar width.
+#' @param sidebar_padding_x Sidebar horizontal padding.
+#' @param sidebar_padding_y Sidebar vertical padding.
+#' @param boxed_layout_max_width Max width used in boxed layout.
+#' @param screen_header_collapse When to show the smaller logo.
+#' @param main_bg Main background color.
+#' @param content_padding_x Main content horizontal padding.
+#' @param content_padding_y Main content vertical padding.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
 #'
-#' @examples
+#' @example examples/bs4dash_layout.R
 bs4dash_layout <- function(font_size_root = NULL,
                            sidebar_width = NULL,
                            sidebar_padding_x = NULL,
@@ -104,8 +104,8 @@ bs4dash_layout <- function(font_size_root = NULL,
                            boxed_layout_max_width = NULL,
                            screen_header_collapse = NULL,
                            main_bg = NULL,
-                           content_padding_y = NULL,
-                           content_padding_x = NULL) {
+                           content_padding_x = NULL,
+                           content_padding_y = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
