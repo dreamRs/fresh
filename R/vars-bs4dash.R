@@ -1,0 +1,119 @@
+
+#' bs4Dash main colors
+#'
+#' @param blue Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#0073b7")} This color is used for \strong{primary} status.
+#' @param lightblue Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#3c8dbc")}
+#' @param navy Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#001f3f")}
+#' @param cyan Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#17a2b8")} This color is used for \strong{info} status.
+#' @param teal Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#39cccc")}
+#' @param olive Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#3d9970")}
+#' @param green Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#28a745")} This color is used for \strong{success} status.
+#' @param lime Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#01ff70")}
+#' @param orange Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#ff851b")}
+#' @param yellow Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#ffc107")} This color is used for \strong{warning} status.
+#' @param fuchsia Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#f012be")}
+#' @param purple Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#605ca8")}
+#' @param maroon Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#d81b60")}
+#' @param red Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#dc3545")} This color is used for \strong{danger} status.
+#' @param black Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#111")}
+#' @param gray_x_light Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#d2d6de")}
+#' @param gray_600  Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#6c757d")} This color is used for \strong{secondary} status.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @example examples/bs4dash_color.R
+bs4dash_color <- function(blue = NULL,
+                          lightblue = NULL,
+                          navy = NULL,
+                          cyan = NULL,
+                          teal = NULL,
+                          olive = NULL,
+                          green = NULL,
+                          lime = NULL,
+                          orange = NULL,
+                          yellow = NULL,
+                          fuchsia = NULL,
+                          purple = NULL,
+                          maroon = NULL,
+                          red = NULL,
+                          black = NULL,
+                          gray_x_light = NULL,
+                          gray_600 = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
+
+
+
+#' bs4Dash status colors
+#'
+#' @param primary Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#0073b7")}
+#' @param secondary Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#6c757d")}
+#' @param success Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#28a745")}
+#' @param info Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#17a2b8")}
+#' @param warning Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#ffc107")}
+#' @param danger Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#dc3545")}
+#' @param light Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#f8f9fa")}
+#' @param dark Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#343a40")}
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples examples/bs4dash_status.R
+bs4dash_status <- function(primary = NULL,
+                           secondary = NULL,
+                           success = NULL,
+                           info = NULL,
+                           warning = NULL,
+                           danger = NULL,
+                           light = NULL,
+                           dark = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
+
+
+
+#' bs4Dash layout options
+#'
+#' @param font_size_root
+#' @param sidebar_width
+#' @param sidebar_padding_x
+#' @param sidebar_padding_y
+#' @param boxed_layout_max_width
+#' @param screen_header_collapse
+#' @param main_bg
+#' @param content_padding_y
+#' @param content_padding_x
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+bs4dash_layout <- function(font_size_root = NULL,
+                           sidebar_width = NULL,
+                           sidebar_padding_x = NULL,
+                           sidebar_padding_y = NULL,
+                           boxed_layout_max_width = NULL,
+                           screen_header_collapse = NULL,
+                           main_bg = NULL,
+                           content_padding_y = NULL,
+                           content_padding_x = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
+
+
+
+
+

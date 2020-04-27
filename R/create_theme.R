@@ -77,6 +77,8 @@ create_theme <- function(...,
     framework <- "bootstrap"
   } else if (all(is_adminlte_vars(vars))) {
     framework <- "adminlte"
+  } else if (all(is_bs4dash_vars(vars))) {
+    framework <- "bs4dash"
   } else {
     if (any(is_bootstrap_vars(vars)) & any(is_adminlte_vars(vars))) {
       stop("You cannot mix Bootstrap and AddminLTE variables", call. = FALSE)
@@ -87,6 +89,9 @@ create_theme <- function(...,
       } else if (any(is_adminlte_vars(vars))) {
         framework <- "adminlte"
         warning("Using custom variables with adminlte SCSS files", call. = FALSE)
+      } else if (any(is_bs4dash_vars(vars))) {
+        framework <- "bs4dash"
+        warning("Using custom variables with bs4dash SCSS files", call. = FALSE)
       } else {
         framework <- "bootstrap"
         warning("Using custom variables with Bootstrap SCSS files", call. = FALSE)
@@ -111,8 +116,13 @@ create_theme <- function(...,
   } else if (identical(framework, "adminlte")) {
     input <- list(
       vars,
-      adminlte_scss(),
-      adminlte_skin_scss()
+      adminlte2_scss(),
+      adminlte2_skin_scss()
+    )
+  } else if (identical(framework, "bs4dash")) {
+    input <- list(
+      vars,
+      adminlte3_scss()
     )
   }
   if (!is.null(output_file) && isTRUE(include_assets)) {
@@ -168,25 +178,31 @@ bootswatch_scss <- function(theme) {
 
 
 #' @importFrom sass sass_file
-adminlte_scss <- function() {
+adminlte2_scss <- function() {
   sass_file(input = system.file(
-    "assets/adminlte2/scss/AdminLTE.scss",
+    "assets/AdminLTE-2.4.10/scss/AdminLTE.scss",
     package = "fresh"
   ))
 }
 
 
 #' @importFrom sass sass_file
-adminlte_skin_scss <- function() {
+adminlte2_skin_scss <- function() {
   sass_file(input = system.file(
-    "assets/adminlte2/scss/skins/_all-skins.scss",
+    "assets/AdminLTE-2.4.10/scss/skins/_all-skins.scss",
     package = "fresh"
   ))
 }
 
 
 
-
+#' @importFrom sass sass_file
+adminlte3_scss <- function() {
+  sass_file(input = system.file(
+    "assets/AdminLTE-3.0.4/AdminLTE.scss",
+    package = "fresh"
+  ))
+}
 
 
 

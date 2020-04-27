@@ -26,3 +26,24 @@ is_bootstrap_vars <- function(vars) {
 is_adminlte_vars <- function(vars) {
   unlist(lapply(vars, inherits, what = "adminlte_vars"))
 }
+
+is_bs4dash_vars <- function(vars) {
+  unlist(lapply(vars, inherits, what = "bs4dash_vars"))
+}
+
+rd_color_tag <- function(color, label = color) {
+  style <- sprintf(
+    "width:12px;height:12px;background:%s;border-radius:2px;display:inline-block;margin-right:5px;",
+    color
+  )
+  sprintf(
+    "\\ifelse{html}{\\out{<span style='%s'></span>%s.}}{%s.}",
+    style, label, label
+  )
+}
+
+
+
+
+
+

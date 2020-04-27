@@ -1,6 +1,6 @@
 Package: fresh
 Title: Create Custom 'Bootstrap' Themes to Use in 'Shiny'
-Version: 0.1.0.900
+Version: 0.1.1.900
 Authors@R: c(
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Fanny", "Meyer", role = "aut"),
@@ -9,7 +9,8 @@ Authors@R: c(
   person("Jacob", "Thornton", role = "ctb", comment = "Bootstrap library"),
   person(family = "Bootstrap contributors", role = "ctb", comment = "Bootstrap library"),
   person(family = "Twitter, Inc", role = "cph", comment = "Bootstrap library"),
-  person("onkbear", role = c("ctb", "cph"), comment = "admin-lte-2-sass"))
+  person("onkbear", role = c("ctb", "cph"), comment = "admin-lte-2-sass"),
+  person(family = "Colorlib", role = c("ctb", "cph"), comment = "AdminLTE"))
 Description: Customize 'Bootstrap' and 'Bootswatch' themes, like colors, fonts, grid layout, 
   to use in 'Shiny' applications, 'rmarkdown' documents and 'flexdashboard'.
 URL: https://github.com/dreamRs/fresh
@@ -25,6 +26,7 @@ Imports:
 Suggests: 
     shinyWidgets,
     shinydashboard,
+    bs4Dash,
     knitr,
     rmarkdown,
     testthat (>= 2.1.0),
