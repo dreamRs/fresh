@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>bs4Dash status colors — bs4dash_status • fresh</title>
+<title>bs4Dash layout options — bs4dash_layout • fresh</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="bs4Dash status colors — bs4dash_status" />
-<meta property="og:description" content="bs4Dash status colors" />
+<meta property="og:title" content="bs4Dash layout options — bs4dash_layout" />
+<meta property="og:description" content="bs4Dash layout options" />
 
 
 
@@ -123,60 +123,65 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>bs4Dash status colors</h1>
+    <h1>bs4Dash layout options</h1>
     <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bs4dash.R'><code>R/vars-bs4dash.R</code></a></small>
-    <div class="hidden name"><code>bs4dash_status.Rd</code></div>
+    <div class="hidden name"><code>bs4dash_layout.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>bs4Dash status colors</p>
+    <p>bs4Dash layout options</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs4dash_status</span>(
-  <span class='kw'>primary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>secondary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>success</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>info</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>warning</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>danger</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'>bs4dash_layout</span>(
+  <span class='kw'>font_size_root</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sidebar_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sidebar_padding_x</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sidebar_padding_y</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>boxed_layout_max_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>screen_header_collapse</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>main_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>content_padding_x</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>content_padding_y</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>primary</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#0073b7;border-radius:2px;display:inline-block;margin-right:5px;'></span>#0073b7.</p></td>
+      <th>font_size_root</th>
+      <td><p>Font size root.</p></td>
     </tr>
     <tr>
-      <th>secondary</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#6c757d;border-radius:2px;display:inline-block;margin-right:5px;'></span>#6c757d.</p></td>
+      <th>sidebar_width</th>
+      <td><p>Sidebar width.</p></td>
     </tr>
     <tr>
-      <th>success</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#28a745;border-radius:2px;display:inline-block;margin-right:5px;'></span>#28a745.</p></td>
+      <th>sidebar_padding_x</th>
+      <td><p>Sidebar horizontal padding.</p></td>
     </tr>
     <tr>
-      <th>info</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#17a2b8;border-radius:2px;display:inline-block;margin-right:5px;'></span>#17a2b8.</p></td>
+      <th>sidebar_padding_y</th>
+      <td><p>Sidebar vertical padding.</p></td>
     </tr>
     <tr>
-      <th>warning</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#ffc107;border-radius:2px;display:inline-block;margin-right:5px;'></span>#ffc107.</p></td>
+      <th>boxed_layout_max_width</th>
+      <td><p>Max width used in boxed layout.</p></td>
     </tr>
     <tr>
-      <th>danger</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#dc3545;border-radius:2px;display:inline-block;margin-right:5px;'></span>#dc3545.</p></td>
+      <th>screen_header_collapse</th>
+      <td><p>When to show the smaller logo.</p></td>
     </tr>
     <tr>
-      <th>light</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#f8f9fa;border-radius:2px;display:inline-block;margin-right:5px;'></span>#f8f9fa.</p></td>
+      <th>main_bg</th>
+      <td><p>Main background color.</p></td>
     </tr>
     <tr>
-      <th>dark</th>
-      <td><p>Default: <span style='width:12px;height:12px;background:#343a40;border-radius:2px;display:inline-block;margin-right:5px;'></span>#343a40.</p></td>
+      <th>content_padding_x</th>
+      <td><p>Main content horizontal padding.</p></td>
+    </tr>
+    <tr>
+      <th>content_padding_y</th>
+      <td><p>Main content vertical padding.</p></td>
     </tr>
     </table>
 
@@ -186,15 +191,11 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='co'># Change colors used in bs4Dash</span>
-<span class='fu'>bs4dash_status</span>(
-  <span class='kw'>primary</span> <span class='kw'>=</span> <span class='st'>"#F7FE2E"</span>,
-  <span class='kw'>secondary</span> <span class='kw'>=</span> <span class='st'>"#01DF3A"</span>
-)</div><div class='output co'>#&gt; $primary
-#&gt; [1] "#F7FE2E"
-#&gt; 
-#&gt; $secondary
-#&gt; [1] "#01DF3A"
+<span class='co'># Sidebar width</span>
+<span class='fu'>bs4dash_layout</span>(
+  <span class='kw'>sidebar_width</span> <span class='kw'>=</span> <span class='st'>"400px"</span>
+)</div><div class='output co'>#&gt; $`sidebar-width`
+#&gt; [1] "400px"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bs4dash_vars"    "list"           </div><div class='input'>
@@ -204,11 +205,10 @@
   <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>bs4Dash</span>)
 
   <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashPage.html'>bs4DashPage</a></span>(
-    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash Custom Status"</span>,
-    <span class='co'># sidebar_collapsed = FALSE,</span>
+    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash big sidebar"</span>,
     <span class='kw'>navbar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashNavbar.html'>bs4DashNavbar</a></span>(),
     <span class='kw'>sidebar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashSidebar.html'>bs4DashSidebar</a></span>(
-      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash Custom Status"</span>,
+      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash big sidebar"</span>,
       <span class='kw'>skin</span> <span class='kw'>=</span> <span class='st'>"light"</span>,
       <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4SidebarMenu.html'>bs4SidebarMenu</a></span>(
         <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4SidebarMenuItem.html'>bs4SidebarMenuItem</a></span>(
@@ -220,56 +220,15 @@
     <span class='kw'>body</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html'>bs4DashBody</a></span>(
 
       <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-        <span class='fu'>bs4dash_status</span>(
-          <span class='kw'>primary</span> <span class='kw'>=</span> <span class='st'>"#F7FE2E"</span>,
-          <span class='kw'>secondary</span> <span class='kw'>=</span> <span class='st'>"#01DF3A"</span>
+        <span class='fu'>bs4dash_layout</span>(
+          <span class='kw'>sidebar_width</span> <span class='kw'>=</span> <span class='st'>"600px"</span>
         )
       )),
 
       <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4TabItems.html'>bs4TabItems</a></span>(
         <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4TabItem.html'>bs4TabItem</a></span>(
           <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"tab1"</span>,
-          <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h2</a></span>(<span class='st'>"UI components"</span>),
-          <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h4</a></span>(<span class='st'>"bs4ValueBox"</span>),
-          <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
-            <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4ValueBox.html'>bs4ValueBox</a></span>(
-              <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>150</span>,
-              <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"ValueBox with primary status"</span>,
-              <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-              <span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"shopping-cart"</span>,
-              <span class='kw'>href</span> <span class='kw'>=</span> <span class='st'>"#"</span>,
-              <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>4</span>
-            ),
-            <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4ValueBox.html'>bs4ValueBox</a></span>(
-              <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>150</span>,
-              <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"ValueBox with secondary status"</span>,
-              <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"secondary"</span>,
-              <span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"shopping-cart"</span>,
-              <span class='kw'>href</span> <span class='kw'>=</span> <span class='st'>"#"</span>,
-              <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>4</span>
-            )
-          ),
-          <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h4</a></span>(<span class='st'>"bs4Card"</span>),
-          <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
-            <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4Card.html'>bs4Card</a></span>(
-              <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Card with primary status"</span>,
-              <span class='kw'>closable</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-              <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
-              <span class='kw'>solidHeader</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-              <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-              <span class='kw'>collapsible</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-              <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>p</a></span>(<span class='st'>"Box Content"</span>)
-            ),
-            <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4Card.html'>bs4Card</a></span>(
-              <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Card with secondary status"</span>,
-              <span class='kw'>closable</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-              <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
-              <span class='kw'>solidHeader</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-              <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"secondary"</span>,
-              <span class='kw'>collapsible</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-              <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>p</a></span>(<span class='st'>"Box Content"</span>)
-            )
-          )
+          <span class='st'>"Content tab 1"</span>
         )
       )
     )
