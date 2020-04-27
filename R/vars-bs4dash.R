@@ -115,5 +115,63 @@ bs4dash_layout <- function(font_size_root = NULL,
 
 
 
+#' bs4Dash sidebar skins light/dark
+#'
+#' @param bg Background color.
+#' @param hover_bg Hover background color.
+#' @param color Color.
+#' @param hover_color Hover color.
+#' @param active_color Active color.
+#' @param submenu_bg Submenu background color.
+#' @param submenu_color Submenu color.
+#' @param submenu_hover_color Submenu hover color.
+#' @param submenu_hover_bg Submenu hover background color.
+#' @param submenu_active_color Submenu active color.
+#' @param submenu_active_bg Submenu active background color.
+#' @param header_color Header color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @name bs4Dash-sidebar
+#'
+#' @example examples/bs4dash-sidebars.R
+bs4dash_sidebar_light <- function(bg = NULL,
+                                  hover_bg = NULL,
+                                  color = NULL,
+                                  hover_color = NULL,
+                                  active_color = NULL,
+                                  submenu_bg, submenu_color = NULL,
+                                  submenu_hover_color = NULL,
+                                  submenu_hover_bg = NULL,
+                                  submenu_active_color = NULL,
+                                  submenu_active_bg = NULL,
+                                  header_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "sidebar-light")
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
 
+#' @export
+#'
+#' @rdname bs4Dash-sidebar
+bs4dash_sidebar_dark <- function(bg = NULL,
+                                 hover_bg = NULL,
+                                 color = NULL,
+                                 hover_color = NULL,
+                                 active_color = NULL,
+                                 submenu_bg, submenu_color = NULL,
+                                 submenu_hover_color = NULL,
+                                 submenu_hover_bg = NULL,
+                                 submenu_active_color = NULL,
+                                 submenu_active_bg = NULL,
+                                 header_color = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "sidebar-dark")
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
 
