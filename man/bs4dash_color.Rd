@@ -21,7 +21,10 @@ bs4dash_color(
   red = NULL,
   black = NULL,
   gray_x_light = NULL,
-  gray_600 = NULL
+  gray_600 = NULL,
+  gray_800 = NULL,
+  gray_900 = NULL,
+  white = NULL
 )
 }
 \arguments{
@@ -58,6 +61,12 @@ bs4dash_color(
 \item{gray_x_light}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#d2d6de")}}
 
 \item{gray_600}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#6c757d")} This color is used for \strong{secondary} status.}
+
+\item{gray_800}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#343a40")} Color for dark skin.}
+
+\item{gray_900}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#212529")} Color for text in body.}
+
+\item{white}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#ffffff")}}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.

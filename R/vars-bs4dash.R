@@ -17,7 +17,10 @@
 #' @param red Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#dc3545")} This color is used for \strong{danger} status.
 #' @param black Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#111")}
 #' @param gray_x_light Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#d2d6de")}
-#' @param gray_600  Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#6c757d")} This color is used for \strong{secondary} status.
+#' @param gray_600 Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#6c757d")} This color is used for \strong{secondary} status.
+#' @param gray_800 Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#343a40")} Color for dark skin.
+#' @param gray_900 Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#212529")} Color for text in body.
+#' @param white Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#ffffff")}
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
@@ -39,7 +42,10 @@ bs4dash_color <- function(blue = NULL,
                           red = NULL,
                           black = NULL,
                           gray_x_light = NULL,
-                          gray_600 = NULL) {
+                          gray_600 = NULL,
+                          gray_800 = NULL,
+                          gray_900 = NULL,
+                          white = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)
@@ -174,4 +180,37 @@ bs4dash_sidebar_dark <- function(bg = NULL,
   class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
   vars
 }
+
+
+
+
+#' @title bs4Dash color contrast
+#'
+#' @description These variables allow to customize color used if
+#' contrast between a color and its background is under threshold.
+#' For example, it's used to choose text color written in \code{bs4ValueBox}
+#' with background defined by a status.
+#'
+#' @param contrasted_threshold The yiq lightness value that
+#'  determines when the lightness of color changes from "dark"
+#'  to "light". Acceptable values are between 0 and 255.
+#' @param text_dark Dark text color.
+#' @param text_light Light text color.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @example examples/bs4dash_yiq.R
+bs4dash_yiq <- function(contrasted_threshold = NULL,
+                        text_dark = NULL,
+                        text_light = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "yiq")
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
+
+
+
 
