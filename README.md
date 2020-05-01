@@ -1,6 +1,6 @@
 # fresh <img src="man/figures/fresh-logo.png" width=200 align="right" />
 
-> Create fresh themes for use in {shiny} & {shinydashboard} applications and {flexdashboard} documents.
+> Create fresh themes for use in [{shiny}](https://github.com/rstudio/shiny), [{shinydashboard}](https://github.com/rstudio/shinydashboard) and [{bs4Dash}](https://github.com/RinteRface/bs4Dash) applications and {flexdashboard} documents.
 
 <!-- badges: start -->
 [![version](http://www.r-pkg.org/badges/version/fresh)](https://CRAN.R-project.org/package=fresh)

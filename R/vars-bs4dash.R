@@ -93,6 +93,8 @@ bs4dash_status <- function(primary = NULL,
 #' @param sidebar_width Sidebar width.
 #' @param sidebar_padding_x Sidebar horizontal padding.
 #' @param sidebar_padding_y Sidebar vertical padding.
+#' @param sidebar_mini_width Width for mini sidabar.
+#' @param control_sidebar_width Control sidebar width (the one on the right).
 #' @param boxed_layout_max_width Max width used in boxed layout.
 #' @param screen_header_collapse When to show the smaller logo.
 #' @param main_bg Main background color.
@@ -107,6 +109,8 @@ bs4dash_layout <- function(font_size_root = NULL,
                            sidebar_width = NULL,
                            sidebar_padding_x = NULL,
                            sidebar_padding_y = NULL,
+                           sidebar_mini_width = NULL,
+                           control_sidebar_width = NULL,
                            boxed_layout_max_width = NULL,
                            screen_header_collapse = NULL,
                            main_bg = NULL,
@@ -212,5 +216,74 @@ bs4dash_yiq <- function(contrasted_threshold = NULL,
 }
 
 
+
+
+#' bs4Dash fonts parameters
+#'
+#' @param size_base Base size, this size is used to calculate other size. Must in \code{rem} unit.
+#' @param size_lg Large size.
+#' @param size_sm Small size.
+#' @param size_xs Extra small size.
+#' @param size_xl Extra large size.
+#' @param weight_light Light font weight.
+#' @param weight_normal Normal font weight.
+#' @param weight_bold Bold font weight.
+#' @param family_sans_serif Sans serif font family.
+#' @param family_monospace Monospace font family.
+#' @param family_base Base font family.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @example examples/bs4dash_font.R
+bs4dash_font <- function(size_base = NULL,
+                         size_lg = NULL,
+                         size_sm = NULL,
+                         size_xs = NULL,
+                         size_xl = NULL,
+                         weight_light = NULL,
+                         weight_normal = NULL,
+                         weight_bold = NULL,
+                         family_sans_serif = NULL,
+                         family_monospace = NULL,
+                         family_base = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "font")
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
+
+
+
+#' bs4dash buttons variables
+#'
+#' @param default_background_color Default background color.
+#' @param default_color Default color.
+#' @param default_border_color Default border color.
+#' @param padding_y_xs Vertical padding for extra small button.
+#' @param padding_x_xs Horizontal padding for extra small button.
+#' @param line_height_xs Line height for extra small button.
+#' @param font_size_xs Font size for extra small button.
+#' @param border_radius_xs Border radius for extra small button.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @example examples/bs4dash_button.R
+bs4dash_button <- function(default_background_color = NULL,
+                           default_color = NULL,
+                           default_border_color = NULL,
+                           padding_y_xs = NULL,
+                           padding_x_xs = NULL,
+                           line_height_xs = NULL,
+                           font_size_xs = NULL,
+                           border_radius_xs = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars, prefix = "button")
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
 
 

@@ -9,6 +9,8 @@ bs4dash_layout(
   sidebar_width = NULL,
   sidebar_padding_x = NULL,
   sidebar_padding_y = NULL,
+  sidebar_mini_width = NULL,
+  control_sidebar_width = NULL,
   boxed_layout_max_width = NULL,
   screen_header_collapse = NULL,
   main_bg = NULL,
@@ -24,6 +26,10 @@ bs4dash_layout(
 \item{sidebar_padding_x}{Sidebar horizontal padding.}
 
 \item{sidebar_padding_y}{Sidebar vertical padding.}
+
+\item{sidebar_mini_width}{Width for mini sidabar.}
+
+\item{control_sidebar_width}{Control sidebar width (the one on the right).}
 
 \item{boxed_layout_max_width}{Max width used in boxed layout.}
 

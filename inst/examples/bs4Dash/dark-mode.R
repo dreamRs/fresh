@@ -1,7 +1,7 @@
 
 #  ------------------------------------------------------------------------
 #
-# Title : Custom bs4Dash theme
+# Title : bs4Dash Dark Mode
 #    By : Victor
 #  Date : 2020-04-25
 #
@@ -21,7 +21,14 @@ library(fresh)
 # Theme -------------------------------------------------------------------
 
 bs4DashTheme <- create_theme(
-  bs4dash_status(primary = "#FFFF00", danger = "#3ADF00")
+  bs4dash_yiq(contrasted_threshold = 10, text_dark = "#FFF", text_light = "#272c30"),
+  bs4dash_layout(main_bg = "#353c42"),
+  bs4dash_sidebar_dark(
+    bg = "#272c30", color = "#bec5cb", hover_color = "#FFF",
+    submenu_bg = "#272c30", submenu_color = "#FFF", submenu_hover_color = "#FFF"
+  ),
+  bs4dash_status(dark = "#272c30"),
+  bs4dash_color(white = "#272c30", gray_900 = "#FFF")
 )
 
 
@@ -30,19 +37,37 @@ bs4DashTheme <- create_theme(
 
 
 ui <- bs4DashPage(
-  title = "bs4Dash Custom Theme",
-  navbar = bs4DashNavbar(skin = "light"),
+  title = "bs4Dash Dark Mode",
+  # sidebar_collapsed = FALSE,
+  navbar = bs4DashNavbar(skin = "dark"),
   sidebar = bs4DashSidebar(
-    title = "bs4Dash Custom Theme",
-    skin = "light",
+    title = "bs4Dash Dark Mode",
+    skin = "dark",
     bs4SidebarMenu(
+      bs4SidebarHeader("Menu:"),
       bs4SidebarMenuItem(
         tabName = "tab1",
-        text = "UI components"
+        text = "UI components",
+        icon = "home"
       ),
       bs4SidebarMenuItem(
         tabName = "tab2",
         text = "Tab 2"
+      ),
+      bs4SidebarMenuItem(
+        text = "Item List",
+        icon = "bars",
+        startExpanded = TRUE,
+        bs4SidebarMenuSubItem(
+          text = "Item 1",
+          tabName = "item1",
+          icon = "circle-thin"
+        ),
+        bs4SidebarMenuSubItem(
+          text = "Item 2",
+          tabName = "item2",
+          icon = "circle-thin"
+        )
       )
     )
   ),
@@ -54,7 +79,6 @@ ui <- bs4DashPage(
       bs4TabItem(
         tabName = "tab1",
         tags$h2("UI components"),
-        actionButton("go", "A go button"),
         tags$h4("bs4ValueBox"),
         fluidRow(
           bs4ValueBox(
@@ -82,35 +106,12 @@ ui <- bs4DashPage(
             width = 4
           )
         ),
-        fluidRow(
-          bs4ValueBox(
-            value = "44",
-            subtitle = "ValueBox with warning status",
-            status = "warning",
-            icon = "sliders",
-            width = 4
-          ),
-          bs4ValueBox(
-            value = "44",
-            subtitle = "ValueBox with info status",
-            status = "info",
-            icon = "sliders",
-            width = 4
-          ),
-          bs4ValueBox(
-            value = "44",
-            subtitle = "ValueBox with success status",
-            status = "success",
-            icon = "sliders",
-            width = 4
-          )
-        ),
         tags$h4("bs4InfoBox"),
         fluidRow(
           bs4InfoBox(
             value = 150,
             title = "InfoBox with primary status",
-            status = "primary",
+            iconStatus = "primary",
             icon = "shopping-cart",
             href = "#",
             width = 4
@@ -118,7 +119,7 @@ ui <- bs4DashPage(
           bs4InfoBox(
             value = 150,
             title = "InfoBox with secondary status",
-            status = "secondary",
+            iconStatus = "secondary",
             icon = "shopping-cart",
             href = "#",
             width = 4
@@ -126,32 +127,9 @@ ui <- bs4DashPage(
           bs4InfoBox(
             value = "53%",
             title = "InfoBox with danger status",
-            status = "danger",
+            iconStatus = "danger",
             icon = "cogs",
             footer = "Hello World",
-            width = 4
-          )
-        ),
-        fluidRow(
-          bs4InfoBox(
-            value = "44",
-            title = "InfoBox with warning status",
-            status = "warning",
-            icon = "sliders",
-            width = 4
-          ),
-          bs4InfoBox(
-            value = "44",
-            title = "InfoBox with info status",
-            status = "info",
-            icon = "sliders",
-            width = 4
-          ),
-          bs4InfoBox(
-            value = "44",
-            title = "InfoBox with success status",
-            status = "success",
-            icon = "sliders",
             width = 4
           )
         ),
