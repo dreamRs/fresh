@@ -526,7 +526,7 @@ bs_vars_modal <- function(md = NULL,
 #' @title Bootstrap CSS button variables
 #'
 #' @description Those variables can be used to customize
-#'  buttons (e.g. \code{\link[shiny:actionButton]{shiny::actionButton}}
+#'  buttons (e.g. \code{\link[shiny:actionButton]{shiny::actionButton}})
 #'  in Bootstrap and Bootswatch themes.
 #'
 #' @param font_weight Text font weight.

@@ -82,7 +82,7 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
 Those variables can be used to customize
- buttons (e.g. \code{\link[shiny:actionButton]{shiny::actionButton}}
+ buttons (e.g. \code{\link[shiny:actionButton]{shiny::actionButton}})
  in Bootstrap and Bootswatch themes.
 }
 \examples{
