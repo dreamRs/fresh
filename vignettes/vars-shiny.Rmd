@@ -218,6 +218,7 @@ navbar <- navbarPage("App Title",
 
 ```{r, eval=FALSE}
 bs_vars_navbar(
+  padding_horizontal = "15px",
   default_bg = "#112446",
   default_color = "#FFFFFF",
   default_link_color = "#FFFFFF",
@@ -528,5 +529,32 @@ With our {fresh} theme it will look like:
 :::
 
 ::::::
+
+
+
+## Modal
+
+Modal create with `modalDialog` can be customized with `bs_vars_modal()`, you can change the width of the window, the overlay color behind the modal and its opacity.
+
+For example, here's a modal with 80% width and an opaque background:
+
+```{r, eval=FALSE}
+bs_vars_modal(
+  md = "80%",backdrop_bg = "#112446",
+  backdrop_opacity = 1,
+  header_border_color = "#112446",
+  footer_border_color = "#112446"
+)
+```
+
+
+With default theme, it will render as:
+
+<img src="figures/modal-default.png" style="width:100%"></img>
+
+
+With our {fresh} theme it will look like:
+
+<img src="figures/modal-custom.png" style="width:100%"></img>
 
 
