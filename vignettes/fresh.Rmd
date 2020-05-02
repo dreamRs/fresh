@@ -1,0 +1,154 @@
+---
+title: "Fresh themes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Theme for shiny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(fresh)
+```
+
+
+{fresh} allow to create custom themes to use in [{shiny}](https://github.com/rstudio/shiny) applications, currently you can create themes to use with:
+
+* shiny itself, with `shiny::fluidPage` or `shiny::navbarPage` or themes from [Bootswatch](https://bootswatch.com/3/)
+* [{shinydashboard}](https://rstudio.github.io/shinydashboard/): Shiny Dashboarding framework
+* [{bs4Dash}](https://rinterface.github.io/bs4Dash/index.html): Bootstrap 4 shinydashboard using AdminLTE3
+
+
+## Create a theme
+
+Use function `create_theme` to create a new theme, this function accept **variables** to set specific parameters of the theme. There's 3 type of variables depending on which framework you use:
+
+* `bs_vars_*` to create a shiny theme
+* `adminlte_*` to create a shinydashboard theme
+* `bs4dash_*` to create a bs4Dash theme
+
+When using `bs_vars_*`, you can specify `theme` argument to use a Bootswatch template.
+
+
+```{r}
+create_theme(
+  theme = "default",
+  bs_vars_button(
+    default_color = "#FFF",
+    default_bg = "#112446",
+    default_border = "#112446",
+    border_radius_base = "15px"
+  ),
+  bs_vars_wells(
+    bg = "#FFF",
+    border = "#112446"
+  )
+)
+```
+
+Here we modify `shiny::actionButton` appearance with `bs_vars_button` and appearance of `shiny::sidebarPanel` with `bs_vars_wells`.
+
+
+Result looks like :
+
+<!-- ![](figures/example_shiny.png) -->
+
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics(path = "figures/example_shiny.png")
+```
+
+
+
+
+## Use a theme
+
+There's two way to use a newly created theme : 
+
+1. inline in the UI (useful to quickly visualize your theme)
+2. using a CSS file (recommended)
+
+
+### Inline
+
+Don't specify an output file and use rsult of `create_theme()` in `use_theme()` directly in your application : 
+
+```{r}
+mytheme <- create_theme(
+  theme = "default",
+  bs_vars_navbar(
+    default_bg = "#75b8d1",
+    default_color = "#FFFFFF",
+    default_link_color = "#FFFFFF",
+    default_link_active_color = "#75b8d1",
+    default_link_active_bg = "#FFFFFF",
+    default_link_hover_color = "firebrick"
+  ),
+  output_file = NULL
+)
+
+navbarPage(
+  title = "Custom navbar",
+  header = tagList(
+    use_theme(mytheme) # <-- use your theme
+  ),
+  tabPanel("Tab 1"),
+  tabPanel("Tab 2")
+)
+```
+
+
+
+### File
+
+When you create a theme, you can specify an output file : 
+
+```{r}
+create_theme(
+  theme = "default", 
+  ...,
+  output_file = "my-custom-theme.css"
+)
+```
+
+Put the file `my-custom-theme.css` in the `www/` folder of your application, and reference it like that in your UI's `fluidPage` or `navbarPage` : 
+
+```r
+fluidPage(
+  
+  theme = "my-custom-theme.css",
+  
+  # ...
+)
+
+# or if using a navbar page
+navbarPage(
+  
+  title = "My application",
+  theme = "mytheme.css",
+  
+  # ...
+)
+```
+
+In {shinydasboard} or {bs4Dash}, you can use `use_theme()` with a path inside `dashboardBody` or `bs4DashBody` :
+
+
+```r
+dashboardBody(
+  use_theme("path/to/theme.css")
+)
+
+bs4DashBody(
+  use_theme("path/to/theme.css")
+)
+```
+
+Note that the path must be in the `www/` folder of your application.
