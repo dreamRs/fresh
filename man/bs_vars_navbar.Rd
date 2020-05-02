@@ -7,6 +7,10 @@
 bs_vars_navbar(
   height = NULL,
   margin_bottom = NULL,
+  border_radius = NULL,
+  padding_horizontal = NULL,
+  padding_vertical = NULL,
+  collapse_max_height = NULL,
   default_color = NULL,
   default_bg = NULL,
   default_border = NULL,
@@ -29,6 +33,14 @@ bs_vars_navbar(
 \item{height}{Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).}
 
 \item{margin_bottom}{Bottom margin of navbar.}
+
+\item{border_radius}{Radius border (rounded corner).}
+
+\item{padding_horizontal}{Horizontal padding.}
+
+\item{padding_vertical}{= Vertical padding.}
+
+\item{collapse_max_height}{Max height when collapsed.}
 
 \item{default_color}{Color of text in the navbar.}
 

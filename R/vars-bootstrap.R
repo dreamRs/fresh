@@ -84,6 +84,10 @@ bs_vars_color <- function(brand_primary = NULL,
 #'
 #' @param height Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).
 #' @param margin_bottom Bottom margin of navbar.
+#' @param border_radius Radius border (rounded corner).
+#' @param padding_horizontal Horizontal padding.
+#' @param padding_vertical = Vertical padding.
+#' @param collapse_max_height Max height when collapsed.
 #' @param default_color Color of text in the navbar.
 #' @param default_bg Background color of the navbar.
 #' @param default_border Border color of the navbar.
@@ -109,6 +113,10 @@ bs_vars_color <- function(brand_primary = NULL,
 #' @example examples/bs_vars_navbar.R
 bs_vars_navbar <- function(height = NULL,
                            margin_bottom = NULL,
+                           border_radius = NULL,
+                           padding_horizontal = NULL,
+                           padding_vertical = NULL,
+                           collapse_max_height = NULL,
                            default_color = NULL,
                            default_bg = NULL,
                            default_border = NULL,
