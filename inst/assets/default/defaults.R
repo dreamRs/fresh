@@ -41,6 +41,7 @@ sass::sass(
       grid_gutter_width = "15px"
     ),
     bs_vars_navbar(
+      padding_horizontal = "15px",
       default_bg = "#112446",
       default_color = "#FFFFFF",
       default_link_color = "#FFFFFF",
@@ -78,7 +79,7 @@ sass::sass(
       bg = "#FFF",
       border = "#3f2d54"
     ),
-    bs_vars_nav(link_padding = "5px 25px"),
+    # bs_vars_nav(link_padding = "5px 25px"),
     bs_vars_tabs(
       border_color = "#112446",
       active_link_hover_bg = "#FFF",

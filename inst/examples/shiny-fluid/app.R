@@ -8,7 +8,7 @@ library(fresh)
 # Color taken from
 # hrbrthemes::ipsum_pal()(9)
 
-create_theme(
+mytheme <- create_theme(
   theme = "default",
   bs_vars_navbar(
     default_bg = "#3f2d54",
@@ -39,16 +39,21 @@ create_theme(
   bs_vars_wells(
     bg = "#FFF",
     border = "#3f2d54"
-  ),
-  output_file = "www/mytheme.css",
-  include_assets = FALSE
+  )
+  # ,
+  # output_file = "www/mytheme.css",
+  # include_assets = FALSE
 )
 
 ui <- navbarPage(
 
   title = "My application",
-  theme = "mytheme.css",
+  # theme = "mytheme.css",
   # theme = "stylesheets/mytheme.css",
+
+  header = tagList(
+    use_theme(mytheme)
+  ),
 
   tabPanel(
     title = "First page",
