@@ -107,7 +107,9 @@ create_theme <- function(...,
       )
     } else {
       input <- list(
-        vars,
+        c(vars, list(
+          "icon-font-path" = shQuote(paste0(system.file("assets/bootstrap3/default/fonts/bootstrap", package = "fresh"), "/"))
+        )),
         bootswatch_vars_scss(theme),
         bootstrap_scss(),
         bootswatch_scss(theme)

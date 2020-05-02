@@ -3,9 +3,15 @@
 # create for flexdashboard
 
 create_theme(
-  theme = "cosmo",
+  theme = "flatly",
+  # list(
+  #   # "web-font-path" = shQuote(paste0(system.file("assets/bootstrap3/default/fonts/", package = "fresh"), "/")),
+  #   # "web-font-path" = "''",
+  #   "icon-font-path" = shQuote(paste0(system.file("assets/bootstrap3/default/fonts/bootstrap", package = "fresh"), "/"))
+  # ),
   bs_vars_navbar(
     default_bg = "#3f2d54",
+    inverse_bg = "#3f2d54",
     default_color = "#FFFFFF",
     default_link_color = "#FFFFFF",
     default_link_active_color = "#FFFFFF",
@@ -35,6 +41,6 @@ create_theme(
     border = "#3f2d54"
   ),
   output_file = "inst/examples/flexdashboard/assets/mytheme.css",
-  include_assets = TRUE
+  include_assets = FALSE
 )
 

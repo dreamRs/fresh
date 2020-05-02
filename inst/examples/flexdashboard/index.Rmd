@@ -2,7 +2,7 @@
 title: "Custom CSS"
 output: 
   flexdashboard::flex_dashboard:
-    css: assets/stylesheets/mytheme.css
+    css: assets/mytheme.css
 ---
 
 
