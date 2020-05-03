@@ -2,6 +2,7 @@
 
 * Support for {bs4Dash} custom themes.
 * There's no more fonts included in the package, so if you use Bootswatch theme or want to use a custom font, you have to download the files. This can be done easily with the [gfonts](https://github.com/dreamRs/gfonts) package.
+* `vars_file()` has been renamed `bs_vars_file()`.
 
 
 # fresh 0.1.0

@@ -21,23 +21,28 @@ use_vars_template(
 if applicable, or via \code{utils::file.edit()} otherwise.}
 }
 \description{
-Open a SCSS template to modify variable,
- after use \link{vars_file} to import variables and create a theme.
+Open a SCSS template to modify variables,
+ after use \link{bs_vars_file} to import those variables and create a theme.
 }
 \note{
-After use \code{\link{vars_file}} to use the template.
+After use \code{\link{bs_vars_file}} to use the template.
 }
 \examples{
 \donttest{
 
+custom <- tempfile(fileext = ".scss")
+
 # this will open a template
 # to modify variables of the flatly theme
 use_vars_template(
-  output_file = "custom.scss",
+  output_file = custom,
   theme = "flatly"
 )
 
-# after use vars_file() to use the template
+# after use bs_vars_file() to use the template
+
+# clean up
+unlink(custom)
 
 }
 

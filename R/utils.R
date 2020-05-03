@@ -19,7 +19,7 @@ vars_names <- function(x, prefix = NULL) {
 
 
 is_bootstrap_vars <- function(vars) {
-  unlist(lapply(vars, inherits, what = "bootstrap_vars"))
+  unlist(lapply(vars, inherits, what = c("bootstrap_vars", "bootstrap_vars_file")))
 }
 
 
@@ -29,6 +29,10 @@ is_adminlte_vars <- function(vars) {
 
 is_bs4dash_vars <- function(vars) {
   unlist(lapply(vars, inherits, what = "bs4dash_vars"))
+}
+
+is_sass_file <- function(vars) {
+  unlist(lapply(vars, inherits, what = "sass_file"))
 }
 
 rd_color_tag <- function(color, label = color) {

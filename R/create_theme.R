@@ -98,7 +98,8 @@ create_theme <- function(...,
       }
     }
   }
-  vars <- Reduce(c, vars)
+  is_file <- is_sass_file(vars)
+  vars <- Reduce(c, vars[!is_file])
   if (identical(framework, "bootstrap")) {
     if (identical(theme, "default")) {
       input <- list(
@@ -126,6 +127,9 @@ create_theme <- function(...,
       vars,
       adminlte3_scss()
     )
+  }
+  if (sum(is_file) > 0) {
+    input <- c(vars[is_file], input)
   }
   if (!is.null(output_file) && isTRUE(include_assets)) {
     path <- normalizePath(path = output_file, mustWork = FALSE)

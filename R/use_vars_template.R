@@ -1,15 +1,15 @@
 
 #' @title Use a template to define SCSS variables
 #'
-#' @description Open a SCSS template to modify variable,
-#'  after use \link{vars_file} to import variables and create a theme.
+#' @description Open a SCSS template to modify variables,
+#'  after use \link{bs_vars_file} to import those variables and create a theme.
 #'
 #' @param output_file Path where to create the template, use \code{".scss"} as file extension.
 #' @param theme Base theme to use, e.g. \code{"cosmo"} to start modifying the cosmo theme.
 #' @param open Open the newly created file for editing? Happens in RStudio,
 #'  if applicable, or via \code{utils::file.edit()} otherwise.
 #'
-#' @note After use \code{\link{vars_file}} to use the template.
+#' @note After use \code{\link{bs_vars_file}} to use the template.
 #'
 #' @export
 #'
@@ -19,14 +19,19 @@
 #' @examples
 #' \donttest{
 #'
+#' custom <- tempfile(fileext = ".scss")
+#'
 #' # this will open a template
 #' # to modify variables of the flatly theme
 #' use_vars_template(
-#'   output_file = "custom.scss",
+#'   output_file = custom,
 #'   theme = "flatly"
 #' )
 #'
-#' # after use vars_file() to use the template
+#' # after use bs_vars_file() to use the template
+#'
+#' # clean up
+#' unlink(custom)
 #'
 #' }
 #'
@@ -63,7 +68,7 @@ use_vars_template <- function(output_file,
 }
 
 
-#' SCSS variables from a file
+#' Bootstrap variables from a file
 #'
 #' @param input_file Path to SCSS file containing variables to use for creating a theme.
 #'
@@ -86,11 +91,11 @@ use_vars_template <- function(output_file,
 #' )
 #'
 #' }
-vars_file <- function(input_file) {
+bs_vars_file <- function(input_file) {
   vars <- sass_file(
     input = input_file
   )
-  class(vars) <- c("fresh_sass_vars", "fresh_file_vars", class(vars))
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars_file", class(vars))
   vars
 }
 
