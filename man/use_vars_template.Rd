@@ -28,8 +28,7 @@ Open a SCSS template to modify variables,
 After use \code{\link{bs_vars_file}} to use the template.
 }
 \examples{
-\donttest{
-
+# For example, we use a temporary file
 custom <- tempfile(fileext = ".scss")
 
 # this will open a template
@@ -43,7 +42,4 @@ use_vars_template(
 
 # clean up
 unlink(custom)
-
-}
-
 }

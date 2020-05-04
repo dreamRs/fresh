@@ -17,8 +17,7 @@
 #' @importFrom utils file.edit
 #'
 #' @examples
-#' \donttest{
-#'
+#' # For example, we use a temporary file
 #' custom <- tempfile(fileext = ".scss")
 #'
 #' # this will open a template
@@ -32,9 +31,6 @@
 #'
 #' # clean up
 #' unlink(custom)
-#'
-#' }
-#'
 use_vars_template <- function(output_file,
                               theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
                                         "journal", "lumen", "paper", "readable", "sandstone", "simplex",
@@ -76,21 +72,26 @@ use_vars_template <- function(output_file,
 #' @export
 #'
 #' @examples
-#' \donttest{
+#' my_vars <- file.path(tempdir(), "custom-vars.scss")
+#' my_theme <- file.path(tempdir(), "theme.css")
+#'
 #' # Open template and edit variables
 #' use_vars_template(
-#'   output_file = "custom.scss",
+#'   output_file = my_vars,
 #'   theme = "flatly"
 #' )
 #'
 #' # Create new theme based on the modified template
 #' create_theme(
 #'   theme = "flatly",
-#'   vars_file(input_file = "custom.scss"),
-#'   output_file = "mytheme.css"
+#'   bs_vars_file(input_file = my_vars),
+#'   output_file = my_theme
 #' )
 #'
-#' }
+#'
+#' # Clean up
+#' unlink(my_vars)
+#' unlink(my_theme)
 bs_vars_file <- function(input_file) {
   vars <- sass_file(
     input = input_file

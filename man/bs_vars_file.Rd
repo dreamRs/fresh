@@ -16,19 +16,24 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 Bootstrap variables from a file
 }
 \examples{
-\donttest{
+my_vars <- file.path(tempdir(), "custom-vars.scss")
+my_theme <- file.path(tempdir(), "theme.css")
+
 # Open template and edit variables
 use_vars_template(
-  output_file = "custom.scss",
+  output_file = my_vars,
   theme = "flatly"
 )
 
 # Create new theme based on the modified template
 create_theme(
   theme = "flatly",
-  vars_file(input_file = "custom.scss"),
-  output_file = "mytheme.css"
+  bs_vars_file(input_file = my_vars),
+  output_file = my_theme
 )
 
-}
+
+# Clean up
+unlink(my_vars)
+unlink(my_theme)
 }
