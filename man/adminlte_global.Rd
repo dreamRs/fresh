@@ -4,10 +4,14 @@
 \alias{adminlte_global}
 \title{AdminLTE CSS global variables}
 \usage{
-adminlte_global(content_bg = NULL)
+adminlte_global(content_bg = NULL, box_bg = NULL, info_box_bg = NULL)
 }
 \arguments{
 \item{content_bg}{Background color of the body.}
+
+\item{box_bg}{Default background color for boxes.}
+
+\item{info_box_bg}{Default background color for info boxes.}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.

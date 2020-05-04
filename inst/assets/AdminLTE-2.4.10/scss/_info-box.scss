@@ -5,7 +5,7 @@
 .info-box {
   display: block;
   min-height: 90px;
-  background: #fff;
+  background: $info-box-bg;
   width: 100%;
   box-shadow: $box-boxshadow;
   @include border-radius-all(2px);

@@ -215,6 +215,8 @@ adminlte_sidebar <- function(width = NULL,
 #'  global settings in {shinydashboard}.
 #'
 #' @param content_bg Background color of the body.
+#' @param box_bg Default background color for boxes.
+#' @param info_box_bg Default background color for info boxes.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
@@ -243,7 +245,7 @@ adminlte_sidebar <- function(width = NULL,
 #'
 #'   shinyApp(ui, server)
 #' }
-adminlte_global <- function(content_bg = NULL) {
+adminlte_global <- function(content_bg = NULL, box_bg = NULL, info_box_bg = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars)

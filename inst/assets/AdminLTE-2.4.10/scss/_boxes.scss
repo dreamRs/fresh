@@ -5,7 +5,7 @@
 .box {
   position: relative;
   @include border-radius-all($box-border-radius);
-  background: #ffffff;
+  background: $box-bg;
   border-top: 3px solid $box-default-border-top-color;
   margin-bottom: 20px;
   width: 100%;
