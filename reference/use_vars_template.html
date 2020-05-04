@@ -168,8 +168,7 @@ if applicable, or via <code><a href='https://rdrr.io/r/utils/file.edit.html'>uti
     <p>After use <code><a href='bs_vars_file.html'>bs_vars_file</a></code> to use the template.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-
+    <pre class="examples"><div class='input'><span class='co'># For example, we use a temporary file</span>
 <span class='no'>custom</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".scss"</span>)
 
 <span class='co'># this will open a template</span>
@@ -182,9 +181,7 @@ if applicable, or via <code><a href='https://rdrr.io/r/utils/file.edit.html'>uti
 <span class='co'># after use bs_vars_file() to use the template</span>
 
 <span class='co'># clean up</span>
-<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>custom</span>)
-
-<span class='co'># }</span></div></pre>
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>custom</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
