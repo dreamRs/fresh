@@ -198,3 +198,18 @@ test_that("bs_vars_badge works", {
   expect_length(vars, 3)
 })
 
+
+test_that("bs_vars_badge works", {
+
+  vars <- bs_vars_component(
+    padding_base_vertical = "5px",
+    padding_base_horizontal = "20px",
+    border_radius_base = 0,
+    component_active_bg = "#0B610B"
+  )
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bootstrap_vars")
+  expect_length(vars, 4)
+})

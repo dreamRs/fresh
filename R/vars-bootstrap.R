@@ -738,6 +738,55 @@ bs_vars_badge <- function(color = NULL,
 }
 
 
-
+#' @title Bootstrap CSS components variables
+#'
+#' @description Those variables can be used to customize
+#'  components padding and borders in Bootstrap and Bootswatch themes.
+#'
+#' @param padding_base_vertical Vertical base padding.
+#' @param padding_base_horizontal Horizontal base padding.
+#' @param padding_large_vertical Vertical large padding.
+#' @param padding_large_horizontal Horizontal large padding.
+#' @param padding_small_vertical Vertical small padding.
+#' @param padding_small_horizontal Horizontal small padding.
+#' @param padding_xs_vertical Vertical extra small padding.
+#' @param padding_xs_horizontal Horizontal extra small padding.
+#' @param line_height_large Line height for large elements.
+#' @param line_height_small Line height for small elements.
+#' @param border_radius_base Base border radius.
+#' @param border_radius_large Large border radius.
+#' @param border_radius_small Small border radius.
+#' @param component_active_color Color for active components.
+#' @param component_active_bg Background color for active components.
+#' @param caret_width_base Width for caret.
+#' @param caret_width_large Widget for large caret.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @example examples/bs_vars_component.R
+bs_vars_component <- function(padding_base_vertical = NULL,
+                              padding_base_horizontal = NULL,
+                              padding_large_vertical = NULL,
+                              padding_large_horizontal = NULL,
+                              padding_small_vertical = NULL,
+                              padding_small_horizontal = NULL,
+                              padding_xs_vertical = NULL,
+                              padding_xs_horizontal = NULL,
+                              line_height_large = NULL,
+                              line_height_small = NULL,
+                              border_radius_base = NULL,
+                              border_radius_large = NULL,
+                              border_radius_small = NULL,
+                              component_active_color = NULL,
+                              component_active_bg = NULL,
+                              caret_width_base = NULL,
+                              caret_width_large = NULL) {
+  vars <- as.list(environment())
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
+  vars
+}
 
 
