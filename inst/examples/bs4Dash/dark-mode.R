@@ -21,6 +21,11 @@ library(fresh)
 # Theme -------------------------------------------------------------------
 
 bs4DashTheme <- create_theme(
+  bs4dash_vars(
+    navbar_dark_color = "#bec5cb",
+    navbar_dark_active_color = "#FFF",
+    navbar_dark_hover_color = "#FFF"
+  ),
   bs4dash_yiq(contrasted_threshold = 10, text_dark = "#FFF", text_light = "#272c30"),
   bs4dash_layout(main_bg = "#353c42"),
   bs4dash_sidebar_dark(
@@ -28,7 +33,7 @@ bs4DashTheme <- create_theme(
     submenu_bg = "#272c30", submenu_color = "#FFF", submenu_hover_color = "#FFF"
   ),
   bs4dash_status(dark = "#272c30"),
-  bs4dash_color(white = "#272c30", gray_900 = "#FFF")
+  bs4dash_color(gray_900 = "#FFF", white = "#272c30")
 )
 
 
@@ -40,6 +45,10 @@ ui <- bs4DashPage(
   title = "bs4Dash Dark Mode",
   # sidebar_collapsed = FALSE,
   navbar = bs4DashNavbar(skin = "dark"),
+  controlbar = bs4DashControlbar(
+    skin = "dark",
+    "This is the control bar"
+  ),
   sidebar = bs4DashSidebar(
     title = "bs4Dash Dark Mode",
     skin = "dark",
