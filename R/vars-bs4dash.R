@@ -289,3 +289,32 @@ bs4dash_button <- function(default_background_color = NULL,
 }
 
 
+
+
+
+#' @title bs4dash custom variables
+#'
+#' @description Use any AdminLTE or Bootstrap variables to customize a \{bs4Dash\} theme.
+#'
+#' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
+#'
+#' @note For a full list of available variables, use \code{\link{search_bs4dash_vars}}.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' bs4dash_vars(body_bg = "#FFF")
+#'
+#' bs4dash_vars("body-bg" = "#FFF")
+bs4dash_vars <- function(...) {
+  vars <- list(...)
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "bs4dash_vars", class(vars))
+  vars
+}
+
+
+
+
