@@ -298,7 +298,7 @@ bs4dash_button <- function(default_background_color = NULL,
 #'
 #' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
 #'
-#' @note For a full list of available variables, use \code{\link{search_bs4dash_vars}}.
+#' @note For a full list of available variables, use \code{\link{search_vars_bs4dash}}.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export

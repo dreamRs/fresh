@@ -16,7 +16,7 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 Use any AdminLTE or Bootstrap variables to customize a \{bs4Dash\} theme.
 }
 \note{
-For a full list of available variables, use \code{\link{search_bs4dash_vars}}.
+For a full list of available variables, use \code{\link{search_vars_bs4dash}}.
 }
 \examples{
 bs4dash_vars(body_bg = "#FFF")
