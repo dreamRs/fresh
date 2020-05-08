@@ -71,12 +71,12 @@ search_vars <- function(file) {
 #'
 #' @examples
 #' # Retrieve all variables
-#' all_vars <- search_bs4dash_vars()
+#' all_vars <- search_vars_bs4dash()
 #' head(all_vars, 20)
 #'
 #' # Search for a pattern
-#' head(search_bs4dash_vars("navbar"))
-search_bs4dash_vars <- function(pattern = NULL, source = c("adminlte", "bootstrap")) {
+#' head(search_vars_bs4dash("navbar"))
+search_vars_bs4dash <- function(pattern = NULL, source = c("adminlte", "bootstrap")) {
   source <- match.arg(source, several.ok = TRUE)
   do.call("rbind", lapply(source, function(x) {
     if (identical(source, "adminlte")) {
