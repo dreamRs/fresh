@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>bs4dash custom variables — bs4dash_vars • fresh</title>
+<title>Search bs4Dash variables — search_vars_bs4dash • fresh</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="bs4dash custom variables — bs4dash_vars" />
-<meta property="og:description" content="Use any AdminLTE or Bootstrap variables to customize a {bs4Dash} theme." />
+<meta property="og:title" content="Search bs4Dash variables — search_vars_bs4dash" />
+<meta property="og:description" content="Search bs4Dash variables" />
 
 
 
@@ -129,44 +129,73 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>bs4dash custom variables</h1>
-    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bs4dash.R'><code>R/vars-bs4dash.R</code></a></small>
-    <div class="hidden name"><code>bs4dash_vars.Rd</code></div>
+    <h1>Search bs4Dash variables</h1>
+    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/search_vars.R'><code>R/search_vars.R</code></a></small>
+    <div class="hidden name"><code>search_vars_bs4dash.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Use any AdminLTE or Bootstrap variables to customize a {bs4Dash} theme.</p>
+    <p>Search bs4Dash variables</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs4dash_vars</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>search_vars_bs4dash</span>(<span class='kw'>pattern</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"adminlte"</span>, <span class='st'>"bootstrap"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>Variables to use, under the form <code>body_bg = "#FFF"</code> or <code>"body-bg" = "#FFF"</code>.</p></td>
+      <th>pattern</th>
+      <td><p>A pattern to filter the results.</p></td>
+    </tr>
+    <tr>
+      <th>source</th>
+      <td><p>Search variables in AdminLTE or Bootstrap or both.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>For a full list of available variables, use <code>search_bs4dash_vars</code>.</p>
+    <p>a <code>data.frame</code></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bs4dash_vars</span>(<span class='kw'>body_bg</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>)</div><div class='output co'>#&gt; $`body-bg`
-#&gt; [1] "#FFF"
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "fresh_sass_vars" "bs4dash_vars"    "list"           </div><div class='input'>
-<span class='fu'>bs4dash_vars</span>(<span class='st'>"body-bg"</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>)</div><div class='output co'>#&gt; $`body-bg`
-#&gt; [1] "#FFF"
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "fresh_sass_vars" "bs4dash_vars"    "list"           </div></pre>
+    <pre class="examples"><div class='input'><span class='co'># Retrieve all variables</span>
+<span class='no'>all_vars</span> <span class='kw'>&lt;-</span> <span class='fu'>search_vars_bs4dash</span>()
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>all_vars</span>, <span class='fl'>20</span>)</div><div class='output co'>#&gt;    variable   value    source
+#&gt; 1     white #ffffff bootstrap
+#&gt; 2  gray-100 #f8f9fa bootstrap
+#&gt; 3  gray-200 #e9ecef bootstrap
+#&gt; 4  gray-300 #dee2e6 bootstrap
+#&gt; 5  gray-400 #ced4da bootstrap
+#&gt; 6  gray-500 #adb5bd bootstrap
+#&gt; 7  gray-600 #6c757d bootstrap
+#&gt; 8  gray-700 #495057 bootstrap
+#&gt; 9  gray-800 #343a40 bootstrap
+#&gt; 10 gray-900 #212529 bootstrap
+#&gt; 11    black    #000 bootstrap
+#&gt; 14     blue #007bff bootstrap
+#&gt; 15   indigo #6610f2 bootstrap
+#&gt; 16   purple #6f42c1 bootstrap
+#&gt; 17     pink #e83e8c bootstrap
+#&gt; 18      red #dc3545 bootstrap
+#&gt; 19   orange #fd7e14 bootstrap
+#&gt; 20   yellow #ffc107 bootstrap
+#&gt; 21    green #28a745 bootstrap
+#&gt; 22     teal #20c997 bootstrap</div><div class='input'>
+<span class='co'># Search for a pattern</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'>search_vars_bs4dash</span>(<span class='st'>"navbar"</span>))</div><div class='output co'>#&gt;                      variable                                       value
+#&gt; 327 navbar-nav-link-padding-x                                        1rem
+#&gt; 328    navbar-brand-font-size                               $font-size-lg
+#&gt; 330       navbar-brand-height $navbar-brand-font-size * $line-height-base
+#&gt; 332  navbar-toggler-padding-y                                      .25rem
+#&gt; 333  navbar-toggler-padding-x                                      .75rem
+#&gt; 334  navbar-toggler-font-size                               $font-size-lg
+#&gt;        source
+#&gt; 327 bootstrap
+#&gt; 328 bootstrap
+#&gt; 330 bootstrap
+#&gt; 332 bootstrap
+#&gt; 333 bootstrap
+#&gt; 334 bootstrap</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
