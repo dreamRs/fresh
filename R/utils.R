@@ -8,6 +8,9 @@ vars_names <- function(x, prefix = NULL) {
   if (length(x) == 0) {
     return(x)
   }
+  if (length(x) == 1 && is.list(x)  && inherits(x[[1]], "fresh_vars_table")) {
+    x <- setNames(as.list(x[[1]]$value), x[[1]]$variable)
+  }
   n_x <- names(x)
   n_x <- gsub(pattern = "_", replacement = "-", x = n_x)
   if (!is.null(prefix)) {
