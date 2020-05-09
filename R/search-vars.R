@@ -66,7 +66,12 @@ search_vars <- function(file) {
 #' @param pattern A pattern to filter the results.
 #' @param source Search variables in AdminLTE or Bootstrap or both.
 #'
-#' @return a \code{data.frame}
+#' @return a \code{data.frame} with three variables:
+#' \itemize{
+#'  \item{\code{source}: }{AdminLTE or Bootstrap variable.}
+#'  \item{\code{variable}: }{name of the variable.}
+#'  \item{\code{value}: }{default value used.}
+#' }
 #' @export
 #'
 #' @examples
@@ -79,7 +84,7 @@ search_vars <- function(file) {
 search_vars_bs4dash <- function(pattern = NULL, source = c("adminlte", "bootstrap")) {
   source <- match.arg(source, several.ok = TRUE)
   do.call("rbind", lapply(source, function(x) {
-    if (identical(source, "adminlte")) {
+    if (identical(x, "adminlte")) {
       res <- search_vars(system.file(
         "assets/AdminLTE-3.0.4/_variables.scss",
         package = "fresh"
@@ -102,6 +107,76 @@ search_vars_bs4dash <- function(pattern = NULL, source = c("adminlte", "bootstra
 
 
 
+#' Search Bootstrap variables
+#'
+#' @param pattern A pattern to filter the results.
+#' @param theme Name of the theme for which to search the variables.
+#'
+#' @return a \code{data.frame} with two variables:
+#' \itemize{
+#'  \item{\code{variable}: }{name of the variable.}
+#'  \item{\code{value}: }{default value used in theme.}
+#' }
+#'
+#' @export
+#'
+#' @examples
+#'
+#' # List default variables for Bootstrap 3
+#' search_vars_bs()
+#'
+#' # Variables for flatly theme
+#' search_vars_bs("flatly")
+#'
+search_vars_bs <- function(pattern = NULL,
+                           theme = c("default", "cerulean", "cosmo", "cyborg", "darkly", "flatly",
+                                     "journal", "lumen", "paper", "readable", "sandstone", "simplex",
+                                     "slate", "spacelab", "superhero", "united", "yeti")) {
+  theme <- match.arg(theme)
+  if (identical(theme, "default")) {
+    res <- search_vars(file = system.file(
+      "assets/bootstrap3/default/stylesheets/bootstrap/_variables.scss",
+      package = "fresh"
+    ))
+  } else {
+    res <- search_vars(file = system.file(
+      "assets/bootstrap3", theme, "_variables.scss",
+      package = "fresh"
+    ))
+  }
+  if (!is.null(pattern))
+    res <- res[grepl(pattern = pattern, x = res$variable), ]
+  return(res)
+}
 
+
+
+
+#' Search AdminLTE 2 (shinydashboard) variables
+#'
+#' @param pattern A pattern to filter the results.
+#'
+#' @return a \code{data.frame} with two variables:
+#' \itemize{
+#'  \item{\code{variable}: }{name of the variable.}
+#'  \item{\code{value}: }{default value used in theme.}
+#' }
+#' @export
+#'
+#' @examples
+#' # All AdminLTE2 variables
+#' search_vars_adminlte2()
+#'
+#' # Only sidebar related variables
+#' search_vars_adminlte2(pattern = "sidebar")
+search_vars_adminlte2 <- function(pattern = NULL) {
+  res <- search_vars(file = system.file(
+    "assets/AdminLTE-2.4.10/scss/_variables.scss",
+    package = "fresh"
+  ))
+  if (!is.null(pattern))
+    res <- res[grepl(pattern = pattern, x = res$variable), ]
+  return(res)
+}
 
 
