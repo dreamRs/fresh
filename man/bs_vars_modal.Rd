@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_modal}
 \alias{bs_vars_modal}
-\title{Bootstrap CSS modal variables}
+\title{Bootstrap modal variables}
 \usage{
 bs_vars_modal(
   md = NULL,

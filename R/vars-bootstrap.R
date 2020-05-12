@@ -1,4 +1,29 @@
 
+#' @title Bootstrap custom variables
+#'
+#' @description Use any Bootstrap variables to customize a \{shiny\} theme.
+#'
+#' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
+#'
+#' @note For a full list of available variables, use \code{\link{search_vars_bs}}.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' bs_vars(body_bg = "#FFF")
+#'
+#' bs_vars("body-bg" = "#FFF")
+bs_vars <- function(...) {
+  vars <- list(...)
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "bootstrap_vars", class(vars))
+  vars
+}
+
+
+
 #' @title Bootstrap global variables
 #'
 #' @description Those variables can be used to customize

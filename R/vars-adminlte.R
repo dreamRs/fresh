@@ -1,4 +1,27 @@
 
+#' @title AdminLTE 2 custom variables
+#'
+#' @description Use any AdmnLTE or Bootstrap variables to customize a \{shinydashboard\} theme.
+#'
+#' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
+#'
+#' @note For a full list of available variables, use \code{\link{search_vars_adminlte2}}.
+#'
+#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @export
+#'
+#' @examples
+#' adminlte_vars(body_bg = "#FFF")
+#'
+#' adminlte_vars("body-bg" = "#FFF")
+adminlte_vars <- function(...) {
+  vars <- list(...)
+  vars <- dropNulls(vars)
+  vars <- vars_names(vars)
+  class(vars) <- c("fresh_sass_vars", "adminlte_vars", class(vars))
+  vars
+}
+
 #' @title AdminLTE CSS colors variables
 #'
 #' @description Those variables can be used to customize
