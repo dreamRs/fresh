@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bootstrap alert variables — bs_vars_alert • fresh</title>
+<title>Bootstrap table variables — bs_vars_table • fresh</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,11 @@
 
 
 
-<meta property="og:title" content="Bootstrap alert variables — bs_vars_alert" />
+<meta property="og:title" content="Bootstrap table variables — bs_vars_table" />
 <meta property="og:description" content="Those variables can be used to customize
- inputs in Bootstrap and Bootswatch themes." />
+ table (produced ever by shiny::renderTable
+ or by shiny::renderDataTable and DT equivalent)
+ in Bootstrap and Bootswatch themes." />
 
 
 
@@ -130,147 +132,115 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Bootstrap alert variables</h1>
+    <h1>Bootstrap table variables</h1>
     <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/vars-bootstrap.R'><code>R/vars-bootstrap.R</code></a></small>
-    <div class="hidden name"><code>bs_vars_alert.Rd</code></div>
+    <div class="hidden name"><code>bs_vars_table.Rd</code></div>
     </div>
 
     <div class="ref-description">
     <p>Those variables can be used to customize
- inputs in Bootstrap and Bootswatch themes.</p>
+ table (produced ever by <code><a href='https://rdrr.io/pkg/shiny/man/renderTable.html'>shiny::renderTable</a></code>
+ or by <code><a href='https://rdrr.io/pkg/shiny/man/renderDataTable.html'>shiny::renderDataTable</a></code> and DT equivalent)
+ in Bootstrap and Bootswatch themes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_alert</span>(
-  <span class='kw'>padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_font_weight</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>success_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>success_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>success_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>info_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>info_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>info_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>warning_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>warning_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>warning_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>danger_text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>danger_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>danger_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'>bs_vars_table</span>(
+  <span class='kw'>cell_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>condensed_cell_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>bg_accent</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>bg_hover</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>bg_active</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>padding</th>
-      <td><p>Padding for alerts.</p></td>
+      <th>cell_padding</th>
+      <td><p>Cell padding.</p></td>
     </tr>
     <tr>
-      <th>border_radius</th>
-      <td><p>Border radius (rounded corners)</p></td>
+      <th>condensed_cell_padding</th>
+      <td><p>Cell padding when using condensed table.</p></td>
     </tr>
     <tr>
-      <th>link_font_weight</th>
-      <td><p>Font weight for links in alerts.</p></td>
+      <th>bg</th>
+      <td><p>Background color.</p></td>
     </tr>
     <tr>
-      <th>success_text</th>
-      <td><p>Success text color.</p></td>
+      <th>bg_accent</th>
+      <td><p>Background color used in striped table.</p></td>
     </tr>
     <tr>
-      <th>success_bg</th>
-      <td><p>Success background color.</p></td>
+      <th>bg_hover</th>
+      <td><p>Background color used when hovering the table with the mouse.</p></td>
     </tr>
     <tr>
-      <th>success_border</th>
-      <td><p>Success border color.</p></td>
+      <th>bg_active</th>
+      <td><p>Background color when row is selected.</p></td>
     </tr>
     <tr>
-      <th>info_text</th>
-      <td><p>Info text color.</p></td>
-    </tr>
-    <tr>
-      <th>info_bg</th>
-      <td><p>Info background color.</p></td>
-    </tr>
-    <tr>
-      <th>info_border</th>
-      <td><p>Info border color.</p></td>
-    </tr>
-    <tr>
-      <th>warning_text</th>
-      <td><p>Warning text color.</p></td>
-    </tr>
-    <tr>
-      <th>warning_bg</th>
-      <td><p>Warning background color.</p></td>
-    </tr>
-    <tr>
-      <th>warning_border</th>
-      <td><p>Warning border color.</p></td>
-    </tr>
-    <tr>
-      <th>danger_text</th>
-      <td><p>Danger text color.</p></td>
-    </tr>
-    <tr>
-      <th>danger_bg</th>
-      <td><p>Danger background color.</p></td>
-    </tr>
-    <tr>
-      <th>danger_border</th>
-      <td><p>Danger border color.</p></td>
+      <th>border_color</th>
+      <td><p>Border color.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>See default parameters for Bootstrap: <a href='https://getbootstrap.com/docs/3.4/customize/'>https://getbootstrap.com/docs/3.4/customize/</a>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bs_vars_alert</span>(
-  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='st'>"10px"</span>, <span class='co'># increase border radius,</span>
-  <span class='kw'>success_bg</span> <span class='kw'>=</span> <span class='st'>"#c9d175"</span> <span class='co'># change color for success alerts</span>
-)</div><div class='output co'>#&gt; $`alert-border-radius`
-#&gt; [1] "10px"
+    <pre class="examples"><div class='input'>
+<span class='fu'>bs_vars_table</span>(
+  <span class='kw'>bg_accent</span> <span class='kw'>=</span> <span class='st'>"lightblue"</span>,
+  <span class='kw'>bg_hover</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
+)</div><div class='output co'>#&gt; $`table-bg-accent`
+#&gt; [1] "lightblue"
 #&gt; 
-#&gt; $`alert-success-bg`
-#&gt; [1] "#c9d175"
+#&gt; $`table-bg-hover`
+#&gt; [1] "firebrick"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
+
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
   <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>fresh</span>)
 
   <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(
-      <span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-        <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-        <span class='fu'>bs_vars_alert</span>(
-          <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='st'>"15px"</span>,
-          <span class='kw'>success_bg</span> <span class='kw'>=</span> <span class='st'>"forestgreen"</span>,
-          <span class='kw'>success_text</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>,
-          <span class='kw'>danger_bg</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>,
-          <span class='kw'>danger_text</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>
-        ),
-        <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+
+    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
+      <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
+      <span class='fu'>bs_vars_table</span>(
+        <span class='kw'>bg_accent</span> <span class='kw'>=</span> <span class='st'>"lightblue"</span>,
+        <span class='kw'>bg_hover</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
       )
-    ),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>br</a></span>(),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>div</a></span>(
-      <span class='kw'>class</span> <span class='kw'>=</span> <span class='st'>"alert alert-success"</span>,
-      <span class='st'>"This is an alert !"</span>
-    ),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>div</a></span>(
-      <span class='kw'>class</span> <span class='kw'>=</span> <span class='st'>"alert alert-danger"</span>,
-      <span class='st'>"This is an other alert !"</span>
+    )),
+
+    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Tables"</span>),
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
+        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tableOutput.html'>tableOutput</a></span>(<span class='st'>"table"</span>)
+      ),
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
+        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/tableOutput.html'>dataTableOutput</a></span>(<span class='st'>"datatable"</span>)
+      )
     )
   )
 
   <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+
+    <span class='no'>output</span>$<span class='no'>table</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/renderTable.html'>renderTable</a></span>(
+      <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>iris</span>), <span class='kw'>striped</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>hover</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+    )
+
+    <span class='no'>output</span>$<span class='no'>datatable</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/renderDataTable.html'>renderDataTable</a></span>({
+      <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>mtcars</span>)
+    })
 
   }
 

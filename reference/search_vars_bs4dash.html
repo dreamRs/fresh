@@ -130,7 +130,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Search bs4Dash variables</h1>
-    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/search_vars.R'><code>R/search_vars.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/dreamRs/fresh/blob/master/R/search-vars.R'><code>R/search-vars.R</code></a></small>
     <div class="hidden name"><code>search_vars_bs4dash.Rd</code></div>
     </div>
 
@@ -155,32 +155,37 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>data.frame</code></p>
+    <p>a <code>data.frame</code> with three variables:</p><ul>
+<li><p><code>source</code>: AdminLTE or Bootstrap variable.</p></li>
+<li><p><code>variable</code>: name of the variable.</p></li>
+<li><p><code>value</code>: default value used.</p></li>
+</ul>
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Retrieve all variables</span>
 <span class='no'>all_vars</span> <span class='kw'>&lt;-</span> <span class='fu'>search_vars_bs4dash</span>()
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>all_vars</span>, <span class='fl'>20</span>)</div><div class='output co'>#&gt;    variable   value    source
-#&gt; 1     white #ffffff bootstrap
-#&gt; 2  gray-100 #f8f9fa bootstrap
-#&gt; 3  gray-200 #e9ecef bootstrap
-#&gt; 4  gray-300 #dee2e6 bootstrap
-#&gt; 5  gray-400 #ced4da bootstrap
-#&gt; 6  gray-500 #adb5bd bootstrap
-#&gt; 7  gray-600 #6c757d bootstrap
-#&gt; 8  gray-700 #495057 bootstrap
-#&gt; 9  gray-800 #343a40 bootstrap
-#&gt; 10 gray-900 #212529 bootstrap
-#&gt; 11    black    #000 bootstrap
-#&gt; 14     blue #007bff bootstrap
-#&gt; 15   indigo #6610f2 bootstrap
-#&gt; 16   purple #6f42c1 bootstrap
-#&gt; 17     pink #e83e8c bootstrap
-#&gt; 18      red #dc3545 bootstrap
-#&gt; 19   orange #fd7e14 bootstrap
-#&gt; 20   yellow #ffc107 bootstrap
-#&gt; 21    green #28a745 bootstrap
-#&gt; 22     teal #20c997 bootstrap</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>all_vars</span>, <span class='fl'>20</span>)</div><div class='output co'>#&gt;                  variable                          value   source
+#&gt; 1                    blue                        #0073b7 adminlte
+#&gt; 2               lightblue                        #3c8dbc adminlte
+#&gt; 3                    navy                        #001f3f adminlte
+#&gt; 4                    teal                        #39cccc adminlte
+#&gt; 5                   olive                        #3d9970 adminlte
+#&gt; 6                    lime                        #01ff70 adminlte
+#&gt; 7                  orange                        #ff851b adminlte
+#&gt; 8                 fuchsia                        #f012be adminlte
+#&gt; 9                  purple                        #605ca8 adminlte
+#&gt; 10                 maroon                        #d81b60 adminlte
+#&gt; 11                  black                           #111 adminlte
+#&gt; 12           gray-x-light                        #d2d6de adminlte
+#&gt; 13                 colors                    map-merge(( adminlte
+#&gt; 14         font-size-root                           1rem adminlte
+#&gt; 15          sidebar-width                          250px adminlte
+#&gt; 16      sidebar-padding-x                         0.5rem adminlte
+#&gt; 17      sidebar-padding-y                              0 adminlte
+#&gt; 18 boxed-layout-max-width                         1250px adminlte
+#&gt; 19 screen-header-collapse map-get($grid-breakpoints, md) adminlte
+#&gt; 20                main-bg                        #f4f6f9 adminlte</div><div class='input'>
 <span class='co'># Search for a pattern</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'>search_vars_bs4dash</span>(<span class='st'>"navbar"</span>))</div><div class='output co'>#&gt;                      variable                                       value
 #&gt; 327 navbar-nav-link-padding-x                                        1rem
