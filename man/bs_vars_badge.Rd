@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_badge}
 \alias{bs_vars_badge}
-\title{Bootstrap CSS badge variables}
+\title{Bootstrap badge variables}
 \usage{
 bs_vars_badge(
   color = NULL,

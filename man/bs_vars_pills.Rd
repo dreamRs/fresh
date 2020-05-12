@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_pills}
 \alias{bs_vars_pills}
-\title{Bootstrap CSS pills variables}
+\title{Bootstrap pills variables}
 \usage{
 bs_vars_pills(
   border_radius = NULL,

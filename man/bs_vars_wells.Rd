@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_wells}
 \alias{bs_vars_wells}
-\title{Bootstrap CSS wells variables}
+\title{Bootstrap wells variables}
 \usage{
 bs_vars_wells(bg = NULL, border = NULL)
 }

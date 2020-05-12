@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_panel}
 \alias{bs_vars_panel}
-\title{Bootstrap CSS panel variables}
+\title{Bootstrap panel variables}
 \usage{
 bs_vars_panel(
   bg = NULL,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_color}
 \alias{bs_vars_color}
-\title{Bootstrap CSS colors variables}
+\title{Bootstrap colors variables}
 \usage{
 bs_vars_color(
   brand_primary = NULL,

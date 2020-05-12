@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_tabs}
 \alias{bs_vars_tabs}
-\title{Bootstrap CSS tabs variables}
+\title{Bootstrap tabs variables}
 \usage{
 bs_vars_tabs(
   border_color = NULL,

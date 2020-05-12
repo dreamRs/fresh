@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_global}
 \alias{bs_vars_global}
-\title{Bootstrap CSS global variables}
+\title{Bootstrap global variables}
 \usage{
 bs_vars_global(
   body_bg = NULL,

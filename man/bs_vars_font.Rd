@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_font}
 \alias{bs_vars_font}
-\title{Bootstrap CSS font variables}
+\title{Bootstrap font variables}
 \usage{
 bs_vars_font(
   family_sans_serif = NULL,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_alert}
 \alias{bs_vars_alert}
-\title{Bootstrap CSS alert variables}
+\title{Bootstrap alert variables}
 \usage{
 bs_vars_alert(
   padding = NULL,

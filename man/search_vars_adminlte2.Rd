@@ -23,4 +23,6 @@ Search AdminLTE 2 (shinydashboard) variables
 # All AdminLTE2 variables
 search_vars_adminlte2()
 
+# Only sidebar related variables
+search_vars_adminlte2(pattern = "sidebar")
 }

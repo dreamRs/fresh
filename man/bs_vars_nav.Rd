@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_nav}
 \alias{bs_vars_nav}
-\title{Bootstrap CSS nav variables}
+\title{Bootstrap nav variables}
 \usage{
 bs_vars_nav(
   link_padding = NULL,
@@ -40,7 +40,6 @@ bs_vars_nav(
 
 if (interactive()) {
   library(shiny)
-  library(shinyWidgets)
   library(fresh)
 
   ui <- fluidPage(

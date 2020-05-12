@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_input}
 \alias{bs_vars_input}
-\title{Bootstrap CSS input variables}
+\title{Bootstrap input variables}
 \usage{
 bs_vars_input(
   bg = NULL,

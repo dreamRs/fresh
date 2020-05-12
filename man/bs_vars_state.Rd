@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_state}
 \alias{bs_vars_state}
-\title{Bootstrap CSS states variables}
+\title{Bootstrap states variables}
 \usage{
 bs_vars_state(
   success_text = NULL,

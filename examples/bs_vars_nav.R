@@ -6,7 +6,6 @@ bs_vars_nav(
 
 if (interactive()) {
   library(shiny)
-  library(shinyWidgets)
   library(fresh)
 
   ui <- fluidPage(

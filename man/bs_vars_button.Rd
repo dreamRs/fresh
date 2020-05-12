@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_button}
 \alias{bs_vars_button}
-\title{Bootstrap CSS button variables}
+\title{Bootstrap button variables}
 \usage{
 bs_vars_button(
   font_weight = NULL,

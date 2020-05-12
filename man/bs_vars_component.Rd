@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_component}
 \alias{bs_vars_component}
-\title{Bootstrap CSS components variables}
+\title{Bootstrap components variables}
 \usage{
 bs_vars_component(
   padding_base_vertical = NULL,

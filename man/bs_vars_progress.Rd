@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_progress}
 \alias{bs_vars_progress}
-\title{Bootstrap CSS progress variables}
+\title{Bootstrap progress variables}
 \usage{
 bs_vars_progress(
   bg = NULL,

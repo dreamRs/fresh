@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_navbar}
 \alias{bs_vars_navbar}
-\title{Bootstrap CSS navbar variables}
+\title{Bootstrap navbar variables}
 \usage{
 bs_vars_navbar(
   height = NULL,

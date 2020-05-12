@@ -2,7 +2,7 @@
 % Please edit documentation in R/vars-bootstrap.R
 \name{bs_vars_dropdown}
 \alias{bs_vars_dropdown}
-\title{Bootstrap CSS dropdown variables}
+\title{Bootstrap dropdown variables}
 \usage{
 bs_vars_dropdown(
   bg = NULL,
