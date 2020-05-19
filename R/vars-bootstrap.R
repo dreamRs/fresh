@@ -325,6 +325,7 @@ bs_vars_state <- function(success_text = NULL,
 #' @param color_placeholder Text color of placeholder.
 #' @param group_addon_bg Background color of addons.
 #' @param border_focus Color of border when focused.
+#' @param bg_disabled Background color for disabled input.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
@@ -338,7 +339,8 @@ bs_vars_input <- function(bg = NULL,
                           border_radius = NULL,
                           color_placeholder = NULL,
                           group_addon_bg = NULL,
-                          border_focus = NULL) {
+                          border_focus = NULL,
+                          bg_disabled = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
   vars <- vars_names(vars, prefix = "input")

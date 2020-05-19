@@ -11,7 +11,8 @@ bs_vars_input(
   border_radius = NULL,
   color_placeholder = NULL,
   group_addon_bg = NULL,
-  border_focus = NULL
+  border_focus = NULL,
+  bg_disabled = NULL
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ bs_vars_input(
 \item{group_addon_bg}{Background color of addons.}
 
 \item{border_focus}{Color of border when focused.}
+
+\item{bg_disabled}{Background color for disabled input.}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.
