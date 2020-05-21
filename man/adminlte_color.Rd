@@ -80,7 +80,11 @@ if (interactive()) {
     header = dashboardHeader(title = "My dashboard"),
     sidebar = dashboardSidebar(
       sidebarMenu(
-        menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard"))
+        menuItem(
+          "Dashboard",
+          tabName = "dashboard",
+          icon = icon("dashboard")
+        )
       )
     ),
     body = dashboardBody(
@@ -101,29 +105,39 @@ if (interactive()) {
           # infoBoxes
           fluidRow(
             infoBox(
-              "Orders", uiOutput("orderNum2"), "Subtitle", icon = icon("credit-card")
+              "Orders", uiOutput("orderNum2"),
+              "Subtitle", icon = icon("credit-card")
             ),
             infoBox(
-              "Approval Rating", "60\%", icon = icon("line-chart"), color = "green",
+              "Approval Rating", "60\%",
+              icon = icon("line-chart"), color = "green",
               fill = TRUE
             ),
             infoBox(
-              "Progress", "20\%", icon = icon("users"), color = "purple"
+              "Progress", "20\%",
+               icon = icon("users"),
+               color = "purple"
             )
           ),
 
           # valueBoxes
           fluidRow(
             valueBox(
-              5846, "New Orders", icon = icon("credit-card"),
+              5846, "New Orders",
+              icon = icon("credit-card"),
               href = "http://google.com"
             ),
             valueBox(
-              tagList("60", tags$sup(style="font-size: 20px", "\%")),
-              "Approval Rating", icon = icon("line-chart"), color = "green"
+              tagList("60",
+                      tags$sup(style="font-size: 20px", "\%")),
+              "Approval Rating",
+              icon = icon("line-chart"),
+               color = "green"
             ),
             valueBox(
-              "42\%", "Progress", icon = icon("users"), color = "purple"
+              "42\%", "Progress",
+              icon = icon("users"),
+              color = "purple"
             )
 
           )

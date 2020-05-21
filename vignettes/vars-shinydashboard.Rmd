@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 library(fresh)
 ```
 
-[{shinydashboard}](https://github.com/rstudio/shinydashboard) is powered by [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html), with variables from `adminlte_*` functions, you can customize th appearance of your dashboard. Here some examples of what you can modify.
+[{shinydashboard}](https://github.com/rstudio/shinydashboard) is powered by [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html), with variables from `adminlte_*` functions, you can customize th appearance of your dashboard. Here are some examples of what you can change.
 
 
 ## Colors

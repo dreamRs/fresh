@@ -28,7 +28,7 @@ bs4dash_color(
 )
 }
 \arguments{
-\item{blue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}. This color is used for \strong{primary} status.}
+\item{blue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#007bff")}. This color is used for \strong{primary} status.}
 
 \item{lightblue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}.}
 
