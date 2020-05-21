@@ -27,22 +27,22 @@ adminlte_vars <- function(...) {
 #' @description Those variables can be used to customize
 #'  defaults colors in {shinydashboard}.
 #'
-#' @param light_blue Light blue (primary status), default to \code{#3c8dbc}.
-#' @param red Red (danger status), default to \code{#dd4b39}.
-#' @param green Green (success status), default to \code{#00a65a}.
-#' @param aqua Aqua (info status), default to \code{#00c0ef}.
-#' @param yellow Yellow (warning status), default to \code{#f39c12}.
-#' @param blue Blue, default to \code{#0073b7}.
-#' @param navy Navy, default to \code{#001F3F}.
-#' @param teal Teal, default to \code{#39CCCC}.
-#' @param olive Olive, default to \code{#3D9970}.
-#' @param lime Lime, default to \code{#01FF70}.
-#' @param orange Orange, default to \code{#FF851B}.
-#' @param fuchsia Fuchsia, default to \code{#F012BE}.
-#' @param purple Purple, default to \code{#605ca8}.
-#' @param maroon Maroon, default to \code{#D81B60}.
-#' @param black Black, default to \code{#111}.
-#' @param gray_lte Gray, default to \code{#d2d6de}.
+#' @param light_blue Light blue (primary status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}.
+#' @param red Red (danger status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dd4b39")}.
+#' @param green Green (success status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#00a65a")}.
+#' @param aqua Aqua (info status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#00c0ef")}.
+#' @param yellow Yellow (warning status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f39c12")}.
+#' @param blue Blue, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}.
+#' @param navy Navy, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#001F3F")}.
+#' @param teal Teal, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#39CCCC")}.
+#' @param olive Olive, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3D9970")}.
+#' @param lime Lime, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#01FF70")}.
+#' @param orange Orange, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#FF851B")}.
+#' @param fuchsia Fuchsia, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#F012BE")}.
+#' @param purple Purple, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#605ca8")}.
+#' @param maroon Maroon, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#D81B60")}.
+#' @param black Black, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#111")}.
+#' @param gray_lte Gray, default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d2d6de")}.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export

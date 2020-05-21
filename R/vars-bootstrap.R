@@ -64,11 +64,11 @@ bs_vars_global <- function(body_bg = NULL,
 #' @description Those variables can be used to customize
 #'  defaults colors in Bootstrap and Bootswatch themes.
 #'
-#' @param brand_primary Primary color (default in Bootstrap is blue).
-#' @param brand_success Success color (default in Bootstrap is green).
-#' @param brand_info Info color (default in Bootstrap is light blue).
-#' @param brand_warning Warning color (default in Bootstrap is orange).
-#' @param brand_danger Danger color (default in Bootstrap is red).
+#' @param brand_primary Primary color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#337ab7")}.
+#' @param brand_success Success color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#5cb85c")}.
+#' @param brand_info Info color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#5bc0de")}.
+#' @param brand_warning Warning color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f0ad4e")}.
+#' @param brand_danger Danger color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d9534f")}.
 #' @param gray_base Base gray color.
 #' @param gray_darker Darker gray color.
 #' @param gray_dark Dark gray color.

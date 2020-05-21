@@ -1,26 +1,26 @@
 
 #' bs4Dash main colors
 #'
-#' @param blue Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")} This color is used for \strong{primary} status.
-#' @param lightblue Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}
-#' @param navy Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#001f3f")}
-#' @param cyan Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")} This color is used for \strong{info} status.
-#' @param teal Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#39cccc")}
-#' @param olive Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3d9970")}
-#' @param green Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")} This color is used for \strong{success} status.
-#' @param lime Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#01ff70")}
-#' @param orange Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ff851b")}
-#' @param yellow Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")} This color is used for \strong{warning} status.
-#' @param fuchsia Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f012be")}
-#' @param purple Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#605ca8")}
-#' @param maroon Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d81b60")}
-#' @param red Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")} This color is used for \strong{danger} status.
-#' @param black Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#111")}
-#' @param gray_x_light Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d2d6de")}
-#' @param gray_600 Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")} This color is used for \strong{secondary} status.
-#' @param gray_800 Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")} Color for dark skin.
-#' @param gray_900 Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#212529")} Color for text in body.
-#' @param white Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffffff")}
+#' @param blue Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}. This color is used for \strong{primary} status.
+#' @param lightblue Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}.
+#' @param navy Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#001f3f")}.
+#' @param cyan Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")}. This color is used for \strong{info} status.
+#' @param teal Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#39cccc")}.
+#' @param olive Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3d9970")}.
+#' @param green Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")}. This color is used for \strong{success} status.
+#' @param lime Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#01ff70")}.
+#' @param orange Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ff851b")}.
+#' @param yellow Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")}. This color is used for \strong{warning} status.
+#' @param fuchsia Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f012be")}.
+#' @param purple Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#605ca8")}.
+#' @param maroon Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d81b60")}.
+#' @param red Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")}. This color is used for \strong{danger} status.
+#' @param black Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#111")}.
+#' @param gray_x_light Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d2d6de")}.
+#' @param gray_600 Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")}. This color is used for \strong{secondary} status.
+#' @param gray_800 Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")}. Color for dark skin.
+#' @param gray_900 Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#212529")}. Color for text in body.
+#' @param white Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffffff")}.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export
@@ -57,14 +57,14 @@ bs4dash_color <- function(blue = NULL,
 
 #' bs4Dash status colors
 #'
-#' @param primary Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}
-#' @param secondary Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")}
-#' @param success Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")}
-#' @param info Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")}
-#' @param warning Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")}
-#' @param danger Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")}
-#' @param light Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f8f9fa")}
-#' @param dark Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")}
+#' @param primary Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}.
+#' @param secondary Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")}.
+#' @param success Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")}.
+#' @param info Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")}.
+#' @param warning Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")}.
+#' @param danger Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")}.
+#' @param light Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f8f9fa")}.
+#' @param dark Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")}.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export

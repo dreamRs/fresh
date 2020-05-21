@@ -19,15 +19,15 @@ bs_vars_color(
 )
 }
 \arguments{
-\item{brand_primary}{Primary color (default in Bootstrap is blue).}
+\item{brand_primary}{Primary color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#337ab7")}.}
 
-\item{brand_success}{Success color (default in Bootstrap is green).}
+\item{brand_success}{Success color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#5cb85c")}.}
 
-\item{brand_info}{Info color (default in Bootstrap is light blue).}
+\item{brand_info}{Info color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#5bc0de")}.}
 
-\item{brand_warning}{Warning color (default in Bootstrap is orange).}
+\item{brand_warning}{Warning color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f0ad4e")}.}
 
-\item{brand_danger}{Danger color (default in Bootstrap is red).}
+\item{brand_danger}{Danger color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d9534f")}.}
 
 \item{gray_base}{Base gray color.}
 

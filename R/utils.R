@@ -43,7 +43,7 @@ rd_col <- function(color, label = color) {
     color
   )
   sprintf(
-    "\\ifelse{html}{\\out{<span style='%s'></span>%s.}}{%s.}",
+    "\\ifelse{html}{\\out{<span style='%s'></span>%s}}{%s}",
     style, label, label
   )
 }

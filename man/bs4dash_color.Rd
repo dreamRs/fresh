@@ -28,45 +28,45 @@ bs4dash_color(
 )
 }
 \arguments{
-\item{blue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")} This color is used for \strong{primary} status.}
+\item{blue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}. This color is used for \strong{primary} status.}
 
-\item{lightblue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}}
+\item{lightblue}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}.}
 
-\item{navy}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#001f3f")}}
+\item{navy}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#001f3f")}.}
 
-\item{cyan}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")} This color is used for \strong{info} status.}
+\item{cyan}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")}. This color is used for \strong{info} status.}
 
-\item{teal}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#39cccc")}}
+\item{teal}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#39cccc")}.}
 
-\item{olive}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3d9970")}}
+\item{olive}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3d9970")}.}
 
-\item{green}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")} This color is used for \strong{success} status.}
+\item{green}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")}. This color is used for \strong{success} status.}
 
-\item{lime}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#01ff70")}}
+\item{lime}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#01ff70")}.}
 
-\item{orange}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ff851b")}}
+\item{orange}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ff851b")}.}
 
-\item{yellow}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")} This color is used for \strong{warning} status.}
+\item{yellow}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")}. This color is used for \strong{warning} status.}
 
-\item{fuchsia}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f012be")}}
+\item{fuchsia}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f012be")}.}
 
-\item{purple}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#605ca8")}}
+\item{purple}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#605ca8")}.}
 
-\item{maroon}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d81b60")}}
+\item{maroon}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d81b60")}.}
 
-\item{red}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")} This color is used for \strong{danger} status.}
+\item{red}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")}. This color is used for \strong{danger} status.}
 
-\item{black}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#111")}}
+\item{black}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#111")}.}
 
-\item{gray_x_light}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d2d6de")}}
+\item{gray_x_light}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#d2d6de")}.}
 
-\item{gray_600}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")} This color is used for \strong{secondary} status.}
+\item{gray_600}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")}. This color is used for \strong{secondary} status.}
 
-\item{gray_800}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")} Color for dark skin.}
+\item{gray_800}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")}. Color for dark skin.}
 
-\item{gray_900}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#212529")} Color for text in body.}
+\item{gray_900}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#212529")}. Color for text in body.}
 
-\item{white}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffffff")}}
+\item{white}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffffff")}.}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.
