@@ -58,6 +58,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/vars-bs4dash.html">Variables for {bs4dash}</a>
+    </li>
+    <li>
       <a href="articles/vars-shiny.html">Variables for Shiny</a>
     </li>
     <li>
@@ -158,29 +161,96 @@
 <div id="shinydashboard" class="section level2">
 <h2 class="hasAnchor">
 <a href="#shinydashboard" class="anchor"></a>shinydashboard</h2>
-<p>Customize colors used in Shiny dashboard applications :</p>
-<p>From :</p>
-<p><img src="reference/figures/shinydashboard-default.png"></p>
-<p>Obtain this :</p>
-<p><img src="reference/figures/shinydashboard-custom.png"></p>
-<p>With:</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/create_theme.html">create_theme</a></span>(
-  <span class="fu"><a href="reference/adminlte_global.html">adminlte_global</a></span>(
-    <span class="kw">content_bg</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+<p>Customize colors and other settings used in <a href="https://github.com/rstudio/shinydashboard">{shinydashboard}</a> applications :</p>
+<p><img src="reference/figures/shinydashboard.png"></p>
+<p>Create the theme:</p>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="no">mytheme</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/create_theme.html">create_theme</a></span>(
+  <span class="fu"><a href="reference/adminlte_color.html">adminlte_color</a></span>(
+    <span class="kw">light_blue</span> <span class="kw">=</span> <span class="st">"#434C5E"</span>
   ),
   <span class="fu"><a href="reference/adminlte_sidebar.html">adminlte_sidebar</a></span>(
-    <span class="kw">dark_bg</span> <span class="kw">=</span> <span class="st">"#80829a"</span>,
-    <span class="kw">dark_hover_bg</span> <span class="kw">=</span> <span class="st">"#53486c"</span>
+    <span class="kw">width</span> <span class="kw">=</span> <span class="st">"400px"</span>,
+    <span class="kw">dark_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>,
+    <span class="kw">dark_hover_bg</span> <span class="kw">=</span> <span class="st">"#81A1C1"</span>,
+    <span class="kw">dark_color</span> <span class="kw">=</span> <span class="st">"#2E3440"</span>
   ),
-  <span class="fu"><a href="reference/adminlte_color.html">adminlte_color</a></span>(
-    <span class="kw">light_blue</span> <span class="kw">=</span> <span class="st">"#3f2d54"</span>,
-    <span class="kw">aqua</span> <span class="kw">=</span> <span class="st">"#75b8d1"</span>,
-    <span class="kw">green</span> <span class="kw">=</span> <span class="st">"#c9d175"</span>,
-    <span class="kw">red</span> <span class="kw">=</span> <span class="st">"#d175b8"</span>,
-    <span class="kw">purple</span> <span class="kw">=</span> <span class="st">"#3f2d54"</span>,
-    <span class="kw">yellow</span> <span class="kw">=</span> <span class="st">"#d1ab75"</span>
+  <span class="fu"><a href="reference/adminlte_global.html">adminlte_global</a></span>(
+    <span class="kw">content_bg</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
+    <span class="kw">box_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>,
+    <span class="kw">info_box_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>
   )
 )</pre></div>
+<p>Use your theme:</p>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu">dashboardPage</span>(
+  <span class="kw">header</span> <span class="kw">=</span> <span class="fu">dashboardHeader</span>(<span class="kw">title</span> <span class="kw">=</span> <span class="st">"My dashboard"</span>),
+  <span class="kw">sidebar</span> <span class="kw">=</span> <span class="fu">dashboardSidebar</span>(
+    <span class="co"># ...</span>
+  ),
+  <span class="kw">body</span> <span class="kw">=</span> <span class="fu">dashboardBody</span>(
+
+    <span class="fu"><a href="reference/use_theme.html">use_theme</a></span>(<span class="no">mytheme</span>), <span class="co"># &lt;-- use the theme</span>
+
+    <span class="co"># ...</span>
+
+  )
+)</pre></div>
+<p>See more information here: <a href="https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html">Variables for {shinydashboard}</a> or in R console: <code><a href="articles/vars-shinydashboard.html">vignette("vars-shinydashboard", package = "fresh")</a></code>.</p>
+</div>
+<div id="bs4dash" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bs4dash" class="anchor"></a>bs4Dash</h2>
+<p>Create a theme to personnalize your <a href="https://github.com/RinteRface/bs4Dash">{bs4Dash}</a> applications:</p>
+<p><img src="reference/figures/bs4dash.png"></p>
+<p>Create the theme:</p>
+<div class="sourceCode" id="cb7"><pre class="r"><span class="no">mytheme</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/create_theme.html">create_theme</a></span>(
+  <span class="fu"><a href="reference/bs4dash_vars.html">bs4dash_vars</a></span>(
+    <span class="kw">navbar_light_color</span> <span class="kw">=</span> <span class="st">"#bec5cb"</span>,
+    <span class="kw">navbar_light_active_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
+    <span class="kw">navbar_light_hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+  ),
+  <span class="fu"><a href="reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(
+    <span class="kw">contrasted_threshold</span> <span class="kw">=</span> <span class="fl">10</span>,
+    <span class="kw">text_dark</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
+    <span class="kw">text_light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>
+  ),
+  <span class="fu"><a href="reference/bs4dash_layout.html">bs4dash_layout</a></span>(
+    <span class="kw">main_bg</span> <span class="kw">=</span> <span class="st">"#353c42"</span>
+  ),
+  <span class="fu"><a href="reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span>(
+    <span class="kw">bg</span> <span class="kw">=</span> <span class="st">"#272c30"</span>,
+    <span class="kw">color</span> <span class="kw">=</span> <span class="st">"#bec5cb"</span>,
+    <span class="kw">hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
+    <span class="kw">submenu_bg</span> <span class="kw">=</span> <span class="st">"#272c30"</span>,
+    <span class="kw">submenu_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
+    <span class="kw">submenu_hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+  ),
+  <span class="fu"><a href="reference/bs4dash_status.html">bs4dash_status</a></span>(
+    <span class="kw">primary</span> <span class="kw">=</span> <span class="st">"#5E81AC"</span>, <span class="kw">danger</span> <span class="kw">=</span> <span class="st">"#BF616A"</span>, <span class="kw">light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>
+  ),
+  <span class="fu"><a href="reference/bs4dash_color.html">bs4dash_color</a></span>(
+    <span class="kw">gray_900</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+  )
+)</pre></div>
+<p>Use your theme:</p>
+<div class="sourceCode" id="cb8"><pre class="r"><span class="fu">bs4DashPage</span>(
+  <span class="kw">title</span> <span class="kw">=</span> <span class="st">"bs4Dash custom theme"</span>,
+  <span class="kw">navbar</span> <span class="kw">=</span> <span class="fu">bs4DashNavbar</span>(<span class="kw">skin</span> <span class="kw">=</span> <span class="st">"light"</span>),
+  <span class="kw">sidebar</span> <span class="kw">=</span> <span class="fu">bs4DashSidebar</span>(
+    <span class="kw">title</span> <span class="kw">=</span> <span class="st">"bs4Dash custom theme"</span>,
+    <span class="kw">skin</span> <span class="kw">=</span> <span class="st">"light"</span>,
+
+    <span class="co"># ...</span>
+
+  ),
+  <span class="kw">body</span> <span class="kw">=</span> <span class="fu">bs4DashBody</span>(
+
+    <span class="fu"><a href="reference/use_theme.html">use_theme</a></span>(<span class="no">mytheme</span>), <span class="co"># &lt;-- use the theme</span>
+
+    <span class="co"># ...</span>
+
+  )
+)</pre></div>
+<p>See more information here: <a href="https://dreamrs.github.io/fresh/articles/vars-bs4dash.html">Variables for {bs4dash}</a> or in R console: <code><a href="articles/vars-bs4dash.html">vignette("vars-bs4dash", package = "fresh")</a></code>.</p>
 </div>
 </div>
   </div>
