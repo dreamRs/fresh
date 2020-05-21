@@ -1,7 +1,7 @@
 
 #' @title AdminLTE 2 custom variables
 #'
-#' @description Use any AdmnLTE or Bootstrap variables to customize a \{shinydashboard\} theme.
+#' @description Use any AdminLTE or Bootstrap variables to customize a \{shinydashboard\} theme.
 #'
 #' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
 #'

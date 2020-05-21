@@ -142,7 +142,7 @@ See more information here: [Variables for {shinydashboard}](https://dreamrs.gith
 
 ## bs4Dash
 
-Create a theme to personnalize your [{bs4Dash}](https://github.com/RinteRface/bs4Dash) applications:
+Create a theme to personalize your [{bs4Dash}](https://github.com/RinteRface/bs4Dash) applications:
 
 ![](man/figures/bs4dash.png)
 

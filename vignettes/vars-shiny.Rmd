@@ -42,7 +42,7 @@ library(htmltools)
 
 
 
-{shiny} is powered by [Bootstrap](https://getbootstrap.com/docs/3.4/), the main components are customizable using a large number of variables. Below, we give some examples of parameters that you can modify to change the appearance of elements created by {shiny} functions.
+{shiny} is powered by [Bootstrap](https://getbootstrap.com/docs/3.4/), the main components are personnalisable using a large number of variables. Below, we give some examples of parameters that you can modify to change the appearance of elements created by {shiny} functions.
 
 
 ## Buttons

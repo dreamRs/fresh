@@ -20,7 +20,7 @@ library(fresh)
 ```
 
 
-[{bsh4Dash}](https://github.com/RinteRface/bs4Dash) allow to construct dashboards in Shiny with latest version of [AdminLTE](https://github.com/ColorlibHQ/AdminLTE) based on Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can create a custom theme to use with it with functions `bs4dash_*`. Here are some examples of what you can change.
+[{bs4Dash}](https://github.com/RinteRface/bs4Dash) allow to construct dashboards in Shiny with latest version of [AdminLTE](https://github.com/ColorlibHQ/AdminLTE) based on Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can create a custom theme to use with it with functions `bs4dash_*`. Here are some examples of what you can change.
 
 
 ## Main statuses 
@@ -98,7 +98,7 @@ We now have:
 
 ## Navbar
 
-Background color of the navbar is defined by the light or dark status, then we can change default with xustom variables:
+Background color of the navbar is defined by the light or dark status, then we can change default with custom variables:
 
 ```{r}
 bs4dash_status(light = "#272c30")
@@ -120,7 +120,7 @@ Here's the result:
 
 ## Color contrast
 
-Last set of variables that we can use to finalize our new theme is the YIQ color contrast variables that allow to swith color if contrast is below a threshold. 
+Last set of variables that we can use to finalize our new theme is the YIQ color contrast variables that allow to switch color if contrast is below a threshold. 
 
 
 ```{r}

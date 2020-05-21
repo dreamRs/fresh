@@ -93,7 +93,7 @@ bs4dash_status <- function(primary = NULL,
 #' @param sidebar_width Sidebar width.
 #' @param sidebar_padding_x Sidebar horizontal padding.
 #' @param sidebar_padding_y Sidebar vertical padding.
-#' @param sidebar_mini_width Width for mini sidabar.
+#' @param sidebar_mini_width Width for mini sidebar.
 #' @param control_sidebar_width Control sidebar width (the one on the right).
 #' @param boxed_layout_max_width Max width used in boxed layout.
 #' @param screen_header_collapse When to show the smaller logo.

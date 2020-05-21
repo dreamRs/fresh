@@ -78,7 +78,7 @@ There's two way to use a newly created theme :
 
 ### Inline
 
-Don't specify an output file and use rsult of `create_theme()` in `use_theme()` directly in your application : 
+Don't specify an output file and use result of `create_theme()` in `use_theme()` directly in your application : 
 
 ```{r}
 mytheme <- create_theme(
@@ -138,7 +138,7 @@ navbarPage(
 )
 ```
 
-In {shinydasboard} or {bs4Dash}, you can use `use_theme()` with a path inside `dashboardBody` or `bs4DashBody` :
+In {shinydashboard} or {bs4Dash}, you can use `use_theme()` with a path inside `dashboardBody` or `bs4DashBody` :
 
 
 ```r

@@ -249,7 +249,7 @@ bs_vars_font <- function(family_sans_serif = NULL,
 #'  wells panel (e.g. \code{\link[shiny:wellPanel]{shiny::wellPanel}} or
 #'  \code{\link[shiny:sidebarLayout]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
 #'
-#' @param bg Background color (default in Shiny is grey).
+#' @param bg Background color (default in Shiny is gray).
 #' @param border Border color.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.

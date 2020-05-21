@@ -7,7 +7,7 @@
 bs_vars_wells(bg = NULL, border = NULL)
 }
 \arguments{
-\item{bg}{Background color (default in Shiny is grey).}
+\item{bg}{Background color (default in Shiny is gray).}
 
 \item{border}{Border color.}
 }

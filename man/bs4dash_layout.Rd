@@ -27,7 +27,7 @@ bs4dash_layout(
 
 \item{sidebar_padding_y}{Sidebar vertical padding.}
 
-\item{sidebar_mini_width}{Width for mini sidabar.}
+\item{sidebar_mini_width}{Width for mini sidebar.}
 
 \item{control_sidebar_width}{Control sidebar width (the one on the right).}
 
