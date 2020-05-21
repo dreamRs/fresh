@@ -16,21 +16,21 @@ bs4dash_status(
 )
 }
 \arguments{
-\item{primary}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#0073b7")}}
+\item{primary}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#0073b7")}}
 
-\item{secondary}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#6c757d")}}
+\item{secondary}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#6c757d")}}
 
-\item{success}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#28a745")}}
+\item{success}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#28a745")}}
 
-\item{info}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#17a2b8")}}
+\item{info}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#17a2b8")}}
 
-\item{warning}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#ffc107")}}
+\item{warning}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#ffc107")}}
 
-\item{danger}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#dc3545")}}
+\item{danger}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dc3545")}}
 
-\item{light}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#f8f9fa")}}
+\item{light}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#f8f9fa")}}
 
-\item{dark}{Default: \Sexpr[results=rd, stage=render]{fresh:::rd_color_tag("#343a40")}}
+\item{dark}{Default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#343a40")}}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.

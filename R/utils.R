@@ -22,23 +22,22 @@ vars_names <- function(x, prefix = NULL) {
 
 
 is_bootstrap_vars <- function(vars) {
-  unlist(lapply(vars, inherits, what = c("bootstrap_vars", "bootstrap_vars_file")))
+  vapply(vars, inherits, what = c("bootstrap_vars", "bootstrap_vars_file"), FUN.VALUE = logical(1))
 }
 
-
 is_adminlte_vars <- function(vars) {
-  unlist(lapply(vars, inherits, what = "adminlte_vars"))
+  vapply(vars, inherits, what = "adminlte_vars", FUN.VALUE = logical(1))
 }
 
 is_bs4dash_vars <- function(vars) {
-  unlist(lapply(vars, inherits, what = "bs4dash_vars"))
+  vapply(vars, inherits, what = "bs4dash_vars", FUN.VALUE = logical(1))
 }
 
 is_sass_file <- function(vars) {
   unlist(lapply(vars, inherits, what = "sass_file"))
 }
 
-rd_color_tag <- function(color, label = color) {
+rd_col <- function(color, label = color) {
   style <- sprintf(
     "width:12px;height:12px;background:%s;border-radius:2px;display:inline-block;margin-right:5px;",
     color
