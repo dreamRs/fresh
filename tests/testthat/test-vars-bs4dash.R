@@ -1,4 +1,15 @@
 
+test_that("bs4dash_vars works", {
+
+  vars <- bs4dash_vars(default_background_color = "#FFF", "default-color" = "#000")
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bs4dash_vars")
+  expect_length(vars, 2)
+})
+
+
 test_that("bs4dash_button works", {
 
   vars <- bs4dash_button(default_background_color = "#FFF", default_color = "#000")

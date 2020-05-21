@@ -11,6 +11,17 @@ test_that("works with no args", {
 })
 
 
+test_that("bs_vars works", {
+
+  vars <- bs_vars(body_bg = "#fff", "grid-columns" = 8)
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bootstrap_vars")
+  expect_length(vars, 2)
+})
+
+
 test_that("bs_vars_global works", {
 
   vars <- bs_vars_global(body_bg = "#fff", grid_columns = 8)
@@ -213,3 +224,20 @@ test_that("bs_vars_badge works", {
   expect_is(vars, "bootstrap_vars")
   expect_length(vars, 4)
 })
+
+
+test_that("bs_vars_table works", {
+
+  vars <- bs_vars_table(
+    bg_accent = "lightblue",
+    bg_hover = "firebrick",
+    border_color = "#000"
+  )
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "bootstrap_vars")
+  expect_length(vars, 3)
+})
+
+

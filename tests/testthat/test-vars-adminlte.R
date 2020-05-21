@@ -1,7 +1,18 @@
 
+test_that("adminlte_vars works", {
+
+  vars <- adminlte_vars("light-blue" = "#fff", dark_bg = "#000")
+
+  expect_is(vars, "list")
+  expect_is(vars, "fresh_sass_vars")
+  expect_is(vars, "adminlte_vars")
+  expect_length(vars, 2)
+})
+
+
 test_that("adminlte_color works", {
 
-  vars <- adminlte_color(light_blue = "#fff",red = "#000")
+  vars <- adminlte_color(light_blue = "#fff", red = "#000")
 
   expect_is(vars, "list")
   expect_is(vars, "fresh_sass_vars")
