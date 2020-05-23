@@ -88,6 +88,33 @@ ui <- bs4DashPage(
       bs4TabItem(
         tabName = "tab1",
         tags$h2("UI components"),
+
+        tags$h4("Buttons"),
+        actionButton("default", "default"),
+        actionButton("primary", "primary", class= "btn-primary"),
+        actionButton("secondary", "secondary", class= "btn-secondary"),
+        actionButton("danger", "danger", class= "btn-danger"),
+        actionButton("success", "success", class= "btn-success"),
+        actionButton("info", "info", class= "btn-info"),
+
+        actionButton("modal", "Launch modal", class = "btn-block"),
+
+        tags$h4("Alerts"),
+        fluidRow(
+          bs4Alert(
+            title = "A primary alert",
+            status = "primary",
+            closable = FALSE,
+            "Example of alert."
+          ),
+          bs4Alert(
+            title = "Be Careful!",
+            status = "danger",
+            closable = FALSE,
+            "Danger alert preview."
+          )
+        ),
+
         tags$h4("bs4ValueBox"),
         fluidRow(
           bs4ValueBox(
@@ -198,6 +225,26 @@ ui <- bs4DashPage(
             collapsible = TRUE,
             p("Box Content")
           )
+        ),
+        tags$h4("Tab Card"),
+        bs4TabCard(
+          id = "tabcard",
+          title = "A card with tabs",
+          bs4TabPanel(
+            tabName = "Tab 1",
+            active = FALSE,
+            "Content 1"
+          ),
+          bs4TabPanel(
+            tabName = "Tab 2",
+            active = TRUE,
+            "Content 2"
+          ),
+          bs4TabPanel(
+            tabName = "Tab 3",
+            active = FALSE,
+            "Content 3"
+          )
         )
       ),
       bs4TabItem(
@@ -209,7 +256,16 @@ ui <- bs4DashPage(
 )
 
 
-server <- function(input, output) {
+server <- function(input, output, session) {
+
+  observeEvent(input$modal, {
+    showModal(modalDialog(
+      title = "Somewhat important message",
+      "This is a somewhat important message.",
+      easyClose = TRUE,
+      footer = NULL
+    ))
+  })
 
 }
 

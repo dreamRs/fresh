@@ -24,7 +24,7 @@ library(fresh)
 
 ## Colors
 
-There's a fixed list of colors that you can use in `valueBox`, `infoBox`, `box`, but which are also used for other components like the header. Some colors are associated with a status, for example in `valueBox` you can use `color = "light-blue"`, but in `box` you have to use `status = "pimary"` for the same color. The function `adminlte_color()` allow you to define thoses colors:
+There's a fixed list of colors that you can use in `valueBox`, `infoBox`, `box`, but which are also used for other components like the header. Some colors are associated with a status, for example in `valueBox` you can use `color = "light-blue"`, but in `box` you have to use `status = "pimary"` for the same color. The function `adminlte_color()` allow you to define those colors:
 
 With the following code we are gonna change the light-blue color that is also the color for the primary status and for the header:
 

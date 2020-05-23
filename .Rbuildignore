@@ -10,3 +10,4 @@
 ^cran-comments\.md$
 ^CRAN-RELEASE$
 ^\.github$
+^LICENSE\.md$
