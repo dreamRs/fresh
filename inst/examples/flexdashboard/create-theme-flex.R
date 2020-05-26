@@ -2,6 +2,7 @@
 
 # create for flexdashboard
 
+dir.create("inst/examples/flexdashboard/assets")
 create_theme(
   theme = "flatly",
   # list(

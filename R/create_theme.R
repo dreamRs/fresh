@@ -99,18 +99,16 @@ create_theme <- function(...,
     }
   }
   is_file <- is_sass_file(vars)
-  vars <- Reduce(c, vars[!is_file])
+  variables <- Reduce(c, vars[!is_file])
   if (identical(framework, "bootstrap")) {
     if (identical(theme, "default")) {
       input <- list(
-        vars,
+        variables,
         bootstrap_scss()
       )
     } else {
       input <- list(
-        c(vars, list(
-          "icon-font-path" = shQuote(paste0(system.file("assets/bootstrap3/default/fonts/bootstrap", package = "fresh"), "/"))
-        )),
+        variables,
         bootswatch_vars_scss(theme),
         bootstrap_scss(),
         bootswatch_scss(theme)
@@ -118,32 +116,34 @@ create_theme <- function(...,
     }
   } else if (identical(framework, "adminlte")) {
     input <- list(
-      vars,
+      variables,
       adminlte2_scss(),
       adminlte2_skin_scss()
     )
   } else if (identical(framework, "bs4dash")) {
     input <- list(
-      vars,
+      variables,
       adminlte3_scss()
     )
   }
+  input <- dropNulls(input)
   if (sum(is_file) > 0) {
     input <- c(vars[is_file], input)
   }
   if (!is.null(output_file) && isTRUE(include_assets)) {
-    path <- normalizePath(path = output_file, mustWork = FALSE)
-    file.copy(
-      from = system.file("assets/bootstrap3/default/fonts", package = "fresh"),
-      to = dirname(path), recursive = TRUE
-    )
-    output_dir <- file.path(dirname(path), "stylesheets")
-    dir.create(path = output_dir)
-    output_file <- file.path(output_dir, basename(output_file))
-    warning(
-      "Output path has been modified to include assets: ",
-      output_file, call. = FALSE
-    )
+    warning("create_theme: argument include_assets has been deprecated in fresh 0.2.0", call. = FALSE)
+    # path <- normalizePath(path = output_file, mustWork = FALSE)
+    # file.copy(
+    #   from = system.file("assets/bootstrap3/default/fonts", package = "fresh"),
+    #   to = dirname(path), recursive = TRUE
+    # )
+    # output_dir <- file.path(dirname(path), "stylesheets")
+    # dir.create(path = output_dir)
+    # output_file <- file.path(output_dir, basename(output_file))
+    # warning(
+    #   "Output path has been modified to include assets: ",
+    #   output_file, call. = FALSE
+    # )
   }
   sass(
     input = input,

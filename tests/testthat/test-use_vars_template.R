@@ -61,4 +61,29 @@ test_that("create_theme works with bs_vars_file", {
 })
 
 
+test_that("create_theme works with bs_vars_file and vars", {
 
+  my_vars <- file.path(tempdir(), "custom-vars.scss")
+  my_theme <- file.path(tempdir(), "theme.css")
+
+  # Open template and edit variables
+  use_vars_template(
+    output_file = my_vars,
+    theme = "flatly"
+  )
+  expect_true(file.exists(my_vars))
+
+  # Create new theme based on the modified template
+  create_theme(
+    theme = "default",
+    bs_vars_alert(padding = "5px"),
+    bs_vars_file(input_file = my_vars),
+    output_file = my_theme
+  )
+  expect_true(file.exists(my_theme))
+
+  # Clean up
+  unlink(my_vars)
+  unlink(my_theme)
+
+})
