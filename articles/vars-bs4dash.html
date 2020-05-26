@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.910</span>
       </span>
     </div>
 
@@ -102,7 +102,7 @@
     
     
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">fresh</span>)</pre></body></html></div>
-<p><a href="https://github.com/RinteRface/bs4Dash">{bsh4Dash}</a> allow to construct dashboards in Shiny with latest version of <a href="https://github.com/ColorlibHQ/AdminLTE">AdminLTE</a> based on Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can create a custom theme to use with it with functions <code>bs4dash_*</code>. Here are some examples of what you can change.</p>
+<p><a href="https://github.com/RinteRface/bs4Dash">{bs4Dash}</a> allow to construct dashboards in Shiny with latest version of <a href="https://github.com/ColorlibHQ/AdminLTE">AdminLTE</a> based on Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can create a custom theme to use with it with functions <code>bs4dash_*</code>. Here are some examples of what you can change.</p>
 <div id="main-statuses" class="section level2">
 <h2 class="hasAnchor">
 <a href="#main-statuses" class="anchor"></a>Main statuses</h2>
@@ -148,7 +148,7 @@
 <div id="navbar" class="section level2">
 <h2 class="hasAnchor">
 <a href="#navbar" class="anchor"></a>Navbar</h2>
-<p>Background color of the navbar is defined by the light or dark status, then we can change default with xustom variables:</p>
+<p>Background color of the navbar is defined by the light or dark status, then we can change default with custom variables:</p>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(<span class="kw">light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>)
 
 <span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span>(
@@ -163,7 +163,7 @@
 <div id="color-contrast" class="section level2">
 <h2 class="hasAnchor">
 <a href="#color-contrast" class="anchor"></a>Color contrast</h2>
-<p>Last set of variables that we can use to finalize our new theme is the YIQ color contrast variables that allow to swith color if contrast is below a threshold.</p>
+<p>Last set of variables that we can use to finalize our new theme is the YIQ color contrast variables that allow to switch color if contrast is below a threshold.</p>
 <div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(<span class="kw">contrasted_threshold</span> <span class="kw">=</span> <span class="fl">10</span>, <span class="kw">text_dark</span> <span class="kw">=</span> <span class="st">"#FFF"</span>, <span class="kw">text_light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>)</pre></body></html></div>
 <p>Now text is more readable:</p>
 <p><img src="figures/bs4dash-yiq-custom.png" style="width:100%"></p>
