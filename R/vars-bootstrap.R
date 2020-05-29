@@ -121,14 +121,14 @@ bs_vars_color <- function(brand_primary = NULL,
 #' @param default_link_active_bg Background color for active link (selected tab).
 #' @param default_link_hover_color Color of links when hovered.
 #' @param default_link_hover_bg Background color of links when hovered.
-#' @param inverse_color Color of text for inversed navbar.
-#' @param inverse_bg Background color for inversed navbar.
-#' @param inverse_border Border color for inversed navbar.
-#' @param inverse_link_color Link color for inversed navbar.
-#' @param inverse_link_active_color Color for active link (selected tab) for inversed navbar.
-#' @param inverse_link_active_bg Background color for active link (selected tab) for inversed navbar.
-#' @param inverse_link_hover_color Color of links when hovered for inversed navbar.
-#' @param inverse_link_hover_bg Background color of links when hovered for inversed navbar.
+#' @param inverse_color Color of text for inverted navbar.
+#' @param inverse_bg Background color for inverted navbar.
+#' @param inverse_border Border color for inverted navbar.
+#' @param inverse_link_color Link color for inverted navbar.
+#' @param inverse_link_active_color Color for active link (selected tab) for inverted navbar.
+#' @param inverse_link_active_bg Background color for active link (selected tab) for inverted navbar.
+#' @param inverse_link_hover_color Color of links when hovered for inverted navbar.
+#' @param inverse_link_hover_bg Background color of links when hovered for inverted navbar.
 #'
 #' @return a \code{list} that can be used in \code{\link{create_theme}}.
 #' @export

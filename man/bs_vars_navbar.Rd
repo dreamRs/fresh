@@ -58,21 +58,21 @@ bs_vars_navbar(
 
 \item{default_link_hover_bg}{Background color of links when hovered.}
 
-\item{inverse_color}{Color of text for inversed navbar.}
+\item{inverse_color}{Color of text for inverted navbar.}
 
-\item{inverse_bg}{Background color for inversed navbar.}
+\item{inverse_bg}{Background color for inverted navbar.}
 
-\item{inverse_border}{Border color for inversed navbar.}
+\item{inverse_border}{Border color for inverted navbar.}
 
-\item{inverse_link_color}{Link color for inversed navbar.}
+\item{inverse_link_color}{Link color for inverted navbar.}
 
-\item{inverse_link_active_color}{Color for active link (selected tab) for inversed navbar.}
+\item{inverse_link_active_color}{Color for active link (selected tab) for inverted navbar.}
 
-\item{inverse_link_active_bg}{Background color for active link (selected tab) for inversed navbar.}
+\item{inverse_link_active_bg}{Background color for active link (selected tab) for inverted navbar.}
 
-\item{inverse_link_hover_color}{Color of links when hovered for inversed navbar.}
+\item{inverse_link_hover_color}{Color of links when hovered for inverted navbar.}
 
-\item{inverse_link_hover_bg}{Background color of links when hovered for inversed navbar.}
+\item{inverse_link_hover_bg}{Background color of links when hovered for inverted navbar.}
 }
 \value{
 a \code{list} that can be used in \code{\link{create_theme}}.
