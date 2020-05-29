@@ -134,7 +134,7 @@ create_theme <- function(...,
     warning("create_theme: argument include_assets has been deprecated in fresh 0.2.0", call. = FALSE)
     # path <- normalizePath(path = output_file, mustWork = FALSE)
     # file.copy(
-    #   from = system.file("assets/bootstrap3/default/fonts", package = "fresh"),
+    #   from = system.file("assets/bootstrap-3.4.1/default/fonts", package = "fresh"),
     #   to = dirname(path), recursive = TRUE
     # )
     # output_dir <- file.path(dirname(path), "stylesheets")
@@ -156,7 +156,7 @@ create_theme <- function(...,
 bootstrap_scss <- function() {
   sass_file(
     input = system.file(
-      "assets/bootstrap3/default/stylesheets/_bootstrap.scss",
+      "assets/bootstrap-3.4.1/default/stylesheets/_bootstrap.scss",
       package = "fresh"
     )
   )
@@ -166,7 +166,7 @@ bootstrap_scss <- function() {
 bootswatch_vars_scss <- function(theme) {
   sass_file(
     input = system.file(
-      "assets/bootstrap3", theme, "_variables.scss",
+      "assets/bootstrap-3.4.1", theme, "_variables.scss",
       package = "fresh"
     )
   )
@@ -176,7 +176,7 @@ bootswatch_vars_scss <- function(theme) {
 bootswatch_scss <- function(theme) {
   sass_file(
     input = system.file(
-      "assets/bootstrap3", theme, "_bootswatch.scss",
+      "assets/bootstrap-3.4.1", theme, "_bootswatch.scss",
       package = "fresh"
     )
   )

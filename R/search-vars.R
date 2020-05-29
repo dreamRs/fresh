@@ -135,12 +135,12 @@ search_vars_bs <- function(pattern = NULL,
   theme <- match.arg(theme)
   if (identical(theme, "default")) {
     res <- search_vars(file = system.file(
-      "assets/bootstrap3/default/stylesheets/bootstrap/_variables.scss",
+      "assets/bootstrap-3.4.1/default/stylesheets/bootstrap/_variables.scss",
       package = "fresh"
     ))
   } else {
     res <- search_vars(file = system.file(
-      "assets/bootstrap3", theme, "_variables.scss",
+      "assets/bootstrap-3.4.1", theme, "_variables.scss",
       package = "fresh"
     ))
   }

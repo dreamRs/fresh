@@ -24,7 +24,7 @@ test_that("use_vars_template works", {
 test_that("vars_file works", {
 
   vars <- bs_vars_file(input_file = system.file(
-    "assets/bootstrap3/default/stylesheets/bootstrap/_variables.scss",
+    "assets/bootstrap-3.4.1/default/stylesheets/bootstrap/_variables.scss",
     package = "fresh"
   ))
 

@@ -40,7 +40,7 @@ use_vars_template <- function(output_file,
   if (identical(theme, "default")) {
     rc <- file.copy(
       from = system.file(
-        "assets/bootstrap3/default/stylesheets/bootstrap/_variables.scss",
+        "assets/bootstrap-3.4.1/default/stylesheets/bootstrap/_variables.scss",
         package = "fresh"
       ),
       to = output_file
@@ -48,7 +48,7 @@ use_vars_template <- function(output_file,
   } else {
     rc <- file.copy(
       from = system.file(
-        "assets/bootstrap3", theme, "_variables.scss",
+        "assets/bootstrap-3.4.1", theme, "_variables.scss",
         package = "fresh"
       ),
       to = output_file
