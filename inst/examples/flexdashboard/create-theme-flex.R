@@ -1,15 +1,24 @@
 
+#  ------------------------------------------------------------------------
+#
+# Title : Use {fresh} with flexdashboard
+#
+#  ------------------------------------------------------------------------
 
-# create for flexdashboard
 
+library(fresh)
+
+
+# Create an "assets" directory in your Rmd directory
 dir.create("inst/examples/flexdashboard/assets")
+
+
+# Create a theme using Bootswatch's Flatly theme as base
+# the theme is saved as "mytheme.css" in the assets directory
+
 create_theme(
   theme = "flatly",
-  # list(
-  #   # "web-font-path" = shQuote(paste0(system.file("assets/bootstrap3/default/fonts/", package = "fresh"), "/")),
-  #   # "web-font-path" = "''",
-  #   "icon-font-path" = shQuote(paste0(system.file("assets/bootstrap3/default/fonts/bootstrap", package = "fresh"), "/"))
-  # ),
+  output_file = "inst/examples/flexdashboard/assets/mytheme.css",
   bs_vars_navbar(
     default_bg = "#3f2d54",
     inverse_bg = "#3f2d54",
@@ -40,8 +49,6 @@ create_theme(
   bs_vars_wells(
     bg = "#FFF",
     border = "#3f2d54"
-  ),
-  output_file = "inst/examples/flexdashboard/assets/mytheme.css",
-  include_assets = FALSE
+  )
 )
 
