@@ -354,7 +354,7 @@ bs_vars_input <- function(bg = NULL,
 #' @title Bootstrap alert variables
 #'
 #' @description Those variables can be used to customize
-#'  inputs in Bootstrap and Bootswatch themes.
+#'  alerts in Bootstrap and Bootswatch themes.
 #'
 #' @param padding Padding for alerts.
 #' @param border_radius Border radius (rounded corners)
