@@ -20,19 +20,33 @@ library(fresh)
 
 # Theme -------------------------------------------------------------------
 
+library(fresh)
 bs4DashTheme <- create_theme(
   bs4dash_vars(
     navbar_dark_color = "#bec5cb",
     navbar_dark_active_color = "#FFF",
     navbar_dark_hover_color = "#FFF"
   ),
-  bs4dash_yiq(contrasted_threshold = 10, text_dark = "#FFF", text_light = "#272c30"),
+  bs4dash_yiq(
+    contrasted_threshold = 10,
+    text_dark = "#FFF",
+    text_light = "#272c30"
+  ),
   bs4dash_layout(main_bg = "#353c42"),
   bs4dash_sidebar_dark(
-    bg = "#272c30", color = "#bec5cb", hover_color = "#FFF",
-    submenu_bg = "#272c30", submenu_color = "#FFF", submenu_hover_color = "#FFF"
+    bg = "#272c30",
+    color = "#bec5cb",
+    hover_color = "#FFF",
+
+    submenu_bg = "#272c30",
+    submenu_color = "#FFF",
+    submenu_hover_color = "#FFF"
   ),
-  bs4dash_status(dark = "#272c30"),
+  bs4dash_status(
+    dark = "#272c30",
+    primary = "#5E81AC",
+    danger = "#BF616A"
+  ),
   bs4dash_color(gray_900 = "#FFF", white = "#272c30")
 )
 
@@ -88,32 +102,22 @@ ui <- bs4DashPage(
       bs4TabItem(
         tabName = "tab1",
         tags$h2("UI components"),
-
-        tags$h4("Buttons"),
-        actionButton("default", "default"),
-        actionButton("primary", "primary", class= "btn-primary"),
-        actionButton("secondary", "secondary", class= "btn-secondary"),
-        actionButton("danger", "danger", class= "btn-danger"),
-        actionButton("success", "success", class= "btn-success"),
-        actionButton("info", "info", class= "btn-info"),
-
-        actionButton("modal", "Launch modal", class = "btn-block"),
-
-        tags$h4("Alerts"),
-        fluidRow(
-          bs4Alert(
-            title = "A primary alert",
-            status = "primary",
-            closable = FALSE,
-            "Example of alert."
-          ),
-          bs4Alert(
-            title = "Be Careful!",
-            status = "danger",
-            closable = FALSE,
-            "Danger alert preview."
-          )
-        ),
+#
+#         tags$h4("Alerts"),
+#         fluidRow(
+#           bs4Alert(
+#             title = "A primary alert",
+#             status = "primary",
+#             closable = FALSE,
+#             "Example of alert."
+#           ),
+#           bs4Alert(
+#             title = "Be Careful!",
+#             status = "danger",
+#             closable = FALSE,
+#             "Danger alert preview."
+#           )
+#         ),
 
         tags$h4("bs4ValueBox"),
         fluidRow(

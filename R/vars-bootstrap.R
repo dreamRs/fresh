@@ -442,7 +442,7 @@ bs_vars_progress <- function(bg = NULL,
 #' @title Bootstrap panel variables
 #'
 #' @description Those variables can be used to customize
-#'  panel (e.g. \code{\link[shinyWidgets:panel]{shinyWidgets::panel}}
+#'  panel (e.g. \code{\link[shinyWidgets:bootstrap-utils]{shinyWidgets::panel}}
 #'  in Bootstrap and Bootswatch themes.
 #'
 #' @param bg Background color.
