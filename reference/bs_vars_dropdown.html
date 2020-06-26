@@ -145,18 +145,18 @@
  in Bootstrap and Bootswatch themes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_dropdown</span>(
-  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>fallback_border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>divider_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_active_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_active_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>link_disabled_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>header_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_dropdown.html'>bs_vars_dropdown</a></span>(
+  bg = <span class='kw'>NULL</span>,
+  border = <span class='kw'>NULL</span>,
+  fallback_border = <span class='kw'>NULL</span>,
+  divider_bg = <span class='kw'>NULL</span>,
+  link_color = <span class='kw'>NULL</span>,
+  link_hover_color = <span class='kw'>NULL</span>,
+  link_hover_bg = <span class='kw'>NULL</span>,
+  link_active_color = <span class='kw'>NULL</span>,
+  link_active_bg = <span class='kw'>NULL</span>,
+  link_disabled_color = <span class='kw'>NULL</span>,
+  header_color = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -210,12 +210,12 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bs_vars_dropdown</span>(
-  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#FAFAFA"</span>,
-  <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_dropdown.html'>bs_vars_dropdown</a></span>(
+  bg = <span class='st'>"#FAFAFA"</span>,
+  border = <span class='st'>"firebrick"</span>
 )</div><div class='output co'>#&gt; $`dropdown-bg`
 #&gt; [1] "#FAFAFA"
 #&gt; 
@@ -224,48 +224,48 @@
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shinyWidgets</span>)
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/dreamRs/shinyWidgets'>shinyWidgets</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(
-      <span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-        <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-        <span class='fu'>bs_vars_dropdown</span>(
-          <span class='kw'>bg</span> <span class='kw'>=</span> <span class='st'>"#FAFAFA"</span>,
-          <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"firebrick"</span>
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+    <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_theme.html'>use_theme</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+        theme = <span class='st'>"default"</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_dropdown.html'>bs_vars_dropdown</a></span>(
+          bg = <span class='st'>"#FAFAFA"</span>,
+          border = <span class='st'>"firebrick"</span>
         ),
-        <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+        output_file = <span class='kw'>NULL</span>
       )
     ),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Custom dropdowns"</span>),
+    <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"Custom dropdowns"</span>),
     <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/dropdownButton.html'>dropdownButton</a></span>(
-      <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"mydropdown"</span>,
-      <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>"Controls"</span>,
-      <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"sliders"</span>),
-      <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-      <span class='kw'>circle</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+      inputId = <span class='st'>"mydropdown"</span>,
+      label = <span class='st'>"Controls"</span>,
+      icon = <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"sliders"</span>),
+      status = <span class='st'>"primary"</span>,
+      circle = <span class='fl'>FALSE</span>,
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/sliderInput.html'>sliderInput</a></span>(
-        <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"n"</span>,
-        <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>"Number of observations"</span>,
-        <span class='kw'>min</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>30</span>
+        inputId = <span class='st'>"n"</span>,
+        label = <span class='st'>"Number of observations"</span>,
+        min = <span class='fl'>10</span>, max = <span class='fl'>100</span>, value = <span class='fl'>30</span>
       ),
       <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/prettyToggle.html'>prettyToggle</a></span>(
-        <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"na"</span>,
-        <span class='kw'>label_on</span> <span class='kw'>=</span> <span class='st'>"NAs keeped"</span>,
-        <span class='kw'>label_off</span> <span class='kw'>=</span> <span class='st'>"NAs removed"</span>,
-        <span class='kw'>icon_on</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"check"</span>),
-        <span class='kw'>icon_off</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"remove"</span>)
+        inputId = <span class='st'>"na"</span>,
+        label_on = <span class='st'>"NAs keeped"</span>,
+        label_off = <span class='st'>"NAs removed"</span>,
+        icon_on = <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"check"</span>),
+        icon_off = <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"remove"</span>)
       )
     )
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

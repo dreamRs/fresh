@@ -140,15 +140,15 @@
 
     <div class="ref-description">
     <p>Open a SCSS template to modify variables,
- after use <a href='bs_vars_file.html'>bs_vars_file</a> to import those variables and create a theme.</p>
+ after use <a href='https://rdrr.io/pkg/fresh/man/bs_vars_file.html'>bs_vars_file</a> to import those variables and create a theme.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_vars_template</span>(
-  <span class='no'>output_file</span>,
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"cerulean"</span>, <span class='st'>"cosmo"</span>, <span class='st'>"cyborg"</span>, <span class='st'>"darkly"</span>, <span class='st'>"flatly"</span>, <span class='st'>"journal"</span>,
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_vars_template.html'>use_vars_template</a></span>(
+  <span class='kw'>output_file</span>,
+  theme = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"cerulean"</span>, <span class='st'>"cosmo"</span>, <span class='st'>"cyborg"</span>, <span class='st'>"darkly"</span>, <span class='st'>"flatly"</span>, <span class='st'>"journal"</span>,
     <span class='st'>"lumen"</span>, <span class='st'>"paper"</span>, <span class='st'>"readable"</span>, <span class='st'>"sandstone"</span>, <span class='st'>"simplex"</span>, <span class='st'>"slate"</span>, <span class='st'>"spacelab"</span>,
     <span class='st'>"superhero"</span>, <span class='st'>"united"</span>, <span class='st'>"yeti"</span>),
-  <span class='kw'>open</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()
+  open = <span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -171,23 +171,23 @@ if applicable, or via <code><a href='https://rdrr.io/r/utils/file.edit.html'>uti
 
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>After use <code><a href='bs_vars_file.html'>bs_vars_file</a></code> to use the template.</p>
+    <p>After use <code><a href='https://rdrr.io/pkg/fresh/man/bs_vars_file.html'>bs_vars_file</a></code> to use the template.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># For example, we use a temporary file</span>
-<span class='no'>custom</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".scss"</span>)
+<span class='kw'>custom</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(fileext = <span class='st'>".scss"</span>)
 
 <span class='co'># this will open a template</span>
 <span class='co'># to modify variables of the flatly theme</span>
-<span class='fu'>use_vars_template</span>(
-  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='no'>custom</span>,
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"flatly"</span>
+<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_vars_template.html'>use_vars_template</a></span>(
+  output_file = <span class='kw'>custom</span>,
+  theme = <span class='st'>"flatly"</span>
 )
 
 <span class='co'># after use bs_vars_file() to use the template</span>
 
 <span class='co'># clean up</span>
-<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>custom</span>)</div></pre>
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='kw'>custom</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

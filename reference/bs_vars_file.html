@@ -141,7 +141,7 @@
     <p>Bootstrap variables from a file</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_file</span>(<span class='no'>input_file</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_file.html'>bs_vars_file</a></span>(<span class='kw'>input_file</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -154,29 +154,29 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>my_vars</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"custom-vars.scss"</span>)
-<span class='no'>my_theme</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"theme.css"</span>)
+    <pre class="examples"><div class='input'><span class='kw'>my_vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"custom-vars.scss"</span>)
+<span class='kw'>my_theme</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"theme.css"</span>)
 
 <span class='co'># Open template and edit variables</span>
-<span class='fu'><a href='use_vars_template.html'>use_vars_template</a></span>(
-  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='no'>my_vars</span>,
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"flatly"</span>
+<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_vars_template.html'>use_vars_template</a></span>(
+  output_file = <span class='kw'>my_vars</span>,
+  theme = <span class='st'>"flatly"</span>
 )
 
 <span class='co'># Create new theme based on the modified template</span>
-<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"flatly"</span>,
-  <span class='fu'>bs_vars_file</span>(<span class='kw'>input_file</span> <span class='kw'>=</span> <span class='no'>my_vars</span>),
-  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='no'>my_theme</span>
+<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+  theme = <span class='st'>"flatly"</span>,
+  <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_file.html'>bs_vars_file</a></span>(input_file = <span class='kw'>my_vars</span>),
+  output_file = <span class='kw'>my_theme</span>
 )
 
 
 <span class='co'># Clean up</span>
-<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>my_vars</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>my_theme</span>)</div></pre>
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='kw'>my_vars</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='kw'>my_theme</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

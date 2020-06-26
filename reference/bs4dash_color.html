@@ -142,26 +142,26 @@
     </div>
 
     <pre class="usage"><span class='fu'>bs4dash_color</span>(
-  <span class='kw'>blue</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lightblue</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>navy</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>cyan</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>teal</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>olive</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>green</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lime</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>orange</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>yellow</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>fuchsia</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>purple</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>maroon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>red</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>black</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>gray_x_light</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>gray_600</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>gray_800</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>gray_900</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>white</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+  blue = <span class='kw'>NULL</span>,
+  lightblue = <span class='kw'>NULL</span>,
+  navy = <span class='kw'>NULL</span>,
+  cyan = <span class='kw'>NULL</span>,
+  teal = <span class='kw'>NULL</span>,
+  olive = <span class='kw'>NULL</span>,
+  green = <span class='kw'>NULL</span>,
+  lime = <span class='kw'>NULL</span>,
+  orange = <span class='kw'>NULL</span>,
+  yellow = <span class='kw'>NULL</span>,
+  fuchsia = <span class='kw'>NULL</span>,
+  purple = <span class='kw'>NULL</span>,
+  maroon = <span class='kw'>NULL</span>,
+  red = <span class='kw'>NULL</span>,
+  black = <span class='kw'>NULL</span>,
+  gray_x_light = <span class='kw'>NULL</span>,
+  gray_600 = <span class='kw'>NULL</span>,
+  gray_800 = <span class='kw'>NULL</span>,
+  gray_900 = <span class='kw'>NULL</span>,
+  white = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -271,14 +271,14 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code>create_theme</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='co'># Change colors used in bs4Dash</span>
 <span class='fu'>bs4dash_color</span>(
-  <span class='kw'>blue</span> <span class='kw'>=</span> <span class='st'>"#F7FE2E"</span>,
-  <span class='kw'>lightblue</span> <span class='kw'>=</span> <span class='st'>"#01DF3A"</span>
+  blue = <span class='st'>"#F7FE2E"</span>,
+  lightblue = <span class='st'>"#01DF3A"</span>
 )</div><div class='output co'>#&gt; $blue
 #&gt; [1] "#F7FE2E"
 #&gt; 
@@ -287,59 +287,59 @@
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bs4dash_vars"    "list"           </div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>bs4Dash</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://rinterface.github.io/bs4Dash/index.html'>bs4Dash</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashPage.html'>bs4DashPage</a></span>(
-    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash Custom Colors"</span>,
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashPage.html'>bs4DashPage</a></span>(
+    title = <span class='st'>"bs4Dash Custom Colors"</span>,
     <span class='co'># sidebar_collapsed = FALSE,</span>
-    <span class='kw'>navbar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashNavbar.html'>bs4DashNavbar</a></span>(),
-    <span class='kw'>sidebar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashSidebar.html'>bs4DashSidebar</a></span>(
-      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash Custom Colors"</span>,
-      <span class='kw'>skin</span> <span class='kw'>=</span> <span class='st'>"light"</span>,
+    navbar = <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashNavbar.html'>bs4DashNavbar</a></span>(),
+    sidebar = <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashSidebar.html'>bs4DashSidebar</a></span>(
+      title = <span class='st'>"bs4Dash Custom Colors"</span>,
+      skin = <span class='st'>"light"</span>,
       <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4SidebarMenu.html'>bs4SidebarMenu</a></span>(
         <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4SidebarMenuItem.html'>bs4SidebarMenuItem</a></span>(
-          <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"tab1"</span>,
-          <span class='kw'>text</span> <span class='kw'>=</span> <span class='st'>"UI components"</span>
+          tabName = <span class='st'>"tab1"</span>,
+          text = <span class='st'>"UI components"</span>
         )
       )
     ),
-    <span class='kw'>body</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html'>bs4DashBody</a></span>(
+    body = <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html'>bs4DashBody</a></span>(
 
-      <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
+      <span class='fu'>use_theme</span>(<span class='fu'>create_theme</span>(
         <span class='fu'>bs4dash_color</span>(
-          <span class='kw'>blue</span> <span class='kw'>=</span> <span class='st'>"#F7FE2E"</span>,
-          <span class='kw'>navy</span> <span class='kw'>=</span> <span class='st'>"#01DF3A"</span>
+          blue = <span class='st'>"#F7FE2E"</span>,
+          navy = <span class='st'>"#01DF3A"</span>
         )
       )),
 
       <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4TabItems.html'>bs4TabItems</a></span>(
         <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4TabItem.html'>bs4TabItem</a></span>(
-          <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"tab1"</span>,
-          <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h2</a></span>(<span class='st'>"UI components"</span>, <span class='kw'>class</span> <span class='kw'>=</span> <span class='st'>"bg-navy"</span>),
-          <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h4</a></span>(<span class='st'>"bs4ValueBox"</span>),
+          tabName = <span class='st'>"tab1"</span>,
+          <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"UI components"</span>, class = <span class='st'>"bg-navy"</span>),
+          <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"bs4ValueBox"</span>),
           <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
             <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4ValueBox.html'>bs4ValueBox</a></span>(
-              <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>150</span>,
-              <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"ValueBox with primary status"</span>,
-              <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-              <span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"shopping-cart"</span>,
-              <span class='kw'>href</span> <span class='kw'>=</span> <span class='st'>"#"</span>,
-              <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>4</span>
+              value = <span class='fl'>150</span>,
+              subtitle = <span class='st'>"ValueBox with primary status"</span>,
+              status = <span class='st'>"primary"</span>,
+              icon = <span class='st'>"shopping-cart"</span>,
+              href = <span class='st'>"#"</span>,
+              width = <span class='fl'>4</span>
             )
           ),
-          <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h4</a></span>(<span class='st'>"bs4Card"</span>),
+          <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"bs4Card"</span>),
           <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
             <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4Card.html'>bs4Card</a></span>(
-              <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Card with primary status"</span>,
-              <span class='kw'>closable</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-              <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
-              <span class='kw'>solidHeader</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-              <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-              <span class='kw'>collapsible</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-              <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>p</a></span>(<span class='st'>"Box Content"</span>)
+              title = <span class='st'>"Card with primary status"</span>,
+              closable = <span class='fl'>FALSE</span>,
+              width = <span class='fl'>6</span>,
+              solidHeader = <span class='fl'>TRUE</span>,
+              status = <span class='st'>"primary"</span>,
+              collapsible = <span class='fl'>TRUE</span>,
+              <span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>p</a></span>(<span class='st'>"Box Content"</span>)
             )
           )
         )
@@ -347,11 +347,11 @@
     )
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>) {
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 
 }</div></pre>
   </div>

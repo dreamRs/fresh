@@ -147,7 +147,7 @@ For example, it's used to choose text color written in <code>bs4ValueBox</code>
 with background defined by a status.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs4dash_yiq</span>(<span class='kw'>contrasted_threshold</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>text_dark</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>text_light</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>bs4dash_yiq</span>(contrasted_threshold = <span class='kw'>NULL</span>, text_dark = <span class='kw'>NULL</span>, text_light = <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -170,15 +170,15 @@ to "light". Acceptable values are between 0 and 255.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code>create_theme</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='co'># Contrast colors</span>
 <span class='fu'>bs4dash_yiq</span>(
-  <span class='kw'>contrasted_threshold</span> <span class='kw'>=</span> <span class='fl'>150</span>,
-  <span class='kw'>text_dark</span> <span class='kw'>=</span> <span class='st'>"#007bff"</span>, <span class='co'># blue</span>
-  <span class='kw'>text_light</span> <span class='kw'>=</span> <span class='st'>"#dc3545"</span> <span class='co'># red</span>
+  contrasted_threshold = <span class='fl'>150</span>,
+  text_dark = <span class='st'>"#007bff"</span>, <span class='co'># blue</span>
+  text_light = <span class='st'>"#dc3545"</span> <span class='co'># red</span>
 )</div><div class='output co'>#&gt; $`yiq-contrasted-threshold`
 #&gt; [1] 150
 #&gt; 
@@ -190,51 +190,51 @@ to "light". Acceptable values are between 0 and 255.</p></td>
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bs4dash_vars"    "list"           </div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>bs4Dash</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://rinterface.github.io/bs4Dash/index.html'>bs4Dash</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashPage.html'>bs4DashPage</a></span>(
-    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"bs4Dash Contrast"</span>,
-    <span class='kw'>navbar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashNavbar.html'>bs4DashNavbar</a></span>(),
-    <span class='kw'>sidebar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashSidebar.html'>bs4DashSidebar</a></span>(),
-    <span class='kw'>body</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html'>bs4DashBody</a></span>(
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashPage.html'>bs4DashPage</a></span>(
+    title = <span class='st'>"bs4Dash Contrast"</span>,
+    navbar = <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashNavbar.html'>bs4DashNavbar</a></span>(),
+    sidebar = <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashSidebar.html'>bs4DashSidebar</a></span>(),
+    body = <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html'>bs4DashBody</a></span>(
 
-      <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
+      <span class='fu'>use_theme</span>(<span class='fu'>create_theme</span>(
         <span class='fu'>bs4dash_yiq</span>(
-          <span class='kw'>contrasted_threshold</span> <span class='kw'>=</span> <span class='fl'>180</span>,
-          <span class='kw'>text_dark</span> <span class='kw'>=</span> <span class='st'>"#000"</span>,
-          <span class='kw'>text_light</span> <span class='kw'>=</span> <span class='st'>"#dc3545"</span>
+          contrasted_threshold = <span class='fl'>180</span>,
+          text_dark = <span class='st'>"#000"</span>,
+          text_light = <span class='st'>"#dc3545"</span>
         )
       )),
 
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
         <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4ValueBox.html'>bs4ValueBox</a></span>(
-          <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>120</span>,
-          <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"ValueBox with primary status"</span>,
-          <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"primary"</span>,
-          <span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"shopping-cart"</span>,
-          <span class='kw'>href</span> <span class='kw'>=</span> <span class='st'>"#"</span>,
-          <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>4</span>
+          value = <span class='fl'>120</span>,
+          subtitle = <span class='st'>"ValueBox with primary status"</span>,
+          status = <span class='st'>"primary"</span>,
+          icon = <span class='st'>"shopping-cart"</span>,
+          href = <span class='st'>"#"</span>,
+          width = <span class='fl'>4</span>
         ),
         <span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4ValueBox.html'>bs4ValueBox</a></span>(
-          <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>150</span>,
-          <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"ValueBox with danger status"</span>,
-          <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"danger"</span>,
-          <span class='kw'>icon</span> <span class='kw'>=</span> <span class='st'>"shopping-cart"</span>,
-          <span class='kw'>href</span> <span class='kw'>=</span> <span class='st'>"#"</span>,
-          <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>4</span>
+          value = <span class='fl'>150</span>,
+          subtitle = <span class='st'>"ValueBox with danger status"</span>,
+          status = <span class='st'>"danger"</span>,
+          icon = <span class='st'>"shopping-cart"</span>,
+          href = <span class='st'>"#"</span>,
+          width = <span class='fl'>4</span>
         )
       )
     )
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>) {
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 
 }</div></pre>
   </div>

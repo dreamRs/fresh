@@ -88,7 +88,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="vars-bs4dash_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Variables for {bs4dash}</h1>
@@ -101,13 +101,17 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">fresh</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
+</pre></div>
 <p><a href="https://github.com/RinteRface/bs4Dash">{bs4Dash}</a> allow to construct dashboards in Shiny with latest version of <a href="https://github.com/ColorlibHQ/AdminLTE">AdminLTE</a> based on Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can create a custom theme to use with it with functions <code>bs4dash_*</code>. Here are some examples of what you can change.</p>
 <div id="main-statuses" class="section level2">
 <h2 class="hasAnchor">
 <a href="#main-statuses" class="anchor"></a>Main statuses</h2>
 <p>Main colors of {bs4Dash} are defined in 6 status, you can use those status in <code>infoBox</code>, <code>valueBox</code>, <code>cards</code>, … The primary color (<span style="width:12px;height:12px;background:#007bff;border-radius:2px;display:inline-block;"></span>) is also used to highlight active elements, so it’s present everywhere. Below is an example by changing the color of the “primary” and “danger” statuses:</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(<span class="kw">primary</span> <span class="kw">=</span> <span class="st">"#5E81AC"</span>, <span class="kw">danger</span> <span class="kw">=</span> <span class="st">"#BF616A"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(primary = <span class="st">"#5E81AC"</span>, danger = <span class="st">"#BF616A"</span>)
+</pre></div>
 <p>With classic statuses from {bs4Dash}, it look like:</p>
 <p><img src="figures/bs4dash-status-default.png" style="width:100%"></p>
 <p>With our new theme, we have changed the color of boxes and active element in sidebar:</p>
@@ -117,7 +121,9 @@
 <h2 class="hasAnchor">
 <a href="#layout" class="anchor"></a>Layout</h2>
 <p>Layout variables allow you to change the width of the sidebar, as well as the width of the controlbar (right sidebar). And also the main background:</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span>(<span class="kw">main_bg</span> <span class="kw">=</span> <span class="st">"#353c42"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span>(main_bg = <span class="st">"#353c42"</span>)
+</pre></div>
 <p>Result is:</p>
 <p><img src="figures/bs4dash-layout-custom.png" style="width:100%"></p>
 <p>The text is not readable on a black background but fortunately we will be able to change that.</p>
@@ -126,7 +132,9 @@
 <h2 class="hasAnchor">
 <a href="#colors" class="anchor"></a>Colors</h2>
 <p>We can invert colors used for text by changing colors variables:</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span>(<span class="kw">gray_900</span> <span class="kw">=</span> <span class="st">"#FFF"</span>, <span class="kw">white</span> <span class="kw">=</span> <span class="st">"#272c30"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span>(gray_900 = <span class="st">"#FFF"</span>, white = <span class="st">"#272c30"</span>)
+</pre></div>
 <p><img src="figures/bs4dash-color-custom.png" style="width:100%"></p>
 <p>Now the body looks good, we can deal with the sidebar and the navbar. Text in boxes is less readable, but again this can be fixed later.</p>
 </div>
@@ -134,14 +142,16 @@
 <h2 class="hasAnchor">
 <a href="#sidebar" class="anchor"></a>Sidebar</h2>
 <p>In {bs4Dash} there’s two skins for the sidebar: light or dark, here we have used the light one, and we can override its defaults to have a fully custom one with:</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span>(
-  <span class="kw">bg</span> <span class="kw">=</span> <span class="st">"#272c30"</span>,
-  <span class="kw">color</span> <span class="kw">=</span> <span class="st">"#bec5cb"</span>,
-  <span class="kw">hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-  <span class="kw">submenu_bg</span> <span class="kw">=</span> <span class="st">"#272c30"</span>,
-  <span class="kw">submenu_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-  <span class="kw">submenu_hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span>(
+  bg = <span class="st">"#272c30"</span>,
+  color = <span class="st">"#bec5cb"</span>,
+  hover_color = <span class="st">"#FFF"</span>,
+  submenu_bg = <span class="st">"#272c30"</span>, 
+  submenu_color = <span class="st">"#FFF"</span>,
+  submenu_hover_color = <span class="st">"#FFF"</span>
+)
+</pre></div>
 <p>We now have:</p>
 <p><img src="figures/bs4dash-sidebar-custom.png" style="width:100%"></p>
 </div>
@@ -149,13 +159,15 @@
 <h2 class="hasAnchor">
 <a href="#navbar" class="anchor"></a>Navbar</h2>
 <p>Background color of the navbar is defined by the light or dark status, then we can change default with custom variables:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(<span class="kw">light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>)
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(light = <span class="st">"#272c30"</span>)
 
 <span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span>(
-  <span class="kw">navbar_light_color</span> <span class="kw">=</span> <span class="st">"#bec5cb"</span>,
-  <span class="kw">navbar_light_active_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-  <span class="kw">navbar_light_hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
-)</pre></body></html></div>
+  navbar_light_color = <span class="st">"#bec5cb"</span>,
+  navbar_light_active_color = <span class="st">"#FFF"</span>,
+  navbar_light_hover_color = <span class="st">"#FFF"</span>
+)
+</pre></div>
 <p>Like the sidebar, we could have used “dark” instead of “light”. To find available variables, you can use: <code><a href="../reference/search_vars_bs4dash.html">search_vars_bs4dash("navbar")</a></code>.</p>
 <p>Here’s the result:</p>
 <p><img src="figures/bs4dash-navbar-custom.png" style="width:100%"></p>
@@ -164,7 +176,9 @@
 <h2 class="hasAnchor">
 <a href="#color-contrast" class="anchor"></a>Color contrast</h2>
 <p>Last set of variables that we can use to finalize our new theme is the YIQ color contrast variables that allow to switch color if contrast is below a threshold.</p>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(<span class="kw">contrasted_threshold</span> <span class="kw">=</span> <span class="fl">10</span>, <span class="kw">text_dark</span> <span class="kw">=</span> <span class="st">"#FFF"</span>, <span class="kw">text_light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(contrasted_threshold = <span class="fl">10</span>, text_dark = <span class="st">"#FFF"</span>, text_light = <span class="st">"#272c30"</span>)
+</pre></div>
 <p>Now text is more readable:</p>
 <p><img src="figures/bs4dash-yiq-custom.png" style="width:100%"></p>
 </div>
@@ -172,35 +186,37 @@
 <h2 class="hasAnchor">
 <a href="#full-theme" class="anchor"></a>Full theme</h2>
 <p>Here the code to create this theme:</p>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
+<div class="sourceCode" id="cb8"><pre class="downlit">
+<span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
   <span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span>(
-    <span class="kw">navbar_light_color</span> <span class="kw">=</span> <span class="st">"#bec5cb"</span>,
-    <span class="kw">navbar_light_active_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">navbar_light_hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+    navbar_light_color = <span class="st">"#bec5cb"</span>,
+    navbar_light_active_color = <span class="st">"#FFF"</span>,
+    navbar_light_hover_color = <span class="st">"#FFF"</span>
   ),
   <span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(
-    <span class="kw">contrasted_threshold</span> <span class="kw">=</span> <span class="fl">10</span>,
-    <span class="kw">text_dark</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">text_light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>
+    contrasted_threshold = <span class="fl">10</span>,
+    text_dark = <span class="st">"#FFF"</span>, 
+    text_light = <span class="st">"#272c30"</span>
   ),
   <span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span>(
-    <span class="kw">main_bg</span> <span class="kw">=</span> <span class="st">"#353c42"</span>
+    main_bg = <span class="st">"#353c42"</span>
   ),
   <span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span>(
-    <span class="kw">bg</span> <span class="kw">=</span> <span class="st">"#272c30"</span>,
-    <span class="kw">color</span> <span class="kw">=</span> <span class="st">"#bec5cb"</span>,
-    <span class="kw">hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">submenu_bg</span> <span class="kw">=</span> <span class="st">"#272c30"</span>,
-    <span class="kw">submenu_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">submenu_hover_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+    bg = <span class="st">"#272c30"</span>, 
+    color = <span class="st">"#bec5cb"</span>,
+    hover_color = <span class="st">"#FFF"</span>,
+    submenu_bg = <span class="st">"#272c30"</span>, 
+    submenu_color = <span class="st">"#FFF"</span>, 
+    submenu_hover_color = <span class="st">"#FFF"</span>
   ),
   <span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(
-    <span class="kw">primary</span> <span class="kw">=</span> <span class="st">"#5E81AC"</span>, <span class="kw">danger</span> <span class="kw">=</span> <span class="st">"#BF616A"</span>, <span class="kw">light</span> <span class="kw">=</span> <span class="st">"#272c30"</span>
+    primary = <span class="st">"#5E81AC"</span>, danger = <span class="st">"#BF616A"</span>, light = <span class="st">"#272c30"</span>
   ),
   <span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span>(
-    <span class="kw">gray_900</span> <span class="kw">=</span> <span class="st">"#FFF"</span>
+    gray_900 = <span class="st">"#FFF"</span>
   )
-)</pre></body></html></div>
+)
+</pre></div>
 </div>
   </div>
 

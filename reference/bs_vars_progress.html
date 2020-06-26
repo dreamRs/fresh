@@ -147,15 +147,15 @@
  in Bootstrap and Bootswatch themes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_progress</span>(
-  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bar_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bar_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bar_success_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bar_warning_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bar_danger_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bar_info_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_progress.html'>bs_vars_progress</a></span>(
+  bg = <span class='kw'>NULL</span>,
+  bar_color = <span class='kw'>NULL</span>,
+  border_radius = <span class='kw'>NULL</span>,
+  bar_bg = <span class='kw'>NULL</span>,
+  bar_success_bg = <span class='kw'>NULL</span>,
+  bar_warning_bg = <span class='kw'>NULL</span>,
+  bar_danger_bg = <span class='kw'>NULL</span>,
+  bar_info_bg = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -197,15 +197,15 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bs_vars_progress</span>(
-  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='st'>"15px"</span>,
-  <span class='kw'>bar_bg</span> <span class='kw'>=</span> <span class='st'>"#1B9E77"</span>,
-  <span class='kw'>bar_info_bg</span> <span class='kw'>=</span> <span class='st'>"#D95F02"</span>,
-  <span class='kw'>bar_success_bg</span> <span class='kw'>=</span> <span class='st'>"#7570B3"</span>,
-  <span class='kw'>bar_danger_bg</span> <span class='kw'>=</span> <span class='st'>"#E7298A"</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_progress.html'>bs_vars_progress</a></span>(
+  border_radius = <span class='st'>"15px"</span>,
+  bar_bg = <span class='st'>"#1B9E77"</span>,
+  bar_info_bg = <span class='st'>"#D95F02"</span>,
+  bar_success_bg = <span class='st'>"#7570B3"</span>,
+  bar_danger_bg = <span class='st'>"#E7298A"</span>
 )</div><div class='output co'>#&gt; $`progress-border-radius`
 #&gt; [1] "15px"
 #&gt; 
@@ -223,70 +223,70 @@
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shinyWidgets</span>)
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/dreamRs/shinyWidgets'>shinyWidgets</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(
-      <span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-        <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-        <span class='fu'>bs_vars_progress</span>(
-          <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='st'>"15px"</span>,
-          <span class='kw'>bar_bg</span> <span class='kw'>=</span> <span class='st'>"#1B9E77"</span>,
-          <span class='kw'>bar_info_bg</span> <span class='kw'>=</span> <span class='st'>"#D95F02"</span>,
-          <span class='kw'>bar_success_bg</span> <span class='kw'>=</span> <span class='st'>"#7570B3"</span>,
-          <span class='kw'>bar_danger_bg</span> <span class='kw'>=</span> <span class='st'>"#E7298A"</span>
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+    <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_theme.html'>use_theme</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+        theme = <span class='st'>"default"</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_progress.html'>bs_vars_progress</a></span>(
+          border_radius = <span class='st'>"15px"</span>,
+          bar_bg = <span class='st'>"#1B9E77"</span>,
+          bar_info_bg = <span class='st'>"#D95F02"</span>,
+          bar_success_bg = <span class='st'>"#7570B3"</span>,
+          bar_danger_bg = <span class='st'>"#E7298A"</span>
         ),
-        <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+        output_file = <span class='kw'>NULL</span>
       )
     ),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Custom progress bars"</span>),
+    <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"Custom progress bars"</span>),
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
-        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        width = <span class='fl'>6</span>,
         <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/progress-bar.html'>progressBar</a></span>(
-          <span class='st'>"pb1"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>90</span>, <span class='kw'>display_pct</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+          <span class='st'>"pb1"</span>, value = <span class='fl'>90</span>, display_pct = <span class='fl'>TRUE</span>
         )
       ),
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
-        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        width = <span class='fl'>6</span>,
         <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/progress-bar.html'>progressBar</a></span>(
-          <span class='st'>"pb2"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>70</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"info"</span>, <span class='kw'>display_pct</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+          <span class='st'>"pb2"</span>, value = <span class='fl'>70</span>, status = <span class='st'>"info"</span>, display_pct = <span class='fl'>TRUE</span>
         )
       ),
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
-        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        width = <span class='fl'>6</span>,
         <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/progress-bar.html'>progressBar</a></span>(
-          <span class='st'>"pb3"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>50</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"success"</span>, <span class='kw'>display_pct</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+          <span class='st'>"pb3"</span>, value = <span class='fl'>50</span>, status = <span class='st'>"success"</span>, display_pct = <span class='fl'>TRUE</span>
         )
       ),
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
-        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        width = <span class='fl'>6</span>,
         <span class='fu'><a href='https://rdrr.io/pkg/shinyWidgets/man/progress-bar.html'>progressBar</a></span>(
-          <span class='st'>"pb4"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>30</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"danger"</span>, <span class='kw'>display_pct</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+          <span class='st'>"pb4"</span>, value = <span class='fl'>30</span>, status = <span class='st'>"danger"</span>, display_pct = <span class='fl'>TRUE</span>
         )
       )
     ),
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/plotOutput.html'>plotOutput</a></span>(<span class='st'>"plot"</span>)
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
 
-    <span class='no'>output</span>$<span class='no'>plot</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/renderPlot.html'>renderPlot</a></span>({
-      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/withProgress.html'>withProgress</a></span>(<span class='kw'>message</span> <span class='kw'>=</span> <span class='st'>'Calculation in progress'</span>,
-                   <span class='kw'>detail</span> <span class='kw'>=</span> <span class='st'>'This may take a while...'</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>0</span>, {
-                     <span class='kw'>for</span> (<span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='fl'>15</span>) {
-                       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/withProgress.html'>incProgress</a></span>(<span class='fl'>1</span>/<span class='fl'>15</span>)
+    <span class='kw'>output</span><span class='op'>$</span><span class='kw'>plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/renderPlot.html'>renderPlot</a></span>({
+      <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/withProgress.html'>withProgress</a></span>(message = <span class='st'>'Calculation in progress'</span>,
+                   detail = <span class='st'>'This may take a while...'</span>, value = <span class='fl'>0</span>, {
+                     <span class='co'>for</span> (<span class='kw'>i</span> <span class='co'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>15</span>) {
+                       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/withProgress.html'>incProgress</a></span>(<span class='fl'>1</span><span class='op'>/</span><span class='fl'>15</span>)
                        <span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>0.25</span>)
                      }
                    })
-      <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>cars</span>)
+      <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>cars</span>)
     })
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

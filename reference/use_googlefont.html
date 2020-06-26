@@ -141,7 +141,7 @@
     <p>Use online Google font in Shiny application</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_googlefont</span>(<span class='no'>family</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_googlefont.html'>use_googlefont</a></span>(<span class='kw'>family</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -157,31 +157,31 @@
     <p>a HTML tag to be included in a UI definition</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>fresh</span>)
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/dreamRs/fresh'>fresh</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
 
-    <span class='fu'>use_googlefont</span>(<span class='st'>"Saira Stencil One"</span>),
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-      <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-      <span class='fu'><a href='bs_vars_font.html'>bs_vars_font</a></span>(
-        <span class='kw'>family_sans_serif</span> <span class='kw'>=</span> <span class='st'>"'Saira Stencil One', cursive"</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_googlefont.html'>use_googlefont</a></span>(<span class='st'>"Saira Stencil One"</span>),
+    <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_theme.html'>use_theme</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+      theme = <span class='st'>"default"</span>,
+      <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_font.html'>bs_vars_font</a></span>(
+        family_sans_serif = <span class='st'>"'Saira Stencil One', cursive"</span>
       )
     )),
 
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Use a google font (online demo)"</span>),
+    <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"Use a google font (online demo)"</span>),
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidRow</a></span>(
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
-        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
-        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
-        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
-        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
-        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
-        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>),
-        <span class='no'>tags</span>$<span class='fu'>b</span>(<span class='st'>"Bold text"</span>),
-        <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>p</a></span>(
+        width = <span class='fl'>6</span>,
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"Second level title"</span>),
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h3</a></span>(<span class='st'>"Third level title"</span>),
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h4</a></span>(<span class='st'>"Fourth level title"</span>),
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h5</a></span>(<span class='st'>"Fifth level title"</span>),
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h6</a></span>(<span class='st'>"Sixth level title"</span>),
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'>b</span>(<span class='st'>"Bold text"</span>),
+        <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>p</a></span>(
           <span class='st'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"</span>,
           <span class='st'>" sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</span>,
           <span class='st'>"Ut enim ad minim veniam, quis nostrud exercitation ullamco"</span>,
@@ -193,26 +193,26 @@
         )
       ),
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/column.html'>column</a></span>(
-        <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>6</span>,
+        width = <span class='fl'>6</span>,
         <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/textInput.html'>textInput</a></span>(<span class='st'>"caption"</span>, <span class='st'>"Caption"</span>, <span class='st'>"Data Summary"</span>),
         <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/actionButton.html'>actionButton</a></span>(<span class='st'>"goButton"</span>, <span class='st'>"Go!"</span>),
         <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/checkboxGroupInput.html'>checkboxGroupInput</a></span>(<span class='st'>"variable"</span>, <span class='st'>"Variables to show:"</span>,
-                           <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cylinders"</span> <span class='kw'>=</span> <span class='st'>"cyl"</span>,
-                             <span class='st'>"Transmission"</span> <span class='kw'>=</span> <span class='st'>"am"</span>,
-                             <span class='st'>"Gears"</span> <span class='kw'>=</span> <span class='st'>"gear"</span>)),
+                           <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cylinders"</span> = <span class='st'>"cyl"</span>,
+                             <span class='st'>"Transmission"</span> = <span class='st'>"am"</span>,
+                             <span class='st'>"Gears"</span> = <span class='st'>"gear"</span>)),
         <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/selectInput.html'>selectInput</a></span>(<span class='st'>"variable"</span>, <span class='st'>"Variable:"</span>,
-                    <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cylinders"</span> <span class='kw'>=</span> <span class='st'>"cyl"</span>,
-                      <span class='st'>"Transmission"</span> <span class='kw'>=</span> <span class='st'>"am"</span>,
-                      <span class='st'>"Gears"</span> <span class='kw'>=</span> <span class='st'>"gear"</span>))
+                    <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cylinders"</span> = <span class='st'>"cyl"</span>,
+                      <span class='st'>"Transmission"</span> = <span class='st'>"am"</span>,
+                      <span class='st'>"Gears"</span> = <span class='st'>"gear"</span>))
       )
     )
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -141,13 +141,13 @@
     <p>Allow to customize some CSS variables from Bootstrap themes to be included in Shiny applications.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>create_theme</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"cerulean"</span>, <span class='st'>"cosmo"</span>, <span class='st'>"cyborg"</span>, <span class='st'>"darkly"</span>, <span class='st'>"flatly"</span>, <span class='st'>"journal"</span>,
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+  <span class='kw'>...</span>,
+  theme = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"cerulean"</span>, <span class='st'>"cosmo"</span>, <span class='st'>"cyborg"</span>, <span class='st'>"darkly"</span>, <span class='st'>"flatly"</span>, <span class='st'>"journal"</span>,
     <span class='st'>"lumen"</span>, <span class='st'>"paper"</span>, <span class='st'>"readable"</span>, <span class='st'>"sandstone"</span>, <span class='st'>"simplex"</span>, <span class='st'>"slate"</span>, <span class='st'>"spacelab"</span>,
     <span class='st'>"superhero"</span>, <span class='st'>"united"</span>, <span class='st'>"yeti"</span>),
-  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>include_assets</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  output_file = <span class='kw'>NULL</span>,
+  include_assets = <span class='fl'>FALSE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -182,37 +182,37 @@ the CSS file will be located.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='co'># using a temporary file but use the path you want</span>
-<span class='no'>tmp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"custom-theme.css"</span>)
+<span class='kw'>tmp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"custom-theme.css"</span>)
 
 <span class='co'># Create the new theme</span>
-<span class='fu'>create_theme</span>(
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-  <span class='fu'><a href='bs_vars_color.html'>bs_vars_color</a></span>(
-    <span class='kw'>brand_primary</span> <span class='kw'>=</span> <span class='st'>"#75b8d1"</span>,
-    <span class='kw'>brand_success</span> <span class='kw'>=</span> <span class='st'>"#c9d175"</span>,
-    <span class='kw'>brand_info</span> <span class='kw'>=</span> <span class='st'>"#758bd1"</span>,
-    <span class='kw'>brand_warning</span> <span class='kw'>=</span> <span class='st'>"#d1ab75"</span>,
-    <span class='kw'>brand_danger</span> <span class='kw'>=</span> <span class='st'>"#d175b8"</span>
+<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+  theme = <span class='st'>"default"</span>,
+  <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_color.html'>bs_vars_color</a></span>(
+    brand_primary = <span class='st'>"#75b8d1"</span>,
+    brand_success = <span class='st'>"#c9d175"</span>,
+    brand_info = <span class='st'>"#758bd1"</span>,
+    brand_warning = <span class='st'>"#d1ab75"</span>,
+    brand_danger = <span class='st'>"#d175b8"</span>
   ),
-  <span class='fu'><a href='bs_vars_navbar.html'>bs_vars_navbar</a></span>(
-    <span class='kw'>default_bg</span> <span class='kw'>=</span> <span class='st'>"#75b8d1"</span>,
-    <span class='kw'>default_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
-    <span class='kw'>default_link_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
-    <span class='kw'>default_link_active_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_navbar.html'>bs_vars_navbar</a></span>(
+    default_bg = <span class='st'>"#75b8d1"</span>,
+    default_color = <span class='st'>"#FFFFFF"</span>,
+    default_link_color = <span class='st'>"#FFFFFF"</span>,
+    default_link_active_color = <span class='st'>"#FFFFFF"</span>
   ),
-  <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='no'>tmp</span>
+  output_file = <span class='kw'>tmp</span>
 )
 
 <span class='co'># Use the file created at the path provided</span>
 <span class='co'># in your Shiny app by moving it in the</span>
 <span class='co'># www/ folder, then use it in UI</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
 <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-  <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"custom-theme.css"</span>
+  theme = <span class='st'>"custom-theme.css"</span>
 )</div><div class='output co'>#&gt; &lt;div class="container-fluid"&gt;&lt;/div&gt;</div><div class='input'>
 <span class='co'># clean up</span>
-<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='no'>tmp</span>)</div></pre>
+<span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span>(<span class='kw'>tmp</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

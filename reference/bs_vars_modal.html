@@ -145,20 +145,20 @@
  in Bootstrap and Bootswatch themes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_modal</span>(
-  <span class='kw'>md</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>sm</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>inner_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_line_height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>content_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>content_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>content_fallback_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>backdrop_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>backdrop_opacity</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>header_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>footer_border_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_modal.html'>bs_vars_modal</a></span>(
+  md = <span class='kw'>NULL</span>,
+  lg = <span class='kw'>NULL</span>,
+  sm = <span class='kw'>NULL</span>,
+  inner_padding = <span class='kw'>NULL</span>,
+  title_padding = <span class='kw'>NULL</span>,
+  title_line_height = <span class='kw'>NULL</span>,
+  content_bg = <span class='kw'>NULL</span>,
+  content_border_color = <span class='kw'>NULL</span>,
+  content_fallback_border_color = <span class='kw'>NULL</span>,
+  backdrop_bg = <span class='kw'>NULL</span>,
+  backdrop_opacity = <span class='kw'>NULL</span>,
+  header_border_color = <span class='kw'>NULL</span>,
+  footer_border_color = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -166,15 +166,15 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>md</th>
-      <td><p>Size in pixel for medium modal, e.g. <code>modalDialog(size = "m")</code>.</p></td>
+      <td><p>Size in pixel for medium modal, e.g. <code><a href='https://rdrr.io/pkg/shiny/man/modalDialog.html'>modalDialog(size = "m")</a></code>.</p></td>
     </tr>
     <tr>
       <th>lg</th>
-      <td><p>Size in pixel for large modal, e.g. <code>modalDialog(size = "l")</code>.</p></td>
+      <td><p>Size in pixel for large modal, e.g. <code><a href='https://rdrr.io/pkg/shiny/man/modalDialog.html'>modalDialog(size = "l")</a></code>.</p></td>
     </tr>
     <tr>
       <th>sm</th>
-      <td><p>Size in pixel for small modal, e.g. <code>modalDialog(size = "s")</code>.</p></td>
+      <td><p>Size in pixel for small modal, e.g. <code><a href='https://rdrr.io/pkg/shiny/man/modalDialog.html'>modalDialog(size = "s")</a></code>.</p></td>
     </tr>
     <tr>
       <th>inner_padding</th>
@@ -220,14 +220,14 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bs_vars_modal</span>(
-  <span class='kw'>md</span> <span class='kw'>=</span> <span class='st'>"80%"</span>,
-  <span class='kw'>backdrop_opacity</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>header_border_color</span> <span class='kw'>=</span> <span class='st'>"#112446"</span>,
-  <span class='kw'>footer_border_color</span> <span class='kw'>=</span> <span class='st'>"#112446"</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_modal.html'>bs_vars_modal</a></span>(
+  md = <span class='st'>"80%"</span>,
+  backdrop_opacity = <span class='fl'>1</span>,
+  header_border_color = <span class='st'>"#112446"</span>,
+  footer_border_color = <span class='st'>"#112446"</span>
 )</div><div class='output co'>#&gt; $`modal-md`
 #&gt; [1] "80%"
 #&gt; 
@@ -242,39 +242,39 @@
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shinyWidgets</span>)
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/dreamRs/shinyWidgets'>shinyWidgets</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(
-      <span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-        <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-        <span class='fu'>bs_vars_modal</span>(
-          <span class='kw'>md</span> <span class='kw'>=</span> <span class='st'>"80%"</span>,
-          <span class='kw'>backdrop_opacity</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-          <span class='kw'>header_border_color</span> <span class='kw'>=</span> <span class='st'>"#112446"</span>,
-          <span class='kw'>footer_border_color</span> <span class='kw'>=</span> <span class='st'>"#112446"</span>
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+    <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_theme.html'>use_theme</a></span>(
+      <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+        theme = <span class='st'>"default"</span>,
+        <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_modal.html'>bs_vars_modal</a></span>(
+          md = <span class='st'>"80%"</span>,
+          backdrop_opacity = <span class='fl'>1</span>,
+          header_border_color = <span class='st'>"#112446"</span>,
+          footer_border_color = <span class='st'>"#112446"</span>
         ),
-        <span class='kw'>output_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+        output_file = <span class='kw'>NULL</span>
       )
     ),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h1</a></span>(<span class='st'>"Custom modals"</span>),
+    <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h1</a></span>(<span class='st'>"Custom modals"</span>),
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/actionButton.html'>actionButton</a></span>(<span class='st'>"show"</span>, <span class='st'>"Show modal dialog"</span>)
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
 
-    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/observeEvent.html'>observeEvent</a></span>(<span class='no'>input</span>$<span class='no'>show</span>, {
+    <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/observeEvent.html'>observeEvent</a></span>(<span class='kw'>input</span><span class='op'>$</span><span class='kw'>show</span>, {
       <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/showModal.html'>showModal</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/modalDialog.html'>modalDialog</a></span>(
-        <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Important message"</span>,
+        title = <span class='st'>"Important message"</span>,
         <span class='st'>"This is an important message!"</span>
       ))
     })
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

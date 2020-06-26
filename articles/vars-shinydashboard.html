@@ -88,7 +88,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="vars-shinydashboard_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Variables for {shinydashboard}</h1>
@@ -101,16 +101,20 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">fresh</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
+</pre></div>
 <p><a href="https://github.com/rstudio/shinydashboard">{shinydashboard}</a> is powered by <a href="https://adminlte.io/themes/AdminLTE/index2.html">AdminLTE</a>, with variables from <code>adminlte_*</code> functions, you can customize the appearance of your dashboard. Here are some examples of what you can change.</p>
 <div id="colors" class="section level2">
 <h2 class="hasAnchor">
 <a href="#colors" class="anchor"></a>Colors</h2>
 <p>There’s a fixed list of colors that you can use in <code>valueBox</code>, <code>infoBox</code>, <code>box</code>, but which are also used for other components like the header. Some colors are associated with a status, for example in <code>valueBox</code> you can use <code>color = "light-blue"</code>, but in <code>box</code> you have to use <code>status = "pimary"</code> for the same color. The function <code><a href="../reference/adminlte_color.html">adminlte_color()</a></code> allow you to define those colors:</p>
 <p>With the following code we are gonna change the light-blue color that is also the color for the primary status and for the header:</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/adminlte_color.html">adminlte_color</a></span>(
-  <span class="kw">light_blue</span> <span class="kw">=</span> <span class="st">"#086A87"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="../reference/adminlte_color.html">adminlte_color</a></span>(
+  light_blue = <span class="st">"#086A87"</span>
+)
+</pre></div>
 <p>With classic colors from {shinydashboard}, it look like:</p>
 <p><img src="figures/shinydashboard-default.png" style="width:100%"></p>
 <p>With our new theme, we have changed the color of four elements:</p>
@@ -122,12 +126,14 @@
 <a href="#sidebar" class="anchor"></a>Sidebar</h2>
 <p>One of the main features of {shinydashboard} is the side menu, which can be modified with <code><a href="../reference/adminlte_sidebar.html">adminlte_sidebar()</a></code>.</p>
 <p>In the example below, we change the default width of the sidebar as well as its color:</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/adminlte_sidebar.html">adminlte_sidebar</a></span>(
-  <span class="kw">width</span> <span class="kw">=</span> <span class="st">"400px"</span>,
-  <span class="kw">dark_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>,
-  <span class="kw">dark_hover_bg</span> <span class="kw">=</span> <span class="st">"#81A1C1"</span>,
-  <span class="kw">dark_color</span> <span class="kw">=</span> <span class="st">"#2E3440"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/adminlte_sidebar.html">adminlte_sidebar</a></span>(
+  width = <span class="st">"400px"</span>,
+  dark_bg = <span class="st">"#D8DEE9"</span>,
+  dark_hover_bg = <span class="st">"#81A1C1"</span>,
+  dark_color = <span class="st">"#2E3440"</span>
+)
+</pre></div>
 <p>With classic colors from {shinydashboard}, it look like:</p>
 <p><img src="figures/shinydashboard-default.png" style="width:100%"></p>
 <p>With our new theme:</p>
@@ -137,11 +143,13 @@
 <h2 class="hasAnchor">
 <a href="#body" class="anchor"></a>Body</h2>
 <p>Last set of variables you can use, are for changing background color of the body itself and boxes.</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/adminlte_global.html">adminlte_global</a></span>(
-  <span class="kw">content_bg</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
-  <span class="kw">box_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>,
-  <span class="kw">info_box_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/adminlte_global.html">adminlte_global</a></span>(
+  content_bg = <span class="st">"#FFFFFF"</span>,
+  box_bg = <span class="st">"#D8DEE9"</span>, 
+  info_box_bg = <span class="st">"#D8DEE9"</span>
+)
+</pre></div>
 <p>With classic colors from {shinydashboard}, it look like:</p>
 <p><img src="figures/shinydashboard-default.png" style="width:100%"></p>
 <p>With our new theme:</p>
@@ -151,58 +159,59 @@
 <h2 class="hasAnchor">
 <a href="#full-application" class="anchor"></a>Full application</h2>
 <p>Here’s the code to create the theme and use it in a dashboard application:</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">fresh</span>)
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
 <span class="co"># Create the theme</span>
-<span class="no">mytheme</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
+<span class="kw">mytheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
   <span class="fu"><a href="../reference/adminlte_color.html">adminlte_color</a></span>(
-    <span class="kw">light_blue</span> <span class="kw">=</span> <span class="st">"#434C5E"</span>
+    light_blue = <span class="st">"#434C5E"</span>
   ),
   <span class="fu"><a href="../reference/adminlte_sidebar.html">adminlte_sidebar</a></span>(
-    <span class="kw">width</span> <span class="kw">=</span> <span class="st">"400px"</span>,
-    <span class="kw">dark_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>,
-    <span class="kw">dark_hover_bg</span> <span class="kw">=</span> <span class="st">"#81A1C1"</span>,
-    <span class="kw">dark_color</span> <span class="kw">=</span> <span class="st">"#2E3440"</span>
+    width = <span class="st">"400px"</span>,
+    dark_bg = <span class="st">"#D8DEE9"</span>,
+    dark_hover_bg = <span class="st">"#81A1C1"</span>,
+    dark_color = <span class="st">"#2E3440"</span>
   ),
   <span class="fu"><a href="../reference/adminlte_global.html">adminlte_global</a></span>(
-    <span class="kw">content_bg</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">box_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>,
-    <span class="kw">info_box_bg</span> <span class="kw">=</span> <span class="st">"#D8DEE9"</span>
+    content_bg = <span class="st">"#FFF"</span>,
+    box_bg = <span class="st">"#D8DEE9"</span>, 
+    info_box_bg = <span class="st">"#D8DEE9"</span>
   )
 )
 
 
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">shiny</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">shinydashboard</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="http://shiny.rstudio.com">shiny</a></span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="http://rstudio.github.io/shinydashboard">shinydashboard</a></span>)
 
-<span class="no">ui</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardPage.html">dashboardPage</a></span>(
-  <span class="kw">header</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardHeader.html">dashboardHeader</a></span>(<span class="kw">title</span> <span class="kw">=</span> <span class="st">"My dashboard"</span>),
-  <span class="kw">sidebar</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardSidebar.html">dashboardSidebar</a></span>(
+<span class="kw">ui</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardPage.html">dashboardPage</a></span>(
+  header = <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardHeader.html">dashboardHeader</a></span>(title = <span class="st">"My dashboard"</span>),
+  sidebar = <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardSidebar.html">dashboardSidebar</a></span>(
     <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html">sidebarMenu</a></span>(
-      <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html">menuItem</a></span>(<span class="st">"Dashboard"</span>, <span class="kw">tabName</span> <span class="kw">=</span> <span class="st">"dashboard"</span>, <span class="kw">icon</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"dashboard"</span>)),
-      <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html">menuItem</a></span>(<span class="st">"Settings"</span>, <span class="kw">tabName</span> <span class="kw">=</span> <span class="st">"settings"</span>, <span class="kw">icon</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"sliders"</span>))
+      <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html">menuItem</a></span>(<span class="st">"Dashboard"</span>, tabName = <span class="st">"dashboard"</span>, icon = <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"dashboard"</span>)),
+      <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html">menuItem</a></span>(<span class="st">"Settings"</span>, tabName = <span class="st">"settings"</span>, icon = <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"sliders"</span>))
     )
   ),
-  <span class="kw">body</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardBody.html">dashboardBody</a></span>(
-
-    <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="no">mytheme</span>), <span class="co"># &lt;-- use the theme</span>
-
+  body = <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/dashboardBody.html">dashboardBody</a></span>(
+    
+    <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="kw">mytheme</span>), <span class="co"># &lt;-- use the theme</span>
+    
     <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/tabItems.html">tabItems</a></span>(
       <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/tabItem.html">tabItem</a></span>(
         <span class="st">"dashboard"</span>,
-
+        
         <span class="co"># infoBoxes</span>
         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidRow</a></span>(
           <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/infoBox.html">infoBox</a></span>(
-            <span class="st">"Orders"</span>, <span class="st">"123"</span>, <span class="st">"Subtitle"</span>, <span class="kw">icon</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"credit-card"</span>),
-            <span class="kw">color</span> <span class="kw">=</span> <span class="st">"light-blue"</span>
+            <span class="st">"Orders"</span>, <span class="st">"123"</span>, <span class="st">"Subtitle"</span>, icon = <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"credit-card"</span>),
+            color = <span class="st">"light-blue"</span>
           ),
           <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/valueBox.html">valueBox</a></span>(
-            <span class="fl">5846</span>, <span class="st">"New Orders"</span>, <span class="kw">icon</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"credit-card"</span>),
-            <span class="kw">color</span> <span class="kw">=</span> <span class="st">"light-blue"</span>
+            <span class="fl">5846</span>, <span class="st">"New Orders"</span>, icon = <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/icon.html">icon</a></span>(<span class="st">"credit-card"</span>),
+            color = <span class="st">"light-blue"</span>
           ),
           <span class="fu"><a href="https://rdrr.io/pkg/shinydashboard/man/box.html">box</a></span>(
-            <span class="kw">title</span> <span class="kw">=</span> <span class="st">"A box"</span>, <span class="kw">solidHeader</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">width</span> <span class="kw">=</span> <span class="fl">4</span>,
-            <span class="kw">status</span> <span class="kw">=</span> <span class="st">"primary"</span>,
+            title = <span class="st">"A box"</span>, solidHeader = <span class="fl">TRUE</span>, width = <span class="fl">4</span>,
+            status = <span class="st">"primary"</span>,
             <span class="st">"Content of the box"</span>
           )
         )
@@ -211,11 +220,12 @@
   )
 )
 
-<span class="no">server</span> <span class="kw">&lt;-</span> <span class="kw">function</span>(<span class="no">input</span>, <span class="no">output</span>, <span class="no">session</span>) {
-
+<span class="kw">server</span> <span class="op">&lt;-</span> <span class="fu">function</span>(<span class="kw">input</span>, <span class="kw">output</span>, <span class="kw">session</span>) {
+  
 }
 
-<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html">shinyApp</a></span>(<span class="no">ui</span>, <span class="no">server</span>)</pre></body></html></div>
+<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html">shinyApp</a></span>(<span class="kw">ui</span>, <span class="kw">server</span>)
+</pre></div>
 </div>
   </div>
 

@@ -144,21 +144,21 @@
     </div>
 
     <pre class="usage"><span class='fu'>adminlte_sidebar</span>(
-  <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_submenu_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_submenu_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dark_submenu_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_hover_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_submenu_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_submenu_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>light_submenu_hover_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+  width = <span class='kw'>NULL</span>,
+  dark_bg = <span class='kw'>NULL</span>,
+  dark_hover_bg = <span class='kw'>NULL</span>,
+  dark_color = <span class='kw'>NULL</span>,
+  dark_hover_color = <span class='kw'>NULL</span>,
+  dark_submenu_bg = <span class='kw'>NULL</span>,
+  dark_submenu_color = <span class='kw'>NULL</span>,
+  dark_submenu_hover_color = <span class='kw'>NULL</span>,
+  light_bg = <span class='kw'>NULL</span>,
+  light_hover_bg = <span class='kw'>NULL</span>,
+  light_color = <span class='kw'>NULL</span>,
+  light_hover_color = <span class='kw'>NULL</span>,
+  light_submenu_bg = <span class='kw'>NULL</span>,
+  light_submenu_color = <span class='kw'>NULL</span>,
+  light_submenu_hover_color = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -228,42 +228,42 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code>create_theme</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shinydashboard</span>)
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://rstudio.github.io/shinydashboard'>shinydashboard</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardPage.html'>dashboardPage</a></span>(
-    <span class='kw'>header</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardHeader.html'>dashboardHeader</a></span>(<span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"My dashboard"</span>),
-    <span class='kw'>sidebar</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardSidebar.html'>dashboardSidebar</a></span>(
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardPage.html'>dashboardPage</a></span>(
+    header = <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardHeader.html'>dashboardHeader</a></span>(title = <span class='st'>"My dashboard"</span>),
+    sidebar = <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardSidebar.html'>dashboardSidebar</a></span>(
       <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>sidebarMenu</a></span>(
-        <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuItem</a></span>(<span class='st'>"Dashboard"</span>, <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"dashboard"</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"dashboard"</span>)),
-        <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuItem</a></span>(<span class='st'>"Widgets"</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"th"</span>), <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"widgets"</span>, <span class='kw'>badgeLabel</span> <span class='kw'>=</span> <span class='st'>"new"</span>,
-                 <span class='kw'>badgeColor</span> <span class='kw'>=</span> <span class='st'>"green"</span>),
-        <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuItem</a></span>(<span class='st'>"Charts"</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"bar-chart-o"</span>),
-                 <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuSubItem</a></span>(<span class='st'>"Sub-item 1"</span>, <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"subitem1"</span>),
-                 <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuSubItem</a></span>(<span class='st'>"Sub-item 2"</span>, <span class='kw'>tabName</span> <span class='kw'>=</span> <span class='st'>"subitem2"</span>)
+        <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuItem</a></span>(<span class='st'>"Dashboard"</span>, tabName = <span class='st'>"dashboard"</span>, icon = <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"dashboard"</span>)),
+        <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuItem</a></span>(<span class='st'>"Widgets"</span>, icon = <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"th"</span>), tabName = <span class='st'>"widgets"</span>, badgeLabel = <span class='st'>"new"</span>,
+                 badgeColor = <span class='st'>"green"</span>),
+        <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuItem</a></span>(<span class='st'>"Charts"</span>, icon = <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/icon.html'>icon</a></span>(<span class='st'>"bar-chart-o"</span>),
+                 <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuSubItem</a></span>(<span class='st'>"Sub-item 1"</span>, tabName = <span class='st'>"subitem1"</span>),
+                 <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/sidebarMenu.html'>menuSubItem</a></span>(<span class='st'>"Sub-item 2"</span>, tabName = <span class='st'>"subitem2"</span>)
         )
       )
     ),
-    <span class='kw'>body</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardBody.html'>dashboardBody</a></span>(
+    body = <span class='fu'><a href='https://rdrr.io/pkg/shinydashboard/man/dashboardBody.html'>dashboardBody</a></span>(
 
-      <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
+      <span class='fu'>use_theme</span>(<span class='fu'>create_theme</span>(
         <span class='fu'>adminlte_sidebar</span>(
-          <span class='kw'>dark_bg</span> <span class='kw'>=</span> <span class='st'>"#F5A9A9"</span>,
-          <span class='kw'>dark_hover_bg</span> <span class='kw'>=</span> <span class='st'>"#8A0808"</span>
+          dark_bg = <span class='st'>"#F5A9A9"</span>,
+          dark_hover_bg = <span class='st'>"#8A0808"</span>
         )
       ))
     )
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

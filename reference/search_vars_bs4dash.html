@@ -141,7 +141,7 @@
     <p>Search bs4Dash variables</p>
     </div>
 
-    <pre class="usage"><span class='fu'>search_vars_bs4dash</span>(<span class='kw'>pattern</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"adminlte"</span>, <span class='st'>"bootstrap"</span>))</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/search_vars_bs4dash.html'>search_vars_bs4dash</a></span>(pattern = <span class='kw'>NULL</span>, source = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"adminlte"</span>, <span class='st'>"bootstrap"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -167,8 +167,8 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Retrieve all variables</span>
-<span class='no'>all_vars</span> <span class='kw'>&lt;-</span> <span class='fu'>search_vars_bs4dash</span>()
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>all_vars</span>, <span class='fl'>20</span>)</div><div class='output co'>#&gt;                  variable                          value   source
+<span class='kw'>all_vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/search_vars_bs4dash.html'>search_vars_bs4dash</a></span>()
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>all_vars</span>, <span class='fl'>20</span>)</div><div class='output co'>#&gt;                  variable                          value   source
 #&gt; 1                    blue                        #0073b7 adminlte
 #&gt; 2               lightblue                        #3c8dbc adminlte
 #&gt; 3                    navy                        #001f3f adminlte
@@ -190,7 +190,7 @@
 #&gt; 19 screen-header-collapse map-get($grid-breakpoints, md) adminlte
 #&gt; 20                main-bg                        #f4f6f9 adminlte</div><div class='input'>
 <span class='co'># Search for a pattern</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'>search_vars_bs4dash</span>(<span class='st'>"navbar"</span>))</div><div class='output co'>#&gt;                      variable                                       value
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/search_vars_bs4dash.html'>search_vars_bs4dash</a></span>(<span class='st'>"navbar"</span>))</div><div class='output co'>#&gt;                      variable                                       value
 #&gt; 327 navbar-nav-link-padding-x                                        1rem
 #&gt; 328    navbar-brand-font-size                               $font-size-lg
 #&gt; 330       navbar-brand-height $navbar-brand-font-size * $line-height-base

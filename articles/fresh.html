@@ -88,7 +88,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="fresh_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Fresh themes</h1>
@@ -101,7 +101,9 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">fresh</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
+</pre></div>
 <p>{fresh} allow to create custom themes to use in <a href="https://github.com/rstudio/shiny">{shiny}</a> applications, currently you can create themes to use with:</p>
 <ul>
 <li>shiny itself, with <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">shiny::fluidPage</a></code> or <code><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">shiny::navbarPage</a></code> or themes from <a href="https://bootswatch.com/3/">Bootswatch</a>
@@ -124,19 +126,21 @@
 <code>bs4dash_*</code> to create a bs4Dash theme</li>
 </ul>
 <p>When using <code>bs_vars_*</code>, you can specify <code>theme</code> argument to use a Bootswatch template.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  <span class="kw">theme</span> <span class="kw">=</span> <span class="st">"default"</span>,
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
+  theme = <span class="st">"default"</span>,
   <span class="fu"><a href="../reference/bs_vars_button.html">bs_vars_button</a></span>(
-    <span class="kw">default_color</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">default_bg</span> <span class="kw">=</span> <span class="st">"#112446"</span>,
-    <span class="kw">default_border</span> <span class="kw">=</span> <span class="st">"#112446"</span>,
-    <span class="kw">border_radius_base</span> <span class="kw">=</span> <span class="st">"15px"</span>
+    default_color = <span class="st">"#FFF"</span>,
+    default_bg = <span class="st">"#112446"</span>,
+    default_border = <span class="st">"#112446"</span>,
+    border_radius_base = <span class="st">"15px"</span>
   ),
   <span class="fu"><a href="../reference/bs_vars_wells.html">bs_vars_wells</a></span>(
-    <span class="kw">bg</span> <span class="kw">=</span> <span class="st">"#FFF"</span>,
-    <span class="kw">border</span> <span class="kw">=</span> <span class="st">"#112446"</span>
+    bg = <span class="st">"#FFF"</span>,
+    border = <span class="st">"#112446"</span>
   )
-)</pre></body></html></div>
+)
+</pre></div>
 <p>Here we modify <code><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">shiny::actionButton</a></code> appearance with <code>bs_vars_button</code> and appearance of <code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">shiny::sidebarPanel</a></code> with <code>bs_vars_wells</code>.</p>
 <p>Result looks like :</p>
 <!-- ![](figures/example_shiny.png) -->
@@ -154,61 +158,69 @@
 <h3 class="hasAnchor">
 <a href="#inline" class="anchor"></a>Inline</h3>
 <p>Don’t specify an output file and use result of <code><a href="../reference/create_theme.html">create_theme()</a></code> in <code><a href="../reference/use_theme.html">use_theme()</a></code> directly in your application :</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">mytheme</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  <span class="kw">theme</span> <span class="kw">=</span> <span class="st">"default"</span>,
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="kw">mytheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
+  theme = <span class="st">"default"</span>,
   <span class="fu"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span>(
-    <span class="kw">default_bg</span> <span class="kw">=</span> <span class="st">"#75b8d1"</span>,
-    <span class="kw">default_color</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
-    <span class="kw">default_link_color</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
-    <span class="kw">default_link_active_color</span> <span class="kw">=</span> <span class="st">"#75b8d1"</span>,
-    <span class="kw">default_link_active_bg</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
-    <span class="kw">default_link_hover_color</span> <span class="kw">=</span> <span class="st">"firebrick"</span>
+    default_bg = <span class="st">"#75b8d1"</span>,
+    default_color = <span class="st">"#FFFFFF"</span>,
+    default_link_color = <span class="st">"#FFFFFF"</span>,
+    default_link_active_color = <span class="st">"#75b8d1"</span>,
+    default_link_active_bg = <span class="st">"#FFFFFF"</span>,
+    default_link_hover_color = <span class="st">"firebrick"</span>
   ),
-  <span class="kw">output_file</span> <span class="kw">=</span> <span class="kw">NULL</span>
+  output_file = <span class="kw">NULL</span>
 )
 
-<span class="fu">navbarPage</span>(
-  <span class="kw">title</span> <span class="kw">=</span> <span class="st">"Custom navbar"</span>,
-  <span class="kw">header</span> <span class="kw">=</span> <span class="fu">tagList</span>(
-    <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="no">mytheme</span>) <span class="co"># &lt;-- use your theme</span>
+<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">navbarPage</a></span>(
+  title = <span class="st">"Custom navbar"</span>,
+  header = <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/tag.html">tagList</a></span>(
+    <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="kw">mytheme</span>) <span class="co"># &lt;-- use your theme</span>
   ),
-  <span class="fu">tabPanel</span>(<span class="st">"Tab 1"</span>),
-  <span class="fu">tabPanel</span>(<span class="st">"Tab 2"</span>)
-)</pre></body></html></div>
+  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Tab 1"</span>),
+  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Tab 2"</span>)
+)
+</pre></div>
 </div>
 <div id="file" class="section level3">
 <h3 class="hasAnchor">
 <a href="#file" class="anchor"></a>File</h3>
 <p>When you create a theme, you can specify an output file :</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  <span class="kw">theme</span> <span class="kw">=</span> <span class="st">"default"</span>,
-  <span class="no">...</span>,
-  <span class="kw">output_file</span> <span class="kw">=</span> <span class="st">"my-custom-theme.css"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
+  theme = <span class="st">"default"</span>, 
+  <span class="kw">...</span>,
+  output_file = <span class="st">"my-custom-theme.css"</span>
+)
+</pre></div>
 <p>Put the file <code>my-custom-theme.css</code> in the <code>www/</code> folder of your application, and reference it like that in your UI’s <code>fluidPage</code> or <code>navbarPage</code> :</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu">fluidPage</span>(
-
-  <span class="kw">theme</span> <span class="kw">=</span> <span class="st">"my-custom-theme.css"</span>,
-
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidPage</a></span>(
+  
+  theme = <span class="st">"my-custom-theme.css"</span>,
+  
   <span class="co"># ...</span>
 )
 
 <span class="co"># or if using a navbar page</span>
-<span class="fu">navbarPage</span>(
-
-  <span class="kw">title</span> <span class="kw">=</span> <span class="st">"My application"</span>,
-  <span class="kw">theme</span> <span class="kw">=</span> <span class="st">"mytheme.css"</span>,
-
+<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">navbarPage</a></span>(
+  
+  title = <span class="st">"My application"</span>,
+  theme = <span class="st">"mytheme.css"</span>,
+  
   <span class="co"># ...</span>
-)</pre></body></html></div>
+)
+</pre></div>
 <p>In {shinydashboard} or {bs4Dash}, you can use <code><a href="../reference/use_theme.html">use_theme()</a></code> with a path inside <code>dashboardBody</code> or <code>bs4DashBody</code> :</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu">dashboardBody</span>(
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html">dashboardBody</a></span>(
   <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="st">"path/to/theme.css"</span>)
 )
 
-<span class="fu">bs4DashBody</span>(
+<span class="fu"><a href="https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html">bs4DashBody</a></span>(
   <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="st">"path/to/theme.css"</span>)
-)</pre></body></html></div>
+)
+</pre></div>
 <p>Note that the path must be in the <code>www/</code> folder of your application.</p>
 </div>
 </div>

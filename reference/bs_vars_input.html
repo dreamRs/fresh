@@ -143,15 +143,15 @@
  inputs in Bootstrap and Bootswatch themes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bs_vars_input</span>(
-  <span class='kw'>bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>border</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>color_placeholder</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>group_addon_bg</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>border_focus</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>bg_disabled</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_input.html'>bs_vars_input</a></span>(
+  bg = <span class='kw'>NULL</span>,
+  color = <span class='kw'>NULL</span>,
+  border = <span class='kw'>NULL</span>,
+  border_radius = <span class='kw'>NULL</span>,
+  color_placeholder = <span class='kw'>NULL</span>,
+  group_addon_bg = <span class='kw'>NULL</span>,
+  border_focus = <span class='kw'>NULL</span>,
+  bg_disabled = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -193,42 +193,42 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></code>.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>See default parameters for Bootstrap: <a href='https://getbootstrap.com/docs/3.4/customize/'>https://getbootstrap.com/docs/3.4/customize/</a>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># change border radius</span>
-<span class='fu'>bs_vars_input</span>(
-  <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='st'>"20px"</span>
+<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_input.html'>bs_vars_input</a></span>(
+  border_radius = <span class='st'>"20px"</span>
 )</div><div class='output co'>#&gt; $`input-border-radius`
 #&gt; [1] "20px"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "bootstrap_vars"  "list"           </div><div class='input'>
 
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>shiny</span>)
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://shiny.rstudio.com'>shiny</a></span>)
 
-  <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
-    <span class='fu'><a href='use_theme.html'>use_theme</a></span>(<span class='fu'><a href='create_theme.html'>create_theme</a></span>(
-      <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
-      <span class='fu'>bs_vars_input</span>(
-        <span class='kw'>border_radius</span> <span class='kw'>=</span> <span class='st'>"20px"</span>
+  <span class='kw'>ui</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/fluidPage.html'>fluidPage</a></span>(
+    <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/use_theme.html'>use_theme</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/fresh/man/create_theme.html'>create_theme</a></span>(
+      theme = <span class='st'>"default"</span>,
+      <span class='fu'><a href='https://rdrr.io/pkg/fresh/man/bs_vars_input.html'>bs_vars_input</a></span>(
+        border_radius = <span class='st'>"20px"</span>
       )
     )),
-    <span class='no'>tags</span>$<span class='fu'><a href='https://rdrr.io/pkg/shiny/man/builder.html'>h2</a></span>(<span class='st'>"Rounded corner for inputs"</span>),
+    <span class='kw'>tags</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>h2</a></span>(<span class='st'>"Rounded corner for inputs"</span>),
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/textInput.html'>textInput</a></span>(<span class='st'>"text"</span>, <span class='st'>"Text:"</span>),
     <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/selectInput.html'>selectInput</a></span>(<span class='st'>"select"</span>, <span class='st'>"Select:"</span>,
-                <span class='no'>letters</span>, <span class='kw'>selectize</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+                <span class='kw'>letters</span>, selectize = <span class='fl'>FALSE</span>)
   )
 
-  <span class='no'>server</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>input</span>, <span class='no'>output</span>, <span class='no'>session</span>) {
+  <span class='kw'>server</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>) {
 
   }
 
-  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='no'>ui</span>, <span class='no'>server</span>)
+  <span class='fu'><a href='https://rdrr.io/pkg/shiny/man/shinyApp.html'>shinyApp</a></span>(<span class='kw'>ui</span>, <span class='kw'>server</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

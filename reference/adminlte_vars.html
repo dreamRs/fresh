@@ -141,7 +141,7 @@
     <p>Use any AdminLTE or Bootstrap variables to customize a {shinydashboard} theme.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>adminlte_vars</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>adminlte_vars</span>(<span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -154,18 +154,18 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code>list</code> that can be used in <code><a href='create_theme.html'>create_theme</a></code>.</p>
+    <p>a <code>list</code> that can be used in <code>create_theme</code>.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>For a full list of available variables, use <code><a href='search_vars_adminlte2.html'>search_vars_adminlte2</a></code>.</p>
+    <p>For a full list of available variables, use <code>search_vars_adminlte2</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>adminlte_vars</span>(<span class='kw'>body_bg</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>)</div><div class='output co'>#&gt; $`body-bg`
+    <pre class="examples"><div class='input'><span class='fu'>adminlte_vars</span>(body_bg = <span class='st'>"#FFF"</span>)</div><div class='output co'>#&gt; $`body-bg`
 #&gt; [1] "#FFF"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "fresh_sass_vars" "adminlte_vars"   "list"           </div><div class='input'>
-<span class='fu'>adminlte_vars</span>(<span class='st'>"body-bg"</span> <span class='kw'>=</span> <span class='st'>"#FFF"</span>)</div><div class='output co'>#&gt; $`body-bg`
+<span class='fu'>adminlte_vars</span>(<span class='st'>"body-bg"</span> = <span class='st'>"#FFF"</span>)</div><div class='output co'>#&gt; $`body-bg`
 #&gt; [1] "#FFF"
 #&gt; 
 #&gt; attr(,"class")
