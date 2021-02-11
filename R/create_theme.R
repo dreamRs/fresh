@@ -205,7 +205,7 @@ adminlte2_skin_scss <- function() {
 #' @importFrom sass sass_file
 adminlte3_scss <- function() {
   sass_file(input = system.file(
-    "assets/AdminLTE-3.0.4/AdminLTE.scss",
+    "assets/AdminLTE-3.1.0/adminlte.scss",
     package = "fresh"
   ))
 }

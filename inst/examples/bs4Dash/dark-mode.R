@@ -23,6 +23,7 @@ library(fresh)
 library(fresh)
 bs4DashTheme <- create_theme(
   bs4dash_vars(
+    "body-color" = "#FFF",
     navbar_dark_color = "#bec5cb",
     navbar_dark_active_color = "#FFF",
     navbar_dark_hover_color = "#FFF"
@@ -47,7 +48,7 @@ bs4DashTheme <- create_theme(
     primary = "#5E81AC",
     danger = "#BF616A"
   ),
-  bs4dash_color(gray_900 = "#FFF", white = "#272c30")
+  bs4dash_color(gray_900 = "#FFF", white = "#FFF")
 )
 
 
@@ -58,7 +59,7 @@ bs4DashTheme <- create_theme(
 ui <- bs4DashPage(
   title = "bs4Dash Dark Mode",
   # sidebar_collapsed = FALSE,
-  navbar = bs4DashNavbar(skin = "dark"),
+  header = bs4DashNavbar(skin = "dark"),
   controlbar = bs4DashControlbar(
     skin = "dark",
     "This is the control bar"
@@ -71,7 +72,7 @@ ui <- bs4DashPage(
       bs4SidebarMenuItem(
         tabName = "tab1",
         text = "UI components",
-        icon = "home"
+        icon = icon("home")
       ),
       bs4SidebarMenuItem(
         tabName = "tab2",
@@ -79,17 +80,17 @@ ui <- bs4DashPage(
       ),
       bs4SidebarMenuItem(
         text = "Item List",
-        icon = "bars",
+        icon = icon("bars"),
         startExpanded = TRUE,
         bs4SidebarMenuSubItem(
           text = "Item 1",
           tabName = "item1",
-          icon = "circle-thin"
+          icon = icon("circle-thin")
         ),
         bs4SidebarMenuSubItem(
           text = "Item 2",
           tabName = "item2",
-          icon = "circle-thin"
+          icon = icon("circle-thin")
         )
       )
     )
@@ -124,24 +125,24 @@ ui <- bs4DashPage(
           bs4ValueBox(
             value = 150,
             subtitle = "ValueBox with primary status",
-            status = "primary",
-            icon = "shopping-cart",
+            color = "primary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4ValueBox(
             value = 150,
             subtitle = "ValueBox with secondary status",
-            status = "secondary",
-            icon = "shopping-cart",
+            color = "secondary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4ValueBox(
             value = "53%",
             subtitle = "ValueBox with danger status",
-            status = "danger",
-            icon = "cogs",
+            color = "danger",
+            icon = icon("cogs"),
             footer = "Hello World",
             width = 4
           )
@@ -151,25 +152,24 @@ ui <- bs4DashPage(
           bs4InfoBox(
             value = 150,
             title = "InfoBox with primary status",
-            iconStatus = "primary",
-            icon = "shopping-cart",
+            color = "primary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4InfoBox(
             value = 150,
             title = "InfoBox with secondary status",
-            iconStatus = "secondary",
-            icon = "shopping-cart",
+            color = "secondary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4InfoBox(
             value = "53%",
             title = "InfoBox with danger status",
-            iconStatus = "danger",
-            icon = "cogs",
-            footer = "Hello World",
+            color = "danger",
+            icon = icon("cogs"),
             width = 4
           )
         ),
@@ -234,19 +234,16 @@ ui <- bs4DashPage(
         bs4TabCard(
           id = "tabcard",
           title = "A card with tabs",
-          bs4TabPanel(
+          tabPanel(
             tabName = "Tab 1",
-            active = FALSE,
             "Content 1"
           ),
-          bs4TabPanel(
+          tabPanel(
             tabName = "Tab 2",
-            active = TRUE,
             "Content 2"
           ),
-          bs4TabPanel(
+          tabPanel(
             tabName = "Tab 3",
-            active = FALSE,
             "Content 3"
           )
         )

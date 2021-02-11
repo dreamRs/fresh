@@ -86,13 +86,13 @@ search_vars_bs4dash <- function(pattern = NULL, source = c("adminlte", "bootstra
   do.call("rbind", lapply(source, function(x) {
     if (identical(x, "adminlte")) {
       res <- search_vars(system.file(
-        "assets/AdminLTE-3.0.4/_variables.scss",
+        "assets/AdminLTE-3.1.0/_variables.scss",
         package = "fresh"
       ))
       res$source <- "adminlte"
     } else {
       res <- search_vars(system.file(
-        "assets/AdminLTE-3.0.4/_bootstrap-variables.scss",
+        "assets/AdminLTE-3.1.0/_bootstrap-variables.scss",
         package = "fresh"
       ))
       res$source <- "bootstrap"
