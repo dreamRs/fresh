@@ -105,6 +105,50 @@
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"dreamRs/fresh"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="bs4dash">bs4Dash<a class="anchor" aria-label="anchor" href="#bs4dash"></a>
+</h2>
+<p>Create a theme to personalize your <a href="https://github.com/RinteRface/bs4Dash" class="external-link">{bs4Dash}</a> applications:</p>
+<p><img src="reference/figures/bs4dash.png"></p>
+<p>Create the theme:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">bs4DashTheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/bs4Dash_theme.html">bs4Dash_theme</a></span><span class="op">(</span></span>
+<span>  primary <span class="op">=</span> <span class="st">"#5E81AC"</span>,</span>
+<span>  secondary <span class="op">=</span> <span class="st">"#B48EAD"</span>,</span>
+<span>  success <span class="op">=</span> <span class="st">"#A3BE8C"</span>,</span>
+<span>  danger <span class="op">=</span> <span class="st">"#BF616A"</span>,</span>
+<span>  <span class="st">"sidebar-light-bg"</span> <span class="op">=</span> <span class="st">"#3B4252"</span>,</span>
+<span>  <span class="st">"sidebar-light-color"</span> <span class="op">=</span> <span class="st">"#E5E9F0"</span>,</span>
+<span>  <span class="st">"main-bg"</span> <span class="op">=</span> <span class="st">"#2E3440"</span>,</span>
+<span>  <span class="st">"body-color"</span> <span class="op">=</span> <span class="st">"#ECEFF4"</span>,</span>
+<span>  <span class="st">"card-bg"</span> <span class="op">=</span> <span class="st">"#4C566A"</span>, <span class="co"># bs4Card() background</span></span>
+<span>  <span class="st">"white"</span> <span class="op">=</span> <span class="st">"#E5E9F0"</span>,</span>
+<span>  <span class="st">"info-box-bg"</span> <span class="op">=</span> <span class="st">"#4C566A"</span>,  <span class="co"># bs4InfoBox() background</span></span>
+<span>  dark <span class="op">=</span> <span class="st">"#272c30"</span>, <span class="co">#  bs4DashNavbar(status = "dark") background,</span></span>
+<span>  <span class="st">"gray-600"</span> <span class="op">=</span> <span class="st">"#FFF"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Use your theme:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">bs4DashPage</span><span class="op">(</span></span>
+<span>  title <span class="op">=</span> <span class="st">"bs4Dash custom theme"</span>,</span>
+<span>  navbar <span class="op">=</span> <span class="fu">bs4DashNavbar</span><span class="op">(</span>skin <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span>,</span>
+<span>  sidebar <span class="op">=</span> <span class="fu">bs4DashSidebar</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"bs4Dash custom theme"</span>,</span>
+<span>    skin <span class="op">=</span> <span class="st">"light"</span>,</span>
+<span>    </span>
+<span>    <span class="co"># ...</span></span>
+<span>    </span>
+<span>  <span class="op">)</span>,</span>
+<span>  body <span class="op">=</span> <span class="fu">bs4DashBody</span><span class="op">(</span></span>
+<span>    </span>
+<span>    <span class="fu"><a href="reference/use_theme.html">use_theme</a></span><span class="op">(</span><span class="va">bs4DashTheme</span><span class="op">)</span>, <span class="co"># &lt;-- use the theme</span></span>
+<span>    </span>
+<span>    <span class="co"># ...</span></span>
+<span>    </span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>See more information here: <a href="https://dreamrs.github.io/fresh/articles/vars-bs4dash.html" class="external-link">Variables for {bs4dash}</a> or in R console: <code><a href="articles/vars-bs4dash.html">vignette("vars-bs4dash", package = "fresh")</a></code>.</p>
+</div>
+<div class="section level2">
 <h2 id="shiny">shiny<a class="anchor" aria-label="anchor" href="#shiny"></a>
 </h2>
 <p>Create new themes to use in shiny applications with <code>fluidPage</code> or <code>navbarPage</code>. From the default theme :</p>
@@ -112,7 +156,7 @@
 <p>Obtain this :</p>
 <p><img src="reference/figures/shiny-custom.png"></p>
 <p>This theme was creating with following code:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
 <span>  theme <span class="op">=</span> <span class="st">"default"</span>,</span>
 <span>  <span class="fu"><a href="reference/bs3-variables.html">bs_vars_navbar</a></span><span class="op">(</span></span>
@@ -147,7 +191,7 @@
 <span>  output_file <span class="op">=</span> <span class="st">"www/mytheme.css"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>Use the created theme like this:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">navbarPage</span><span class="op">(</span></span>
 <span>  </span>
 <span>  title <span class="op">=</span> <span class="st">"My application"</span>,</span>
@@ -162,7 +206,7 @@
 <p>Customize colors and other settings used in <a href="https://github.com/rstudio/shinydashboard" class="external-link">{shinydashboard}</a> applications :</p>
 <p><img src="reference/figures/shinydashboard.png"></p>
 <p>Create the theme:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mytheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="reference/adminlte_color.html">adminlte_color</a></span><span class="op">(</span></span>
 <span>    light_blue <span class="op">=</span> <span class="st">"#434C5E"</span></span>
@@ -180,7 +224,7 @@
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>Use your theme:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">dashboardPage</span><span class="op">(</span></span>
 <span>  header <span class="op">=</span> <span class="fu">dashboardHeader</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"My dashboard"</span><span class="op">)</span>,</span>
 <span>  sidebar <span class="op">=</span> <span class="fu">dashboardSidebar</span><span class="op">(</span></span>
@@ -195,64 +239,6 @@
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>See more information here: <a href="https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html" class="external-link">Variables for {shinydashboard}</a> or in R console: <code><a href="articles/vars-shinydashboard.html">vignette("vars-shinydashboard", package = "fresh")</a></code>.</p>
-</div>
-<div class="section level2">
-<h2 id="bs4dash">bs4Dash<a class="anchor" aria-label="anchor" href="#bs4dash"></a>
-</h2>
-<p>Create a theme to personalize your <a href="https://github.com/RinteRface/bs4Dash" class="external-link">{bs4Dash}</a> applications:</p>
-<p><img src="reference/figures/bs4dash.png"></p>
-<p>Create the theme:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mytheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
-<span>  <span class="fu"><a href="reference/bs4dash_vars.html">bs4dash_vars</a></span><span class="op">(</span></span>
-<span>    navbar_light_color <span class="op">=</span> <span class="st">"#bec5cb"</span>,</span>
-<span>    navbar_light_active_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
-<span>    navbar_light_hover_color <span class="op">=</span> <span class="st">"#FFF"</span></span>
-<span>  <span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="reference/bs4dash_yiq.html">bs4dash_yiq</a></span><span class="op">(</span></span>
-<span>    contrasted_threshold <span class="op">=</span> <span class="fl">10</span>,</span>
-<span>    text_dark <span class="op">=</span> <span class="st">"#FFF"</span>, </span>
-<span>    text_light <span class="op">=</span> <span class="st">"#272c30"</span></span>
-<span>  <span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="reference/bs4dash_layout.html">bs4dash_layout</a></span><span class="op">(</span></span>
-<span>    main_bg <span class="op">=</span> <span class="st">"#353c42"</span></span>
-<span>  <span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span><span class="op">(</span></span>
-<span>    bg <span class="op">=</span> <span class="st">"#272c30"</span>, </span>
-<span>    color <span class="op">=</span> <span class="st">"#bec5cb"</span>,</span>
-<span>    hover_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
-<span>    submenu_bg <span class="op">=</span> <span class="st">"#272c30"</span>, </span>
-<span>    submenu_color <span class="op">=</span> <span class="st">"#FFF"</span>, </span>
-<span>    submenu_hover_color <span class="op">=</span> <span class="st">"#FFF"</span></span>
-<span>  <span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="reference/bs4dash_status.html">bs4dash_status</a></span><span class="op">(</span></span>
-<span>    primary <span class="op">=</span> <span class="st">"#5E81AC"</span>, danger <span class="op">=</span> <span class="st">"#BF616A"</span>, light <span class="op">=</span> <span class="st">"#272c30"</span></span>
-<span>  <span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="reference/bs4dash_color.html">bs4dash_color</a></span><span class="op">(</span></span>
-<span>    gray_900 <span class="op">=</span> <span class="st">"#FFF"</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div>
-<p>Use your theme:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">bs4DashPage</span><span class="op">(</span></span>
-<span>  title <span class="op">=</span> <span class="st">"bs4Dash custom theme"</span>,</span>
-<span>  navbar <span class="op">=</span> <span class="fu">bs4DashNavbar</span><span class="op">(</span>skin <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span>,</span>
-<span>  sidebar <span class="op">=</span> <span class="fu">bs4DashSidebar</span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"bs4Dash custom theme"</span>,</span>
-<span>    skin <span class="op">=</span> <span class="st">"light"</span>,</span>
-<span>    </span>
-<span>    <span class="co"># ...</span></span>
-<span>    </span>
-<span>  <span class="op">)</span>,</span>
-<span>  body <span class="op">=</span> <span class="fu">bs4DashBody</span><span class="op">(</span></span>
-<span>    </span>
-<span>    <span class="fu"><a href="reference/use_theme.html">use_theme</a></span><span class="op">(</span><span class="va">mytheme</span><span class="op">)</span>, <span class="co"># &lt;-- use the theme</span></span>
-<span>    </span>
-<span>    <span class="co"># ...</span></span>
-<span>    </span>
-<span>  <span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div>
-<p>See more information here: <a href="https://dreamrs.github.io/fresh/articles/vars-bs4dash.html" class="external-link">Variables for {bs4dash}</a> or in R console: <code><a href="articles/vars-bs4dash.html">vignette("vars-bs4dash", package = "fresh")</a></code>.</p>
 </div>
 </div>
   </div>
