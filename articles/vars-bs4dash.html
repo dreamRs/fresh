@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Variables for {bs4dash} • fresh</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9100</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/fresh.html">Get started</a>
 </li>
@@ -50,7 +46,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -73,8 +69,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/dreamRs/fresh/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/dreamRs/fresh/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -88,135 +84,149 @@
 
       
 
-      </header><script src="vars-bs4dash_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Variables for {bs4dash}</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/dreamRs/fresh/blob/master/vignettes/vars-bs4dash.Rmd"><code>vignettes/vars-bs4dash.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/dreamRs/fresh/blob/HEAD/vignettes/vars-bs4dash.Rmd" class="external-link"><code>vignettes/vars-bs4dash.Rmd</code></a></small>
       <div class="hidden name"><code>vars-bs4dash.Rmd</code></div>
 
     </div>
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
-</pre></div>
-<p><a href="https://github.com/RinteRface/bs4Dash">{bs4Dash}</a> allow to construct dashboards in Shiny with latest version of <a href="https://github.com/ColorlibHQ/AdminLTE">AdminLTE</a> based on Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can create a custom theme to use with it with functions <code>bs4dash_*</code>. Here are some examples of what you can change.</p>
-<div id="main-statuses" class="section level2">
-<h2 class="hasAnchor">
-<a href="#main-statuses" class="anchor"></a>Main statuses</h2>
-<p>Main colors of {bs4Dash} are defined in 6 status, you can use those status in <code>infoBox</code>, <code>valueBox</code>, <code>cards</code>, … The primary color (<span style="width:12px;height:12px;background:#007bff;border-radius:2px;display:inline-block;"></span>) is also used to highlight active elements, so it’s present everywhere. Below is an example by changing the color of the “primary” and “danger” statuses:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(primary = <span class="st">"#5E81AC"</span>, danger = <span class="st">"#BF616A"</span>)
-</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dreamRs/fresh" class="external-link">fresh</a></span><span class="op">)</span></span></code></pre></div>
+<p><a href="https://github.com/RinteRface/bs4Dash" class="external-link">{bs4Dash}</a> allow
+to construct dashboards in Shiny with latest version of <a href="https://github.com/ColorlibHQ/AdminLTE" class="external-link">AdminLTE</a> based on
+Bootstrap 4, {bs4Dash} usage is close to {shinydashboard}. You can
+create a custom theme to use with it with functions
+<code>bs4dash_*</code>. Here are some examples of what you can
+change.</p>
+<div class="section level2">
+<h2 id="main-statuses">Main statuses<a class="anchor" aria-label="anchor" href="#main-statuses"></a>
+</h2>
+<p>Main colors of {bs4Dash} are defined in 6 status, you can use those
+status in <code>infoBox</code>, <code>valueBox</code>,
+<code>cards</code>, … The primary color (<span style="width:12px;height:12px;background:#007bff;border-radius:2px;display:inline-block;"></span>)
+is also used to highlight active elements, so it’s present everywhere.
+Below is an example by changing the color of the “primary” and “danger”
+statuses:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span><span class="op">(</span>primary <span class="op">=</span> <span class="st">"#5E81AC"</span>, danger <span class="op">=</span> <span class="st">"#BF616A"</span><span class="op">)</span></span></code></pre></div>
 <p>With classic statuses from {bs4Dash}, it look like:</p>
 <p><img src="figures/bs4dash-status-default.png" style="width:100%"></p>
-<p>With our new theme, we have changed the color of boxes and active element in sidebar:</p>
+<p>With our new theme, we have changed the color of boxes and active
+element in sidebar:</p>
 <p><img src="figures/bs4dash-status-custom.png" style="width:100%"></p>
 </div>
-<div id="layout" class="section level2">
-<h2 class="hasAnchor">
-<a href="#layout" class="anchor"></a>Layout</h2>
-<p>Layout variables allow you to change the width of the sidebar, as well as the width of the controlbar (right sidebar). And also the main background:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span>(main_bg = <span class="st">"#353c42"</span>)
-</pre></div>
+<div class="section level2">
+<h2 id="layout">Layout<a class="anchor" aria-label="anchor" href="#layout"></a>
+</h2>
+<p>Layout variables allow you to change the width of the sidebar, as
+well as the width of the controlbar (right sidebar). And also the main
+background:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span><span class="op">(</span>main_bg <span class="op">=</span> <span class="st">"#353c42"</span><span class="op">)</span></span></code></pre></div>
 <p>Result is:</p>
 <p><img src="figures/bs4dash-layout-custom.png" style="width:100%"></p>
-<p>The text is not readable on a black background but fortunately we will be able to change that.</p>
+<p>The text is not readable on a black background but fortunately we
+will be able to change that.</p>
 </div>
-<div id="colors" class="section level2">
-<h2 class="hasAnchor">
-<a href="#colors" class="anchor"></a>Colors</h2>
+<div class="section level2">
+<h2 id="colors">Colors<a class="anchor" aria-label="anchor" href="#colors"></a>
+</h2>
 <p>We can invert colors used for text by changing colors variables:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span>(gray_900 = <span class="st">"#FFF"</span>, white = <span class="st">"#272c30"</span>)
-</pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span><span class="op">(</span>gray_900 <span class="op">=</span> <span class="st">"#FFF"</span>, white <span class="op">=</span> <span class="st">"#272c30"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/bs4dash-color-custom.png" style="width:100%"></p>
-<p>Now the body looks good, we can deal with the sidebar and the navbar. Text in boxes is less readable, but again this can be fixed later.</p>
+<p>Now the body looks good, we can deal with the sidebar and the navbar.
+Text in boxes is less readable, but again this can be fixed later.</p>
 </div>
-<div id="sidebar" class="section level2">
-<h2 class="hasAnchor">
-<a href="#sidebar" class="anchor"></a>Sidebar</h2>
-<p>In {bs4Dash} there’s two skins for the sidebar: light or dark, here we have used the light one, and we can override its defaults to have a fully custom one with:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span>(
-  bg = <span class="st">"#272c30"</span>,
-  color = <span class="st">"#bec5cb"</span>,
-  hover_color = <span class="st">"#FFF"</span>,
-  submenu_bg = <span class="st">"#272c30"</span>, 
-  submenu_color = <span class="st">"#FFF"</span>,
-  submenu_hover_color = <span class="st">"#FFF"</span>
-)
-</pre></div>
+<div class="section level2">
+<h2 id="sidebar">Sidebar<a class="anchor" aria-label="anchor" href="#sidebar"></a>
+</h2>
+<p>In {bs4Dash} there’s two skins for the sidebar: light or dark, here
+we have used the light one, and we can override its defaults to have a
+fully custom one with:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span><span class="op">(</span></span>
+<span>  bg <span class="op">=</span> <span class="st">"#272c30"</span>,</span>
+<span>  color <span class="op">=</span> <span class="st">"#bec5cb"</span>,</span>
+<span>  hover_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>  submenu_bg <span class="op">=</span> <span class="st">"#272c30"</span>, </span>
+<span>  submenu_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>  submenu_hover_color <span class="op">=</span> <span class="st">"#FFF"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>We now have:</p>
 <p><img src="figures/bs4dash-sidebar-custom.png" style="width:100%"></p>
 </div>
-<div id="navbar" class="section level2">
-<h2 class="hasAnchor">
-<a href="#navbar" class="anchor"></a>Navbar</h2>
-<p>Background color of the navbar is defined by the light or dark status, then we can change default with custom variables:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(light = <span class="st">"#272c30"</span>)
-
-<span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span>(
-  navbar_light_color = <span class="st">"#bec5cb"</span>,
-  navbar_light_active_color = <span class="st">"#FFF"</span>,
-  navbar_light_hover_color = <span class="st">"#FFF"</span>
-)
-</pre></div>
-<p>Like the sidebar, we could have used “dark” instead of “light”. To find available variables, you can use: <code><a href="../reference/search_vars_bs4dash.html">search_vars_bs4dash("navbar")</a></code>.</p>
+<div class="section level2">
+<h2 id="navbar">Navbar<a class="anchor" aria-label="anchor" href="#navbar"></a>
+</h2>
+<p>Background color of the navbar is defined by the light or dark
+status, then we can change default with custom variables:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span><span class="op">(</span>light <span class="op">=</span> <span class="st">"#272c30"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span><span class="op">(</span></span>
+<span>  navbar_light_color <span class="op">=</span> <span class="st">"#bec5cb"</span>,</span>
+<span>  navbar_light_active_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>  navbar_light_hover_color <span class="op">=</span> <span class="st">"#FFF"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Like the sidebar, we could have used “dark” instead of “light”. To
+find available variables, you can use:
+<code>search_vars_bs4dash("navbar")</code>.</p>
 <p>Here’s the result:</p>
 <p><img src="figures/bs4dash-navbar-custom.png" style="width:100%"></p>
 </div>
-<div id="color-contrast" class="section level2">
-<h2 class="hasAnchor">
-<a href="#color-contrast" class="anchor"></a>Color contrast</h2>
-<p>Last set of variables that we can use to finalize our new theme is the YIQ color contrast variables that allow to switch color if contrast is below a threshold.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(contrasted_threshold = <span class="fl">10</span>, text_dark = <span class="st">"#FFF"</span>, text_light = <span class="st">"#272c30"</span>)
-</pre></div>
+<div class="section level2">
+<h2 id="color-contrast">Color contrast<a class="anchor" aria-label="anchor" href="#color-contrast"></a>
+</h2>
+<p>Last set of variables that we can use to finalize our new theme is
+the YIQ color contrast variables that allow to switch color if contrast
+is below a threshold.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span><span class="op">(</span>contrasted_threshold <span class="op">=</span> <span class="fl">10</span>, text_dark <span class="op">=</span> <span class="st">"#FFF"</span>, text_light <span class="op">=</span> <span class="st">"#272c30"</span><span class="op">)</span></span></code></pre></div>
 <p>Now text is more readable:</p>
 <p><img src="figures/bs4dash-yiq-custom.png" style="width:100%"></p>
 </div>
-<div id="full-theme" class="section level2">
-<h2 class="hasAnchor">
-<a href="#full-theme" class="anchor"></a>Full theme</h2>
+<div class="section level2">
+<h2 id="full-theme">Full theme<a class="anchor" aria-label="anchor" href="#full-theme"></a>
+</h2>
 <p>Here the code to create this theme:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  <span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span>(
-    navbar_light_color = <span class="st">"#bec5cb"</span>,
-    navbar_light_active_color = <span class="st">"#FFF"</span>,
-    navbar_light_hover_color = <span class="st">"#FFF"</span>
-  ),
-  <span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span>(
-    contrasted_threshold = <span class="fl">10</span>,
-    text_dark = <span class="st">"#FFF"</span>, 
-    text_light = <span class="st">"#272c30"</span>
-  ),
-  <span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span>(
-    main_bg = <span class="st">"#353c42"</span>
-  ),
-  <span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span>(
-    bg = <span class="st">"#272c30"</span>, 
-    color = <span class="st">"#bec5cb"</span>,
-    hover_color = <span class="st">"#FFF"</span>,
-    submenu_bg = <span class="st">"#272c30"</span>, 
-    submenu_color = <span class="st">"#FFF"</span>, 
-    submenu_hover_color = <span class="st">"#FFF"</span>
-  ),
-  <span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span>(
-    primary = <span class="st">"#5E81AC"</span>, danger = <span class="st">"#BF616A"</span>, light = <span class="st">"#272c30"</span>
-  ),
-  <span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span>(
-    gray_900 = <span class="st">"#FFF"</span>
-  )
-)
-</pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="../reference/bs4dash_vars.html">bs4dash_vars</a></span><span class="op">(</span></span>
+<span>    navbar_light_color <span class="op">=</span> <span class="st">"#bec5cb"</span>,</span>
+<span>    navbar_light_active_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>    navbar_light_hover_color <span class="op">=</span> <span class="st">"#FFF"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs4dash_yiq.html">bs4dash_yiq</a></span><span class="op">(</span></span>
+<span>    contrasted_threshold <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>    text_dark <span class="op">=</span> <span class="st">"#FFF"</span>, </span>
+<span>    text_light <span class="op">=</span> <span class="st">"#272c30"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs4dash_layout.html">bs4dash_layout</a></span><span class="op">(</span></span>
+<span>    main_bg <span class="op">=</span> <span class="st">"#353c42"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs4Dash-sidebar.html">bs4dash_sidebar_light</a></span><span class="op">(</span></span>
+<span>    bg <span class="op">=</span> <span class="st">"#272c30"</span>, </span>
+<span>    color <span class="op">=</span> <span class="st">"#bec5cb"</span>,</span>
+<span>    hover_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>    submenu_bg <span class="op">=</span> <span class="st">"#272c30"</span>, </span>
+<span>    submenu_color <span class="op">=</span> <span class="st">"#FFF"</span>, </span>
+<span>    submenu_hover_color <span class="op">=</span> <span class="st">"#FFF"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs4dash_status.html">bs4dash_status</a></span><span class="op">(</span></span>
+<span>    primary <span class="op">=</span> <span class="st">"#5E81AC"</span>, danger <span class="op">=</span> <span class="st">"#BF616A"</span>, light <span class="op">=</span> <span class="st">"#272c30"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs4dash_color.html">bs4dash_color</a></span><span class="op">(</span></span>
+<span>    gray_900 <span class="op">=</span> <span class="st">"#FFF"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
   </div>
 
@@ -231,11 +241,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://twitter.com/_pvictorr"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://twitter.com/_pvictorr" class="external-link"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan" class="external-link"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
 </div>
 
       </footer>
@@ -243,6 +255,8 @@
 
   
 
+
+  
 
   </body>
 </html>

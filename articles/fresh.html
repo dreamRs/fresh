@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fresh themes • fresh</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9100</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/fresh.html">Get started</a>
 </li>
@@ -50,7 +46,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -73,8 +69,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/dreamRs/fresh/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/dreamRs/fresh/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -88,35 +84,41 @@
 
       
 
-      </header><script src="fresh_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Fresh themes</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/dreamRs/fresh/blob/master/vignettes/fresh.Rmd"><code>vignettes/fresh.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/dreamRs/fresh/blob/HEAD/vignettes/fresh.Rmd" class="external-link"><code>vignettes/fresh.Rmd</code></a></small>
       <div class="hidden name"><code>fresh.Rmd</code></div>
 
     </div>
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
-</pre></div>
-<p>{fresh} allow to create custom themes to use in <a href="https://github.com/rstudio/shiny">{shiny}</a> applications, currently you can create themes to use with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dreamRs/fresh" class="external-link">fresh</a></span><span class="op">)</span></span></code></pre></div>
+<p>{fresh} allow to create custom themes to use in <a href="https://github.com/rstudio/shiny" class="external-link">{shiny}</a> applications,
+currently you can create themes to use with:</p>
 <ul>
-<li>shiny itself, with <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">shiny::fluidPage</a></code> or <code><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">shiny::navbarPage</a></code> or themes from <a href="https://bootswatch.com/3/">Bootswatch</a>
+<li>shiny itself, with <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">shiny::fluidPage</a></code> or
+<code><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html" class="external-link">shiny::navbarPage</a></code> or themes from <a href="https://bootswatch.com/3/" class="external-link">Bootswatch</a>
 </li>
 <li>
-<a href="https://rstudio.github.io/shinydashboard/">{shinydashboard}</a>: Shiny Dashboarding framework</li>
+<a href="https://rstudio.github.io/shinydashboard/" class="external-link">{shinydashboard}</a>:
+Shiny Dashboarding framework</li>
 <li>
-<a href="https://rinterface.github.io/bs4Dash/index.html">{bs4Dash}</a>: Bootstrap 4 shinydashboard using AdminLTE3</li>
+<a href="https://rinterface.github.io/bs4Dash/index.html" class="external-link">{bs4Dash}</a>:
+Bootstrap 4 shinydashboard using AdminLTE3</li>
 </ul>
-<div id="create-a-theme" class="section level2">
-<h2 class="hasAnchor">
-<a href="#create-a-theme" class="anchor"></a>Create a theme</h2>
-<p>Use function <code>create_theme</code> to create a new theme, this function accept <strong>variables</strong> to set specific parameters of the theme. There’s 3 type of variables depending on which framework you use:</p>
+<div class="section level2">
+<h2 id="create-a-theme">Create a theme<a class="anchor" aria-label="anchor" href="#create-a-theme"></a>
+</h2>
+<p>Use function <code>create_theme</code> to create a new theme, this
+function accept <strong>variables</strong> to set specific parameters of
+the theme. There’s 3 type of variables depending on which framework you
+use:</p>
 <ul>
 <li>
 <code>bs_vars_*</code> to create a shiny theme</li>
@@ -125,103 +127,108 @@
 <li>
 <code>bs4dash_*</code> to create a bs4Dash theme</li>
 </ul>
-<p>When using <code>bs_vars_*</code>, you can specify <code>theme</code> argument to use a Bootswatch template.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  theme = <span class="st">"default"</span>,
-  <span class="fu"><a href="../reference/bs_vars_button.html">bs_vars_button</a></span>(
-    default_color = <span class="st">"#FFF"</span>,
-    default_bg = <span class="st">"#112446"</span>,
-    default_border = <span class="st">"#112446"</span>,
-    border_radius_base = <span class="st">"15px"</span>
-  ),
-  <span class="fu"><a href="../reference/bs_vars_wells.html">bs_vars_wells</a></span>(
-    bg = <span class="st">"#FFF"</span>,
-    border = <span class="st">"#112446"</span>
-  )
-)
-</pre></div>
-<p>Here we modify <code><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">shiny::actionButton</a></code> appearance with <code>bs_vars_button</code> and appearance of <code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">shiny::sidebarPanel</a></code> with <code>bs_vars_wells</code>.</p>
+<p>When using <code>bs_vars_*</code>, you can specify <code>theme</code>
+argument to use a Bootswatch template.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
+<span>  theme <span class="op">=</span> <span class="st">"default"</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs_vars_button.html">bs_vars_button</a></span><span class="op">(</span></span>
+<span>    default_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>    default_bg <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>    default_border <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>    border_radius_base <span class="op">=</span> <span class="st">"15px"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs_vars_wells.html">bs_vars_wells</a></span><span class="op">(</span></span>
+<span>    bg <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>    border <span class="op">=</span> <span class="st">"#112446"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Here we modify <code><a href="https://rdrr.io/pkg/shiny/man/actionButton.html" class="external-link">shiny::actionButton</a></code> appearance with
+<code>bs_vars_button</code> and appearance of
+<code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html" class="external-link">shiny::sidebarPanel</a></code> with <code>bs_vars_wells</code>.</p>
 <p>Result looks like :</p>
 <!-- ![](figures/example_shiny.png) -->
 <p><img src="figures/example_shiny.png"><!-- --></p>
 </div>
-<div id="use-a-theme" class="section level2">
-<h2 class="hasAnchor">
-<a href="#use-a-theme" class="anchor"></a>Use a theme</h2>
+<div class="section level2">
+<h2 id="use-a-theme">Use a theme<a class="anchor" aria-label="anchor" href="#use-a-theme"></a>
+</h2>
 <p>There’s two way to use a newly created theme :</p>
 <ol style="list-style-type: decimal">
 <li>inline in the UI (useful to quickly visualize your theme)</li>
 <li>using a CSS file (recommended)</li>
 </ol>
-<div id="inline" class="section level3">
-<h3 class="hasAnchor">
-<a href="#inline" class="anchor"></a>Inline</h3>
-<p>Don’t specify an output file and use result of <code><a href="../reference/create_theme.html">create_theme()</a></code> in <code><a href="../reference/use_theme.html">use_theme()</a></code> directly in your application :</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">mytheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  theme = <span class="st">"default"</span>,
-  <span class="fu"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span>(
-    default_bg = <span class="st">"#75b8d1"</span>,
-    default_color = <span class="st">"#FFFFFF"</span>,
-    default_link_color = <span class="st">"#FFFFFF"</span>,
-    default_link_active_color = <span class="st">"#75b8d1"</span>,
-    default_link_active_bg = <span class="st">"#FFFFFF"</span>,
-    default_link_hover_color = <span class="st">"firebrick"</span>
-  ),
-  output_file = <span class="kw">NULL</span>
-)
-
-<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">navbarPage</a></span>(
-  title = <span class="st">"Custom navbar"</span>,
-  header = <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/tag.html">tagList</a></span>(
-    <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="kw">mytheme</span>) <span class="co"># &lt;-- use your theme</span>
-  ),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Tab 1"</span>),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Tab 2"</span>)
-)
-</pre></div>
+<div class="section level3">
+<h3 id="inline">Inline<a class="anchor" aria-label="anchor" href="#inline"></a>
+</h3>
+<p>Don’t specify an output file and use result of
+<code><a href="../reference/create_theme.html">create_theme()</a></code> in <code><a href="../reference/use_theme.html">use_theme()</a></code> directly in your
+application :</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mytheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
+<span>  theme <span class="op">=</span> <span class="st">"default"</span>,</span>
+<span>  <span class="fu"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span><span class="op">(</span></span>
+<span>    default_bg <span class="op">=</span> <span class="st">"#75b8d1"</span>,</span>
+<span>    default_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
+<span>    default_link_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
+<span>    default_link_active_color <span class="op">=</span> <span class="st">"#75b8d1"</span>,</span>
+<span>    default_link_active_bg <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
+<span>    default_link_hover_color <span class="op">=</span> <span class="st">"firebrick"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  output_file <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html" class="external-link">navbarPage</a></span><span class="op">(</span></span>
+<span>  title <span class="op">=</span> <span class="st">"Custom navbar"</span>,</span>
+<span>  header <span class="op">=</span> <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/tagList.html" class="external-link">tagList</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span><span class="op">(</span><span class="va">mytheme</span><span class="op">)</span> <span class="co"># &lt;-- use your theme</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Tab 1"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Tab 2"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#file" class="anchor"></a>File</h3>
+<div class="section level3">
+<h3 id="file">File<a class="anchor" aria-label="anchor" href="#file"></a>
+</h3>
 <p>When you create a theme, you can specify an output file :</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/create_theme.html">create_theme</a></span>(
-  theme = <span class="st">"default"</span>, 
-  <span class="kw">...</span>,
-  output_file = <span class="st">"my-custom-theme.css"</span>
-)
-</pre></div>
-<p>Put the file <code>my-custom-theme.css</code> in the <code>www/</code> folder of your application, and reference it like that in your UI’s <code>fluidPage</code> or <code>navbarPage</code> :</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidPage</a></span>(
-  
-  theme = <span class="st">"my-custom-theme.css"</span>,
-  
-  <span class="co"># ...</span>
-)
-
-<span class="co"># or if using a navbar page</span>
-<span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">navbarPage</a></span>(
-  
-  title = <span class="st">"My application"</span>,
-  theme = <span class="st">"mytheme.css"</span>,
-  
-  <span class="co"># ...</span>
-)
-</pre></div>
-<p>In {shinydashboard} or {bs4Dash}, you can use <code><a href="../reference/use_theme.html">use_theme()</a></code> with a path inside <code>dashboardBody</code> or <code>bs4DashBody</code> :</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html">dashboardBody</a></span>(
-  <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="st">"path/to/theme.css"</span>)
-)
-
-<span class="fu"><a href="https://rdrr.io/pkg/bs4Dash/man/bs4DashBody.html">bs4DashBody</a></span>(
-  <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span>(<span class="st">"path/to/theme.css"</span>)
-)
-</pre></div>
-<p>Note that the path must be in the <code>www/</code> folder of your application.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/create_theme.html">create_theme</a></span><span class="op">(</span></span>
+<span>  theme <span class="op">=</span> <span class="st">"default"</span>, </span>
+<span>  <span class="va">...</span>,</span>
+<span>  output_file <span class="op">=</span> <span class="st">"my-custom-theme.css"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Put the file <code>my-custom-theme.css</code> in the
+<code>www/</code> folder of your application, and reference it like that
+in your UI’s <code>fluidPage</code> or <code>navbarPage</code> :</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidPage</a></span><span class="op">(</span></span>
+<span>  </span>
+<span>  theme <span class="op">=</span> <span class="st">"my-custom-theme.css"</span>,</span>
+<span>  </span>
+<span>  <span class="co"># ...</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># or if using a navbar page</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html" class="external-link">navbarPage</a></span><span class="op">(</span></span>
+<span>  </span>
+<span>  title <span class="op">=</span> <span class="st">"My application"</span>,</span>
+<span>  theme <span class="op">=</span> <span class="st">"mytheme.css"</span>,</span>
+<span>  </span>
+<span>  <span class="co"># ...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>In {shinydashboard} or {bs4Dash}, you can use
+<code><a href="../reference/use_theme.html">use_theme()</a></code> with a path inside <code>dashboardBody</code>
+or <code>bs4DashBody</code> :</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/bs4Dash/man/dashboardBody.html" class="external-link">dashboardBody</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span><span class="op">(</span><span class="st">"path/to/theme.css"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/bs4Dash/man/dashboardBody.html" class="external-link">bs4DashBody</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="../reference/use_theme.html">use_theme</a></span><span class="op">(</span><span class="st">"path/to/theme.css"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Note that the path must be in the <code>www/</code> folder of your
+application.</p>
 </div>
 </div>
   </div>
@@ -237,11 +244,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://twitter.com/_pvictorr"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://twitter.com/_pvictorr" class="external-link"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan" class="external-link"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
 </div>
 
       </footer>
@@ -249,6 +258,8 @@
 
   
 
+
+  
 
   </body>
 </html>

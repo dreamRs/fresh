@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Variables for Shiny • fresh</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fresh</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9100</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/fresh.html">Get started</a>
 </li>
@@ -50,7 +46,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -73,8 +69,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/dreamRs/fresh/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/dreamRs/fresh/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -88,15 +84,13 @@
 
       
 
-      </header><script src="vars-shiny_files/accessible-code-block-0.0.1/empty-anchor.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="vars-shiny_files/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="vars-shiny_files/bootstrap-3.4.1/js/bootstrap.min.js"></script><script src="vars-shiny_files/bootstrap-3.4.1/shim/html5shiv.min.js"></script><script src="vars-shiny_files/bootstrap-3.4.1/shim/respond.min.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Variables for Shiny</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/dreamRs/fresh/blob/master/vignettes/vars-shiny.Rmd"><code>vignettes/vars-shiny.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/dreamRs/fresh/blob/HEAD/vignettes/vars-shiny.Rmd" class="external-link"><code>vignettes/vars-shiny.Rmd</code></a></small>
       <div class="hidden name"><code>vars-shiny.Rmd</code></div>
 
     </div>
@@ -104,12 +98,11 @@
     
     
 <p><link rel="stylesheet" type="text/css" href="assets/bootstrap-default.min.css"><link rel="stylesheet" type="text/css" href="assets/bootstrap-custom.min.css"></p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/fresh">fresh</a></span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="http://shiny.rstudio.com">shiny</a></span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/dreamRs/shinyWidgets">shinyWidgets</a></span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/rstudio/htmltools">htmltools</a></span>)
-</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dreamRs/fresh" class="external-link">fresh</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shiny.posit.co/" class="external-link">shiny</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dreamRs/shinyWidgets" class="external-link">shinyWidgets</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/htmltools" class="external-link">htmltools</a></span><span class="op">)</span></span></code></pre></div>
 <style type="text/css">
 .two-cols {
   display: grid;
@@ -119,39 +112,42 @@
   grid-row-gap: 0px;
 }
 </style>
-<p>{shiny} is powered by <a href="https://getbootstrap.com/docs/3.4/">Bootstrap</a>, the main components are personalizable using a large number of variables. Below, we give some examples of parameters that you can modify to change the appearance of elements created by {shiny} functions.</p>
-<div id="buttons" class="section level2">
-<h2 class="hasAnchor">
-<a href="#buttons" class="anchor"></a>Buttons</h2>
-<p>Buttons and their variants can be modified by variables from <code><a href="../reference/bs_vars_button.html">bs_vars_button()</a></code>. Here we create square buttons with bold labels and custom colors:</p>
+<p>{shiny} is powered by <a href="https://getbootstrap.com/docs/3.4/" class="external-link">Bootstrap</a>, the main
+components are personalizable using a large number of variables. Below,
+we give some examples of parameters that you can modify to change the
+appearance of elements created by {shiny} functions.</p>
+<div class="section level2">
+<h2 id="buttons">Buttons<a class="anchor" aria-label="anchor" href="#buttons"></a>
+</h2>
+<p>Buttons and their variants can be modified by variables from
+<code><a href="../reference/bs_vars_button.html">bs_vars_button()</a></code>. Here we create square buttons with bold
+labels and custom colors:</p>
 <div class="default-theme row">
 <div class="default-theme col-sm-6">
 <p>{shiny} code:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw">buttons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/tag.html">tagList</a></span>(
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">actionButton</a></span>(
-    <span class="st">"default"</span>, <span class="st">"Default"</span>
-  ),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">actionButton</a></span>(
-    <span class="st">"primary"</span>, <span class="st">"Primary"</span>, 
-    class = <span class="st">"btn-primary"</span>
-  )
-)
-</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">buttons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/tagList.html" class="external-link">tagList</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html" class="external-link">actionButton</a></span><span class="op">(</span></span>
+<span>    <span class="st">"default"</span>, <span class="st">"Default"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html" class="external-link">actionButton</a></span><span class="op">(</span></span>
+<span>    <span class="st">"primary"</span>, <span class="st">"Primary"</span>, </span>
+<span>    class <span class="op">=</span> <span class="st">"btn-primary"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="default-theme col-sm-6">
 <p>{fresh} variables:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_button.html">bs_vars_button</a></span>(
-  font_weight = <span class="fl">500</span>,
-  border_radius_base = <span class="fl">0</span>,
-  default_color = <span class="st">"#112446"</span>,
-  default_border = <span class="st">"#112446"</span>,
-  primary_color = <span class="st">"#FFF"</span>,
-  primary_bg = <span class="st">"#112446"</span>,
-  primary_border = <span class="st">"#112446"</span>
-)
-</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_button.html">bs_vars_button</a></span><span class="op">(</span></span>
+<span>  font_weight <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  border_radius_base <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  default_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  default_border <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  primary_color <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>  primary_bg <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  primary_border <span class="op">=</span> <span class="st">"#112446"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <p></p>
@@ -166,185 +162,199 @@
 <button class="btn btn-default action-button btn-primary" id="primary" type="button">Primary</button>
 </div>
 </div>
-<div id="status" class="section level2">
-<h2 class="hasAnchor">
-<a href="#status" class="anchor"></a>Status</h2>
-<p>Buttons like several components in Bootstrap are styled wit statuses colors, there’s 5 options: primary, success, danger, warning and info. It’s possible with <code><a href="../reference/bs_vars_color.html">bs_vars_color()</a></code> to modify theses colors to alter all components depending on them:</p>
+<div class="section level2">
+<h2 id="status">Status<a class="anchor" aria-label="anchor" href="#status"></a>
+</h2>
+<p>Buttons like several components in Bootstrap are styled wit statuses
+colors, there’s 5 options: primary, success, danger, warning and info.
+It’s possible with <code><a href="../reference/bs_vars_color.html">bs_vars_color()</a></code> to modify theses colors
+to alter all components depending on them:</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw">btn</span> <span class="op">&lt;-</span> <span class="fu">function</span>(<span class="kw">x</span>)
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">actionButton</a></span>(
-    <span class="kw">x</span>, <span class="kw">x</span>, 
-    class = <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">"btn-"</span>, <span class="kw">x</span>)
-  )
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">btn</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html" class="external-link">actionButton</a></span><span class="op">(</span></span>
+<span>    <span class="va">x</span>, <span class="va">x</span>, </span>
+<span>    class <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"btn-"</span>, <span class="va">x</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="va">colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/tagList.html" class="external-link">tagList</a></span><span class="op">(</span></span>
+<span>  <span class="fu">btn</span><span class="op">(</span><span class="st">"primary"</span><span class="op">)</span>,</span>
+<span>  <span class="fu">btn</span><span class="op">(</span><span class="st">"success"</span><span class="op">)</span>,</span>
+<span>  <span class="fu">btn</span><span class="op">(</span><span class="st">"info"</span><span class="op">)</span>,</span>
+<span>  <span class="fu">btn</span><span class="op">(</span><span class="st">"warning"</span><span class="op">)</span>,</span>
+<span>  <span class="fu">btn</span><span class="op">(</span><span class="st">"danger"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">p</span><span class="op">(</span><span class="st">""</span><span class="op">)</span>,</span>
+<span>  <span class="fu">shinyWidgets</span><span class="fu">::</span><span class="fu"><a href="https://dreamrs.github.io/shinyWidgets/reference/progress-bar.html" class="external-link">progressBar</a></span><span class="op">(</span></span>
+<span>    <span class="st">"pb1"</span>, value <span class="op">=</span> <span class="fl">80</span>,</span>
+<span>    status <span class="op">=</span> <span class="st">"primary"</span>, </span>
+<span>    display_pct <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
+<div>
+<p>{fresh} variables:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_color.html">bs_vars_color</a></span><span class="op">(</span></span>
+<span>  brand_primary <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  brand_success <span class="op">=</span> <span class="st">"#7bc043"</span>,</span>
+<span>  brand_info <span class="op">=</span> <span class="st">"#0392cf"</span>,</span>
+<span>  brand_warning <span class="op">=</span> <span class="st">"#f37736"</span>,</span>
+<span>  brand_danger <span class="op">=</span> <span class="st">"#ee4035"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<p></p>
+<p>With default theme, it will render as:</p>
+<div class="default-theme">
+<button class="btn btn-default action-button btn-primary" id="primary" type="button">primary</button>
+<button class="btn btn-default action-button btn-success" id="success" type="button">success</button>
+<button class="btn btn-default action-button btn-info" id="info" type="button">info</button>
+<button class="btn btn-default action-button btn-warning" id="warning" type="button">warning</button>
+<button class="btn btn-default action-button btn-danger" id="danger" type="button">danger</button>
+<p></p>
+<div class="progress-group">
+<span class="progress-text" id="pb1-title"> </span>
+<span class="progress-number pull-right float-end" style="display:none;">
+<b id="pb1-value">80</b>
+/
+<span id="pb1-total"></span>
+</span>
+<div class="clearfix"></div>
+<div class="progress">
+<div class="progress-bar progress-bar-primary bg-primary" id="pb1" role="progressbar" style="width:80%; min-width: 2em;">80%</div>
+</div>
+</div>
+</div>
+<p>With our {fresh} theme it will look like:</p>
+<div class="custom-theme">
+<button class="btn btn-default action-button btn-primary" id="primary" type="button">primary</button>
+<button class="btn btn-default action-button btn-success" id="success" type="button">success</button>
+<button class="btn btn-default action-button btn-info" id="info" type="button">info</button>
+<button class="btn btn-default action-button btn-warning" id="warning" type="button">warning</button>
+<button class="btn btn-default action-button btn-danger" id="danger" type="button">danger</button>
+<p></p>
+<div class="progress-group">
+<span class="progress-text" id="pb1-title"> </span>
+<span class="progress-number pull-right float-end" style="display:none;">
+<b id="pb1-value">80</b>
+/
+<span id="pb1-total"></span>
+</span>
+<div class="clearfix"></div>
+<div class="progress">
+<div class="progress-bar progress-bar-primary bg-primary" id="pb1" role="progressbar" style="width:80%; min-width: 2em;">80%</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="navbar">Navbar<a class="anchor" aria-label="anchor" href="#navbar"></a>
+</h2>
+<p>If you use <code><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html" class="external-link">shiny::navbarPage</a></code>, you can customize colors
+with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code>:</p>
+<div class="two-cols">
+<div>
+<p>{shiny} code:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">navbar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html" class="external-link">navbarPage</a></span><span class="op">(</span><span class="st">"App Title"</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Plot"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Summary"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Table"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
+<div>
+<p>{fresh} variables:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span><span class="op">(</span></span>
+<span>  padding_horizontal <span class="op">=</span> <span class="st">"15px"</span>,</span>
+<span>  default_bg <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  default_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
+<span>  default_link_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
+<span>  default_link_active_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
+<span>  default_link_hover_color <span class="op">=</span> <span class="st">"#A4A4A4"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<p>With default theme, it will render as:</p>
+<div class="default-theme">
 
-<span class="kw">colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/tag.html">tagList</a></span>(
-  <span class="fu">btn</span>(<span class="st">"primary"</span>),
-  <span class="fu">btn</span>(<span class="st">"success"</span>),
-  <span class="fu">btn</span>(<span class="st">"info"</span>),
-  <span class="fu">btn</span>(<span class="st">"warning"</span>),
-  <span class="fu">btn</span>(<span class="st">"danger"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span>(<span class="st">""</span>),
-  <span class="kw">shinyWidgets</span>::<span class="fu"><a href="https://rdrr.io/pkg/shinyWidgets/man/progress-bar.html">progressBar</a></span>(
-    <span class="st">"pb1"</span>, value = <span class="fl">80</span>,
-    status = <span class="st">"primary"</span>, 
-    display_pct = <span class="fl">TRUE</span>
-  )
-)
-</pre></div>
-</div>
-<div>
-<p>{fresh} variables:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_color.html">bs_vars_color</a></span>(
-  brand_primary = <span class="st">"#112446"</span>,
-  brand_success = <span class="st">"#7bc043"</span>,
-  brand_info = <span class="st">"#0392cf"</span>,
-  brand_warning = <span class="st">"#f37736"</span>,
-  brand_danger = <span class="st">"#ee4035"</span>
-)
-</pre></div>
-</div>
-</div>
-<p></p>
-<p>With default theme, it will render as:</p>
-<div class="default-theme">
-<button class="btn btn-default action-button btn-primary" id="primary" type="button">primary</button>
-<button class="btn btn-default action-button btn-success" id="success" type="button">success</button>
-<button class="btn btn-default action-button btn-info" id="info" type="button">info</button>
-<button class="btn btn-default action-button btn-warning" id="warning" type="button">warning</button>
-<button class="btn btn-default action-button btn-danger" id="danger" type="button">danger</button>
-<p></p>
-<!--SHINY.SINGLETON[758206d91e54a5751517535560452ac3a0d0a274]-->
-<!--/SHINY.SINGLETON[758206d91e54a5751517535560452ac3a0d0a274]-->
-<div class="progress-group">
-<div class="progress">
-<div class="progress-bar progress-bar-primary" id="pb1" role="progressbar" style="width:80%; min-width: 2em;">80%</div>
-</div>
-</div>
-</div>
-<p>With our {fresh} theme it will look like:</p>
-<div class="custom-theme">
-<button class="btn btn-default action-button btn-primary" id="primary" type="button">primary</button>
-<button class="btn btn-default action-button btn-success" id="success" type="button">success</button>
-<button class="btn btn-default action-button btn-info" id="info" type="button">info</button>
-<button class="btn btn-default action-button btn-warning" id="warning" type="button">warning</button>
-<button class="btn btn-default action-button btn-danger" id="danger" type="button">danger</button>
-<p></p>
-<!--SHINY.SINGLETON[758206d91e54a5751517535560452ac3a0d0a274]-->
-<!--/SHINY.SINGLETON[758206d91e54a5751517535560452ac3a0d0a274]-->
-<div class="progress-group">
-<div class="progress">
-<div class="progress-bar progress-bar-primary" id="pb1" role="progressbar" style="width:80%; min-width: 2em;">80%</div>
-</div>
-</div>
-</div>
-</div>
-<div id="navbar" class="section level2">
-<h2 class="hasAnchor">
-<a href="#navbar" class="anchor"></a>Navbar</h2>
-<p>If you use <code><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">shiny::navbarPage</a></code>, you can customize colors with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code>:</p>
-<div class="two-cols">
-<div>
-<p>{shiny} code:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="kw">navbar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html">navbarPage</a></span>(<span class="st">"App Title"</span>,
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Plot"</span>),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Summary"</span>),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Table"</span>)
-)
-</pre></div>
-</div>
-<div>
-<p>{fresh} variables:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span>(
-  padding_horizontal = <span class="st">"15px"</span>,
-  default_bg = <span class="st">"#112446"</span>,
-  default_color = <span class="st">"#FFFFFF"</span>,
-  default_link_color = <span class="st">"#FFFFFF"</span>,
-  default_link_active_color = <span class="st">"#FFFFFF"</span>,
-  default_link_hover_color = <span class="st">"#A4A4A4"</span>
-)
-</pre></div>
-</div>
-</div>
-<p>With default theme, it will render as:</p>
-<div class="default-theme">
 <nav class="navbar navbar-default navbar-static-top" role="navigation"><div class="container-fluid">
 <div class="navbar-header">
 <span class="navbar-brand">App Title</span>
 </div>
-<ul class="nav navbar-nav" data-tabsetid="6285">
+<ul class="nav navbar-nav nav-underline" data-tabsetid="9596">
 <li class="active">
-<a href="#tab-6285-1" data-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-9596-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-6285-2" data-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-9596-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-6285-3" data-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-9596-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
 </div>
 </nav><div class="container-fluid">
-<div class="tab-content" data-tabsetid="6285">
-<div class="tab-pane active" data-value="Plot" id="tab-6285-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-6285-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-6285-3"></div>
+<div class="tab-content" data-tabsetid="9596">
+<div class="tab-pane active" data-value="Plot" id="tab-9596-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-9596-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-9596-3"></div>
 </div>
 </div>
+
 </div>
 <p>With our {fresh} theme it will look like:</p>
 <div class="custom-theme">
+
 <nav class="navbar navbar-default navbar-static-top" role="navigation"><div class="container-fluid">
 <div class="navbar-header">
 <span class="navbar-brand">App Title</span>
 </div>
-<ul class="nav navbar-nav" data-tabsetid="6285">
+<ul class="nav navbar-nav nav-underline" data-tabsetid="9596">
 <li class="active">
-<a href="#tab-6285-1" data-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-9596-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-6285-2" data-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-9596-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-6285-3" data-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-9596-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
 </div>
 </nav><div class="container-fluid">
-<div class="tab-content" data-tabsetid="6285">
-<div class="tab-pane active" data-value="Plot" id="tab-6285-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-6285-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-6285-3"></div>
+<div class="tab-content" data-tabsetid="9596">
+<div class="tab-pane active" data-value="Plot" id="tab-9596-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-9596-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-9596-3"></div>
 </div>
 </div>
+
 </div>
 </div>
-<div id="wellpanel" class="section level2">
-<h2 class="hasAnchor">
-<a href="#wellpanel" class="anchor"></a>wellPanel</h2>
-<p>In {shiny}, <code>wellPanel</code> create a box with a grey background, it’s also used in <code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">sidebarPanel()</a></code>, you can change these default settings with <code><a href="../reference/bs_vars_wells.html">bs_vars_wells()</a></code>:</p>
+<div class="section level2">
+<h2 id="wellpanel">wellPanel<a class="anchor" aria-label="anchor" href="#wellpanel"></a>
+</h2>
+<p>In {shiny}, <code>wellPanel</code> create a box with a grey
+background, it’s also used in <code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html" class="external-link">sidebarPanel()</a></code>, you can
+change these default settings with <code><a href="../reference/bs_vars_wells.html">bs_vars_wells()</a></code>:</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="kw">well</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(
-  <span class="st">"This is a wellPanel (or sidebarPanel)"</span>
-)
-</pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">well</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span></span>
+<span>  <span class="st">"This is a wellPanel (or sidebarPanel)"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 <div>
 <p>{fresh} variables:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_wells.html">bs_vars_wells</a></span>(
-  bg = <span class="st">"#FFF"</span>,
-  border = <span class="st">"#3f2d54"</span>
-)
-</pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_wells.html">bs_vars_wells</a></span><span class="op">(</span></span>
+<span>  bg <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>  border <span class="op">=</span> <span class="st">"#3f2d54"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <p>With default theme, it will render as:</p>
@@ -356,60 +366,61 @@
 <div class="well">This is a wellPanel (or sidebarPanel)</div>
 </div>
 </div>
-<div id="global" class="section level2">
-<h2 class="hasAnchor">
-<a href="#global" class="anchor"></a>Global</h2>
-<p><code><a href="../reference/bs_vars_global.html">bs_vars_global()</a></code> allow to define some global options like background and text color, but also the number of columns in the grid system (when using <code>fluidRow</code>) :</p>
+<div class="section level2">
+<h2 id="global">Global<a class="anchor" aria-label="anchor" href="#global"></a>
+</h2>
+<p><code><a href="../reference/bs_vars_global.html">bs_vars_global()</a></code> allow to define some global options
+like background and text color, but also the number of columns in the
+grid system (when using <code>fluidRow</code>) :</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
-<span class="kw">grid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/tag.html">tagList</a></span>(
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidRow</a></span>(
-    <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">div</a></span>(
-      class = <span class="st">"col-sm-15"</span>, 
-      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=15 - 2 columns"</span>)
-    ),
-    <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">div</a></span>(
-      class = <span class="st">"col-sm-15"</span>,
-      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=15 - 2 columns"</span>)
-    )
-  ),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidRow</a></span>(
-    <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">div</a></span>(
-      class = <span class="st">"col-sm-10"</span>, 
-      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=10 - 3 columns"</span>)
-    ),
-    <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">div</a></span>(
-      class = <span class="st">"col-sm-10"</span>, 
-      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=10 - 3 columns"</span>)
-    ),
-    <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">div</a></span>(
-      class = <span class="st">"col-sm-10"</span>, 
-      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=10 - 3 columns"</span>)
-    )
-  ),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidRow</a></span>(
-    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span>(width = <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=6 - 5 columns"</span>)),
-    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span>(width = <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=6 - 5 columns"</span>)),
-    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span>(width = <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=6 - 5 columns"</span>)),
-    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span>(width = <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=6 - 5 columns"</span>)),
-    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span>(width = <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html">wellPanel</a></span>(<span class="st">"width=6 - 5 columns"</span>))
-  )
-)
-</pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">grid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/tagList.html" class="external-link">tagList</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow</a></span><span class="op">(</span></span>
+<span>    <span class="va">tags</span><span class="op">$</span><span class="fu">div</span><span class="op">(</span></span>
+<span>      class <span class="op">=</span> <span class="st">"col-sm-15"</span>, </span>
+<span>      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=15 - 2 columns"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    <span class="va">tags</span><span class="op">$</span><span class="fu">div</span><span class="op">(</span></span>
+<span>      class <span class="op">=</span> <span class="st">"col-sm-15"</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=15 - 2 columns"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow</a></span><span class="op">(</span></span>
+<span>    <span class="va">tags</span><span class="op">$</span><span class="fu">div</span><span class="op">(</span></span>
+<span>      class <span class="op">=</span> <span class="st">"col-sm-10"</span>, </span>
+<span>      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=10 - 3 columns"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    <span class="va">tags</span><span class="op">$</span><span class="fu">div</span><span class="op">(</span></span>
+<span>      class <span class="op">=</span> <span class="st">"col-sm-10"</span>, </span>
+<span>      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=10 - 3 columns"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    <span class="va">tags</span><span class="op">$</span><span class="fu">div</span><span class="op">(</span></span>
+<span>      class <span class="op">=</span> <span class="st">"col-sm-10"</span>, </span>
+<span>      <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=10 - 3 columns"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html" class="external-link">fluidRow</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html" class="external-link">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=6 - 5 columns"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html" class="external-link">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=6 - 5 columns"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html" class="external-link">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=6 - 5 columns"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html" class="external-link">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=6 - 5 columns"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html" class="external-link">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">6</span>, <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/wellPanel.html" class="external-link">wellPanel</a></span><span class="op">(</span><span class="st">"width=6 - 5 columns"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 <div>
 <p>{fresh} variables:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_global.html">bs_vars_global</a></span>(
-  grid_columns = <span class="fl">30</span>,
-  grid_gutter_width = <span class="st">"15px"</span>
-)
-</pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_global.html">bs_vars_global</a></span><span class="op">(</span></span>
+<span>  grid_columns <span class="op">=</span> <span class="fl">30</span>,</span>
+<span>  grid_gutter_width <span class="op">=</span> <span class="st">"15px"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-<p>In the first two examples, we can’t use <code>column</code> because it’s limited to a maximum width of 12.</p>
+<p>In the first two examples, we can’t use <code>column</code> because
+it’s limited to a maximum width of 12.</p>
 <p>With default theme, it will render as:</p>
 <div class="default-theme">
 <div class="row">
@@ -471,107 +482,110 @@
 </div>
 </div>
 </div>
-<p>Here we now have a grid system where it’s possible to have 5 columns.</p>
+<p>Here we now have a grid system where it’s possible to have 5
+columns.</p>
 </div>
-<div id="tabpanel" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tabpanel" class="anchor"></a>tabPanel</h2>
-<p>Default <code>tabPanel</code> can be customized with <code><a href="../reference/bs_vars_tabs.html">bs_vars_tabs()</a></code>, if <code>type = "pills"</code> in <code>tabsetPanel</code>, use <code><a href="../reference/bs_vars_pills.html">bs_vars_pills()</a></code>. Some options are common to both and can be set in <code><a href="../reference/bs_vars_nav.html">bs_vars_nav()</a></code>.</p>
+<div class="section level2">
+<h2 id="tabpanel">tabPanel<a class="anchor" aria-label="anchor" href="#tabpanel"></a>
+</h2>
+<p>Default <code>tabPanel</code> can be customized with
+<code><a href="../reference/bs_vars_tabs.html">bs_vars_tabs()</a></code>, if <code>type = "pills"</code> in
+<code>tabsetPanel</code>, use <code><a href="../reference/bs_vars_pills.html">bs_vars_pills()</a></code>. Some options
+are common to both and can be set in <code><a href="../reference/bs_vars_nav.html">bs_vars_nav()</a></code>.</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="kw">tabs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabsetPanel.html">tabsetPanel</a></span>(
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Plot"</span>),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Summary"</span>),
-  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span>(<span class="st">"Table"</span>)
-)
-</pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">tabs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabsetPanel.html" class="external-link">tabsetPanel</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Plot"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Summary"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html" class="external-link">tabPanel</a></span><span class="op">(</span><span class="st">"Table"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 <div>
 <p>{fresh} variables:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_tabs.html">bs_vars_tabs</a></span>(
-  border_color = <span class="st">"#112446"</span>,
-  active_link_hover_bg = <span class="st">"#FFF"</span>,
-  active_link_hover_color = <span class="st">"#112446"</span>,
-  active_link_hover_border_color = <span class="st">"#112446"</span>,
-  link_hover_border_color = <span class="st">"#112446"</span>
-)
-</pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_tabs.html">bs_vars_tabs</a></span><span class="op">(</span></span>
+<span>  border_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  active_link_hover_bg <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
+<span>  active_link_hover_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  active_link_hover_border_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  link_hover_border_color <span class="op">=</span> <span class="st">"#112446"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <p>With default theme, it will render as:</p>
 <div class="default-theme">
 <div class="tabbable">
-<ul class="nav nav-tabs" data-tabsetid="8910">
+<ul class="nav nav-tabs" data-tabsetid="2187">
 <li class="active">
-<a href="#tab-8910-1" data-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-2187-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-8910-2" data-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-2187-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-8910-3" data-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-2187-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
-<div class="tab-content" data-tabsetid="8910">
-<div class="tab-pane active" data-value="Plot" id="tab-8910-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-8910-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-8910-3"></div>
+<div class="tab-content" data-tabsetid="2187">
+<div class="tab-pane active" data-value="Plot" id="tab-2187-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-2187-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-2187-3"></div>
 </div>
 </div>
 </div>
 <p>With our {fresh} theme it will look like:</p>
 <div class="custom-theme">
 <div class="tabbable">
-<ul class="nav nav-tabs" data-tabsetid="8910">
+<ul class="nav nav-tabs" data-tabsetid="2187">
 <li class="active">
-<a href="#tab-8910-1" data-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-2187-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-8910-2" data-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-2187-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-8910-3" data-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-2187-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
-<div class="tab-content" data-tabsetid="8910">
-<div class="tab-pane active" data-value="Plot" id="tab-8910-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-8910-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-8910-3"></div>
+<div class="tab-content" data-tabsetid="2187">
+<div class="tab-pane active" data-value="Plot" id="tab-2187-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-2187-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-2187-3"></div>
 </div>
 </div>
 </div>
 </div>
-<div id="font-size" class="section level2">
-<h2 class="hasAnchor">
-<a href="#font-size" class="anchor"></a>Font size</h2>
-<p>Font size can be set with <code>bs_vars_font</code>, the argument <code>size_base</code> is the base font size, meaning that other sizes are calculated from this value, nonetheless you set absolute size for headings if you want.</p>
+<div class="section level2">
+<h2 id="font-size">Font size<a class="anchor" aria-label="anchor" href="#font-size"></a>
+</h2>
+<p>Font size can be set with <code>bs_vars_font</code>, the argument
+<code>size_base</code> is the base font size, meaning that other sizes
+are calculated from this value, nonetheless you set absolute size for
+headings if you want.</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
-<div class="sourceCode" id="cb14"><pre class="downlit">
-<span class="kw">font</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/tag.html">tagList</a></span>(
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span>(<span class="st">"Normal text"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu">b</span>(<span class="st">"Bold text"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu">i</span>(<span class="st">"Italic text"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">h1</a></span>(<span class="st">"First level title"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">h2</a></span>(<span class="st">"Second level title"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">h3</a></span>(<span class="st">"Third level title"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">h4</a></span>(<span class="st">"Fourth level title"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">h5</a></span>(<span class="st">"Fifth level title"</span>),
-  <span class="kw">tags</span><span class="op">$</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">h6</a></span>(<span class="st">"Sixth level title"</span>)
-)
-</pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">font</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/tagList.html" class="external-link">tagList</a></span><span class="op">(</span></span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">p</span><span class="op">(</span><span class="st">"Normal text"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">b</span><span class="op">(</span><span class="st">"Bold text"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">i</span><span class="op">(</span><span class="st">"Italic text"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">h1</span><span class="op">(</span><span class="st">"First level title"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">h2</span><span class="op">(</span><span class="st">"Second level title"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">h3</span><span class="op">(</span><span class="st">"Third level title"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">h4</span><span class="op">(</span><span class="st">"Fourth level title"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">h5</span><span class="op">(</span><span class="st">"Fifth level title"</span><span class="op">)</span>,</span>
+<span>  <span class="va">tags</span><span class="op">$</span><span class="fu">h6</span><span class="op">(</span><span class="st">"Sixth level title"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 <div>
 <p>{fresh} variables:</p>
-<div class="sourceCode" id="cb15"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_font.html">bs_vars_font</a></span>(
-  size_base = <span class="st">"12px"</span>
-)
-</pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_font.html">bs_vars_font</a></span><span class="op">(</span></span>
+<span>  size_base <span class="op">=</span> <span class="st">"12px"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <div class="two-cols">
@@ -585,19 +599,21 @@
 </div>
 </div>
 </div>
-<div id="modal" class="section level2">
-<h2 class="hasAnchor">
-<a href="#modal" class="anchor"></a>Modal</h2>
-<p>Modal create with <code>modalDialog</code> can be customized with <code><a href="../reference/bs_vars_modal.html">bs_vars_modal()</a></code>, you can change the width of the window, the overlay color behind the modal and its opacity.</p>
-<p>For example, here’s a modal with 80% width and an opaque background:</p>
-<div class="sourceCode" id="cb16"><pre class="downlit">
-<span class="fu"><a href="../reference/bs_vars_modal.html">bs_vars_modal</a></span>(
-  md = <span class="st">"80%"</span>,backdrop_bg = <span class="st">"#112446"</span>,
-  backdrop_opacity = <span class="fl">1</span>,
-  header_border_color = <span class="st">"#112446"</span>,
-  footer_border_color = <span class="st">"#112446"</span>
-)
-</pre></div>
+<div class="section level2">
+<h2 id="modal">Modal<a class="anchor" aria-label="anchor" href="#modal"></a>
+</h2>
+<p>Modal create with <code>modalDialog</code> can be customized with
+<code><a href="../reference/bs_vars_modal.html">bs_vars_modal()</a></code>, you can change the width of the window,
+the overlay color behind the modal and its opacity.</p>
+<p>For example, here’s a modal with 80% width and an opaque
+background:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_modal.html">bs_vars_modal</a></span><span class="op">(</span></span>
+<span>  md <span class="op">=</span> <span class="st">"80%"</span>,backdrop_bg <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  backdrop_opacity <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  header_border_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
+<span>  footer_border_color <span class="op">=</span> <span class="st">"#112446"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>With default theme, it will render as:</p>
 <p><img src="figures/modal-default.png" style="width:100%"></p>
 <p>With our {fresh} theme it will look like:</p>
@@ -616,11 +632,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://twitter.com/_pvictorr"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://twitter.com/_pvictorr" class="external-link"><img src="https://pbs.twimg.com/profile_images/844237339404722177/E1U61aM8_normal.jpg"> Victor Perrier</a>, <a href="https://twitter.com/_mfaan" class="external-link"><img src="https://pbs.twimg.com/profile_images/912313931326218240/o1-wvA18_normal.jpg"> Fanny Meyer</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
 </div>
 
       </footer>
@@ -628,6 +646,8 @@
 
   
 
+
+  
 
   </body>
 </html>
