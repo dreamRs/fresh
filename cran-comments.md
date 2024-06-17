@@ -1,7 +1,7 @@
 ## Test environments
-* local OS Windows 10 install, R 3.6.3
-* ubuntu 16.04 (on Github Actions), R 4.0.0
-* macOS latest (on Github Actions), R 4.0.0
+* local OS Windows 10 install, R 4.3.3
+* ubuntu 16.04 (on Github Actions), R 4.4.1
+* macOS latest (on Github Actions), R 4.4.1
 * win-builder (devel and release)
 
 ## R CMD check results

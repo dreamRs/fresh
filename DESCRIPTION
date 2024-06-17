@@ -17,7 +17,6 @@ URL: https://github.com/dreamRs/fresh
 BugReports: https://github.com/dreamRs/fresh/issues
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports: 
     bslib,
     htmltools,
@@ -25,6 +24,7 @@ Imports:
     sass,
     shiny
 Suggests: 
+    bsicons,
     shinyWidgets,
     shinydashboard,
     bs4Dash,
