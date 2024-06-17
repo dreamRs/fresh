@@ -31,11 +31,11 @@ create_pretty(
 }
 \value{
 If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
- If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.
+If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.
 }
 \description{
 This allow you to change colors of \code{\link[shinyWidgets]{prettyCheckbox}},
- \code{\link[shinyWidgets]{prettyRadioButtons}}
+\code{\link[shinyWidgets]{prettyRadioButtons}}
 }
 \examples{
 

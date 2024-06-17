@@ -58,7 +58,7 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
 Those variables can be used to customize
- the sidebar in {shinydashboard}.
+the sidebar in {shinydashboard}.
 }
 \examples{
 if (interactive()) {

@@ -27,7 +27,7 @@ the CSS file will be located.}
 }
 \value{
 If \code{output_file = NULL}, the function returns a string value of the compiled CSS.
- If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.
+If the output path is specified, the compiled CSS is written to that file and \code{invisible()} is returned.
 }
 \description{
 Allow to customize some CSS variables from Bootstrap themes to be included in Shiny applications.

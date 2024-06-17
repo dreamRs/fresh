@@ -14,9 +14,9 @@ search_vars_bs4dash(pattern = NULL, source = c("adminlte", "bootstrap"))
 \value{
 a \code{data.frame} with three variables:
 \itemize{
- \item{\code{source}: }{AdminLTE or Bootstrap variable.}
- \item{\code{variable}: }{name of the variable.}
- \item{\code{value}: }{default value used.}
+\item{\code{source}: }{AdminLTE or Bootstrap variable.}
+\item{\code{variable}: }{name of the variable.}
+\item{\code{value}: }{default value used.}
 }
 }
 \description{

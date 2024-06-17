@@ -22,7 +22,7 @@ if applicable, or via \code{utils::file.edit()} otherwise.}
 }
 \description{
 Open a SCSS template to modify variables,
- after use \link{bs_vars_file} to import those variables and create a theme.
+after use \link{bs_vars_file} to import those variables and create a theme.
 }
 \note{
 After use \code{\link{bs_vars_file}} to use the template.

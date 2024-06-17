@@ -32,4 +32,5 @@ Suggests:
     testthat (>= 2.1.0),
     covr
 RoxygenNote: 7.3.1
+Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr

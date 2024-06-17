@@ -18,7 +18,7 @@ a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
 Those variables can be used to customize
- global settings in {shinydashboard}.
+global settings in {shinydashboard}.
 }
 \examples{
 if (interactive()) {

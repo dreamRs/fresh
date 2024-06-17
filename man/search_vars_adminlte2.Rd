@@ -12,8 +12,8 @@ search_vars_adminlte2(pattern = NULL)
 \value{
 a \code{data.frame} with two variables:
 \itemize{
- \item{\code{variable}: }{name of the variable.}
- \item{\code{value}: }{default value used in theme.}
+\item{\code{variable}: }{name of the variable.}
+\item{\code{value}: }{default value used in theme.}
 }
 }
 \description{

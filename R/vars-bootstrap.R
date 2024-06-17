@@ -1,14 +1,16 @@
 
 #' @title Bootstrap custom variables
 #'
-#' @description Use any Bootstrap variables to customize a \{shiny\} theme.
+#' @description Use any Bootstrap variables to customize a `shiny` theme.
 #'
-#' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
+#' @param ... Variables to use, under the form `body_bg = "#FFF"` or `"body-bg" = "#FFF"`.
 #'
-#' @note For a full list of available variables, use \code{\link{search_vars_bs}}.
+#' @note For a full list of available variables, use [search_vars_bs()].
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @return a `list` that can be used in [create_theme()].
 #' @export
+#'
+#' @name bs3-variables
 #'
 #' @examples
 #' bs_vars(body_bg = "#FFF")
@@ -24,11 +26,6 @@ bs_vars <- function(...) {
 
 
 
-#' @title Bootstrap global variables
-#'
-#' @description Those variables can be used to customize
-#'  Bootstrap and Bootswatch themes.
-#'
 #' @param body_bg Background color for the body.
 #' @param text_color Global text color on body.
 #' @param link_color Global textual link color.
@@ -38,10 +35,8 @@ bs_vars <- function(...) {
 #' @param grid_gutter_width Padding between columns. Gets divided in half for the left and right.
 #' @param border_radius_base Base border radius (rounds the corners of elements).
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_global.R
 bs_vars_global <- function(body_bg = NULL,
                            text_color = NULL,
                            link_color = NULL,
@@ -59,11 +54,7 @@ bs_vars_global <- function(body_bg = NULL,
 
 
 
-#' @title Bootstrap colors variables
-#'
-#' @description Those variables can be used to customize
-#'  defaults colors in Bootstrap and Bootswatch themes.
-#'
+
 #' @param brand_primary Primary color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#337ab7")}.
 #' @param brand_success Success color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#5cb85c")}.
 #' @param brand_info Info color, default: \Sexpr[results=rd, stage=install]{fresh:::rd_col("#5bc0de")}.
@@ -76,12 +67,8 @@ bs_vars_global <- function(body_bg = NULL,
 #' @param gray_light Light gray color.
 #' @param gray_lighter Lighter gray color.
 #'
-#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_color.R
 bs_vars_color <- function(brand_primary = NULL,
                           brand_success = NULL,
                           brand_info = NULL,
@@ -102,11 +89,7 @@ bs_vars_color <- function(brand_primary = NULL,
 
 
 
-#' @title Bootstrap navbar variables
-#'
-#' @description Those variables can be used to customize
-#'  navigation bar component (e.g. \code{\link[shiny:navbarPage]{shiny::navbarPage}}) in Bootstrap and Bootswatch themes.
-#'
+
 #' @param height Height of the navbar, e.g. \code{"50px"} (the default in Bootstrap).
 #' @param margin_bottom Bottom margin of navbar.
 #' @param border_radius Radius border (rounded corner).
@@ -130,12 +113,8 @@ bs_vars_color <- function(brand_primary = NULL,
 #' @param inverse_link_hover_color Color of links when hovered for inverted navbar.
 #' @param inverse_link_hover_bg Background color of links when hovered for inverted navbar.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
-#' @example examples/bs_vars_navbar.R
 bs_vars_navbar <- function(height = NULL,
                            margin_bottom = NULL,
                            border_radius = NULL,
@@ -167,23 +146,14 @@ bs_vars_navbar <- function(height = NULL,
 
 
 
-#' @title Bootstrap nav variables
-#'
-#' @description Those variables can be used to customize
-#'  navs (e.g. \code{\link[shiny:tabsetPanel]{shiny::tabsetPanel}} or
-#'  \code{\link[shiny:navlistPanel]{shiny::navlistPanel}}) in Bootstrap and Bootswatch themes.
-#'
+
 #' @param link_padding Padding for links (tabset's titles).
 #' @param link_hover_bg Link hover background color.
 #' @param disabled_link_color Disabled link color.
 #' @param disabled_link_hover_color Disabled link hover color.
 #'
-#' @note See \code{\link{bs_vars_pills}} and \code{\link{bs_vars_tabs}} for more options.
-#'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_nav.R
 bs_vars_nav <- function(link_padding = NULL,
                         link_hover_bg = NULL,
                         disabled_link_color = NULL,
@@ -198,11 +168,7 @@ bs_vars_nav <- function(link_padding = NULL,
 
 
 
-#' @title Bootstrap font variables
-#'
-#' @description Those variables can be used to customize
-#'  fonts in Bootstrap and Bootswatch themes.
-#'
+
 #' @param family_sans_serif Font family to use.
 #' @param size_base Size of base font, e.g. normal text, default in Bootstrap is \code{"15px"}.
 #' @param size_large Size of large text.
@@ -214,14 +180,8 @@ bs_vars_nav <- function(link_padding = NULL,
 #' @param size_h5 Size of h5 tags.
 #' @param size_h6 Size of h6 tags.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
-#'
-#' @note In Bootstrap, only \code{size_base} is defined, all others are calculated from this one.
-#'  See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_font.R
 bs_vars_font <- function(family_sans_serif = NULL,
                          size_base = NULL,
                          size_large = NULL,
@@ -243,21 +203,12 @@ bs_vars_font <- function(family_sans_serif = NULL,
 
 
 
-#' @title Bootstrap wells variables
-#'
-#' @description Those variables can be used to customize
-#'  wells panel (e.g. \code{\link[shiny:wellPanel]{shiny::wellPanel}} or
-#'  \code{\link[shiny:sidebarLayout]{shiny::sidebarPanel}}) in Bootstrap and Bootswatch themes.
-#'
+
 #' @param bg Background color (default in Shiny is gray).
 #' @param border Border color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
-#' @example examples/bs_vars_wells.R
 bs_vars_wells <- function(bg = NULL, border = NULL) {
   vars <- as.list(environment())
   vars <- dropNulls(vars)
@@ -268,11 +219,7 @@ bs_vars_wells <- function(bg = NULL, border = NULL) {
 
 
 
-#' @title Bootstrap states variables
-#'
-#' @description Those variables can be used to customize
-#'  states colors (used for alerts or panels) in Bootstrap and Bootswatch themes.
-#'
+
 #' @param success_text Success text color.
 #' @param success_bg Success background color.
 #' @param success_border Success border color.
@@ -286,12 +233,8 @@ bs_vars_wells <- function(bg = NULL, border = NULL) {
 #' @param danger_bg Danger background color.
 #' @param danger_border Danger border color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
-#' @example examples/bs_vars_state.R
 bs_vars_state <- function(success_text = NULL,
                           success_bg = NULL,
                           success_border = NULL,
@@ -313,11 +256,6 @@ bs_vars_state <- function(success_text = NULL,
 
 
 
-#' @title Bootstrap input variables
-#'
-#' @description Those variables can be used to customize
-#'  inputs in Bootstrap and Bootswatch themes.
-#'
 #' @param bg Background color.
 #' @param color Text color.
 #' @param border Border color.
@@ -327,12 +265,8 @@ bs_vars_state <- function(success_text = NULL,
 #' @param border_focus Color of border when focused.
 #' @param bg_disabled Background color for disabled input.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
-#' @example examples/bs_vars_input.R
 bs_vars_input <- function(bg = NULL,
                           color = NULL,
                           border = NULL,
@@ -351,11 +285,7 @@ bs_vars_input <- function(bg = NULL,
 
 
 
-#' @title Bootstrap alert variables
-#'
-#' @description Those variables can be used to customize
-#'  alerts in Bootstrap and Bootswatch themes.
-#'
+
 #' @param padding Padding for alerts.
 #' @param border_radius Border radius (rounded corners)
 #' @param link_font_weight Font weight for links in alerts.
@@ -372,12 +302,8 @@ bs_vars_input <- function(bg = NULL,
 #' @param danger_bg Danger background color.
 #' @param danger_border Danger border color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @note See default parameters for Bootstrap: \url{https://getbootstrap.com/docs/3.4/customize/}.
-#'
-#' @example examples/bs_vars_alert.R
 bs_vars_alert <- function(padding = NULL,
                           border_radius = NULL,
                           link_font_weight = NULL,
@@ -402,13 +328,6 @@ bs_vars_alert <- function(padding = NULL,
 
 
 
-#' @title Bootstrap progress variables
-#'
-#' @description Those variables can be used to customize
-#'  progress bars (e.g. \code{\link[shinyWidgets:progress-bar]{shinyWidgets::progressBar}}
-#'  and \code{\link[shiny:Progress]{shiny::Progress or shiny::withProgress}})
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param bg Background color of the whole progress component
 #' @param bar_color Progress bar text color
 #' @param border_radius Variable for setting rounded corners on progress bar.
@@ -418,10 +337,8 @@ bs_vars_alert <- function(padding = NULL,
 #' @param bar_danger_bg Danger progress bar color.
 #' @param bar_info_bg Info progress bar color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_progress.R
 bs_vars_progress <- function(bg = NULL,
                              bar_color = NULL,
                              border_radius = NULL,
@@ -439,12 +356,7 @@ bs_vars_progress <- function(bg = NULL,
 
 
 
-#' @title Bootstrap panel variables
-#'
-#' @description Those variables can be used to customize
-#'  panel (e.g. \code{\link[shinyWidgets:bootstrap-utils]{shinyWidgets::panel}}
-#'  in Bootstrap and Bootswatch themes.
-#'
+
 #' @param bg Background color.
 #' @param body_padding Panel body padding.
 #' @param heading_padding Panel heading padding.
@@ -471,10 +383,8 @@ bs_vars_progress <- function(bg = NULL,
 #' @param danger_border Border color for danger status.
 #' @param danger_heading_bg Heading background color for danger status.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_panel.R
 bs_vars_panel <- function(bg = NULL,
                           body_padding = NULL,
                           heading_padding = NULL,
@@ -511,12 +421,6 @@ bs_vars_panel <- function(bg = NULL,
 
 
 
-#' @title Bootstrap modal variables
-#'
-#' @description Those variables can be used to customize
-#'  modal (e.g. \code{\link[shiny:modalDialog]{shiny::modalDialog}}
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param md Size in pixel for medium modal, e.g. \code{modalDialog(size = "m")}.
 #' @param lg Size in pixel for large modal, e.g. \code{modalDialog(size = "l")}.
 #' @param sm Size in pixel for small modal, e.g. \code{modalDialog(size = "s")}.
@@ -531,10 +435,8 @@ bs_vars_panel <- function(bg = NULL,
 #' @param header_border_color Modal header border color.
 #' @param footer_border_color Modal footer border color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_modal.R
 bs_vars_modal <- function(md = NULL,
                           lg = NULL,
                           sm = NULL,
@@ -558,12 +460,6 @@ bs_vars_modal <- function(md = NULL,
 
 
 
-#' @title Bootstrap button variables
-#'
-#' @description Those variables can be used to customize
-#'  buttons (e.g. \code{\link[shiny:actionButton]{shiny::actionButton}})
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param font_weight Text font weight.
 #' @param default_color Text color for default buttons.
 #' @param default_bg Background color for default buttons.
@@ -588,10 +484,8 @@ bs_vars_modal <- function(md = NULL,
 #' @param border_radius_large Large button rounded corner.
 #' @param border_radius_small Small button rounded corner.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_button.R
 bs_vars_button <- function(font_weight = NULL,
                            default_color = NULL,
                            default_bg = NULL,
@@ -623,14 +517,6 @@ bs_vars_button <- function(font_weight = NULL,
 }
 
 
-
-
-#' @title Bootstrap dropdown variables
-#'
-#' @description Those variables can be used to customize
-#'  dropdowns (e.g. \code{\link[shinyWidgets:dropdownButton]{shinyWidgets::dropdownButton}}
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param bg Background color for the dropdown menu.
 #' @param border Dropdown menu border-color.
 #' @param fallback_border Dropdown menu border-color (for IE8).
@@ -643,10 +529,8 @@ bs_vars_button <- function(font_weight = NULL,
 #' @param link_disabled_color  Disabled dropdown menu item background color.
 #' @param header_color Text color for headers within dropdown menus.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_dropdown.R
 bs_vars_dropdown <- function(bg = NULL,
                              border = NULL,
                              fallback_border = NULL,
@@ -667,20 +551,12 @@ bs_vars_dropdown <- function(bg = NULL,
 
 
 
-#' @title Bootstrap pills variables
-#'
-#' @description Those variables can be used to customize
-#'  pills (e.g. \code{\link[shiny:tabsetPanel]{shiny:tabsetPanel}}
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param border_radius Rounded corner of elements.
 #' @param active_link_hover_bg Background color when selected.
 #' @param active_link_hover_color Text color when selected.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_pills.R
 bs_vars_pills <- function(border_radius = NULL,
                           active_link_hover_bg = NULL,
                           active_link_hover_color = NULL) {
@@ -696,12 +572,6 @@ bs_vars_pills <- function(border_radius = NULL,
 
 
 
-#' @title Bootstrap tabs variables
-#'
-#' @description Those variables can be used to customize
-#'  pills (e.g. \code{\link[shiny:tabsetPanel]{shiny:tabsetPanel}}
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param border_color Border color.
 #' @param link_hover_border_color Link hover color.
 #' @param active_link_hover_bg Active link hover background color.
@@ -710,10 +580,8 @@ bs_vars_pills <- function(border_radius = NULL,
 #' @param justified_link_border_color Justified link border color.
 #' @param justified_active_link_border_color Justified active link border color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_tabs.R
 bs_vars_tabs <- function(border_color = NULL,
                          link_hover_border_color = NULL,
                          active_link_hover_bg = NULL,
@@ -731,11 +599,6 @@ bs_vars_tabs <- function(border_color = NULL,
 
 
 
-#' @title Bootstrap badge variables
-#'
-#' @description Those variables can be used to customize
-#'  badge in Bootstrap and Bootswatch themes.
-#'
 #' @param color Text color.
 #' @param bg Background color.
 #' @param link_hover_color Linked badge text color on hover.
@@ -745,10 +608,8 @@ bs_vars_tabs <- function(border_color = NULL,
 #' @param line_height Line height.
 #' @param border_radius Border radius.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_badge.R
 bs_vars_badge <- function(color = NULL,
                           bg = NULL,
                           link_hover_color = NULL,
@@ -765,11 +626,7 @@ bs_vars_badge <- function(color = NULL,
 }
 
 
-#' @title Bootstrap components variables
-#'
-#' @description Those variables can be used to customize
-#'  components padding and borders in Bootstrap and Bootswatch themes.
-#'
+
 #' @param padding_base_vertical Vertical base padding.
 #' @param padding_base_horizontal Horizontal base padding.
 #' @param padding_large_vertical Vertical large padding.
@@ -788,10 +645,8 @@ bs_vars_badge <- function(color = NULL,
 #' @param caret_width_base Width for caret.
 #' @param caret_width_large Widget for large caret.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_component.R
 bs_vars_component <- function(padding_base_vertical = NULL,
                               padding_base_horizontal = NULL,
                               padding_large_vertical = NULL,
@@ -818,15 +673,6 @@ bs_vars_component <- function(padding_base_vertical = NULL,
 
 
 
-
-
-#' @title Bootstrap table variables
-#'
-#' @description Those variables can be used to customize
-#'  table (produced ever by \code{\link[shiny:renderTable]{shiny::renderTable}}
-#'  or by \code{\link[shiny:renderDataTable]{shiny::renderDataTable}} and DT equivalent)
-#'  in Bootstrap and Bootswatch themes.
-#'
 #' @param cell_padding Cell padding.
 #' @param condensed_cell_padding Cell padding when using condensed table.
 #' @param bg Background color.
@@ -835,10 +681,8 @@ bs_vars_component <- function(padding_base_vertical = NULL,
 #' @param bg_active Background color when row is selected.
 #' @param border_color Border color.
 #'
-#' @return a \code{list} that can be used in \code{\link{create_theme}}.
+#' @rdname bs3-variables
 #' @export
-#'
-#' @example examples/bs_vars_table.R
 bs_vars_table <- function(cell_padding = NULL,
                           condensed_cell_padding = NULL,
                           bg = NULL,

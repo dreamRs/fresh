@@ -12,5 +12,5 @@ the file must be in www/ directory of the application.}
 }
 \description{
 After created new pretty-checkbox CSS with \code{\link{create_pretty}},
- allow to use in Shiny application instead of default shinyWidgets dependency.
+allow to use in Shiny application instead of default shinyWidgets dependency.
 }
