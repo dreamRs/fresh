@@ -43,6 +43,9 @@
     <loc>/reference/adminlte_vars.html</loc>
   </url>
   <url>
+    <loc>/reference/bs3-variables.html</loc>
+  </url>
+  <url>
     <loc>/reference/bs4Dash-sidebar.html</loc>
   </url>
   <url>
@@ -67,67 +70,7 @@
     <loc>/reference/bs4dash_yiq.html</loc>
   </url>
   <url>
-    <loc>/reference/bs_vars.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_alert.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_badge.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_button.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_color.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_component.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_dropdown.html</loc>
-  </url>
-  <url>
     <loc>/reference/bs_vars_file.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_font.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_global.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_input.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_modal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_nav.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_navbar.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_panel.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_pills.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_progress.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_state.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_table.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_tabs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_wells.html</loc>
   </url>
   <url>
     <loc>/reference/create_pretty.html</loc>

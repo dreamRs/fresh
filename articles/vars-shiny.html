@@ -120,7 +120,7 @@ appearance of elements created by {shiny} functions.</p>
 <h2 id="buttons">Buttons<a class="anchor" aria-label="anchor" href="#buttons"></a>
 </h2>
 <p>Buttons and their variants can be modified by variables from
-<code><a href="../reference/bs_vars_button.html">bs_vars_button()</a></code>. Here we create square buttons with bold
+<code><a href="../reference/bs3-variables.html">bs_vars_button()</a></code>. Here we create square buttons with bold
 labels and custom colors:</p>
 <div class="default-theme row">
 <div class="default-theme col-sm-6">
@@ -139,7 +139,7 @@ labels and custom colors:</p>
 <div class="default-theme col-sm-6">
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_button.html">bs_vars_button</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_button</a></span><span class="op">(</span></span>
 <span>  font_weight <span class="op">=</span> <span class="fl">500</span>,</span>
 <span>  border_radius_base <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>  default_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
@@ -167,7 +167,7 @@ labels and custom colors:</p>
 </h2>
 <p>Buttons like several components in Bootstrap are styled wit statuses
 colors, there’s 5 options: primary, success, danger, warning and info.
-It’s possible with <code><a href="../reference/bs_vars_color.html">bs_vars_color()</a></code> to modify theses colors
+It’s possible with <code><a href="../reference/bs3-variables.html">bs_vars_color()</a></code> to modify theses colors
 to alter all components depending on them:</p>
 <div class="two-cols">
 <div>
@@ -196,7 +196,7 @@ to alter all components depending on them:</p>
 <div>
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_color.html">bs_vars_color</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_color</a></span><span class="op">(</span></span>
 <span>  brand_primary <span class="op">=</span> <span class="st">"#112446"</span>,</span>
 <span>  brand_success <span class="op">=</span> <span class="st">"#7bc043"</span>,</span>
 <span>  brand_info <span class="op">=</span> <span class="st">"#0392cf"</span>,</span>
@@ -253,7 +253,7 @@ to alter all components depending on them:</p>
 <h2 id="navbar">Navbar<a class="anchor" aria-label="anchor" href="#navbar"></a>
 </h2>
 <p>If you use <code><a href="https://rdrr.io/pkg/shiny/man/navbarPage.html" class="external-link">shiny::navbarPage</a></code>, you can customize colors
-with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code>:</p>
+with <code><a href="../reference/bs3-variables.html">bs_vars_navbar()</a></code>:</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
@@ -267,7 +267,7 @@ with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code
 <div>
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_navbar.html">bs_vars_navbar</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_navbar</a></span><span class="op">(</span></span>
 <span>  padding_horizontal <span class="op">=</span> <span class="st">"15px"</span>,</span>
 <span>  default_bg <span class="op">=</span> <span class="st">"#112446"</span>,</span>
 <span>  default_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span>
@@ -284,23 +284,23 @@ with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code
 <div class="navbar-header">
 <span class="navbar-brand">App Title</span>
 </div>
-<ul class="nav navbar-nav nav-underline" data-tabsetid="9596">
+<ul class="nav navbar-nav nav-underline" data-tabsetid="9249">
 <li class="active">
-<a href="#tab-9596-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-9249-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-9596-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-9249-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-9596-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-9249-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
 </div>
 </nav><div class="container-fluid">
-<div class="tab-content" data-tabsetid="9596">
-<div class="tab-pane active" data-value="Plot" id="tab-9596-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-9596-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-9596-3"></div>
+<div class="tab-content" data-tabsetid="9249">
+<div class="tab-pane active" data-value="Plot" id="tab-9249-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-9249-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-9249-3"></div>
 </div>
 </div>
 
@@ -312,23 +312,23 @@ with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code
 <div class="navbar-header">
 <span class="navbar-brand">App Title</span>
 </div>
-<ul class="nav navbar-nav nav-underline" data-tabsetid="9596">
+<ul class="nav navbar-nav nav-underline" data-tabsetid="9249">
 <li class="active">
-<a href="#tab-9596-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-9249-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-9596-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-9249-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-9596-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-9249-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
 </div>
 </nav><div class="container-fluid">
-<div class="tab-content" data-tabsetid="9596">
-<div class="tab-pane active" data-value="Plot" id="tab-9596-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-9596-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-9596-3"></div>
+<div class="tab-content" data-tabsetid="9249">
+<div class="tab-pane active" data-value="Plot" id="tab-9249-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-9249-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-9249-3"></div>
 </div>
 </div>
 
@@ -339,7 +339,7 @@ with <code><a href="../reference/bs_vars_navbar.html">bs_vars_navbar()</a></code
 </h2>
 <p>In {shiny}, <code>wellPanel</code> create a box with a grey
 background, it’s also used in <code><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html" class="external-link">sidebarPanel()</a></code>, you can
-change these default settings with <code><a href="../reference/bs_vars_wells.html">bs_vars_wells()</a></code>:</p>
+change these default settings with <code><a href="../reference/bs3-variables.html">bs_vars_wells()</a></code>:</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
@@ -351,7 +351,7 @@ change these default settings with <code><a href="../reference/bs_vars_wells.htm
 <div>
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_wells.html">bs_vars_wells</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_wells</a></span><span class="op">(</span></span>
 <span>  bg <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
 <span>  border <span class="op">=</span> <span class="st">"#3f2d54"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -369,7 +369,7 @@ change these default settings with <code><a href="../reference/bs_vars_wells.htm
 <div class="section level2">
 <h2 id="global">Global<a class="anchor" aria-label="anchor" href="#global"></a>
 </h2>
-<p><code><a href="../reference/bs_vars_global.html">bs_vars_global()</a></code> allow to define some global options
+<p><code><a href="../reference/bs3-variables.html">bs_vars_global()</a></code> allow to define some global options
 like background and text color, but also the number of columns in the
 grid system (when using <code>fluidRow</code>) :</p>
 <div class="two-cols">
@@ -413,7 +413,7 @@ grid system (when using <code>fluidRow</code>) :</p>
 <div>
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_global.html">bs_vars_global</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_global</a></span><span class="op">(</span></span>
 <span>  grid_columns <span class="op">=</span> <span class="fl">30</span>,</span>
 <span>  grid_gutter_width <span class="op">=</span> <span class="st">"15px"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -489,9 +489,9 @@ columns.</p>
 <h2 id="tabpanel">tabPanel<a class="anchor" aria-label="anchor" href="#tabpanel"></a>
 </h2>
 <p>Default <code>tabPanel</code> can be customized with
-<code><a href="../reference/bs_vars_tabs.html">bs_vars_tabs()</a></code>, if <code>type = "pills"</code> in
-<code>tabsetPanel</code>, use <code><a href="../reference/bs_vars_pills.html">bs_vars_pills()</a></code>. Some options
-are common to both and can be set in <code><a href="../reference/bs_vars_nav.html">bs_vars_nav()</a></code>.</p>
+<code><a href="../reference/bs3-variables.html">bs_vars_tabs()</a></code>, if <code>type = "pills"</code> in
+<code>tabsetPanel</code>, use <code><a href="../reference/bs3-variables.html">bs_vars_pills()</a></code>. Some options
+are common to both and can be set in <code><a href="../reference/bs3-variables.html">bs_vars_nav()</a></code>.</p>
 <div class="two-cols">
 <div>
 <p>{shiny} code:</p>
@@ -505,7 +505,7 @@ are common to both and can be set in <code><a href="../reference/bs_vars_nav.htm
 <div>
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_tabs.html">bs_vars_tabs</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_tabs</a></span><span class="op">(</span></span>
 <span>  border_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
 <span>  active_link_hover_bg <span class="op">=</span> <span class="st">"#FFF"</span>,</span>
 <span>  active_link_hover_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>
@@ -517,42 +517,42 @@ are common to both and can be set in <code><a href="../reference/bs_vars_nav.htm
 <p>With default theme, it will render as:</p>
 <div class="default-theme">
 <div class="tabbable">
-<ul class="nav nav-tabs" data-tabsetid="2187">
+<ul class="nav nav-tabs" data-tabsetid="4334">
 <li class="active">
-<a href="#tab-2187-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-4334-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-2187-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-4334-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-2187-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-4334-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
-<div class="tab-content" data-tabsetid="2187">
-<div class="tab-pane active" data-value="Plot" id="tab-2187-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-2187-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-2187-3"></div>
+<div class="tab-content" data-tabsetid="4334">
+<div class="tab-pane active" data-value="Plot" id="tab-4334-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-4334-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-4334-3"></div>
 </div>
 </div>
 </div>
 <p>With our {fresh} theme it will look like:</p>
 <div class="custom-theme">
 <div class="tabbable">
-<ul class="nav nav-tabs" data-tabsetid="2187">
+<ul class="nav nav-tabs" data-tabsetid="4334">
 <li class="active">
-<a href="#tab-2187-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
+<a href="#tab-4334-1" data-toggle="tab" data-bs-toggle="tab" data-value="Plot">Plot</a>
 </li>
 <li>
-<a href="#tab-2187-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
+<a href="#tab-4334-2" data-toggle="tab" data-bs-toggle="tab" data-value="Summary">Summary</a>
 </li>
 <li>
-<a href="#tab-2187-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
+<a href="#tab-4334-3" data-toggle="tab" data-bs-toggle="tab" data-value="Table">Table</a>
 </li>
 </ul>
-<div class="tab-content" data-tabsetid="2187">
-<div class="tab-pane active" data-value="Plot" id="tab-2187-1"></div>
-<div class="tab-pane" data-value="Summary" id="tab-2187-2"></div>
-<div class="tab-pane" data-value="Table" id="tab-2187-3"></div>
+<div class="tab-content" data-tabsetid="4334">
+<div class="tab-pane active" data-value="Plot" id="tab-4334-1"></div>
+<div class="tab-pane" data-value="Summary" id="tab-4334-2"></div>
+<div class="tab-pane" data-value="Table" id="tab-4334-3"></div>
 </div>
 </div>
 </div>
@@ -583,7 +583,7 @@ headings if you want.</p>
 <div>
 <p>{fresh} variables:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_font.html">bs_vars_font</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_font</a></span><span class="op">(</span></span>
 <span>  size_base <span class="op">=</span> <span class="st">"12px"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -603,12 +603,12 @@ headings if you want.</p>
 <h2 id="modal">Modal<a class="anchor" aria-label="anchor" href="#modal"></a>
 </h2>
 <p>Modal create with <code>modalDialog</code> can be customized with
-<code><a href="../reference/bs_vars_modal.html">bs_vars_modal()</a></code>, you can change the width of the window,
+<code><a href="../reference/bs3-variables.html">bs_vars_modal()</a></code>, you can change the width of the window,
 the overlay color behind the modal and its opacity.</p>
 <p>For example, here’s a modal with 80% width and an opaque
 background:</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs_vars_modal.html">bs_vars_modal</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bs3-variables.html">bs_vars_modal</a></span><span class="op">(</span></span>
 <span>  md <span class="op">=</span> <span class="st">"80%"</span>,backdrop_bg <span class="op">=</span> <span class="st">"#112446"</span>,</span>
 <span>  backdrop_opacity <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  header_border_color <span class="op">=</span> <span class="st">"#112446"</span>,</span>

@@ -108,7 +108,7 @@ the CSS file will be located.</p></dd>
     
 
 <p>If <code>output_file = NULL</code>, the function returns a string value of the compiled CSS.
- If the output path is specified, the compiled CSS is written to that file and <code><a href="https://rdrr.io/r/base/invisible.html" class="external-link">invisible()</a></code> is returned.</p>
+If the output path is specified, the compiled CSS is written to that file and <code><a href="https://rdrr.io/r/base/invisible.html" class="external-link">invisible()</a></code> is returned.</p>
     </div>
 
     <div id="ref-examples">
@@ -120,14 +120,14 @@ the CSS file will be located.</p></dd>
 <span class="r-in"><span><span class="co"># Create the new theme</span></span></span>
 <span class="r-in"><span><span class="fu">create_theme</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  theme <span class="op">=</span> <span class="st">"default"</span>,</span></span>
-<span class="r-in"><span>  <span class="fu"><a href="bs_vars_color.html">bs_vars_color</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="bs3-variables.html">bs_vars_color</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>    brand_primary <span class="op">=</span> <span class="st">"#75b8d1"</span>,</span></span>
 <span class="r-in"><span>    brand_success <span class="op">=</span> <span class="st">"#c9d175"</span>,</span></span>
 <span class="r-in"><span>    brand_info <span class="op">=</span> <span class="st">"#758bd1"</span>,</span></span>
 <span class="r-in"><span>    brand_warning <span class="op">=</span> <span class="st">"#d1ab75"</span>,</span></span>
 <span class="r-in"><span>    brand_danger <span class="op">=</span> <span class="st">"#d175b8"</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span>,</span></span>
-<span class="r-in"><span>  <span class="fu"><a href="bs_vars_navbar.html">bs_vars_navbar</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="bs3-variables.html">bs_vars_navbar</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>    default_bg <span class="op">=</span> <span class="st">"#75b8d1"</span>,</span></span>
 <span class="r-in"><span>    default_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span></span>
 <span class="r-in"><span>    default_link_color <span class="op">=</span> <span class="st">"#FFFFFF"</span>,</span></span>
@@ -135,7 +135,7 @@ the CSS file will be located.</p></dd>
 <span class="r-in"><span>  <span class="op">)</span>,</span></span>
 <span class="r-in"><span>  output_file <span class="op">=</span> <span class="va">tmp</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpJmKXZY/custom-theme.css"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpVSQsUY/custom-theme.css"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Use the file created at the path provided</span></span></span>
 <span class="r-in"><span><span class="co"># in your Shiny app by moving it in the</span></span></span>
