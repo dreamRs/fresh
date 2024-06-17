@@ -6,7 +6,7 @@
   @include box-shadow($card-shadow);
   @include border-radius($border-radius);
 
-  background-color: $white;
+  background-color: $info-box-bg;
   display: flex;
   margin-bottom: map-get($spacers, 3);
   min-height: 80px;

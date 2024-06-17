@@ -25,6 +25,64 @@ You can install the development version of fresh from GitHub with:
 remotes::install_github("dreamRs/fresh")
 ```
 
+
+
+## bs4Dash
+
+Create a theme to personalize your [{bs4Dash}](https://github.com/RinteRface/bs4Dash) applications:
+
+![](man/figures/bs4dash.png)
+
+Create the theme:
+
+```r
+bs4DashTheme <- bs4Dash_theme(
+  primary = "#5E81AC",
+  secondary = "#B48EAD",
+  success = "#A3BE8C",
+  danger = "#BF616A",
+  "sidebar-light-bg" = "#3B4252",
+  "sidebar-light-color" = "#E5E9F0",
+  "main-bg" = "#2E3440",
+  "body-color" = "#ECEFF4",
+  "card-bg" = "#4C566A", # bs4Card() background
+  "white" = "#E5E9F0",
+  "info-box-bg" = "#4C566A",  # bs4InfoBox() background
+  dark = "#272c30", #  bs4DashNavbar(status = "dark") background,
+  "gray-600" = "#FFF"
+)
+```
+
+Use your theme:
+
+```r
+bs4DashPage(
+  title = "bs4Dash custom theme",
+  navbar = bs4DashNavbar(skin = "light"),
+  sidebar = bs4DashSidebar(
+    title = "bs4Dash custom theme",
+    skin = "light",
+    
+    # ...
+    
+  ),
+  body = bs4DashBody(
+    
+    use_theme(bs4DashTheme), # <-- use the theme
+    
+    # ...
+    
+  )
+)
+```
+
+
+See more information here: [Variables for {bs4dash}](https://dreamrs.github.io/fresh/articles/vars-bs4dash.html) or in R console: `vignette("vars-bs4dash", package = "fresh")`.
+
+
+
+
+
 ## shiny
 
 Create new themes to use in shiny applications with `fluidPage` or `navbarPage`. From the default theme :
@@ -138,73 +196,6 @@ dashboardPage(
 
 See more information here: [Variables for {shinydashboard}](https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html) or in R console: `vignette("vars-shinydashboard", package = "fresh")`.
 
-
-
-## bs4Dash
-
-Create a theme to personalize your [{bs4Dash}](https://github.com/RinteRface/bs4Dash) applications:
-
-![](man/figures/bs4dash.png)
-
-Create the theme:
-
-```r
-mytheme <- create_theme(
-  bs4dash_vars(
-    navbar_light_color = "#bec5cb",
-    navbar_light_active_color = "#FFF",
-    navbar_light_hover_color = "#FFF"
-  ),
-  bs4dash_yiq(
-    contrasted_threshold = 10,
-    text_dark = "#FFF", 
-    text_light = "#272c30"
-  ),
-  bs4dash_layout(
-    main_bg = "#353c42"
-  ),
-  bs4dash_sidebar_light(
-    bg = "#272c30", 
-    color = "#bec5cb",
-    hover_color = "#FFF",
-    submenu_bg = "#272c30", 
-    submenu_color = "#FFF", 
-    submenu_hover_color = "#FFF"
-  ),
-  bs4dash_status(
-    primary = "#5E81AC", danger = "#BF616A", light = "#272c30"
-  ),
-  bs4dash_color(
-    gray_900 = "#FFF"
-  )
-)
-```
-
-Use your theme:
-
-```r
-bs4DashPage(
-  title = "bs4Dash custom theme",
-  navbar = bs4DashNavbar(skin = "light"),
-  sidebar = bs4DashSidebar(
-    title = "bs4Dash custom theme",
-    skin = "light",
-    
-    # ...
-    
-  ),
-  body = bs4DashBody(
-    
-    use_theme(mytheme), # <-- use the theme
-    
-    # ...
-    
-  )
-)
-```
-
-
-See more information here: [Variables for {bs4dash}](https://dreamrs.github.io/fresh/articles/vars-bs4dash.html) or in R console: `vignette("vars-bs4dash", package = "fresh")`.
 
 
 

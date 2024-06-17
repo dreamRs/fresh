@@ -7,9 +7,9 @@
 use_theme(theme)
 }
 \arguments{
-\item{theme}{Either a path to CSS file (if in \code{www/} folder,
-do not include \code{www/} in path), or a theme generated with
-\code{\link{create_theme}} and argument \code{output_file = NULL}.}
+\item{theme}{Either a path to CSS file (if in \verb{www/} folder,
+do not include \verb{www/} in path), or a theme generated with
+\code{\link[=create_theme]{create_theme()}} and argument \code{output_file = NULL} or \code{\link[=bs4Dash_theme]{bs4Dash_theme()}}.}
 }
 \value{
 HTML tags to be included in a UI definition.

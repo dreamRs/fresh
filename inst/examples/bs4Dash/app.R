@@ -20,9 +20,7 @@ library(fresh)
 
 # Theme -------------------------------------------------------------------
 
-bs4DashTheme <- create_theme(
-  bs4dash_status(primary = "#FFFF00", danger = "#3ADF00")
-)
+bs4DashTheme <- bs4Dash_theme(primary = "#FFFF00", danger = "#3ADF00")
 
 
 
@@ -31,7 +29,7 @@ bs4DashTheme <- create_theme(
 
 ui <- bs4DashPage(
   title = "bs4Dash Custom Theme",
-  navbar = bs4DashNavbar(skin = "light"),
+  header = bs4DashNavbar(skin = "light"),
   sidebar = bs4DashSidebar(
     title = "bs4Dash Custom Theme",
     skin = "light",
@@ -60,24 +58,24 @@ ui <- bs4DashPage(
           bs4ValueBox(
             value = 150,
             subtitle = "ValueBox with primary status",
-            status = "primary",
-            icon = "shopping-cart",
+            color = "primary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4ValueBox(
             value = 150,
             subtitle = "ValueBox with secondary status",
-            status = "secondary",
-            icon = "shopping-cart",
+            color = "secondary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4ValueBox(
             value = "53%",
             subtitle = "ValueBox with danger status",
-            status = "danger",
-            icon = "cogs",
+            color = "danger",
+            icon = icon("cogs"),
             footer = "Hello World",
             width = 4
           )
@@ -86,22 +84,22 @@ ui <- bs4DashPage(
           bs4ValueBox(
             value = "44",
             subtitle = "ValueBox with warning status",
-            status = "warning",
-            icon = "sliders",
+            color = "warning",
+            icon = icon("sliders"),
             width = 4
           ),
           bs4ValueBox(
             value = "44",
             subtitle = "ValueBox with info status",
-            status = "info",
-            icon = "sliders",
+            color = "info",
+            icon = icon("sliders"),
             width = 4
           ),
           bs4ValueBox(
             value = "44",
             subtitle = "ValueBox with success status",
-            status = "success",
-            icon = "sliders",
+            color = "success",
+            icon = icon("sliders"),
             width = 4
           )
         ),
@@ -110,25 +108,24 @@ ui <- bs4DashPage(
           bs4InfoBox(
             value = 150,
             title = "InfoBox with primary status",
-            status = "primary",
-            icon = "shopping-cart",
+            color = "primary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4InfoBox(
             value = 150,
             title = "InfoBox with secondary status",
-            status = "secondary",
-            icon = "shopping-cart",
+            color = "secondary",
+            icon = icon("shopping-cart"),
             href = "#",
             width = 4
           ),
           bs4InfoBox(
             value = "53%",
             title = "InfoBox with danger status",
-            status = "danger",
-            icon = "cogs",
-            footer = "Hello World",
+            color = "danger",
+            icon = icon("cogs"),
             width = 4
           )
         ),
@@ -136,22 +133,22 @@ ui <- bs4DashPage(
           bs4InfoBox(
             value = "44",
             title = "InfoBox with warning status",
-            status = "warning",
-            icon = "sliders",
+            color = "warning",
+            icon = icon("sliders"),
             width = 4
           ),
           bs4InfoBox(
             value = "44",
             title = "InfoBox with info status",
-            status = "info",
-            icon = "sliders",
+            color = "info",
+            icon = icon("sliders"),
             width = 4
           ),
           bs4InfoBox(
             value = "44",
             title = "InfoBox with success status",
-            status = "success",
-            icon = "sliders",
+            color = "success",
+            icon = icon("sliders"),
             width = 4
           )
         ),

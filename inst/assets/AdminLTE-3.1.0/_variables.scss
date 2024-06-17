@@ -52,6 +52,9 @@ $main-bg: #f4f6f9 !default;
 
 $dark-main-bg: lighten($dark, 7.5%) !important;
 
+// info-box (custom var)
+$info-box-bg: $white !default;
+
 // Content padding
 $content-padding-y: 0 !default;
 $content-padding-x: $navbar-padding-x !default;

@@ -21,35 +21,20 @@ library(fresh)
 # Theme -------------------------------------------------------------------
 
 library(fresh)
-bs4DashTheme <- create_theme(
-  bs4dash_vars(
-    # white = "#bec5cb",
-    "body-color" = "#FFF",
-    navbar_dark_color = "#bec5cb",
-    navbar_dark_active_color = "#FFF",
-    navbar_dark_hover_color = "#FFF"
-  ),
-  bs4dash_yiq(
-    contrasted_threshold = 10,
-    text_dark = "#FFF",
-    text_light = "#272c30"
-  ),
-  bs4dash_layout(main_bg = "#353c42"),
-  bs4dash_sidebar_dark(
-    bg = "#272c30",
-    color = "#bec5cb",
-    hover_color = "#FFF",
-
-    submenu_bg = "#272c30",
-    submenu_color = "#FFF",
-    submenu_hover_color = "#FFF"
-  ),
-  bs4dash_status(
-    dark = "#272c30",
-    primary = "#5E81AC",
-    danger = "#BF616A"
-  ),
-  bs4dash_color(gray_900 = "#FFF", white = "#bec5cb")
+bs4DashTheme <- bs4Dash_theme(
+  primary = "#5E81AC",
+  secondary = "#B48EAD",
+  success = "#A3BE8C",
+  danger = "#BF616A",
+  "sidebar-light-bg" = "#3B4252",
+  "sidebar-light-color" = "#E5E9F0",
+  "main-bg" = "#2E3440",
+  "body-color" = "#ECEFF4",
+  "card-bg" = "#4C566A", # bs4Card() background
+  "white" = "#E5E9F0",
+  "info-box-bg" = "#4C566A",  # bs4InfoBox() background
+  dark = "#272c30", #  bs4DashNavbar(status = "dark") background,
+  "gray-600" = "#FFF"
 )
 
 
@@ -58,15 +43,16 @@ bs4DashTheme <- create_theme(
 
 
 ui <- bs4DashPage(
-  title = "bs4Dash Dark Mode",
+  dark = NULL,
+  title = "bs4Dash Custom Dark Mode",
   # sidebar_collapsed = FALSE,
-  header = bs4DashNavbar(skin = "dark", status = "gray-dark"),
+  header = bs4DashNavbar(status = "dark"),
   controlbar = bs4DashControlbar(
     skin = "dark",
     "This is the control bar"
   ),
   sidebar = bs4DashSidebar(
-    title = "bs4Dash Dark Mode",
+    title = "bs4Dash Custom Dark Mode",
     skin = "dark",
     bs4SidebarMenu(
       bs4SidebarHeader("Menu:"),
