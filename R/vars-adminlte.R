@@ -1,7 +1,7 @@
 
 #' @title AdminLTE 2 custom variables
 #'
-#' @description Use any AdminLTE or Bootstrap variables to customize a \{shinydashboard\} theme.
+#' @description Use any AdminLTE or Bootstrap variables to customize a shinydashboard theme.
 #'
 #' @param ... Variables to use, under the form \code{body_bg = "#FFF"} or \code{"body-bg" = "#FFF"}.
 #'
@@ -25,7 +25,7 @@ adminlte_vars <- function(...) {
 #' @title AdminLTE CSS colors variables
 #'
 #' @description Those variables can be used to customize
-#'  defaults colors in {shinydashboard}.
+#'  defaults colors in shinydashboard.
 #'
 #' @param light_blue Light blue (primary status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#3c8dbc")}.
 #' @param red Red (danger status), default to \Sexpr[results=rd, stage=install]{fresh:::rd_col("#dd4b39")}.
@@ -166,7 +166,7 @@ adminlte_color <- function(light_blue = NULL,
 #' @title AdminLTE CSS sidebar variables
 #'
 #' @description Those variables can be used to customize
-#'  the sidebar in {shinydashboard}.
+#'  the sidebar in shinydashboard.
 #'
 #' @param width Side bar width, default to \code{230px}.
 #' @param dark_bg Background color (dark mode).
@@ -249,7 +249,7 @@ adminlte_sidebar <- function(width = NULL,
 #' @title AdminLTE CSS global variables
 #'
 #' @description Those variables can be used to customize
-#'  global settings in {shinydashboard}.
+#'  global settings in shinydashboard.
 #'
 #' @param content_bg Background color of the body.
 #' @param box_bg Default background color for boxes.
