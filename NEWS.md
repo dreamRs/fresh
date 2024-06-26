@@ -1,3 +1,11 @@
+# fresh 0.2.1 
+
+* Fixed documentation to resolve NOTES on CRAN
+* New functions: 
+    - `bs_theme_nord_light()` & `bs_theme_nord_dark()` two custom Bootstrap themes based on Nord palette.
+    - `bs4Dash_theme()` to create cutom themes for bs4Dash dashboards.
+
+
 # fresh 0.2.0
 
 * Support for [{bs4Dash}](https://github.com/RinteRface/bs4Dash) custom themes.

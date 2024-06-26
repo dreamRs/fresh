@@ -11,7 +11,7 @@
 
 ---
 
-Update with new features and enhancements. No reverse dependencies.
+Fix CRAN notes for documentation, and submit new version built with R >= 4.3.0 as asked on 2024-05-24.
 Thank you!
 Victor
 
