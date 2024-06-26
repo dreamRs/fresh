@@ -2,7 +2,7 @@
 % Please edit documentation in R/search-vars.R
 \name{search_vars_adminlte2}
 \alias{search_vars_adminlte2}
-\title{Search AdminLTE 2 (shinydashboard) variables}
+\title{Search AdminLTE 2 shinydashboard variables}
 \usage{
 search_vars_adminlte2(pattern = NULL)
 }
@@ -10,14 +10,14 @@ search_vars_adminlte2(pattern = NULL)
 \item{pattern}{A pattern to filter the results.}
 }
 \value{
-a \code{data.frame} with two variables:
+a \code{data.frame} with two columns:
 \itemize{
-\item{\code{variable}: }{name of the variable.}
-\item{\code{value}: }{default value used in theme.}
+\item \code{variable} : name of the variable.
+\item \code{value} default value used.
 }
 }
 \description{
-Search AdminLTE 2 (shinydashboard) variables
+Search AdminLTE 2 shinydashboard variables
 }
 \examples{
 # All AdminLTE2 variables

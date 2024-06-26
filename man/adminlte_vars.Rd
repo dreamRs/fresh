@@ -13,7 +13,7 @@ adminlte_vars(...)
 a \code{list} that can be used in \code{\link{create_theme}}.
 }
 \description{
-Use any AdminLTE or Bootstrap variables to customize a \{shinydashboard\} theme.
+Use any AdminLTE or Bootstrap variables to customize a shinydashboard theme.
 }
 \note{
 For a full list of available variables, use \code{\link{search_vars_adminlte2}}.

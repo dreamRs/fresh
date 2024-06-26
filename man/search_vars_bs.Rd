@@ -17,10 +17,10 @@ search_vars_bs(
 \item{theme}{Name of the theme for which to search the variables.}
 }
 \value{
-a \code{data.frame} with two variables:
+a \code{data.frame} with two columns:
 \itemize{
-\item{\code{variable}: }{name of the variable.}
-\item{\code{value}: }{default value used in theme.}
+\item \code{variable} : name of the variable.
+\item \code{value} default value used.
 }
 }
 \description{

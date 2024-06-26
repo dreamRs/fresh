@@ -3,7 +3,7 @@
 #'
 #' @param file File path in which to search for variables.
 #'
-#' @return A \code{data.frame} with 2 columns: \code{"variable"} and \code{"value"}.
+#' @return A `data.frame` with 2 columns: `"variable"` and `"value"`.
 #' @export
 #'
 #' @importFrom tools file_ext
@@ -66,12 +66,11 @@ search_vars <- function(file) {
 #' @param pattern A pattern to filter the results.
 #' @param source Search variables in AdminLTE or Bootstrap or both.
 #'
-#' @return a \code{data.frame} with three variables:
-#' \itemize{
-#'  \item{\code{source}: }{AdminLTE or Bootstrap variable.}
-#'  \item{\code{variable}: }{name of the variable.}
-#'  \item{\code{value}: }{default value used.}
-#' }
+#' @return a `data.frame` with three columns:
+#'    * `source` : AdminLTE or Bootstrap variable.
+#'    * `variable` : name of the variable.
+#'    * `value` default value used.
+#'
 #' @export
 #'
 #' @examples
@@ -112,11 +111,9 @@ search_vars_bs4dash <- function(pattern = NULL, source = c("adminlte", "bootstra
 #' @param pattern A pattern to filter the results.
 #' @param theme Name of the theme for which to search the variables.
 #'
-#' @return a \code{data.frame} with two variables:
-#' \itemize{
-#'  \item{\code{variable}: }{name of the variable.}
-#'  \item{\code{value}: }{default value used in theme.}
-#' }
+#' @return a `data.frame` with two columns:
+#'    * `variable` : name of the variable.
+#'    * `value` default value used.
 #'
 #' @export
 #'
@@ -152,15 +149,14 @@ search_vars_bs <- function(pattern = NULL,
 
 
 
-#' Search AdminLTE 2 (shinydashboard) variables
+#' Search AdminLTE 2 shinydashboard variables
 #'
 #' @param pattern A pattern to filter the results.
 #'
-#' @return a \code{data.frame} with two variables:
-#' \itemize{
-#'  \item{\code{variable}: }{name of the variable.}
-#'  \item{\code{value}: }{default value used in theme.}
-#' }
+#' @return a `data.frame` with two columns:
+#'    * `variable` : name of the variable.
+#'    * `value` default value used.
+#'    
 #' @export
 #'
 #' @examples
