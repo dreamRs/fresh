@@ -24,7 +24,7 @@ library(fresh)
 
 * shiny itself, with `shiny::fluidPage` or `shiny::navbarPage` or themes from [Bootswatch](https://bootswatch.com/3/)
 * [{shinydashboard}](https://rstudio.github.io/shinydashboard/): Shiny Dashboarding framework
-* [{bs4Dash}](https://rinterface.github.io/bs4Dash/index.html): Bootstrap 4 shinydashboard using AdminLTE3
+* [{bs4Dash}](https://bs4dash.rinterface.com/index.html): Bootstrap 4 shinydashboard using AdminLTE3
 
 
 ## Create a theme
