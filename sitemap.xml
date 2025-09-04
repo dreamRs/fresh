@@ -1,117 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/articles/fresh.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/vars-bs4dash.html</loc>
-  </url>
-  <url>
-    <loc>/articles/vars-shiny.html</loc>
-  </url>
-  <url>
-    <loc>/articles/vars-shinydashboard.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/adminlte_color.html</loc>
-  </url>
-  <url>
-    <loc>/reference/adminlte_global.html</loc>
-  </url>
-  <url>
-    <loc>/reference/adminlte_sidebar.html</loc>
-  </url>
-  <url>
-    <loc>/reference/adminlte_vars.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs-theme-nord.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs3-variables.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4Dash-sidebar.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4Dash_theme.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_button.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_color.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_font.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_layout.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_status.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_vars.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs4dash_yiq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bs_vars_file.html</loc>
-  </url>
-  <url>
-    <loc>/reference/create_pretty.html</loc>
-  </url>
-  <url>
-    <loc>/reference/create_theme.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fresh.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/search_vars.html</loc>
-  </url>
-  <url>
-    <loc>/reference/search_vars_adminlte2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/search_vars_bs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/search_vars_bs4dash.html</loc>
-  </url>
-  <url>
-    <loc>/reference/use_googlefont.html</loc>
-  </url>
-  <url>
-    <loc>/reference/use_pretty.html</loc>
-  </url>
-  <url>
-    <loc>/reference/use_theme.html</loc>
-  </url>
-  <url>
-    <loc>/reference/use_vars_template.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/fresh.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/vars-bs4dash.html</loc></url>
+<url><loc>/articles/vars-shiny.html</loc></url>
+<url><loc>/articles/vars-shinydashboard.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/adminlte_color.html</loc></url>
+<url><loc>/reference/adminlte_global.html</loc></url>
+<url><loc>/reference/adminlte_sidebar.html</loc></url>
+<url><loc>/reference/adminlte_vars.html</loc></url>
+<url><loc>/reference/bs-theme-nord.html</loc></url>
+<url><loc>/reference/bs3-variables.html</loc></url>
+<url><loc>/reference/bs4Dash-sidebar.html</loc></url>
+<url><loc>/reference/bs4Dash_theme.html</loc></url>
+<url><loc>/reference/bs4dash_button.html</loc></url>
+<url><loc>/reference/bs4dash_color.html</loc></url>
+<url><loc>/reference/bs4dash_font.html</loc></url>
+<url><loc>/reference/bs4dash_layout.html</loc></url>
+<url><loc>/reference/bs4dash_status.html</loc></url>
+<url><loc>/reference/bs4dash_vars.html</loc></url>
+<url><loc>/reference/bs4dash_yiq.html</loc></url>
+<url><loc>/reference/bs_vars_file.html</loc></url>
+<url><loc>/reference/create_pretty.html</loc></url>
+<url><loc>/reference/create_theme.html</loc></url>
+<url><loc>/reference/fresh.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/search_vars.html</loc></url>
+<url><loc>/reference/search_vars_adminlte2.html</loc></url>
+<url><loc>/reference/search_vars_bs.html</loc></url>
+<url><loc>/reference/search_vars_bs4dash.html</loc></url>
+<url><loc>/reference/use_googlefont.html</loc></url>
+<url><loc>/reference/use_pretty.html</loc></url>
+<url><loc>/reference/use_theme.html</loc></url>
+<url><loc>/reference/use_vars_template.html</loc></url>
 </urlset>
+
