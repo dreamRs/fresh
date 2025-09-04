@@ -1,3 +1,8 @@
+# fresh 0.2.2
+
+* Fixed documentation to resolve NOTES on CRAN
+
+
 # fresh 0.2.1 
 
 * Fixed documentation to resolve NOTES on CRAN
